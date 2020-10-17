@@ -9,17 +9,20 @@ Explain a theoretical bridge between hackers and other technologists; and a spec
 
 ### The Road to Hell is Paved with Bad Passwords
 
-* Incident management of an embassy hacked by ISI
+Incident management of an embassy hacked by ISI
+
 * [Inside the 2014 hack of a Saudi embassy](https://www.csoonline.com/article/3386381/inside-the-2014-hack-of-a-saudi-embassy.html)
 * [Hackernoon article ](https://hackernoon.com/the-road-to-hell-is-paved-with-bad-passwords-ef54815873f9)
 * [Cyberwarfare](https://en.wikipedia.org/wiki/Cyberwarfare)
 
 ### Say Cheese - How I Ransomwared your DSLR Camera
 
+This is the first vulnerability research on the Picture Transfer Protocol, a vendor agnostic logical layer that is common to all modern-day cameras. As DSLR cameras are used by consumers and journalists alike, this opens up the door for future research on these sensitive embedded devices.
+
 * [Precision Time Protocol](https://en.wikipedia.org/wiki/Precision_Time_Protocol) 
 * [Checkpoint GitHub account](https://github.com/CheckPointSW)
 
-#### Leveraging KVM as a debugging platform
+### Leveraging KVM as a debugging platform
 
 * KVM vs Xen vs Virtualbox vs VMware 
 * Bitdefender KVM VMi 
@@ -28,7 +31,7 @@ Explain a theoretical bridge between hackers and other technologists; and a spec
 * Fuzzing 
 * OS hardening
 
-#### The Red Square - Mapping the connections inside Russia's APT Ecosystem
+### The Red Square - Mapping the connections inside Russia's APT Ecosystem
 
 Genetic malware analysis Big DB of "genes" of assembly code Visualize with graph tool gephy [apt-ecosystem.com](http://apt-ecosystem.com/)
 
@@ -38,7 +41,7 @@ Challenge to automatically unpack samples \(static or dynamic\) • Analyze conn
 
 Pas plus de détails qu’en source ouverte, outils de visualisation intéressants, la méthodo serait difficile sur des APT chinoise partageant largement des outils, la méthodo rate l’utilisation de versions rares de librairies légitimes par différents acteurs
 
-#### Fileless Malware Infection and Linux Process Injection in Linux OS
+### Fileless Malware Infection and Linux Process Injection in Linux OS
 
 Bleu vs red team Merlin tool on github Advanced threat tactics Reddit r/malware must die ? Shellcode
 
@@ -82,41 +85,41 @@ Kostiantyn Korsun, ex head of CERT-UA, ex iSIGHT, Berezhasecurity
 
 Equivalent de l’article 47 de la LPM 2013 en France. La légalité effective a été interrogée à plusieurs reprises dans les questions.
 
-#### What the log?! So many events, so little time…
+### What the log?! So many events, so little time…
 
 EventList MITTR Attack sigma
 
-#### The Glitch In The Matrix
+### The Glitch In The Matrix
 
-Gcc graphic overview Gimple -&gt; RTL Gcc vs llvm
+* Gcc graphic overview 
+* Gimple -&gt; RTL 
+* Gcc vs llvm
 
-DNS On Fire
+### DNS On Fire
 
 Warren Mercer and Rascagneres Paul, Cisco Talos
 
-```text
-•    DNS hijacking : DNS administer, DNS system interface, DNS servers, Network infra, Requestor’s endpoint
-•    DNSpionage :
-◦    spearphishing email or social media message (Linkedin)
-◦    domains similar to official ones and redirecting to them to host malicious documents : hr-wipro.com, hr-suncor.com
-◦    Macros to drop DNSpionage : HTTP & DNS tunnel. One sample in debug mode.
-◦    HTTP mode : DNS request to register to …..0ffice36o.com. Fake wikipedia page with base64 encoded commands.
-◦    DNS mode : IP == ASCII encoded
-◦    Monitoring through Cisco OpenDNS
-◦    On IP used for exfilration, .gov. domains pointing to it in the past and Let’s Encrypt certificates found at the same time (Police/Intel/Gov, emails/VPN gateways)
-◦    Main activity in september-november 2018 but first activity seen in Q1 2017
-◦    Alleged Oilrig leak : nothing related to DNSpionage
-▪    Panel of ScareCrow, /Th!swasP@NEl in URL, close to panel name revealed by Lastline (SAS 2019)
-▪    webmask : MiTM via DNS redirection with middle east gov addresses in config file
-•    very possible it has been used for DNSpionage
-•    SeaTurtle :
-◦    Espionage targeting middle east & north african gov departments, intel, oil & gas, military
-◦    Responsible for a publicly confirmed case of a DNS registry compromise (Netnod in Sweden : https://www.netnod.se/news/statement-on-man-in-the-middle-attack-against-netnod)
-◦    Steal credentials for DNS administration and update DNS servers
-◦    Use it for MitM attacks to steal credentials (VPN access)
-◦    No concern about reveal : they have intensified their activity after disclosure
-◦    Attack multiple registrars, very aggressive, certificate abuse, steal certificates from victims infrastructure, 
-◦    July 2019 (blog post) : single use of name-servers (per victim), less < 24h live, Middle East and North Africa, a non profit in Swiss
-•    Protection : monitor your own DNS, monitor Certificate Transparency for your own names, patch, revoke and reset
-```
+* DNS hijacking : DNS administer, DNS system interface, DNS servers, Network infra, Requestor’s endpoint
+* DNSpionage :
+  * spearphishing email or social media message \(Linkedin\)
+  * domains similar to official ones and redirecting to them to host malicious documents : hr-wipro.com, hr-suncor.com
+  * Macros to drop DNSpionage : HTTP & DNS tunnel. One sample in debug mode.
+  * HTTP mode : DNS request to register to …..0ffice36o.com. Fake wikipedia page with base64 encoded commands.
+  * DNS mode : IP == ASCII encoded
+  * Monitoring through Cisco OpenDNS
+  * On IP used for exfilration, .gov. domains pointing to it in the past and Let’s Encrypt certificates found at the same time \(Police/Intel/Gov, emails/VPN gateways\)
+  * Main activity in september-november 2018 but first activity seen in Q1 2017
+  * Alleged Oilrig leak : nothing related to DNSpionage
+* Panel of ScareCrow, /Th!swasP@NEl in URL, close to panel name revealed by Lastline \(SAS 2019\)
+* webmask : MiTM via DNS redirection with middle east gov addresses in config file
+* very possible it has been used for DNSpionage
+* SeaTurtle :
+  * Espionage targeting middle east & north african gov departments, intel, oil & gas, military
+  * Responsible for a publicly confirmed case of a DNS registry compromise \(Netnod in Sweden : https://www.netnod.se/news/statement-on-man-in-the-middle-attack-against-netnod\)
+  * Steal credentials for DNS administration and update DNS servers
+  * Use it for MitM attacks to steal credentials \(VPN access\)
+  * No concern about reveal : they have intensified their activity after disclosure
+  * Attack multiple registrars, very aggressive, certificate abuse, steal certificates from victims infrastructure, 
+  * July 2019 \(blog post\) : single use of name-servers \(per victim\), less &lt; 24h live, Middle East and North Africa, a non profit in Swiss
+* Protection : monitor your own DNS, monitor Certificate Transparency for your own names, patch, revoke and reset
 
