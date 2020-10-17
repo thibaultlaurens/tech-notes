@@ -268,6 +268,43 @@ Explicity flushing modified buffers:
 
 ## Standards and Portability
 
+### Standards: why ?
+
+- __1969__: UNIX first implemented, developped at Bell Labs (AT&T)
+- 1979: Seventh Edition (V7) UNIX
+- After V7, UNIX starts to fragment: __BSD__ (Berkeley Software Distribution from UCB), __System V__ (AT&T), vendor implementations based on System V or BSD
+- Mid-1980s: "UNIX" is a chaos of competing, increasingly incompatible implementations, "The UNIX wars": __UNIX Internation__ (AT&T, Sun) vs __Open Software Foundation__ (the rest)
+- Pressure to standardize results in POSIX (Portable Operating System Interface) and other standards 
+
+### Standards: POSIX
+
+- __POSIX.1__ (1990): Sheperd by IEEE (Institute of Electrical and Electronics Engineers), API standard for (UNIX like) OS
+- __POSIX.2__ (1992): Standard for shell and utilities
+- POSIX.1b (1993): Realtime APIs
+- POSIX.1c (1995): Threads APIs
+- POSIX.1 (1996): Consolidation of POSIX.1-1990, POSIX.1b, POSIX.1c
+
+### XPG and SUS
+
+- 1989: __X/Open__ founded by a consortium of computer vendors for a comprehensive set of open system standards
+- __X/Open Portability Guides (XPG)__: Consolidation of POSIX and various other standards
+- XPG subsequently repackaged as __Single UNIX Specification (SUS)__ (1994: SUSv1 - XPG4v2, 1997: SUSv2 - XPG5)
+- 1996: X/Open merges with Open Software Foundation => __The Open Group__ (TOG); virtually every UNIX vendor is a member nowadays; unofficial end of "The UNIX wars"
+- 1999: IEEE, TOG and ISO/IEC Joint Technical Committee 1 collaborate in __Austin Common Standards Revision Group__ to revise POSIX and SUS standards and consolidate into a single standard
+- 2001: combined POSIX.1-2001 and SUSv3 published as a modular standard; SUSv3 == POSIX + XSI (X/Open System Interface) extension
+- 2008: POSIX.1-2008 / SUSv4 published 
+
+### Linux and standards
+
+- Linux now dominant, but portability is still valuable goal
+- Linux not standards certified, but largely standards compliant
+- See also: _standards(7)_ man page
+
+~### Portable programming: feature test macros~
+
+### ~Portable programming: limits and options~
+
+
 ## Files
 
 ## Directories and Links
