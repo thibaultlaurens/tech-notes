@@ -21,5 +21,9 @@ echo 'You got to trust me on this, I saved the world'
 ```
 {% endcode %}
 
+{% page-ref page="conferences/dfrws-eu-2020.md" %}
+
+{% page-ref page="training-courses/advanced-linux-unix-system-programming.md" %}
+
 
 
