@@ -19,17 +19,24 @@ Incident management of an embassy hacked by ISI
 
 This is the first vulnerability research on the Picture Transfer Protocol, a vendor agnostic logical layer that is common to all modern-day cameras. As DSLR cameras are used by consumers and journalists alike, this opens up the door for future research on these sensitive embedded devices.
 
-* [Precision Time Protocol](https://en.wikipedia.org/wiki/Precision_Time_Protocol) 
+* [Picture Transfer Protocol](https://en.wikipedia.org/wiki/Picture_Transfer_Protocol)
 * [Checkpoint GitHub account](https://github.com/CheckPointSW)
 
 ### Leveraging KVM as a debugging platform
 
-* KVM vs Xen vs Virtualbox vs VMware 
-* Bitdefender KVM VMi 
-* QEMU vs VMI 
-* Libvmi 
-* Fuzzing 
-* OS hardening
+Virtual Machine Introspection keeps opening new possibilities to interact with Virtual Machines, from sandboxing \(VMRay\), to cloud monitoring solutions \(BitDefender HVI\).
+
+Our debuggers needs to benefit from this approach too, and so far we have seen multiple open source projects trying to leverage the hypervisor as a new debugging platform. However, most of these solutions are tied to one hypervisor.
+
+The VMI ecosystem can only grow if it can bring all developers under the same roof, and provide the core libraries that will be the foundation for all VMI applications.
+
+Keeping this vision in mind, pyvmidbg is a GDB stub built on top of LibVMI, a hypervisor-agnostic VMI library. It can introspect Windows VMs and explore the execution context to target and debug a specific process running on the system.
+
+One of the goals of pyvmidbg is to attract developers and users by writing the missing layers that prevent VMI from gaining a wider adoption as of today.
+
+The lack of VMI APIs available on KVM has made of LibVMI a Xen centric library, despite its flexible architecture. However, the situation recently changed in 2017, thanks to BitDefender proposing a new set of APIs for introspection.
+
+This talk demonstrates the new KVM introspection subsystem proposed by BitDefender, its integration in LibVMI, and how pyvmidbg is running on top of KVM today.
 
 ### The Red Square - Mapping the connections inside Russia's APT Ecosystem
 
@@ -47,47 +54,45 @@ Bleu vs red team Merlin tool on github Advanced threat tactics Reddit r/malware 
 
 Fileless Malware Infection and Linux Process Injection in Linux OS アドリアン ヘンドリック - Hendrik Adrian - @MalwareMustDie, LACERT / LAC Reverse + Linux internals peu compréhensible
 
-The Glitch In The Matrix
+### The Glitch In The Matrix
 
 Marion Marschalek, Intel STORM team
 
-```text
-•    Bugify binaries by compromising the compiler ?
-◦    no one is auditing build chains or final output when they have the source code
-◦    usually not a problem because a compiler rarely introduces bugs and even rarely introduces a critical security bug
-◦    but very interesting attack vector !
-•    GCC : front-end to create a generic representation, middle-end produces GIMPLE (language independent), … (language optimizations), RTL, back-end produces machine code. High complexity, millions lines of code, long legacy
-•    RTL : generic representation, proc independent, abstract description of final machine code
-•    Hard to execute bug full control on final binary is easy. Stealth :
-◦    mimicking optimizations fails,
-▪    delete instruction to override a crypto key in memory with 0s because memory not used after [mitigated in recent compilers but an existing « bug » that could be forced]
-◦    configurable bugs
-◦    very small modifications difficult to find through fuzzing : type confusions, off by one, unsign a signed type, shorten a key, kill a canary, attack mitigations
-•    Target GCC built-ins made for machine optimization of standard lib C and are customizable
-```
+* Bugify binaries by compromising the compiler ?
+  * no one is auditing build chains or final output when they have the source code
+  * usually not a problem because a compiler rarely introduces bugs and even rarely introduces a critical security bug
+  * but very interesting attack vector !
+* GCC : front-end to create a generic representation, middle-end produces GIMPLE \(language independent\), … \(language optimizations\), RTL, back-end produces machine code. High complexity, millions lines of code, long legacy
+* RTL : generic representation, proc independent, abstract description of final machine code
+* Hard to execute bug full control on final binary is easy. Stealth :
+  * mimicking optimizations fails,
+* delete instruction to override a crypto key in memory with 0s because memory not used after \[mitigated in recent compilers but an existing « bug » that could be forced\]
+  * configurable bugs
+  * very small modifications difficult to find through fuzzing : type confusions, off by one, unsign a signed type, shorten a key, kill a canary, attack mitigations
+* Target GCC built-ins made for machine optimization of standard lib C and are customizable
 
 Présentation très accessible abordant GCC internals, POC et réflexion sur la faisabilité d’attaques du compilateur
 
-Hacktivism as a defense technique in a cyberwar. \#FRD Lessons for Ukraine
+### Hacktivism as a defense technique in a cyberwar. \#FRD Lessons for Ukraine
 
 Kostiantyn Korsun, ex head of CERT-UA, ex iSIGHT, Berezhasecurity
 
-```text
-•    Ukraine targeting by a lot of high level attacks against critical infrastructure (Central election comity network in 2014, BlackEnergy in 2015, NotPetya in 2017, DanaBot…)
-•    #FRD : Fuck Responsible Disclosure
-◦    Expose non directly exploitable bugs to the public to have officials/critical companies fix the problems faster
-◦    Legal : yes
-◦    Started in October 2017 : open network disk of water supply company, email password available online for CERT-UA, open network disk of Kyiv electric supply company, of a nuclear power plant, plane plant, outdated PHP on State Financial, XSS everywhere, open network of National Police where everyone can search in records, open GIT of National Health with passwords to database full of personal health data.
-•    Typical reactions are the 5 stages of grief : denial, anger, bargaining, depression, acceptance
-•    Consequences : media, discharges, more investments
-•    Now supported by gov/police
-```
+* Ukraine targeting by a lot of high level attacks against critical infrastructure \(Central election comity network in 2014, BlackEnergy in 2015, NotPetya in 2017, DanaBot…\)
+* \#FRD : Fuck Responsible Disclosure
+  * Expose non directly exploitable bugs to the public to have officials/critical companies fix the problems faster
+  * Legal : yes
+  * Started in October 2017 : open network disk of water supply company, email password available online for CERT-UA, open network disk of Kyiv electric supply company, of a nuclear power plant, plane plant, outdated PHP on State Financial, XSS everywhere, open network of National Police where everyone can search in records, open GIT of National Health with passwords to database full of personal health data.
+* Typical reactions are the 5 stages of grief : denial, anger, bargaining, depression, acceptance
+* Consequences : media, discharges, more investments
+* Now supported by gov/police
 
 Equivalent de l’article 47 de la LPM 2013 en France. La légalité effective a été interrogée à plusieurs reprises dans les questions.
 
 ### What the log?! So many events, so little time…
 
-EventList MITTR Attack sigma
+* EventList 
+* MITTR Attack 
+* Sigma
 
 ### The Glitch In The Matrix
 
