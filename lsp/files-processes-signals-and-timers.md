@@ -55,7 +55,7 @@ int open(const char *pathname, int flags, ... /* mode_t mode */);
 * _mode_ specifies permissions when creating new file
 * returns a file descriptor \(guaranteed to be lowest available FD\)
 
-```text
+```c
 #include <unistd.h>
 int read(int fd, void *buffer, size_t count);
 ```
@@ -63,7 +63,7 @@ int read(int fd, void *buffer, size_t count);
 * Args: _fd_ file descriptor, _buffer_ pointer to buffer to store data, _count_ number of bytes to read
 * Returns: &gt; 0 \(number of bytes read\), 0 \(end of file\), -1 \(error\)
 
-```text
+```c
 #include <unistd.h>
 int write(int fd, const void *buffer, size_t count);
 ```
@@ -71,7 +71,7 @@ int write(int fd, const void *buffer, size_t count);
 * Args: _fd_ file descriptor, _buffer_ pointer to data to be written, _count_ number of bytes to write
 * Returns: Number of bytes written, -1 \(error\)
 
-```text
+```c
 #include <unistd.h>
 int close(fd);
 ```
@@ -90,7 +90,7 @@ Every open file has a **file offset**:
 
 _lseek\(\)_: randomly accessing a file
 
-```text
+```c
 #include <unistd.h>
 off_t lseek(int fd, off_t offset, int whence);
 ```
@@ -151,7 +151,7 @@ Why it matters:
 
 ### Duplicating file descriptors
 
-```text
+```c
 #include <unistd.h>
 int dup(int oldfd);
 ```
@@ -161,7 +161,7 @@ int dup(int oldfd);
 * **New file descriptor is guaranteed to be lowest available**
 * Problematic if a lower FD is being closed when closing and duplicating a FD \(to achieve shell 2&gt;&1 redirection for instance\)
 
-```text
+```c
 #include <unistd.h>
 int dup2(int oldfd, int newfd);
 ```
@@ -181,7 +181,7 @@ File status flags
 
 _fcntl\(\)_: file control operations \(check access mode, change file status flags etc.\)
 
-```text
+```c
 #include <unistd.h>
 int fcntl(int fd, int cmd, /* , args */ );
 ```
@@ -191,7 +191,7 @@ int fcntl(int fd, int cmd, /* , args */ );
 
 ### Other file I/O interfaces
 
-```text
+```c
 #include <unistd.h>
 int truncate(const char *pathname, off_t length);
 int ftruncate(int fd, off_t length);
