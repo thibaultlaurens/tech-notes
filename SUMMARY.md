@@ -8,7 +8,8 @@
 * [HACK.LU 2019](conferences/hack.lu-2019.md)
 * [DFRWS EU 2020](conferences/dfrws-eu-2020.md)
 
-## Training
+## Linux System Programming <a id="lsp"></a>
 
-* [Linux System Programming](training/linux-system-programming.md)
+* [Files, Processes, Signals and Timers](lsp/part-a.md)
+* [Threads and IPC](lsp/part-b.md)
 
