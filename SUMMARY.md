@@ -10,6 +10,6 @@
 
 ## Linux System Programming <a id="lsp"></a>
 
-* [Files, Processes, Signals and Timers](lsp/part-a.md)
-* [Threads and IPC](lsp/part-b.md)
+* [Files, Processes, Signals and Timers](lsp/files-processes-signals-and-timers.md)
+* [Threads and IPC](lsp/threads-and-ipc.md)
 
