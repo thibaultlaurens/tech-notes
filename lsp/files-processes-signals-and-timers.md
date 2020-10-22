@@ -1,4 +1,4 @@
-# Files, Processes, Signals and Timers
+# A - Files, Processes, Signals and Timers
 
 Michael Kerrisk - man7.org
 
@@ -23,7 +23,7 @@ Michael Kerrisk - man7.org
 * Return status should **always** be tested
 * Error numbers in _errno_ are &gt; 0
   * errno\(1\) man page 
-  *  defines symbolic names for error numbers 
+  * defines symbolic names for error numbers 
 
 ### System data types
 

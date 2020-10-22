@@ -10,6 +10,8 @@
 
 ## Linux System Programming <a id="lsp"></a>
 
-* [Files, Processes, Signals and Timers](lsp/files-processes-signals-and-timers.md)
-* [Threads and IPC](lsp/threads-and-ipc.md)
+* [A - Files, Processes, Signals and Timers](lsp/files-processes-signals-and-timers.md)
+* [B - Threads and IPC](lsp/threads-and-ipc.md)
+* [C - Security and Isolation API](lsp/security-and-isolation-api.md)
+* [D - Shared Libraries](lsp/shared-libraries.md)
 
