@@ -1,6 +1,3 @@
 # Home
 
-![Tech Notes](.gitbook/assets/gitbook_large.png)
-
-
-
+![Tech Notes](.gitbook/assets/gitbook.png)
