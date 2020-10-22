@@ -2,7 +2,9 @@
 
 Michael Kerrisk - man7.org
 
-## Fundamental Concepts
+## 1. Course Introduction
+
+## 2. Fundamental Concepts
 
 ### System Calls and library functions
 
@@ -29,7 +31,7 @@ Michael Kerrisk - man7.org
 * Using native C data types \(e.g. int, long\) in application code would be non portable
 * POSIX defines system data types via **typedef** \(pid\_t, uid\_t, off\_t etc.\)
 
-## File I/O
+## 3. File I/O
 
 ### File I/O overview
 
@@ -225,7 +227,7 @@ _preadv\(\)_ and _pwritev\(\)_
 * Each process has a corresponding /proc/PID/fd directory containing symbolic links for each of the process's FDs
 * ex: /proc/PID/fd/n == symlink to file opened on descriptor n by process PID
 
-## File I/O Buffering
+## 4. File I/O Buffering
 
 ### Kernel buffering
 
@@ -282,9 +284,9 @@ Explicity flushing modified buffers:
 * Flushing buffer cache doesn't guarantee data has landed on media surface because of disk hardware caching
 * Set O\_SYNC flag to disable buffer cache and make all writes to a file synchronous and block until data has been transferred to disk \(massive performance hit!\)
 
-## ~~File Locking~~
+## ~~5. File Locking~~
 
-## Standards and Portability
+## 6. Standards and Portability
 
 ### Standards: why ?
 
@@ -322,35 +324,35 @@ Explicity flushing modified buffers:
 
 ### ~~Portable programming: limits and options~~
 
-## Files
+## 7. Files
 
-## Directories and Links
+## 8. Directories and Links
 
-## Inotify
+## ~~9. Inotify~~
 
-## Processes
+## 10. Processes
 
-## Process Credentials
+## 11. Process Credentials
 
-## Signals: Introduction
+## 12. Signals: Introduction
 
-## Signals: Signal Handlers
+## 13. Signals: Signal Handlers
 
-## Signals: Further Details
+## ~~14. Signals: Further Details~~
 
-## Process Creation and Termination
+## 15. Process Creation and Termination
 
-## Executing Programs
+## 16. Executing Programs
 
-## System Call Tracing with strace
+## ~~17. System Call Tracing with strace~~
 
-## Daemons
+## 18. Daemons
 
-## Extended Attributes
+## ~~19. Extended Attributes~~
 
-## Access Control Lists
+## ~~20. Access Control Lists~~
 
-## Time
+## ~~21. Time~~
 
-## Timers and Sleeping
+## ~~22. Timers and Sleeping~~
 
