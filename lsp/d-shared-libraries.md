@@ -12,8 +12,8 @@
 
 - Static libraries: "Archive" of compiled object files. Employed by (static) linker (_ld_) at link time. Cons: wast disk space, app must be relinked after libraries update.
 - Shared libraries: Also called **shared object**, a single copy of object files is shared by all executables. Object module not copied into executable; linking done at run time.
-- Pros of shared libraries: **smaller program size** (may result in faster loading) + **apps automatically emply latest version** (linking done at runtime)
-- Cons of shared libraries: **increased complexity**, **must compile to use Position Independant Code** (IPC), **symbol relocation is required** at runtime.
+- Pros of shared libraries: **smaller program size** (may result in faster loading) + **apps automatically employ latest version** (linking done at runtime)
+- Cons of shared libraries: **increased complexity**, **must compile to use Position Independant Code** (PIC), **symbol relocation is required** at runtime.
 
 ### Basics of shared library creation and use
 
@@ -112,14 +112,15 @@ _ldconfig(8)_ does two things to **address potential difficulties** with shared 
 
 ### Further details
 
-- Constructor and destructor functions (also available for main program): automatically executed when library is loaded / unloaded, declared with **\_atribute** ((constructor))\_ / **\_atribute** ((destructor))\_
+- Constructor and destructor functions (also available for main program): automatically executed when library is loaded / unloaded, declared with \_\_attribute\_\_ ((constructor)) / \_\_attribute\_\_ ((destructor))
 - _abidiff(1)_: compares two shared objects, showing different functions, variables, and function arguments (need debugging to show additional arguments: _cc -g_)
 
 ## 57. The Dynamic Linker
 
 ### Rpath: specifying library search paths in an object
 
-- Third option to inform the dynamic linker of location of shared libraries is to **insert a list of directories into the executable** during static linking. To embed a run-time library path (**rpath**) list: _gcc -Wl,-rpath,path-to-lib-dir_
+- Third option to inform the dynamic linker of location of shared libraries is to **insert a list of directories into the executable** during static linking.
+- To embed a run-time library path (**rpath**) list: _gcc -Wl,-rpath,path-to-lib-dir_
 - Shared libraries can themselves have dependencies
 - Order of precedence: (DT_RPATH: original and default ELF entry is a design error) > LD_LIBRARY_PATH > **DT_RUNPATH** (LD_LIBRARY_PATH can override it at run path, what we want)
 - DL understands special names in rpath list:
