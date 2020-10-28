@@ -2,18 +2,8 @@
 
 ![Tech Notes](.gitbook/assets/gitbook.png)
 
+[https://www.youtube.com/watch?v=SzJ46YA\_RaA](https://www.youtube.com/watch?v=SzJ46YA_RaA)
 
-
-
-
-* programming
-  * assembly
-  * paradigms
-  * languages
-    * go
-    * python
-    * erlang
-    * js
 * projects
   * specs
   * issues

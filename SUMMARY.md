@@ -8,7 +8,7 @@
 * [Data](notes/data.md)
 * [Network](notes/network.md)
 * [Security](notes/security.md)
-* [Operation](notes/operation.md)
+* [Operations](notes/operations.md)
 * [Systems](notes/systems.md)
 * [Management](notes/management.md)
 
