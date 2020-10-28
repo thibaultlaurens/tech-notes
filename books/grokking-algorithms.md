@@ -1,5 +1,5 @@
 ---
-description: 'https://livebook.manning.com/book/grokking-algorithms'
+description: An illustrated guide for programmers and other curious people.
 ---
 
 # Grokking Algorithms
