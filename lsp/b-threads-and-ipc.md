@@ -1,6 +1,8 @@
-# B - Threads and IPC
+---
+description: Michael Kerrisk - man7.org
+---
 
-Michael Kerrisk - man7.org
+# B - Threads and IPC
 
 ## 23. Threads: Introduction
 

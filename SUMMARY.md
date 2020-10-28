@@ -1,6 +1,16 @@
 # Table of contents
 
-* [Home](README.md)
+* [HOME](README.md)
+
+## Notes
+
+* [Programming](notes/programming.md)
+* [Data](notes/data.md)
+* [Network](notes/network.md)
+* [Security](notes/security.md)
+* [Operation](notes/operation.md)
+* [Systems](notes/systems.md)
+* [Management](notes/management.md)
 
 ## Books
 
@@ -14,7 +24,7 @@
 
 ## Linux System Programming <a id="lsp"></a>
 
-* [A - Files, Processes, Signals and Timers](lsp/a-files-processes-signals-and-timers.md)
+* [A - Files, Processes and Signals](lsp/a-files-processes-signals-and-timers.md)
 * [B - Threads and IPC](lsp/b-threads-and-ipc.md)
 * [C - Security and Isolation API](lsp/c-security-and-isolation-api.md)
 * [D - Shared Libraries](lsp/d-shared-libraries.md)

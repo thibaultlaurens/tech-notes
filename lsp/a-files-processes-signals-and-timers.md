@@ -1,6 +1,8 @@
-# A - Files, Processes, Signals and Timers
+---
+description: Michael Kerrisk - man7.org
+---
 
-Michael Kerrisk - man7.org
+# A - Files, Processes and Signals
 
 ## 1. Course Introduction
 
