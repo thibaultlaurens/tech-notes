@@ -63,15 +63,19 @@ Big O establishes **worst-case run time**: A simple / linear search algorithm \(
 
 Some common Big O run times sorted from fastest to slowest:
 
-* **O\(log n\)** also known as _log time_ \(ex: binary search\)
-* **O\(n\)**: also known as _linear time_ \(ex: simple search\)
-* **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
-* **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
-* **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
+- **O\(log n\)** also known as _log time_ \(ex: binary search\)
+- **O\(n\)**: also known as _linear time_ \(ex: simple search\)
+- **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
+- **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
+- **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
 
 ![](../.gitbook/assets/big-o-complexity-chart.jpeg)
 
 ## 2. Selection Sort
+
+### Arrays and Linked Lists
+
+### Selection Sort
 
 ## 3. Recursion
 
@@ -90,4 +94,3 @@ Some common Big O run times sorted from fastest to slowest:
 ## 10. K-nearest neighbors
 
 ## 11. Where to go next
-
