@@ -75,7 +75,71 @@ Some common Big O run times sorted from fastest to slowest:
 
 ### Arrays and Linked Lists
 
+Both Arrays and Linked Lists are **linear data structures**, but they have some advantages and disadvantages over each other.
+
+Arrays:
+
+- **Index based** data structure where each elements are associated with an index.
+- They are stored in **sequential** memory location.
+- They have a **fixed size**, specifided during declaration and allocated during compile time.
+- Elements are accessed **directly** (specifying the element index), at **O(1)**.
+- Insertion and deletion is relatively slow (as shifting is required), at **O(n)**.
+
+Linked Lists:
+
+- **Reference based** data structure where each node consists of the data and the reference to the next element.
+- They are stored **randomly** in memory.
+- They have a **variable** numbere of elements and grow and shrink during run time.
+- Elements are accessed **sequentially** (traversing the node, starting from the first one) at **O(n)**.
+- Insertion and deletion is fast, at **O(1)**.
+
 ### Selection Sort
+
+Selection sort is a simple **in-place comparison-based** sorting algorithm. It has **O(n^2)** complexity. The list is divided into two parts, the sorted part at the left end and the unsorted part at the right end. Initially, the sorted part is empty and the unsorted part is the entire list.
+
+The smallest element is selected from the unsorted array and **swapped** with the leftmost element, and that element becomes a part of the sorted array. This process continues moving unsorted array boundary by one element to the right.
+
+Example with python 3:
+
+```python
+def selection_sort(list):
+    print(f"Selection sort on: {list}")
+
+    # range over all the array indexes
+    for i in range(len(list)):
+        min_idx = i
+
+        # find the index of the smallest element in the remaining array
+        for j in range(i+1, len(list)):
+            if list[j] < list[min_idx]:
+                min_idx = j
+
+        # swap the smallest element with the current one
+        list[i], list[min_idx] = list[min_idx], list[i]
+        print(f"Swapped {list[i]} with {list[min_idx]}: {list}")
+
+unsorted_list = [9,6,5,8,4,2,1,3,7]
+selection_sort(unsorted_list)
+```
+
+Output:
+
+```text
+Selection sort on: [9, 6, 5, 8, 4, 2, 1, 3, 7]
+Swapped 1 with 9: [1, 6, 5, 8, 4, 2, 9, 3, 7]
+Swapped 2 with 6: [1, 2, 5, 8, 4, 6, 9, 3, 7]
+Swapped 3 with 5: [1, 2, 3, 8, 4, 6, 9, 5, 7]
+Swapped 4 with 8: [1, 2, 3, 4, 8, 6, 9, 5, 7]
+Swapped 5 with 8: [1, 2, 3, 4, 5, 6, 9, 8, 7]
+Swapped 6 with 6: [1, 2, 3, 4, 5, 6, 9, 8, 7]
+Swapped 7 with 9: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+Swapped 8 with 8: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+Swapped 9 with 9: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+{% hint style="info" %}
+Note: another simple sort algorithm is **insertion sort**. Insertion sort works by taking elements from the list one by one and inserting them in their correct position into **a new** sorted list. Insertion sort is generally faster than selection sort in practice, due to fewer comparisons and good performance on almost-sorted data, and thus is preferred in practice, but selection sort uses fewer writes, and thus is used when write performance is a limiting factor.
+{% endhint %}
 
 ## 3. Recursion
 
