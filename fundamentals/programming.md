@@ -1,13 +1,12 @@
-# Programming
+# Software Programming
 
 ## Compilers 
 
 * Assembly
-* Compiler construction brookes course
 * C and LSP
 * OS
 
-## Data structures
+## Algorithms & Data structures
 
 * grokking
 * [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)

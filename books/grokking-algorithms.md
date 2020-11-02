@@ -63,11 +63,11 @@ Big O establishes **worst-case run time**: A simple / linear search algorithm \(
 
 Some common Big O run times sorted from fastest to slowest:
 
-- **O\(log n\)** also known as _log time_ \(ex: binary search\)
-- **O\(n\)**: also known as _linear time_ \(ex: simple search\)
-- **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
-- **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
-- **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
+* **O\(log n\)** also known as _log time_ \(ex: binary search\)
+* **O\(n\)**: also known as _linear time_ \(ex: simple search\)
+* **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
+* **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
+* **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
 
 ![](../.gitbook/assets/big-o-complexity-chart.jpeg)
 
@@ -79,23 +79,23 @@ Both Arrays and Linked Lists are **linear data structures**, but they have some 
 
 Arrays:
 
-- **Index based** data structure where each elements are associated with an index.
-- They are stored in **sequential** memory location.
-- They have a **fixed size**, specifided during declaration and allocated during compile time.
-- Elements are accessed **directly** (specifying the element index), at **O(1)**.
-- Insertion and deletion is relatively slow (as shifting is required), at **O(n)**.
+* **Index based** data structure where each elements are associated with an index.
+* They are stored in **sequential** memory location.
+* They have a **fixed size**, specifided during declaration and allocated during compile time.
+* Elements are accessed **directly** \(specifying the element index\), at **O\(1\)**.
+* Insertion and deletion is relatively slow \(as shifting is required\), at **O\(n\)**.
 
 Linked Lists:
 
-- **Reference based** data structure where each node consists of the data and the reference to the next element.
-- They are stored **randomly** in memory.
-- They have a **variable** numbere of elements and grow and shrink during run time.
-- Elements are accessed **sequentially** (traversing the node, starting from the first one) at **O(n)**.
-- Insertion and deletion is fast, at **O(1)**.
+* **Reference based** data structure where each node consists of the data and the reference to the next element.
+* They are stored **randomly** in memory.
+* They have a **variable** numbere of elements and grow and shrink during run time.
+* Elements are accessed **sequentially** \(traversing the node, starting from the first one\) at **O\(n\)**.
+* Insertion and deletion is fast, at **O\(1\)**.
 
 ### Selection Sort
 
-Selection sort is a simple **in-place comparison-based** sorting algorithm. It has **O(n^2)** complexity. The list is divided into two parts, the sorted part at the left end and the unsorted part at the right end. Initially, the sorted part is empty and the unsorted part is the entire list.
+Selection sort is a simple **in-place comparison-based** sorting algorithm. It has **O\(n^2\)** complexity. The list is divided into two parts, the sorted part at the left end and the unsorted part at the right end. Initially, the sorted part is empty and the unsorted part is the entire list.
 
 The smallest element is selected from the unsorted array and **swapped** with the leftmost element, and that element becomes a part of the sorted array. This process continues moving unsorted array boundary by one element to the right.
 
@@ -145,7 +145,7 @@ Note: another simple sort algorithm is **insertion sort**. Insertion sort works 
 
 ### Recursion
 
-A program is called **recursive** when an entity calls itself (vs an **iterative** program when there is a loop).
+A program is called **recursive** when an entity calls itself \(vs an **iterative** program when there is a loop\).
 
 To avoid infinite loop when writting a recursive function, we have to tell it when to stop recursing, it's the **base case**. The **recursive case** is when the function actually calls itself.
 
@@ -165,10 +165,10 @@ countdown(10)
 
 A **Stack** is an **abstract data type** that serves as a collection of elements, with two main principal operations:
 
-- **Push**: Add an element to the collection
-- **Pop**: Remove the most recently added element that was not yet removed.
+* **Push**: Add an element to the collection
+* **Pop**: Remove the most recently added element that was not yet removed.
 
-The order in which elements come off a stack gives rise to its alternative name, **LIFO** (last in, first out). Additionally, a **peek** operation may give access to the top without modifying the stack.
+The order in which elements come off a stack gives rise to its alternative name, **LIFO** \(last in, first out\). Additionally, a **peek** operation may give access to the top without modifying the stack.
 
 Considered as a linear data structure, or more abstractly a sequential collection, the push and pop operations occur only at **one end of the structure**, referred to as the **top** of the stack. This data structure makes it possible to implement a stack as a singly linked list and a pointer to the top element. A stack may be implemented to have a **bounded capacity**. If the stack is full and does not contain enough space to accept an entity to be pushed, the stack is then considered to be in an **overflow** state.
 
@@ -178,10 +178,10 @@ A **call stack** is a stack data structure that stores information about the act
 
 The call stack is made up of **stack frames**, one for each method call. A stack frame usually stores:
 
-- Local variables
-- Arguments passed into the method
-- Information about the caller's stack frame
-- The return address: what the program should do after the function returns (i.e.: where it should "return to").
+* Local variables
+* Arguments passed into the method
+* Information about the caller's stack frame
+* The return address: what the program should do after the function returns \(i.e.: where it should "return to"\).
 
 ![](../.gitbook/assets/call-stack.png)
 
@@ -189,7 +189,7 @@ Each method call creates its own stack frame, taking up space on the call stack.
 
 ### Tail recursion
 
-A recursive function is **tail recursive** when recursive call is the last thing executed by the function. Modern compilers do **tail call elimination** to optimize the tail recursive code. The idea used by compilers to optimize tail-recursive functions is simple: since the recursive call is the last statement, there is nothing left to do in the current function, so saving the current function’s stack frame is of no use. Tail call elimination reduces **space complexity** of recursion **from O(N) to O(1)**. As function call is eliminated, no new stack frames are created and the function is executed in **constant memory space**.
+A recursive function is **tail recursive** when recursive call is the last thing executed by the function. Modern compilers do **tail call elimination** to optimize the tail recursive code. The idea used by compilers to optimize tail-recursive functions is simple: since the recursive call is the last statement, there is nothing left to do in the current function, so saving the current function’s stack frame is of no use. Tail call elimination reduces **space complexity** of recursion **from O\(N\) to O\(1\)**. As function call is eliminated, no new stack frames are created and the function is executed in **constant memory space**.
 
 Exemple of a non-tail recursive function with python 3:
 
@@ -200,7 +200,7 @@ def fact(n):
     return n * fact(n-1)
 ```
 
-The value returned by fact(n-1) is used in fact(n), so the call to fact(n-1) is not the last thing done by fact(n). A tail recursive function would use one more argument to accumulate the factorial value:
+The value returned by fact\(n-1\) is used in fact\(n\), so the call to fact\(n-1\) is not the last thing done by fact\(n\). A tail recursive function would use one more argument to accumulate the factorial value:
 
 ```python
 def fact(n, acc = 1):
@@ -221,7 +221,7 @@ Python interpreters don't support tail call optimization, this is for demonstrat
 Euclid's algorithm
 {% endhint %}
 
-- For a recursive function call involving an array, the best case is often an empty array or an array with one element.
+* For a recursive function call involving an array, the best case is often an empty array or an array with one element.
 
 {% hint style="info" %}
 Sneak peak into functional programming
@@ -242,3 +242,4 @@ Sneak peak into functional programming
 ## 10. K-nearest neighbors
 
 ## 11. Where to go next
+

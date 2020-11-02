@@ -2,19 +2,22 @@
 
 * [HOME](README.md)
 
-## Notes
+## Fundamentals
 
-* [Programming](notes/programming.md)
-* [Data](notes/data.md)
-* [Network](notes/network.md)
-* [Security](notes/security.md)
-* [Operations](notes/operations.md)
-* [Systems](notes/systems.md)
-* [Management](notes/management.md)
+* [Compiler Design](fundamentals/compiler-design.md)
+* [Software Programming](fundamentals/programming.md)
+* [Database Management System](fundamentals/data.md)
+* [Networking](fundamentals/network.md)
+* [Security & Cryptography](fundamentals/security.md)
+* [Infrastructure & Operations](fundamentals/operations.md)
+* [Systems design](fundamentals/systems.md)
+* [Distributed Systems](fundamentals/distributed-systems.md)
+* [Software Engineering](fundamentals/management.md)
 
 ## Books
 
 * [Grokking Algorithms](books/grokking-algorithms.md)
+* [Designing Data-Intensive Applications](books/designing-data-intensive-applications.md)
 
 ## Conferences
 
