@@ -18,6 +18,7 @@
 
 * [Grokking Algorithms](books/grokking-algorithms.md)
 * [Designing Data-Intensive Applications](books/designing-data-intensive-applications.md)
+* [Site Reliability Engineering](books/site-reliability-engineering.md)
 
 ## Conferences
 
