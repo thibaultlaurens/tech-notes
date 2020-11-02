@@ -2,7 +2,7 @@
 description: Michael Kerrisk - man7.org
 ---
 
-# B - Threads and IPC
+# Threads and IPC
 
 ## 23. Threads: Introduction
 

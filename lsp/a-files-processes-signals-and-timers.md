@@ -2,7 +2,7 @@
 description: Michael Kerrisk - man7.org
 ---
 
-# A - Files, Processes and Signals
+# Files, Processes and Signals
 
 ## 1. Course Introduction
 

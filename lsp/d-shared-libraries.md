@@ -2,7 +2,7 @@
 description: Michael Kerrisk - man7.org
 ---
 
-# D - Shared Libraries
+# Shared Libraries
 
 ## 55. Fundamentals of Shared Libraries
 
