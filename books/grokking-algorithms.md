@@ -143,7 +143,91 @@ Note: another simple sort algorithm is **insertion sort**. Insertion sort works 
 
 ## 3. Recursion
 
+### Recursion
+
+A program is called **recursive** when an entity calls itself (vs an **iterative** program when there is a loop).
+
+To avoid infinite loop when writting a recursive function, we have to tell it when to stop recursing, it's the **base case**. The **recursive case** is when the function actually calls itself.
+
+Example with python 3:
+
+```python
+def countdown(i):
+    print(i)
+    if i <= 1:      # Base case
+        return
+    countdown(i-1)  # Recursive case
+
+countdown(10)
+```
+
+### The stack
+
+A **Stack** is an **abstract data type** that serves as a collection of elements, with two main principal operations:
+
+- **Push**: Add an element to the collection
+- **Pop**: Remove the most recently added element that was not yet removed.
+
+The order in which elements come off a stack gives rise to its alternative name, **LIFO** (last in, first out). Additionally, a **peek** operation may give access to the top without modifying the stack.
+
+Considered as a linear data structure, or more abstractly a sequential collection, the push and pop operations occur only at **one end of the structure**, referred to as the **top** of the stack. This data structure makes it possible to implement a stack as a singly linked list and a pointer to the top element. A stack may be implemented to have a **bounded capacity**. If the stack is full and does not contain enough space to accept an entity to be pushed, the stack is then considered to be in an **overflow** state.
+
+### The call stack
+
+A **call stack** is a stack data structure that stores information about the active subroutines of a computer program. A subroutine is a sequence of program instructions that perform a specific task, packaged as a unit and can be used in programs wherever the task should be performed. Think of a subroutine as a method or a function. The main purpose of the call stack is to keep track of the point to which each active subroutine should return control when it finishes executing.
+
+The call stack is made up of **stack frames**, one for each method call. A stack frame usually stores:
+
+- Local variables
+- Arguments passed into the method
+- Information about the caller's stack frame
+- The return address: what the program should do after the function returns (i.e.: where it should "return to").
+
+![](../.gitbook/assets/call-stack.png)
+
+Each method call creates its own stack frame, taking up space on the call stack. That's important because it can impact the **space complexity** of an algorithm. Especially when we use **recursion**.
+
+### Tail recursion
+
+A recursive function is **tail recursive** when recursive call is the last thing executed by the function. Modern compilers do **tail call elimination** to optimize the tail recursive code. The idea used by compilers to optimize tail-recursive functions is simple: since the recursive call is the last statement, there is nothing left to do in the current function, so saving the current function’s stack frame is of no use. Tail call elimination reduces **space complexity** of recursion **from O(N) to O(1)**. As function call is eliminated, no new stack frames are created and the function is executed in **constant memory space**.
+
+Exemple of a non-tail recursive function with python 3:
+
+```python
+def fact(n):
+    if (n == 0):
+        return 1
+    return n * fact(n-1)
+```
+
+The value returned by fact(n-1) is used in fact(n), so the call to fact(n-1) is not the last thing done by fact(n). A tail recursive function would use one more argument to accumulate the factorial value:
+
+```python
+def fact(n, acc = 1):
+    if (n == 0):
+        return acc
+    return fact(n - 1, n * acc)
+```
+
+{% hint style="info" %}
+Python interpreters don't support tail call optimization, this is for demonstration purpose only.
+{% endhint %}
+
 ## 4. Quicksort
+
+### Divide and Conquer
+
+{% hint style="info" %}
+Euclid's algorithm
+{% endhint %}
+
+- For a recursive function call involving an array, the best case is often an empty array or an array with one element.
+
+{% hint style="info" %}
+Sneak peak into functional programming
+{% endhint %}
+
+### Quicksort
 
 ## 5. Hash Tables
 
