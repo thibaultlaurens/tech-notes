@@ -14,10 +14,18 @@
 
 ## Programming Paradigms
 
+## Best practices
+
+{% embed url="https://12factor.net/" %}
+
+
+
 ## Languages
 
 * go
 * python
 * erlang
 * js
+
+
 

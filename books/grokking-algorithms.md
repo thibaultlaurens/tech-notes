@@ -63,11 +63,11 @@ Big O establishes **worst-case run time**: A simple / linear search algorithm \(
 
 Some common Big O run times sorted from fastest to slowest:
 
-- **O\(log n\)** also known as _log time_ \(ex: binary search\)
-- **O\(n\)**: also known as _linear time_ \(ex: simple search\)
-- **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
-- **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
-- **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
+* **O\(log n\)** also known as _log time_ \(ex: binary search\)
+* **O\(n\)**: also known as _linear time_ \(ex: simple search\)
+* **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
+* **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
+* **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
 
 ![](../.gitbook/assets/big-o-complexity-chart.jpeg)
 
@@ -79,19 +79,19 @@ Both Arrays and Linked Lists are **linear data structures**, but they have some 
 
 Arrays:
 
-- **Index based** data structure where each elements are associated with an index.
-- They are stored in **sequential** memory location.
-- They have a **fixed size**, specifided during declaration and allocated during compile time.
-- Elements are accessed **directly** \(specifying the element index\), at **O\(1\)**.
-- Insertion and deletion is relatively slow \(as shifting is required\), at **O\(n\)**.
+* **Index based** data structure where each elements are associated with an index.
+* They are stored in **sequential** memory location.
+* They have a **fixed size**, specifided during declaration and allocated during compile time.
+* Elements are accessed **directly** \(specifying the element index\), at **O\(1\)**.
+* Insertion and deletion is relatively slow \(as shifting is required\), at **O\(n\)**.
 
 Linked Lists:
 
-- **Reference based** data structure where each node consists of the data and the reference to the next element.
-- They are stored **randomly** in memory.
-- They have a **variable** numbere of elements and grow and shrink during run time.
-- Elements are accessed **sequentially** \(traversing the node, starting from the first one\) at **O\(n\)**.
-- Insertion and deletion is fast, at **O\(1\)**.
+* **Reference based** data structure where each node consists of the data and the reference to the next element.
+* They are stored **randomly** in memory.
+* They have a **variable** numbere of elements and grow and shrink during run time.
+* Elements are accessed **sequentially** \(traversing the node, starting from the first one\) at **O\(n\)**.
+* Insertion and deletion is fast, at **O\(1\)**.
 
 ### Selection Sort
 
@@ -165,8 +165,8 @@ countdown(10)
 
 A **Stack** is an **abstract data type** that serves as a collection of elements, with two main principal operations:
 
-- **Push**: Add an element to the collection
-- **Pop**: Remove the most recently added element that was not yet removed.
+* **Push**: Add an element to the collection
+* **Pop**: Remove the most recently added element that was not yet removed.
 
 The order in which elements come off a stack gives rise to its alternative name, **LIFO** \(last in, first out\). Additionally, a **peek** operation may give access to the top without modifying the stack.
 
@@ -178,10 +178,10 @@ A **call stack** is a stack data structure that stores information about the act
 
 The call stack is made up of **stack frames**, one for each method call. A stack frame usually stores:
 
-- Local variables
-- Arguments passed into the method
-- Information about the caller's stack frame
-- The return address: what the program should do after the function returns \(i.e.: where it should "return to"\).
+* Local variables
+* Arguments passed into the method
+* Information about the caller's stack frame
+* The return address: what the program should do after the function returns \(i.e.: where it should "return to"\).
 
 ![](../.gitbook/assets/call-stack.png)
 
@@ -221,14 +221,14 @@ Python interpreters don't support tail call optimization, this is for demonstrat
 
 Divide-and-conquer algorithms have three parts:
 
-- **Divide the problem** into a number of subproblems that are smaller instances of the same problem.
-- **Conquer the subproblems** by solving them recursively. If they are small enough, solve the subproblems as base cases.
-- **Combine the solutions** to the subproblems into the solution for the original problem.
+* **Divide the problem** into a number of subproblems that are smaller instances of the same problem.
+* **Conquer the subproblems** by solving them recursively. If they are small enough, solve the subproblems as base cases.
+* **Combine the solutions** to the subproblems into the solution for the original problem.
 
 ![](../.gitbook/assets/divide-and-conquer.png)
 
 {% hint style="info" %}
-The **Euclidean algorithm**, to compute the greatest common divisor (**GCD**) of two numbers by reducing the numbers to smaller and smaller equivalent subproblems, is one of the ancient algorithm using this technique (which dates to several centuries BC). Some authors consider that the name "divide and conquer" should be used only when each problem may generate two or more subproblems. The name **decrease and conquer** has been proposed instead for the single-subproblem class.
+The **Euclidean algorithm**, to compute the greatest common divisor \(**GCD**\) of two numbers by reducing the numbers to smaller and smaller equivalent subproblems, is one of the ancient algorithm using this technique \(which dates to several centuries BC\). Some authors consider that the name "divide and conquer" should be used only when each problem may generate two or more subproblems. The name **decrease and conquer** has been proposed instead for the single-subproblem class.
 {% endhint %}
 
 Using Divide and Conquer to find Fibonacci numbers:
@@ -239,7 +239,7 @@ In mathematics, the **Fibonacci numbers**, commonly denoted Fn, form a sequence,
 
 Let's look at the Fibonacci numbers, starting with a list `[0, 1]`:
 
-```
+```text
 # [0, 1]
 0 + 1 = 1       # 3rd fib number
 # [0, 1, 1]
@@ -247,7 +247,6 @@ Let's look at the Fibonacci numbers, starting with a list `[0, 1]`:
 # [0, 1, 1, 2]
 2 + 1 = 3       # 5th fib number
 # [0, 1, 1, 2, 3]
-
 ```
 
 The first thing when designing a divide and conquer algorithm is to design the recurrence. The recurrence always starts with a base case:
@@ -262,7 +261,7 @@ def f(n):
 The best case is often 0 or 1 when working with numbers and an empty array or an array with one element when working with arrays.
 {% endhint %}
 
-This base case will give us the 1st (n = 0) and the 2nd (n = 1) fibonacci number. Next, to calculate the 3rd number, we will do 2nd + 1st number, in other word (2 - 1) + (1 - 1). From now on, we want to add the last 2 Fibonacci numbers together:
+This base case will give us the 1st \(n = 0\) and the 2nd \(n = 1\) fibonacci number. Next, to calculate the 3rd number, we will do 2nd + 1st number, in other word \(2 - 1\) + \(1 - 1\). From now on, we want to add the last 2 Fibonacci numbers together:
 
 ```python
 def f(n):
@@ -287,3 +286,4 @@ def f(n):
 ## 10. K-nearest neighbors
 
 ## 11. Where to go next
+
