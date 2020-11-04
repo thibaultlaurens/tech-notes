@@ -4,15 +4,15 @@
 
 ## Fundamentals
 
-* [Compiler Design](fundamentals/compiler-design.md)
+* [Software Engineering](fundamentals/management.md)
 * [Software Programming](fundamentals/programming.md)
+* [Compiler Design](fundamentals/compiler-design.md)
 * [Database Management System](fundamentals/data.md)
 * [Networking](fundamentals/network.md)
 * [Security & Cryptography](fundamentals/security.md)
 * [Infrastructure & Operations](fundamentals/operations.md)
 * [Systems design](fundamentals/systems.md)
 * [Distributed Systems](fundamentals/distributed-systems.md)
-* [Software Engineering](fundamentals/management.md)
 
 ## Books
 
