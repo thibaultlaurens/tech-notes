@@ -63,11 +63,11 @@ Big O establishes **worst-case run time**: A simple / linear search algorithm \(
 
 Some common Big O run times sorted from fastest to slowest:
 
-* **O\(log n\)** also known as _log time_ \(ex: binary search\)
-* **O\(n\)**: also known as _linear time_ \(ex: simple search\)
-* **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
-* **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
-* **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
+- **O\(log n\)** also known as _log time_ \(ex: binary search\)
+- **O\(n\)**: also known as _linear time_ \(ex: simple search\)
+- **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
+- **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
+- **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
 
 ![](../.gitbook/assets/big-o-complexity-chart.jpeg)
 
@@ -79,19 +79,19 @@ Both Arrays and Linked Lists are **linear data structures**, but they have some 
 
 Arrays:
 
-* **Index based** data structure where each elements are associated with an index.
-* They are stored in **sequential** memory location.
-* They have a **fixed size**, specifided during declaration and allocated during compile time.
-* Elements are accessed **directly** \(specifying the element index\), at **O\(1\)**.
-* Insertion and deletion is relatively slow \(as shifting is required\), at **O\(n\)**.
+- **Index based** data structure where each elements are associated with an index.
+- They are stored in **sequential** memory location.
+- They have a **fixed size**, specifided during declaration and allocated during compile time.
+- Elements are accessed **directly** \(specifying the element index\), at **O\(1\)**.
+- Insertion and deletion is relatively slow \(as shifting is required\), at **O\(n\)**.
 
 Linked Lists:
 
-* **Reference based** data structure where each node consists of the data and the reference to the next element.
-* They are stored **randomly** in memory.
-* They have a **variable** numbere of elements and grow and shrink during run time.
-* Elements are accessed **sequentially** \(traversing the node, starting from the first one\) at **O\(n\)**.
-* Insertion and deletion is fast, at **O\(1\)**.
+- **Reference based** data structure where each node consists of the data and the reference to the next element.
+- They are stored **randomly** in memory.
+- They have a **variable** numbere of elements and grow and shrink during run time.
+- Elements are accessed **sequentially** \(traversing the node, starting from the first one\) at **O\(n\)**.
+- Insertion and deletion is fast, at **O\(1\)**.
 
 ### Selection Sort
 
@@ -165,8 +165,8 @@ countdown(10)
 
 A **Stack** is an **abstract data type** that serves as a collection of elements, with two main principal operations:
 
-* **Push**: Add an element to the collection
-* **Pop**: Remove the most recently added element that was not yet removed.
+- **Push**: Add an element to the collection
+- **Pop**: Remove the most recently added element that was not yet removed.
 
 The order in which elements come off a stack gives rise to its alternative name, **LIFO** \(last in, first out\). Additionally, a **peek** operation may give access to the top without modifying the stack.
 
@@ -178,10 +178,10 @@ A **call stack** is a stack data structure that stores information about the act
 
 The call stack is made up of **stack frames**, one for each method call. A stack frame usually stores:
 
-* Local variables
-* Arguments passed into the method
-* Information about the caller's stack frame
-* The return address: what the program should do after the function returns \(i.e.: where it should "return to"\).
+- Local variables
+- Arguments passed into the method
+- Information about the caller's stack frame
+- The return address: what the program should do after the function returns \(i.e.: where it should "return to"\).
 
 ![](../.gitbook/assets/call-stack.png)
 
@@ -221,9 +221,9 @@ Python interpreters don't support tail call optimization, this is for demonstrat
 
 Divide-and-conquer algorithms have three parts:
 
-* **Divide the problem** into a number of subproblems that are smaller instances of the same problem.
-* **Conquer the subproblems** by solving them recursively. If they are small enough, solve the subproblems as base cases.
-* **Combine the solutions** to the subproblems into the solution for the original problem.
+- **Divide the problem** into a number of subproblems that are smaller instances of the same problem.
+- **Conquer the subproblems** by solving them recursively. If they are small enough, solve the subproblems as base cases.
+- **Combine the solutions** to the subproblems into the solution for the original problem.
 
 ![](../.gitbook/assets/divide-and-conquer.png)
 
@@ -271,6 +271,73 @@ def f(n):
         return f(n - 1) + f(n - 2)
 ```
 
+### Merge Sort
+
+Merge Sort is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.
+
+Example with python 3:
+
+```python
+def merge_sort(arr):
+    input = arr[:]
+
+    # base caae
+    if len(arr) <= 1:
+        return arr
+
+    # divide the array into two halves
+    mid = len(arr) // 2
+    left = arr[:mid]
+    right = arr[mid:]
+    print(f"Divided {arr} into {left} and {right}")
+
+    # sort both halves
+    merge_sort(left)
+    merge_sort(right)
+
+    # merge data from sorted arrays left and rights
+    i = j = k = 0
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            arr[k] = left[i]
+            i += 1
+        else:
+            arr[k] = right[j]
+            j += 1
+        k += 1
+
+    # Checking if any element was left
+    while i < len(left):
+        arr[k] = left[i]
+        i += 1
+        k += 1
+    while j < len(right):
+        arr[k] = right[j]
+        j += 1
+        k += 1
+
+    print(f"Merged {left} and {right} into {arr}")
+
+
+unsorted_list = [9, 6, 5, 8, 4, 2]
+merge_sort(unsorted_list)
+```
+
+Output:
+
+```text
+Divided [9, 6, 5, 8, 4, 2] into [9, 6, 5] and [8, 4, 2]
+Divided [9, 6, 5] into [9] and [6, 5]
+Divided [6, 5] into [6] and [5]
+Merged [6] and [5] into [5, 6]
+Merged [9] and [5, 6] into [5, 6, 9]
+Divided [8, 4, 2] into [8] and [4, 2]
+Divided [4, 2] into [4] and [2]
+Merged [4] and [2] into [2, 4]
+Merged [8] and [2, 4] into [2, 4, 8]
+Merged [5, 6, 9] and [2, 4, 8] into [2, 4, 5, 6, 8, 9]
+```
+
 ### Quicksort
 
 ## 5. Hash Tables
@@ -286,4 +353,3 @@ def f(n):
 ## 10. K-nearest neighbors
 
 ## 11. Where to go next
-
