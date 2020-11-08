@@ -405,6 +405,35 @@ The **constant factor** in the big O notation is used to compare algorithms with
 
 ## 5. Hash Tables
 
+- collisions are bad
+- hash tables are good at search, insert and delete
+- hash tables are good at modeling relationships from item to another
+- load factor > 0.7 -> resize the hash table
+- hash tables are good for caching data
+- hash tables are good for catching duplicates
+
+A hash table (**hash map**) is a data structure that implements an **associative array abstract data type**, a structure that can map keys to values. A hash table uses a **hash function** to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored.
+
+### Hash functions
+
+Properties of a hashing function:
+
+- **Uniformity**: The hash function should map the expected inputs as evenly as possible over its output range.
+- **Efficiency**: The use of a hash function is a trade off between search time and data storage space. A hash table can be very large, very sparse, but very fast.
+- **Deterministic**: For a given input value it must always generate the same hash value.
+
+### Collisions
+
+Ideally, the hash function will assign each key to a unique bucket, but most hash table designs employ an imperfect hash function, which might cause hash **collisions** where the hash function generates the same index for more than one key. Such collisions are typically accommodated in some way. # TODO: more info
+
+### Performance
+
+In a well-dimensioned hash table, the average cost (number of instructions) for each lookup is independent of the number of elements stored in the table. Many hash table designs also allow arbitrary insertions and deletions of key-value pairs, at constant average cost per operation.
+
+### Use cases
+
+In many situations, hash tables turn out to be on average more efficient than search trees or any other table lookup structure. For this reason, they are widely used in many kinds of computer software, particularly for associative arrays, database indexing, caches, and sets.
+
 ## 6. Breadth-first Search
 
 ## 7. Dijkstra’s algorithm
