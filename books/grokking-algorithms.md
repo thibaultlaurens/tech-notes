@@ -99,6 +99,10 @@ Selection sort is a simple **in-place comparison-based** sorting algorithm. It h
 
 The smallest element is selected from the unsorted array and **swapped** with the leftmost element, and that element becomes a part of the sorted array. This process continues moving unsorted array boundary by one element to the right.
 
+{% hint style="info" %}
+**In-place** means that the algorithm does **not use extra space for manipulating the input** but may require a small though nonconstant extra space for its operation. Usually, this space is O(log n), though sometimes anything in o(n) (Smaller than linear) is allowed.
+{% endhint %}
+
 Example with python 3:
 
 ```python
@@ -273,14 +277,12 @@ def f(n):
 
 ### Merge Sort
 
-Merge Sort is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves.
+**Merge Sort**, invented by John von Neumann in 1945, is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves. It can be expressed as **T(n) = 2T(n/2) + θ(n)** and is **θ(n Log n)** in all 3 cases (**worst, average and best case**) as merge sort always divides the array into two halves and takes linear time to merge two halves.
 
 Example with python 3:
 
 ```python
 def merge_sort(arr):
-    input = arr[:]
-
     # base caae
     if len(arr) <= 1:
         return arr
@@ -319,8 +321,8 @@ def merge_sort(arr):
     print(f"Merged {left} and {right} into {arr}")
 
 
-unsorted_list = [9, 6, 5, 8, 4, 2]
-merge_sort(unsorted_list)
+unsorted_arr = [9, 6, 5, 8, 4, 2]
+merge_sort(unsorted_arr)
 ```
 
 Output:
@@ -338,7 +340,68 @@ Merged [8] and [2, 4] into [2, 4, 8]
 Merged [5, 6, 9] and [2, 4, 8] into [2, 4, 5, 6, 8, 9]
 ```
 
+{% hint style="info" %}
+Most implementations of merge sort produce a **stable sort**: objects with equal keys appear in the same order in sorted output as they appear in the input array to be sorted.
+{% endhint %}
+
 ### Quicksort
+
+Quicksort is another divide-and-conquer algorithm. It works by selecting a **pivot** element from the array and partitioning the other elements into two sub-arrays, according to whether they are **less than or greater than the pivot**. The sub-arrays are then sorted recursively. This can be done in-place, requiring small additional amounts of memory to perform the sorting. However, efficient implementations of Quicksort are not a stable sort.
+
+The way that quicksort uses divide-and-conquer is a little different from how merge sort does. In merge sort, the divide step does hardly anything, and all the real work happens in the combine step. Quicksort is the opposite: **all the real work happens in the divide step**.
+
+Its **worst-case** running time is as bad as selection sort and insertion sort: **O(n^2)**. But its **average-case** running time is as good as merge sort: **O(n log n)**.
+
+```python
+def partition(arr, start, end):
+    # pick the pivot as the last element of arr
+    pivot = arr[end]
+    # track the future index of pivot
+    i = start
+
+    for j in range(start, end):
+        # if current element is smaller than the pivot
+        if arr[j] < pivot:
+            arr[i], arr[j] = arr[j], arr[i]
+            i += 1
+
+    # put the pivot at its right place in arr
+    arr[i], arr[end] = arr[end], arr[i]
+    return i
+
+def quick_sort(arr, start, end):
+    # base case handles arr of 1 element
+    if start >= end:
+        return
+
+    # put pivot at the right place in arr
+    input = arr[start:end+1]
+    pivot = partition(arr, start, end)
+    print(f"Partition of {input} done with pivot {arr[pivot]}: array is now {arr}")
+
+    # sort elements before and after the pivot
+    quick_sort(arr, start, pivot - 1)
+    quick_sort(arr, pivot + 1, end)
+
+
+unsorted_arr = [7, 2, 4, 1, 8, 5]
+quick_sort(unsorted_arr, 0, len(unsorted_arr) - 1)
+```
+
+Output:
+
+```text
+Partition of [7, 2, 4, 1, 8, 5] done with pivot 5: array is now [2, 4, 1, 5, 8, 7]
+Partition of [2, 4, 1] done with pivot 1: array is now [1, 4, 2, 5, 8, 7]
+Partition of [4, 2] done with pivot 2: array is now [1, 2, 4, 5, 8, 7]
+Partition of [8, 7] done with pivot 7: array is now [1, 2, 4, 5, 7, 8]
+```
+
+{% hint style="info" %}
+**Pivot selection** is an important part of quick sort. Selecting the first or last element in a nearly sorted or reversed sorted array degrades the performance to **O(n^2)** because all the elements will go to only one partition. Pivot should be chosen **randomly** or by using the **median value of the first, the last, and the middle element** of the array.
+
+The **constant factor** in the big O notation is used to compare algorithms with the same run time. On the average case, let's say quicksort run at **k1 \* n log n** and merge sort at **k2 \* n log n**. k1 is actually smaller than k2, so quicksort would be faster than merge sort on average case, even though it is slower on worst case.
+{% endhint %}
 
 ## 5. Hash Tables
 
