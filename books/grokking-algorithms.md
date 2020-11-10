@@ -436,6 +436,12 @@ In many situations, hash tables turn out to be on average more efficient than se
 
 ## 6. Breadth-first Search
 
+### Queues
+
+### Graphs
+
+### Breadth-first search
+
 ## 7. Dijkstra’s algorithm
 
 ## 8. Greedy algorithms
