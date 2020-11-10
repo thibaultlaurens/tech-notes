@@ -69,7 +69,7 @@
 - Documentation is for users.
 - Don't panic.
 
-Resources:
+:notebook: Resources:
 
 - Tips for writing clear, idiomatic Go code: [Effective Go](https://golang.org/doc/effective_go.html)
 - Common comments made during reviews of Go code: [CodeReviewComments](https://github.com/golang/go/wiki/CodeReviewComments)
@@ -84,4 +84,15 @@ Resources:
 
 ### Python
 
+:notebook: Resources:
+
+- [PEP8](https://www.python.org/dev/peps/pep-0008/)
+- [Google Style Guide](http://google.github.io/styleguide/pyguide.html)
+- [What the f\*ck Python!](https://github.com/satwikkansal/wtfpython)
+
 ### Javascript
+
+:notebook: Resources:
+
+- [ECMAScript 6 features](https://github.com/lukehoban/es6features)
+- [AirBnb style guide](https://github.com/airbnb/javascript).
