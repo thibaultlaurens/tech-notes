@@ -24,9 +24,7 @@
 * [Interface segregation principle](https://en.wikipedia.org/wiki/Interface_segregation_principle): No client should be forced to depend on methods it does not use \(split interfaces that are very large into smaller and more specific ones\).
 * [Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle): High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details \(concrete implementations\) should depend on abstractions.
 
-### Cloud Native Apps
-
-[The twelve-factor app](https://12factor.net/):
+### [The Twelve-Factor App](https://12factor.net/)
 
 * **Codebase**: One codebase tracked in revision control, many deploys
 * **Dependencies**: Explicitly declare and isolate dependencies
