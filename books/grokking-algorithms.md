@@ -63,11 +63,11 @@ Big O establishes **worst-case run time**: A simple / linear search algorithm \(
 
 Some common Big O run times sorted from fastest to slowest:
 
-- **O\(log n\)** also known as _log time_ \(ex: binary search\)
-- **O\(n\)**: also known as _linear time_ \(ex: simple search\)
-- **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
-- **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
-- **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
+* **O\(log n\)** also known as _log time_ \(ex: binary search\)
+* **O\(n\)**: also known as _linear time_ \(ex: simple search\)
+* **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
+* **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
+* **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
 
 ![](../.gitbook/assets/big-o-complexity-chart.jpeg)
 
@@ -79,19 +79,19 @@ Both Arrays and Linked Lists are **linear data structures**, but they have some 
 
 Arrays:
 
-- **Index based** data structure where each elements are associated with an index.
-- They are stored in **sequential** memory location.
-- They have a **fixed size**, specifided during declaration and allocated during compile time.
-- Elements are accessed **directly** \(specifying the element index\), at **O\(1\)**.
-- Insertion and deletion is relatively slow \(as shifting is required\), at **O\(n\)**.
+* **Index based** data structure where each elements are associated with an index.
+* They are stored in **sequential** memory location.
+* They have a **fixed size**, specifided during declaration and allocated during compile time.
+* Elements are accessed **directly** \(specifying the element index\), at **O\(1\)**.
+* Insertion and deletion is relatively slow \(as shifting is required\), at **O\(n\)**.
 
 Linked Lists:
 
-- **Reference based** data structure where each node consists of the data and the reference to the next element.
-- They are stored **randomly** in memory.
-- They have a **variable** numbere of elements and grow and shrink during run time.
-- Elements are accessed **sequentially** \(traversing the node, starting from the first one\) at **O\(n\)**.
-- Insertion and deletion is fast, at **O\(1\)**.
+* **Reference based** data structure where each node consists of the data and the reference to the next element.
+* They are stored **randomly** in memory.
+* They have a **variable** numbere of elements and grow and shrink during run time.
+* Elements are accessed **sequentially** \(traversing the node, starting from the first one\) at **O\(n\)**.
+* Insertion and deletion is fast, at **O\(1\)**.
 
 ### Selection Sort
 
@@ -100,7 +100,7 @@ Selection sort is a simple **in-place comparison-based** sorting algorithm. It h
 The smallest element is selected from the unsorted array and **swapped** with the leftmost element, and that element becomes a part of the sorted array. This process continues moving unsorted array boundary by one element to the right.
 
 {% hint style="info" %}
-**In-place** means that the algorithm does **not use extra space for manipulating the input** but may require a small though nonconstant extra space for its operation. Usually, this space is O(log n), though sometimes anything in o(n) (Smaller than linear) is allowed.
+**In-place** means that the algorithm does **not use extra space for manipulating the input** but may require a small though nonconstant extra space for its operation. Usually, this space is O\(log n\), though sometimes anything in o\(n\) \(Smaller than linear\) is allowed.
 {% endhint %}
 
 Example with python 3:
@@ -169,8 +169,8 @@ countdown(10)
 
 A **Stack** is an **abstract data type** that serves as a collection of elements, with two main principal operations:
 
-- **Push**: Add an element to the collection
-- **Pop**: Remove the most recently added element that was not yet removed.
+* **Push**: Add an element to the collection
+* **Pop**: Remove the most recently added element that was not yet removed.
 
 The order in which elements come off a stack gives rise to its alternative name, **LIFO** \(last in, first out\). Additionally, a **peek** operation may give access to the top without modifying the stack.
 
@@ -182,10 +182,10 @@ A **call stack** is a stack data structure that stores information about the act
 
 The call stack is made up of **stack frames**, one for each method call. A stack frame usually stores:
 
-- Local variables
-- Arguments passed into the method
-- Information about the caller's stack frame
-- The return address: what the program should do after the function returns \(i.e.: where it should "return to"\).
+* Local variables
+* Arguments passed into the method
+* Information about the caller's stack frame
+* The return address: what the program should do after the function returns \(i.e.: where it should "return to"\).
 
 ![](../.gitbook/assets/call-stack.png)
 
@@ -225,9 +225,9 @@ Python interpreters don't support tail call optimization, this is for demonstrat
 
 Divide-and-conquer algorithms have three parts:
 
-- **Divide the problem** into a number of subproblems that are smaller instances of the same problem.
-- **Conquer the subproblems** by solving them recursively. If they are small enough, solve the subproblems as base cases.
-- **Combine the solutions** to the subproblems into the solution for the original problem.
+* **Divide the problem** into a number of subproblems that are smaller instances of the same problem.
+* **Conquer the subproblems** by solving them recursively. If they are small enough, solve the subproblems as base cases.
+* **Combine the solutions** to the subproblems into the solution for the original problem.
 
 ![](../.gitbook/assets/divide-and-conquer.png)
 
@@ -277,7 +277,7 @@ def f(n):
 
 ### Merge Sort
 
-**Merge Sort**, invented by John von Neumann in 1945, is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves. It can be expressed as **T(n) = 2T(n/2) + θ(n)** and is **θ(n Log n)** in all 3 cases (**worst, average and best case**) as merge sort always divides the array into two halves and takes linear time to merge two halves.
+**Merge Sort**, invented by John von Neumann in 1945, is a Divide and Conquer algorithm. It divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves. It can be expressed as **T\(n\) = 2T\(n/2\) + θ\(n\)** and is **θ\(n Log n\)** in all 3 cases \(**worst, average and best case**\) as merge sort always divides the array into two halves and takes linear time to merge two halves.
 
 Example with python 3:
 
@@ -350,7 +350,7 @@ Quicksort is another divide-and-conquer algorithm. It works by selecting a **piv
 
 The way that quicksort uses divide-and-conquer is a little different from how merge sort does. In merge sort, the divide step does hardly anything, and all the real work happens in the combine step. Quicksort is the opposite: **all the real work happens in the divide step**.
 
-Its **worst-case** running time is as bad as selection sort and insertion sort: **O(n^2)**. But its **average-case** running time is as good as merge sort: **O(n log n)**.
+Its **worst-case** running time is as bad as selection sort and insertion sort: **O\(n^2\)**. But its **average-case** running time is as good as merge sort: **O\(n log n\)**.
 
 ```python
 def partition(arr, start, end):
@@ -398,37 +398,37 @@ Partition of [8, 7] done with pivot 7: array is now [1, 2, 4, 5, 7, 8]
 ```
 
 {% hint style="info" %}
-**Pivot selection** is an important part of quick sort. Selecting the first or last element in a nearly sorted or reversed sorted array degrades the performance to **O(n^2)** because all the elements will go to only one partition. Pivot should be chosen **randomly** or by using the **median value of the first, the last, and the middle element** of the array.
+**Pivot selection** is an important part of quick sort. Selecting the first or last element in a nearly sorted or reversed sorted array degrades the performance to **O\(n^2\)** because all the elements will go to only one partition. Pivot should be chosen **randomly** or by using the **median value of the first, the last, and the middle element** of the array.
 
 The **constant factor** in the big O notation is used to compare algorithms with the same run time. On the average case, let's say quicksort run at **k1 \* n log n** and merge sort at **k2 \* n log n**. k1 is actually smaller than k2, so quicksort would be faster than merge sort on average case, even though it is slower on worst case.
 {% endhint %}
 
 ## 5. Hash Tables
 
-- collisions are bad
-- hash tables are good at search, insert and delete
-- hash tables are good at modeling relationships from item to another
-- load factor > 0.7 -> resize the hash table
-- hash tables are good for caching data
-- hash tables are good for catching duplicates
+* collisions are bad
+* hash tables are good at search, insert and delete
+* hash tables are good at modeling relationships from item to another
+* load factor &gt; 0.7 -&gt; resize the hash table
+* hash tables are good for caching data
+* hash tables are good for catching duplicates
 
-A hash table (**hash map**) is a data structure that implements an **associative array abstract data type**, a structure that can map keys to values. A hash table uses a **hash function** to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored.
+A hash table \(**hash map**\) is a data structure that implements an **associative array abstract data type**, a structure that can map keys to values. A hash table uses a **hash function** to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored.
 
 ### Hash functions
 
 Properties of a hashing function:
 
-- **Uniformity**: The hash function should map the expected inputs as evenly as possible over its output range.
-- **Efficiency**: The use of a hash function is a trade off between search time and data storage space. A hash table can be very large, very sparse, but very fast.
-- **Deterministic**: For a given input value it must always generate the same hash value.
+* **Uniformity**: The hash function should map the expected inputs as evenly as possible over its output range.
+* **Efficiency**: The use of a hash function is a trade off between search time and data storage space. A hash table can be very large, very sparse, but very fast.
+* **Deterministic**: For a given input value it must always generate the same hash value.
 
 ### Collisions
 
-Ideally, the hash function will assign each key to a unique bucket, but most hash table designs employ an imperfect hash function, which might cause hash **collisions** where the hash function generates the same index for more than one key. Such collisions are typically accommodated in some way. # TODO: more info
+Ideally, the hash function will assign each key to a unique bucket, but most hash table designs employ an imperfect hash function, which might cause hash **collisions** where the hash function generates the same index for more than one key. Such collisions are typically accommodated in some way. \# TODO: more info
 
 ### Performance
 
-In a well-dimensioned hash table, the average cost (number of instructions) for each lookup is independent of the number of elements stored in the table. Many hash table designs also allow arbitrary insertions and deletions of key-value pairs, at constant average cost per operation.
+In a well-dimensioned hash table, the average cost \(number of instructions\) for each lookup is independent of the number of elements stored in the table. Many hash table designs also allow arbitrary insertions and deletions of key-value pairs, at constant average cost per operation.
 
 ### Use cases
 
@@ -451,3 +451,4 @@ In many situations, hash tables turn out to be on average more efficient than se
 ## 10. K-nearest neighbors
 
 ## 11. Where to go next
+
