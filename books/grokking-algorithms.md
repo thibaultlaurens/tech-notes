@@ -63,11 +63,11 @@ Big O establishes **worst-case run time**: A simple / linear search algorithm \(
 
 Some common Big O run times sorted from fastest to slowest:
 
-* **O\(log n\)** also known as _log time_ \(ex: binary search\)
-* **O\(n\)**: also known as _linear time_ \(ex: simple search\)
-* **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
-* **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
-* **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
+- **O\(log n\)** also known as _log time_ \(ex: binary search\)
+- **O\(n\)**: also known as _linear time_ \(ex: simple search\)
+- **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
+- **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
+- **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
 
 ![](../.gitbook/assets/big-o-complexity-chart.jpeg)
 
@@ -79,19 +79,19 @@ Both Arrays and Linked Lists are **linear data structures**, but they have some 
 
 Arrays:
 
-* **Index based** data structure where each elements are associated with an index.
-* They are stored in **sequential** memory location.
-* They have a **fixed size**, specifided during declaration and allocated during compile time.
-* Elements are accessed **directly** \(specifying the element index\), at **O\(1\)**.
-* Insertion and deletion is relatively slow \(as shifting is required\), at **O\(n\)**.
+- **Index based** data structure where each elements are associated with an index.
+- They are stored in **sequential** memory location.
+- They have a **fixed size**, specifided during declaration and allocated during compile time.
+- Elements are accessed **directly** \(specifying the element index\), at **O\(1\)**.
+- Insertion and deletion is relatively slow \(as shifting is required\), at **O\(n\)**.
 
 Linked Lists:
 
-* **Reference based** data structure where each node consists of the data and the reference to the next element.
-* They are stored **randomly** in memory.
-* They have a **variable** numbere of elements and grow and shrink during run time.
-* Elements are accessed **sequentially** \(traversing the node, starting from the first one\) at **O\(n\)**.
-* Insertion and deletion is fast, at **O\(1\)**.
+- **Reference based** data structure where each node consists of the data and the reference to the next element.
+- They are stored **randomly** in memory.
+- They have a **variable** numbere of elements and grow and shrink during run time.
+- Elements are accessed **sequentially** \(traversing the node, starting from the first one\) at **O\(n\)**.
+- Insertion and deletion is fast, at **O\(1\)**.
 
 ### Selection Sort
 
@@ -165,12 +165,12 @@ def countdown(i):
 countdown(10)
 ```
 
-### The stack
+### Stacks
 
 A **Stack** is an **abstract data type** that serves as a collection of elements, with two main principal operations:
 
-* **Push**: Add an element to the collection
-* **Pop**: Remove the most recently added element that was not yet removed.
+- **Push**: Add an element to the collection
+- **Pop**: Remove the most recently added element that was not yet removed.
 
 The order in which elements come off a stack gives rise to its alternative name, **LIFO** \(last in, first out\). Additionally, a **peek** operation may give access to the top without modifying the stack.
 
@@ -182,10 +182,10 @@ A **call stack** is a stack data structure that stores information about the act
 
 The call stack is made up of **stack frames**, one for each method call. A stack frame usually stores:
 
-* Local variables
-* Arguments passed into the method
-* Information about the caller's stack frame
-* The return address: what the program should do after the function returns \(i.e.: where it should "return to"\).
+- Local variables
+- Arguments passed into the method
+- Information about the caller's stack frame
+- The return address: what the program should do after the function returns \(i.e.: where it should "return to"\).
 
 ![](../.gitbook/assets/call-stack.png)
 
@@ -225,9 +225,9 @@ Python interpreters don't support tail call optimization, this is for demonstrat
 
 Divide-and-conquer algorithms have three parts:
 
-* **Divide the problem** into a number of subproblems that are smaller instances of the same problem.
-* **Conquer the subproblems** by solving them recursively. If they are small enough, solve the subproblems as base cases.
-* **Combine the solutions** to the subproblems into the solution for the original problem.
+- **Divide the problem** into a number of subproblems that are smaller instances of the same problem.
+- **Conquer the subproblems** by solving them recursively. If they are small enough, solve the subproblems as base cases.
+- **Combine the solutions** to the subproblems into the solution for the original problem.
 
 ![](../.gitbook/assets/divide-and-conquer.png)
 
@@ -403,14 +403,14 @@ Partition of [8, 7] done with pivot 7: array is now [1, 2, 4, 5, 7, 8]
 The **constant factor** in the big O notation is used to compare algorithms with the same run time. On the average case, let's say quicksort run at **k1 \* n log n** and merge sort at **k2 \* n log n**. k1 is actually smaller than k2, so quicksort would be faster than merge sort on average case, even though it is slower on worst case.
 {% endhint %}
 
-## 5. Hash Tables
+## 5. Hash Tables (WIP)
 
-* collisions are bad
-* hash tables are good at search, insert and delete
-* hash tables are good at modeling relationships from item to another
-* load factor &gt; 0.7 -&gt; resize the hash table
-* hash tables are good for caching data
-* hash tables are good for catching duplicates
+- collisions are bad
+- hash tables are good at search, insert and delete
+- hash tables are good at modeling relationships from item to another
+- load factor &gt; 0.7 -&gt; resize the hash table
+- hash tables are good for caching data
+- hash tables are good for catching duplicates
 
 A hash table \(**hash map**\) is a data structure that implements an **associative array abstract data type**, a structure that can map keys to values. A hash table uses a **hash function** to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored.
 
@@ -418,9 +418,9 @@ A hash table \(**hash map**\) is a data structure that implements an **associati
 
 Properties of a hashing function:
 
-* **Uniformity**: The hash function should map the expected inputs as evenly as possible over its output range.
-* **Efficiency**: The use of a hash function is a trade off between search time and data storage space. A hash table can be very large, very sparse, but very fast.
-* **Deterministic**: For a given input value it must always generate the same hash value.
+- **Uniformity**: The hash function should map the expected inputs as evenly as possible over its output range.
+- **Efficiency**: The use of a hash function is a trade off between search time and data storage space. A hash table can be very large, very sparse, but very fast.
+- **Deterministic**: For a given input value it must always generate the same hash value.
 
 ### Collisions
 
@@ -434,13 +434,51 @@ In a well-dimensioned hash table, the average cost \(number of instructions\) fo
 
 In many situations, hash tables turn out to be on average more efficient than search trees or any other table lookup structure. For this reason, they are widely used in many kinds of computer software, particularly for associative arrays, database indexing, caches, and sets.
 
-## 6. Breadth-first Search
+## 6. Breadth-first Search (WIP)
 
 ### Queues
 
+- Data structure similar to stacks, you can't access random elements
+- There are only two operations: **enqueue** and **dequeue**
+- A queue is **FIFO**: First In First Out (in contract to a FIFO stack)
+
 ### Graphs
 
-### Breadth-first search
+- A graph models a set of connections. It models how differet things are connected to one another
+- A graph is made up of **nodes** and **edges**
+- A node can be directly connected to other nodes, its **neighbors**, with edges.
+- A **directed graph** is a graph where edges points to a single direction (uni-directional relationship)
+- An **undirected graph** is a graph where edges doesn't have a direction (bi-directional relationship)
+- A **topological sort** makes an ordered list out of a graph by sorting relationships
+- A **tree** is a special graph where no nodes ever points back (a directed graph with only one edge between nodes)
+
+### Breadth-first search (BFS)
+
+- Run on graphs
+- Find if there is a path between two nodes
+- Find the sortest path between two nodes
+
+How it works:
+
+1. Build hash tables that keep tracks of node's connections
+2. Build a queue that contain nodes to check, start with the first-degree nodes (that's how we get the shortest path)
+3. Create an array to keep track of nodes that have been already checked
+4. Pop a node from the queue, until it's a node that hasn't been checked before
+5. If the node match: we are done
+6. If it doesn't match: add the node to the array of checked node, add all the node connection to the queue, loop back to `4`
+
+{% hint style="info" %}
+Keeping a list of nodes that have been checked solved two potential issues:
+
+- We don't want to check nodes twice to increase performance
+- We don't want to get stuck in an inifite loop
+  {% endhint %}
+
+Running time:
+
+- Search an entire graph means following each edges `O(edges)`
+- Adding each node to the queue (in constant O(1) for each node) means `O(vertices)`
+- BFT running time is `O(V + E)`
 
 ## 7. Dijkstra’s algorithm
 
@@ -451,4 +489,3 @@ In many situations, hash tables turn out to be on average more efficient than se
 ## 10. K-nearest neighbors
 
 ## 11. Where to go next
-
