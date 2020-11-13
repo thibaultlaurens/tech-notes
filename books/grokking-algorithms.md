@@ -477,9 +477,9 @@ Keeping a list of nodes that have been checked solved two potential issues:
 
 Running time:
 
-- Search an entire graph means following each edges `O(edges)`
-- Adding each node to the queue \(in constant O\(1\) for each node\) means `O(vertices)`
-- BFT running time is `O(V + E)`
+- Search an entire graph means following each edges **O(edges)**
+- Adding each node to the queue \(in constant O\(1\) for each node\) means **O(vertices)**
+- BFT running time is **O(V + E)**
 
 ## 7. Dijkstra’s algorithm
 
