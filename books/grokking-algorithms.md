@@ -63,11 +63,11 @@ Big O establishes **worst-case run time**: A simple / linear search algorithm \(
 
 Some common Big O run times sorted from fastest to slowest:
 
-- **O\(log n\)** also known as _log time_ \(ex: binary search\)
-- **O\(n\)**: also known as _linear time_ \(ex: simple search\)
-- **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
-- **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
-- **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
+* **O\(log n\)** also known as _log time_ \(ex: binary search\)
+* **O\(n\)**: also known as _linear time_ \(ex: simple search\)
+* **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
+* **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
+* **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
 
 ![](../.gitbook/assets/big-o-complexity-chart.jpeg)
 
@@ -79,19 +79,19 @@ Both Arrays and Linked Lists are **linear data structures**, but they have some 
 
 Arrays:
 
-- **Index based** data structure where each elements are associated with an index.
-- They are stored in **sequential** memory location.
-- They have a **fixed size**, specifided during declaration and allocated during compile time.
-- Elements are accessed **directly** \(specifying the element index\), at **O\(1\)**.
-- Insertion and deletion is relatively slow \(as shifting is required\), at **O\(n\)**.
+* **Index based** data structure where each elements are associated with an index.
+* They are stored in **sequential** memory location.
+* They have a **fixed size**, specified during declaration and allocated during compile time.
+* Elements are accessed **directly** \(specifying the element index\), at **O\(1\)**.
+* Insertion and deletion is relatively slow \(as shifting is required\), at **O\(n\)**.
 
 Linked Lists:
 
-- **Reference based** data structure where each node consists of the data and the reference to the next element.
-- They are stored **randomly** in memory.
-- They have a **variable** numbere of elements and grow and shrink during run time.
-- Elements are accessed **sequentially** \(traversing the node, starting from the first one\) at **O\(n\)**.
-- Insertion and deletion is fast, at **O\(1\)**.
+* **Reference based** data structure where each node consists of the data and the reference to the next element.
+* They are stored **randomly** in memory.
+* They have a **variable** number of elements and grow and shrink during run time.
+* Elements are accessed **sequentially** \(traversing the node, starting from the first one\) at **O\(n\)**.
+* Insertion and deletion is fast, at **O\(1\)**.
 
 ### Selection Sort
 
@@ -100,7 +100,7 @@ Selection sort is a simple **in-place comparison-based** sorting algorithm. It h
 The smallest element is selected from the unsorted array and **swapped** with the leftmost element, and that element becomes a part of the sorted array. This process continues moving unsorted array boundary by one element to the right.
 
 {% hint style="info" %}
-**In-place** means that the algorithm does **not use extra space for manipulating the input** but may require a small though nonconstant extra space for its operation. Usually, this space is O\(log n\), though sometimes anything in o\(n\) \(Smaller than linear\) is allowed.
+**In-place** means that the algorithm does **not use extra space for manipulating the input** but may require a small though non constant extra space for its operation. Usually, this space is O\(log n\), though sometimes anything in o\(n\) \(Smaller than linear\) is allowed.
 {% endhint %}
 
 Example with python 3:
@@ -151,7 +151,7 @@ Another simple sort algorithm is **insertion sort**. Insertion sort works by tak
 
 A program is called **recursive** when an entity calls itself \(vs an **iterative** program when there is a loop\).
 
-To avoid infinite loop when writting a recursive function, we have to tell it when to stop recursing, it's the **base case**. The **recursive case** is when the function actually calls itself.
+To avoid infinite loop when writing a recursive function, we have to tell it when to stop recursing, it's the **base case**. The **recursive case** is when the function actually calls itself.
 
 Example with python 3:
 
@@ -169,8 +169,8 @@ countdown(10)
 
 A **Stack** is an **abstract data type** that serves as a collection of elements, with two main principal operations:
 
-- **Push**: Add an element to the collection
-- **Pop**: Remove the most recently added element that was not yet removed.
+* **Push**: Add an element to the collection
+* **Pop**: Remove the most recently added element that was not yet removed.
 
 The order in which elements come off a stack gives rise to its alternative name, **LIFO** \(last in, first out\). Additionally, a **peek** operation may give access to the top without modifying the stack.
 
@@ -182,10 +182,10 @@ A **call stack** is a stack data structure that stores information about the act
 
 The call stack is made up of **stack frames**, one for each method call. A stack frame usually stores:
 
-- Local variables
-- Arguments passed into the method
-- Information about the caller's stack frame
-- The return address: what the program should do after the function returns \(i.e.: where it should "return to"\).
+* Local variables
+* Arguments passed into the method
+* Information about the caller's stack frame
+* The return address: what the program should do after the function returns \(i.e.: where it should "return to"\).
 
 ![](../.gitbook/assets/call-stack.png)
 
@@ -225,9 +225,9 @@ Python interpreters don't support tail call optimization, this is for demonstrat
 
 Divide-and-conquer algorithms have three parts:
 
-- **Divide the problem** into a number of subproblems that are smaller instances of the same problem.
-- **Conquer the subproblems** by solving them recursively. If they are small enough, solve the subproblems as base cases.
-- **Combine the solutions** to the subproblems into the solution for the original problem.
+* **Divide the problem** into a number of subproblems that are smaller instances of the same problem.
+* **Conquer the subproblems** by solving them recursively. If they are small enough, solve the subproblems as base cases.
+* **Combine the solutions** to the subproblems into the solution for the original problem.
 
 ![](../.gitbook/assets/divide-and-conquer.png)
 
@@ -348,7 +348,7 @@ Most implementations of merge sort produce a **stable sort**: objects with equal
 
 Quicksort is another divide-and-conquer algorithm. It works by selecting a **pivot** element from the array and partitioning the other elements into two sub-arrays, according to whether they are **less than or greater than the pivot**. The sub-arrays are then sorted recursively. This can be done in-place, requiring small additional amounts of memory to perform the sorting. However, efficient implementations of Quicksort are not a stable sort.
 
-The way that quicksort uses divide-and-conquer is a little different from how merge sort does. In merge sort, the divide step does hardly anything, and all the real work happens in the combine step. Quicksort is the opposite: **all the real work happens in the divide step**.
+The way that Quicksort uses divide-and-conquer is a little different from how merge sort does. In merge sort, the divide step does hardly anything, and all the real work happens in the combine step. Quicksort is the opposite: **all the real work happens in the divide step**.
 
 Its **worst-case** running time is as bad as selection sort and insertion sort: **O\(n^2\)**. But its **average-case** running time is as good as merge sort: **O\(n log n\)**.
 
@@ -400,17 +400,17 @@ Partition of [8, 7] done with pivot 7: array is now [1, 2, 4, 5, 7, 8]
 {% hint style="info" %}
 **Pivot selection** is an important part of quick sort. Selecting the first or last element in a nearly sorted or reversed sorted array degrades the performance to **O\(n^2\)** because all the elements will go to only one partition. Pivot should be chosen **randomly** or by using the **median value of the first, the last, and the middle element** of the array.
 
-The **constant factor** in the big O notation is used to compare algorithms with the same run time. On the average case, let's say quicksort run at **k1 \* n log n** and merge sort at **k2 \* n log n**. k1 is actually smaller than k2, so quicksort would be faster than merge sort on average case, even though it is slower on worst case.
+The **constant factor** in the big O notation is used to compare algorithms with the same run time. On the average case, let's say Quicksort run at **k1 \* n log n** and merge sort at **k2 \* n log n**. k1 is actually smaller than k2, so Quicksort would be faster than merge sort on average case, even though it is slower on worst case.
 {% endhint %}
 
-## 5. Hash Tables (WIP)
+## 5. Hash Tables \(WIP\)
 
-- collisions are bad
-- hash tables are good at search, insert and delete
-- hash tables are good at modeling relationships from item to another
-- load factor &gt; 0.7 -&gt; resize the hash table
-- hash tables are good for caching data
-- hash tables are good for catching duplicates
+* collisions are bad
+* hash tables are good at search, insert and delete
+* hash tables are good at modeling relationships from item to another
+* load factor &gt; 0.7 -&gt; resize the hash table
+* hash tables are good for caching data
+* hash tables are good for catching duplicates
 
 A hash table \(**hash map**\) is a data structure that implements an **associative array abstract data type**, a structure that can map keys to values. A hash table uses a **hash function** to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored.
 
@@ -418,9 +418,9 @@ A hash table \(**hash map**\) is a data structure that implements an **associati
 
 Properties of a hashing function:
 
-- **Uniformity**: The hash function should map the expected inputs as evenly as possible over its output range.
-- **Efficiency**: The use of a hash function is a trade off between search time and data storage space. A hash table can be very large, very sparse, but very fast.
-- **Deterministic**: For a given input value it must always generate the same hash value.
+* **Uniformity**: The hash function should map the expected inputs as evenly as possible over its output range.
+* **Efficiency**: The use of a hash function is a trade off between search time and data storage space. A hash table can be very large, very sparse, but very fast.
+* **Deterministic**: For a given input value it must always generate the same hash value.
 
 ### Collisions
 
@@ -428,57 +428,57 @@ Ideally, the hash function will assign each key to a unique bucket, but most has
 
 ### Performance
 
-In a well-dimensioned hash table, the average cost \(number of instructions\) for each lookup is independent of the number of elements stored in the table. Many hash table designs also allow arbitrary insertions and deletions of key-value pairs, at constant average cost per operation.
+In a well dimensioned hash table, the average cost \(number of instructions\) for each lookup is independent of the number of elements stored in the table. Many hash table designs also allow arbitrary insertions and deletions of key-value pairs, at constant average cost per operation.
 
 ### Use cases
 
 In many situations, hash tables turn out to be on average more efficient than search trees or any other table lookup structure. For this reason, they are widely used in many kinds of computer software, particularly for associative arrays, database indexing, caches, and sets.
 
-## 6. Breadth-first Search (WIP)
+## 6. Breadth-first Search \(WIP\)
 
 ### Queues
 
-- Data structure similar to stacks, you can't access random elements
-- There are only two operations: **enqueue** and **dequeue**
-- A queue is **FIFO**: First In First Out (in contract to a FIFO stack)
+* Data structure similar to stacks, you can't access random elements
+* There are only two operations: **enqueue** and **dequeue**
+* A queue is **FIFO**: First In First Out \(in contract to a FIFO stack\)
 
 ### Graphs
 
-- A graph models a set of connections. It models how differet things are connected to one another
-- A graph is made up of **nodes** and **edges**
-- A node can be directly connected to other nodes, its **neighbors**, with edges.
-- A **directed graph** is a graph where edges points to a single direction (uni-directional relationship)
-- An **undirected graph** is a graph where edges doesn't have a direction (bi-directional relationship)
-- A **topological sort** makes an ordered list out of a graph by sorting relationships
-- A **tree** is a special graph where no nodes ever points back (a directed graph with only one edge between nodes)
+* A graph models a set of connections. It models how different things are connected to one another
+* A graph is made up of **nodes** and **edges**
+* A node can be directly connected to other nodes, its **neighbors**, with edges.
+* A **directed graph** is a graph where edges points to a single direction \(uni-directional relationship\)
+* An **undirected graph** is a graph where edges doesn't have a direction \(bi-directional relationship\)
+* A **topological sort** makes an ordered list out of a graph by sorting relationships
+* A **tree** is a special graph where no nodes ever points back \(a directed graph with only one edge between nodes\)
 
-### Breadth-first search (BFS)
+### Breadth-first search \(BFS\)
 
-- Run on graphs
-- Find if there is a path between two nodes
-- Find the sortest path between two nodes
+* Run on graphs
+* Find if there is a path between two nodes
+* Find the shortest path between two nodes
 
 How it works:
 
 1. Build hash tables that keep tracks of node's connections
-2. Build a queue that contain nodes to check, start with the first-degree nodes (that's how we get the shortest path)
+2. Build a queue that contain nodes to check, start with the first-degree nodes \(that's how we get the shortest path\)
 3. Create an array to keep track of nodes that have been already checked
 4. Pop a node from the queue, until it's a node that hasn't been checked before
 5. If the node match: we are done
 6. If it doesn't match: add the node to the array of checked node, add all the node connection to the queue, loop back to `4`
 
 {% hint style="info" %}
+
 Keeping a list of nodes that have been checked solved two potential issues:
 
-- We don't want to check nodes twice to increase performance
-- We don't want to get stuck in an inifite loop
-  {% endhint %}
+* We don't want to check nodes twice to increase performance
+* We don't want to get stuck in an infinite loop
 
 Running time:
 
-- Search an entire graph means following each edges `O(edges)`
-- Adding each node to the queue (in constant O(1) for each node) means `O(vertices)`
-- BFT running time is `O(V + E)`
+* Search an entire graph means following each edges `O(edges)`
+* Adding each node to the queue \(in constant O\(1\) for each node\) means `O(vertices)`
+* BFT running time is `O(V + E)`
 
 ## 7. Dijkstra’s algorithm
 
@@ -489,3 +489,4 @@ Running time:
 ## 10. K-nearest neighbors
 
 ## 11. Where to go next
+
