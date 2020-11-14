@@ -12,6 +12,14 @@
 * [https://www.bigocheatsheet.com/](https://www.bigocheatsheet.com/)
 * [https://www.cs.usfca.edu/~galles/visualization/Algorithms.html](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 
+
+
+## Programming concepts
+
+{% embed url="https://thecodeboss.dev/2014/10/programming-concepts-the-stack-and-the-heap/" %}
+
+^ Faire toute la serie
+
 ## Programming Paradigms
 
 ## Best practices
@@ -67,7 +75,7 @@
 * Documentation is for users.
 * Don't panic.
 
-📓Resources:
+Resources:
 
 * Tips for writing clear, idiomatic Go code: [Effective Go](https://golang.org/doc/effective_go.html)
 * Common comments made during reviews of Go code: [CodeReviewComments](https://github.com/golang/go/wiki/CodeReviewComments)
@@ -104,7 +112,7 @@
 * If the implementation is easy to explain, it may be a good idea.
 * Namespaces are one honking great idea -- let's do more of those!
 
-📓Resources:
+Resources:
 
 * [PEP8](https://www.python.org/dev/peps/pep-0008/)
 * [Google Style Guide](http://google.github.io/styleguide/pyguide.html)
@@ -112,7 +120,7 @@
 
 ### Javascript
 
-📓Resources:
+Resources:
 
 * [ECMAScript 6 features](https://github.com/lukehoban/es6features)
 * [AirBnb style guide](https://github.com/airbnb/javascript).

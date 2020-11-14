@@ -6,5 +6,9 @@
 
 {% embed url="http://carlcheo.com/compsci" %}
 
+{% embed url="https://github.com/jwasham/coding-interview-university" %}
+
+{% embed url="https://github.com/MaximAbramchuck/awesome-interview-questions" %}
+
 
 
