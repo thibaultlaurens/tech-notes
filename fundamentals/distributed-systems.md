@@ -1,8 +1,17 @@
 # Distributed Systems
 
-{% embed url="https://timilearning.com/1/" %}
-
-{% embed url="https://pdos.csail.mit.edu/6.824/schedule.html" %}
-
-
+* [https://timilearning.com/1/](https://timilearning.com/1/)
+* [https://pdos.csail.mit.edu/6.824/schedule.html](https://pdos.csail.mit.edu/6.824/schedule.html)
+* [https://github.com/theanalyst/awesome-distributed-systems](https://github.com/theanalyst/awesome-distributed-systems)
+* [https://github.com/aphyr/distsys-class](https://github.com/aphyr/distsys-class)
+* [https://lethain.com/introduction-to-architecting-systems-for-scale/](https://lethain.com/introduction-to-architecting-systems-for-scale/)
+* [https://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/](https://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/)
+* [http://book.mixu.net/distsys/single-page.html](http://book.mixu.net/distsys/single-page.html)
+* [https://www.simpleorientedarchitecture.com/8-fallacies-of-distributed-systems/](https://www.simpleorientedarchitecture.com/8-fallacies-of-distributed-systems/)
+* [https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying)
+* [https://horicky.blogspot.com/2009/11/nosql-patterns.html](https://horicky.blogspot.com/2009/11/nosql-patterns.html)
+* [https://www.allthingsdistributed.com/2007/10/amazons\_dynamo.html](https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html)
+* [https://jepsen.io/analyses](https://jepsen.io/analyses)
+* [https://jepsen.io/consistency](https://jepsen.io/consistency)
+* [https://peter.bourgon.org/ok-log/](https://peter.bourgon.org/ok-log/)
 
