@@ -73,6 +73,12 @@
 * Top 125 Network Security Tools: [SecTools.Org](https://sectools.org/)
 * [A Quick Linux Server Hardening Checklist](https://securecompliance.co/linux-server-hardening-checklist/)
 * [How To Secure A Linux Server](https://github.com/imthenachoman/How-To-Secure-A-Linux-Server)
+* [PGP and You](https://thoughtbot.com/blog/pgp-and-you)
+* [Exploiting Stack Overflows](http://repository.root-me.org/Exploitation%20-%20Syst%C3%A8me/Unix/EN%20-%20Exploiting%20Stack%20Buffer%20Overflows%20in%20the%20Linux%20x86%20Kernel.pdf)
+* [https://attack.mitre.org/groups/](https://attack.mitre.org/groups/)
+* [https://stribika.github.io/2015/01/04/secure-secure-shell.html](https://stribika.github.io/2015/01/04/secure-secure-shell.html)
+* [https://en.wikipedia.org/wiki/Pretty\_Good\_Privacy\#OpenPGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP)
+* [https://en.wikipedia.org/wiki/X.509](https://en.wikipedia.org/wiki/X.509)
 
 ### 
 

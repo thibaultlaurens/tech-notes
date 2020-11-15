@@ -14,4 +14,7 @@
 * [https://jepsen.io/analyses](https://jepsen.io/analyses)
 * [https://jepsen.io/consistency](https://jepsen.io/consistency)
 * [https://peter.bourgon.org/ok-log/](https://peter.bourgon.org/ok-log/)
+* [https://www.rabbitmq.com/tutorials/amqp-concepts.html](https://www.rabbitmq.com/tutorials/amqp-concepts.html)
+* [https://www.erlang-solutions.com/blog/an-introduction-to-rabbitmq-what-is-rabbitmq.html](https://www.erlang-solutions.com/blog/an-introduction-to-rabbitmq-what-is-rabbitmq.html)
+* [https://fabxc.org/tsdb/](https://fabxc.org/tsdb/)
 

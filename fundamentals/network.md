@@ -20,7 +20,7 @@
 
 ## Network protocols
 
-* dns
+* dns: [https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197427\(v=ws.10\)](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197427%28v=ws.10%29)
 * dhcp
 * tcp / udp
 * OSI vs TCP/IP

@@ -1,6 +1,7 @@
 # Software Engineering
 
-{% embed url="https://www.geeksforgeeks.org/software-engineering/" %}
+* [https://nvie.com/posts/a-successful-git-branching-model/](https://nvie.com/posts/a-successful-git-branching-model/)
+* [https://www.geeksforgeeks.org/software-engineering/](https://www.geeksforgeeks.org/software-engineering/)
 
 ## **Introduction**
 

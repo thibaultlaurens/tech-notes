@@ -5,6 +5,7 @@
 * Assembly
 * C and LSP
 * OS
+* [A hands-on introduction to static code analysis](https://deepsource.io/blog/introduction-static-code-analysis/)
 
 ## Algorithms & Data structures
 
@@ -96,6 +97,8 @@ Resources:
 * Programming in an industrial context: [Go for Industrial Programming](https://peter.bourgon.org/go-for-industrial-programming/)
 * Best practices from 2016: [Go best practices, six years in](https://peter.bourgon.org/go-best-practices-2016/)
 * Common good practices for go packages: [Style guideline for Go packages](https://rakyll.org/style-packages/)
+* [Network Programming with Go](https://tumregels.github.io/Network-Programming-with-Go/)
+* Collection of Technical Interview Questions solved with Go: [go-interview](https://github.com/shomali11/go-interview/blob/master/README.md)
 
 ### Python
 
