@@ -7,4 +7,5 @@
 * [https://segment.com/blog/a-brief-history-of-the-uuid/?ct=t\(DevOpsLinks\_64\)](https://segment.com/blog/a-brief-history-of-the-uuid/?ct=t%28DevOpsLinks_64%29)
 * [https://www.cloudflare.com/en-gb/dns/dnssec/how-dnssec-works/](https://www.cloudflare.com/en-gb/dns/dnssec/how-dnssec-works/)
 * [https://www.cloudflare.com/en-gb/dns/dnssec/root-signing-ceremony/](https://www.cloudflare.com/en-gb/dns/dnssec/root-signing-ceremony/)
+* [https://nocomplexity.com/documents/arplaybook/index.html](https://nocomplexity.com/documents/arplaybook/index.html)
 
