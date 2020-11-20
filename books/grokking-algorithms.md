@@ -6,6 +6,18 @@ description: An illustrated guide for programmers and other curious people.
 
 [Online version of the book.](https://livebook.manning.com/book/grokking-algorithms/table-of-contents/)
 
+{% hint style="info" %}
+Summary:
+
+- Big O notation: contant, linear, logarithmic, linearithmic, square root, quadratic, cubic, polynomial, exponential, factorial
+- Data structures: arrays, linked lists, hash tables, stacks, queues, graphs
+- Design: Tail recursion and Divide and conquer
+- Search algorithms: linear search and binary search
+- Sorting algorithms: insertion sort and selection sort (simple sorts), merge sort and quicksort (efficient sorts)
+- Graph algorithms: Breadth-first search, Dijkstra’s algorithm, Bellman-Ford algorithm
+
+{% endhint %}
+
 ## 1. Introduction to Algorithms
 
 ### Binary Search
@@ -472,7 +484,8 @@ Keeping a list of nodes that have been checked solved two potential issues:
 
 - We don't want to check nodes twice to increase performance
 - We don't want to get stuck in an infinite loop
-  {% endhint %}
+
+{% endhint %}
 
 Running time:
 
