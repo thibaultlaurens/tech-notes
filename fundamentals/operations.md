@@ -1,21 +1,55 @@
 # Infrastructure & Operations
 
+- google sre
+- CI / CD
+- artifacts
+- monitoring / alerting
+- logging
+- tracing
+- Iaac / ansible / terraform
+- hashistack
+- docker \( best practices / hardening \)
+- chaos engineering
 
+- [Counting & Timing](https://code.flickr.net/2008/10/27/counting-timing/)
+- [Brendan Gregg Overview](http://www.brendangregg.com/overview.html)
+- [eBPF - Rethinking the Linux Kernel](https://www.infoq.com/presentations/facebook-google-bpf-linux-kernel/)
 
-* google sre
-* CI / CD
-* artifacts
-* monitoring / alerting
-* logging
-* tracing
-* Iaac / ansible / terraform
-* hashistack
-* docker \( best practices / hardening \)
-* chaos engineering
+## Post Mortem Report
 
+### Title
 
+- Date
+- Project
+- Environnement
+- Infrastructure
 
-* [Counting & Timing](https://code.flickr.net/2008/10/27/counting-timing/)
-* [Brendan Gregg Overview](http://www.brendangregg.com/overview.html)
-* [eBPF - Rethinking the Linux Kernel](https://www.infoq.com/presentations/facebook-google-bpf-linux-kernel/)
+### Incident overview
 
+Brief description of the incident. Include general informations, like for instance:
+
+- Context, reasons, time and duration of the incident
+- Type of incident: complete downtime, loss of data, partial interruption of normal operation etc.
+- People impacted by the incident: end users, business owners, developpers etc.
+
+### Timeline
+
+Precise timeline of the different issues that happened during the incident, including:
+
+- Starting date of the incident
+- Date when actions were taken to mitigate the incident
+- Resolution date of the incident
+
+### Root cause analysis
+
+Detailed desciption of what caused the incident.
+
+### Resolution
+
+Description of all the actions taken to resolve the incident.
+Include every actions taken, even the incorrect of ineffective ones.
+
+### Preventive measures
+
+List all the measures that should be taken to prevent/avoid this type of incident to happen again in the future.
+Ex: logging, monitoring, code improvements, development workflow etc.
