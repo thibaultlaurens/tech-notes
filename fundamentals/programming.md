@@ -66,11 +66,54 @@ Resources:
 
 ## Programming concepts
 
-{% embed url="https://thecodeboss.dev/2014/10/programming-concepts-the-stack-and-the-heap/" %}
+- [Programming Concepts](https://thecodeboss.dev/2014/10/programming-concepts-the-stack-and-the-heap/) (faire toute la serie)
 
-^ Faire toute la serie
+### The Stack and the Heap
+
+### Compiled and Interpreted languages
+
+### Concurrency
+
+### Static vs Dynamic type checking
+
+### Type Introspection and Reflection
+
+### Core functionnal Programming Concepts
+
+### Garbage Collection
 
 ## Programming Paradigms
+
+- [Wikipedia](https://en.wikipedia.org/wiki/Programming_paradigm)
+- [Programming Paradigms](https://cs.lmu.edu/~ray/notes/paradigms/)
+- [Introduction of Programming Paradigms](https://www.geeksforgeeks.org/introduction-of-programming-paradigms/)
+- [A must know for all programmers](https://hackr.io/blog/programming-paradigms)
+
+### Imperative
+
+### Declarative
+
+### Structured
+
+### Procedural
+
+### Functional
+
+### Function-Level
+
+### Event-Driven
+
+### Flow-Driven
+
+### Logic
+
+### Constaint
+
+### Aspect-Oriented
+
+### Reflective
+
+### Array
 
 ## Best practices
 
