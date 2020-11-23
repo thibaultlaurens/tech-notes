@@ -2,9 +2,9 @@
 
 ## Algorithms & Data structures
 
-### Basics: [Grokking Algorithms](https://docs.tlaurens.xyz/books/grokking-algorithms)
+### [Grokking Algorithms](https://docs.tlaurens.xyz/books/grokking-algorithms) Review
 
-TLDR:
+**TLDR**:
 
 - Big O notation: constant, linear, logarithmic, linearithmic, square root, quadratic, cubic, polynomial, exponential, factorial
 - Data structures: arrays, linked lists, hash tables, stacks, queues, graphs
@@ -13,9 +13,7 @@ TLDR:
 - Sorting algorithms: insertion sort and selection sort \(simple sorts\), merge sort and quicksort \(efficient sorts\)
 - Graph algorithms: Breadth-first search, Dijkstra’s algorithm, Bellman-Ford algorithm
 
-### Advanced (WIP)
-
-#### Indexing
+### Indexing
 
 - Binary Search Trees
 - AVL Trees
@@ -30,14 +28,14 @@ TLDR:
 - B Trees
 - B+ Trees
 
-#### Sorting
+### Sorting
 
 - Bucket Sort
 - Counting Sort
 - Radix Sort
 - Heap Sort
 
-#### Heap-like data structures
+### Heap-like data structures
 
 - Heaps
 - Binomial Queues
@@ -45,7 +43,7 @@ TLDR:
 - Leftist Heaps
 - Skew Heaps
 
-#### Graphs algorithms
+### Graphs algorithms
 
 - Depth-First Search
 - Connected Components
@@ -55,7 +53,7 @@ TLDR:
 - Floyd-Warshall (all pairs shortest paths)
 - Kruskal Minimum Cost Spanning Tree Algorithm
 
-#### Dynamic programming
+### Dynamic programming
 
 - Calculating nth Fibonacci number
 - Making Change
