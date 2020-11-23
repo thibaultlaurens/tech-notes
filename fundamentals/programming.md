@@ -2,7 +2,7 @@
 
 ## Algorithms & Data structures
 
-### [Grokking Algorithms](https://docs.tlaurens.xyz/books/grokking-algorithms) Review
+### [Grokking Algorithms Review](https://docs.tlaurens.xyz/books/grokking-algorithms)
 
 **TLDR**:
 
@@ -117,7 +117,7 @@ Resources:
 
 ## Best practices
 
-### SOLID
+### SOLID Principles
 
 - [Single-responsibility principle](https://en.wikipedia.org/wiki/Single-responsibility_principle): Every module, class or function in a computer program should have responsibility over a single part of that program's functionality, which it should encapsulate.
 - [Open–closed principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle): Software entities \(classes, modules, functions, etc.\) should be open for extension, but closed for modification.
