@@ -154,7 +154,7 @@ SHELL:=/bin/bash
 .PHONY: help deps clean build watch
 
 help:  ## Display this help
-    @awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m\033[0m\n\nTargets:\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2 }' $(MAKEFILE_LIST)
+    @awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36mtarget\033[0m \033[36m\033[0m\n\nTargets:\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2 }' $(MAKEFILE_LIST)
 
 deps:  ## Check dependencies
     $(info Checking and getting dependencies)
@@ -175,7 +175,7 @@ Output:
 $ make
 
 Usage:
-  make
+  make target
 
 Targets:
   help        Display this help
