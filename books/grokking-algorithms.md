@@ -478,14 +478,28 @@ Running time:
 
 ## 7. Dijkstra’s algorithm
 
-- Weighted graph
-- Dijkstra
-- Bellman-Ford algorithm
+- **Weighted graph**
+- Breadth-first search is use to calculate the shortest path for an unweighted graph.
+- **Dijkstra's algorithm** is use to calculate the sortest path for a weighted graph.
+- Dijkstra's algorithm works when **all the weights are positive**.
+- In the case of negative weights, use the **Bellman-Ford algorithm**.
 
 ## 8. Greedy algorithms
 
-- greedy algorithms and approximation algorithms
-- sets: union, intersection, difference
+- **Sets**
+- Operation on sets: **union**, **intersection**, **difference**
+- **Greedy algorithms** optimize locally, hoping to end up with a global optimum.
+- **NP-complete problems** have no know fast solution.
+- When dealing with NP-complete problems, your best bet is to use an **approximation algorithm**
+- Greedy algorithms are easy to write and fast to run, so they make good algorithms
+
+How do you tell if a problem is NP-complete ?
+
+- The algorithm runs quickly with a handful of items but really slows down with more items.
+- "All combinations of X" usually points to an NP-complete problem.
+- Do you have to calculate "every possible version" of X because you can't break it down into smaller sub-problems ? Might be NP-complete.
+- If your problem involves a sequence (such as a sequence of cities, like in the travelling salesperson), and it's hard to solve, it might be NP-complete.
+- Can you restate your problem as the set-covering problem or the travelling salesperson problem? Then your problem is definitely NP-complete.
 
 ## 9. Dynamic programming
 
