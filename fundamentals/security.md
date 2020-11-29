@@ -62,22 +62,6 @@
 - X-Frame-Options
 - X-XSS-Protection
 
-## Resources:
-
-- Video Lessons: [Hacker101](https://www.hacker101.com/videos)
-- The Open Web Application Security Project: [OWASP](https://owasp.org/)
-- OWASP Web Security Testing Guide**:** [WSTG](https://owasp.org/www-project-web-security-testing-guide/)
-- Master the art of bug hunting: [Bugcrowd University](https://github.com/bugcrowd/bugcrowd_university)
-- Top 125 Network Security Tools: [SecTools.Org](https://sectools.org/)
-- [A Quick Linux Server Hardening Checklist](https://securecompliance.co/linux-server-hardening-checklist/)
-- [How To Secure A Linux Server](https://github.com/imthenachoman/How-To-Secure-A-Linux-Server)
-- [PGP and You](https://thoughtbot.com/blog/pgp-and-you)
-- [Exploiting Stack Overflows](http://repository.root-me.org/Exploitation%20-%20Syst%C3%A8me/Unix/EN%20-%20Exploiting%20Stack%20Buffer%20Overflows%20in%20the%20Linux%20x86%20Kernel.pdf)
-- [https://attack.mitre.org/groups/](https://attack.mitre.org/groups/)
-- [https://stribika.github.io/2015/01/04/secure-secure-shell.html](https://stribika.github.io/2015/01/04/secure-secure-shell.html)
-- [https://en.wikipedia.org/wiki/Pretty_Good_Privacy\#OpenPGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP)
-- [https://en.wikipedia.org/wiki/X.509](https://en.wikipedia.org/wiki/X.509)
-
 ## OSINT
 
 - VirusTotal: Analyze suspicious files and URLs to detect types of malware
@@ -107,3 +91,19 @@ Today the services are provided by **PTI** (Public Technical Identifiers), a pur
 
 - **ccTLDs**: country code top-level domains
 - **gTLD**: generic top-level domains
+
+## Resources
+
+- Video Lessons: [Hacker101](https://www.hacker101.com/videos)
+- The Open Web Application Security Project: [OWASP](https://owasp.org/)
+- OWASP Web Security Testing Guide**:** [WSTG](https://owasp.org/www-project-web-security-testing-guide/)
+- Master the art of bug hunting: [Bugcrowd University](https://github.com/bugcrowd/bugcrowd_university)
+- Top 125 Network Security Tools: [SecTools.Org](https://sectools.org/)
+- [A Quick Linux Server Hardening Checklist](https://securecompliance.co/linux-server-hardening-checklist/)
+- [How To Secure A Linux Server](https://github.com/imthenachoman/How-To-Secure-A-Linux-Server)
+- [PGP and You](https://thoughtbot.com/blog/pgp-and-you)
+- [Exploiting Stack Overflows](http://repository.root-me.org/Exploitation%20-%20Syst%C3%A8me/Unix/EN%20-%20Exploiting%20Stack%20Buffer%20Overflows%20in%20the%20Linux%20x86%20Kernel.pdf)
+- [https://attack.mitre.org/groups/](https://attack.mitre.org/groups/)
+- [https://stribika.github.io/2015/01/04/secure-secure-shell.html](https://stribika.github.io/2015/01/04/secure-secure-shell.html)
+- [https://en.wikipedia.org/wiki/Pretty_Good_Privacy\#OpenPGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP)
+- [https://en.wikipedia.org/wiki/X.509](https://en.wikipedia.org/wiki/X.509)
