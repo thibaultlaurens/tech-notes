@@ -64,33 +64,57 @@
 
 ## OSINT
 
-- VirusTotal: Analyze suspicious files and URLs to detect types of malware
-- Shodan: All of the useful information about the target domain or IP address you could want, like open ports, used technology stack and possible vulnerabilities etc.
-- Farsight DNSDB: A database that stores and indexes both the passive DNS data available via Farsight Security Information Exchange as well as the authoritative DNS data that various zone operators make available.
-- WHOIS: Provides the registration details, also known as the WHOIS record data, of a domain name, an IP address, or an email address
-- Censys:
-- Shasowserver
+### Shadowserver
 
-- **IANA** (Internet Assigned Numbers Authority) is responsible for coordinating some of the key elements that keep the Internet running smoothly. IANA allocates and maintains unique codes and numbering systems that are used in the technical standards ("protocols") that drive the Internet:
+- The Shadowserver Foundation is a nonprofit security organization that **gathers and analyzes data on malicious internet activity** (including malware, botnets, and computer fraud), sends daily network reports to subscribers, and works with law enforcement organizations around the world in cybercrime investigations. Established in 2004 as a "volunteer watchdog group", it liaises with national governments, CSIRTs, network providers, academic institutions, financial institutions, Fortune 500 companies, and end users to improve Internet security, enhance product capability, advance research, and dismantle criminal infrastructure.
 
-  - Domain Names: Management of the DNS Root, the .int and .arpa domains, and an IDN practices resource.
-  - Number Resources: Co-ordination of the global pool of IP and AS numbers, primarily providing them to Regional Internet Registries (RIRs).
-  - Protocol Assignments: Internet protocols’ numbering systems are managed in conjunction with standards bodies
+### Microsoft
+
+- **CTIP**()
+- **DCU** (Digital Crimes Unit)
+
+### VirusTotal
+
+Analyze suspicious files and URLs to detect types of malware
+
+### Rapid7
+
+### Shodan
+
+All of the useful information about the target domain or IP address you could want, like open ports, used technology stack and possible vulnerabilities etc.
+
+### Farsight
+
+- **DNSDB**: A database that stores and indexes both the passive DNS data available via Farsight Security Information Exchange as well as the authoritative DNS data that various zone operators make available.
+- **Passive DNS** is a technique where IP to hostname mappings are made by recording the answers of other people's queries.
+
+### Censys
+
+### WHOIS
+
+- provides the registration details, also known as the WHOIS record data, of a domain name, an IP address, or an email address.
+- **ccTLDs**: country code top-level domains
+- **gTLD**: generic top-level domains
+
+### IANA
+
+The **Internet Assigned Numbers Authority** is responsible for coordinating some of the key elements that keep the Internet running smoothly. IANA allocates and maintains unique codes and numbering systems that are used in the technical standards ("protocols") that drive the Internet:
+
+- **Domain Names**: Management of the DNS Root, the .int and .arpa domains, and an IDN practices resource.
+- **Number Resources**: Co-ordination of the global pool of IP and AS numbers, primarily providing them to Regional Internet Registries (RIRs).
+- **Protocol Assignments**: Internet protocols’ numbering systems are managed in conjunction with standards bodies
 
 Today the services are provided by **PTI** (Public Technical Identifiers), a purpose-built organization for providing the IANA functions to the community. PTI is an affiliate of **ICANN** (Internet Corporation for Assigned Names and Numbers), an internationally-organised non-profit organisation set up by the Internet community to coordinate our areas of responsibilities
 
-- **RIR** (Regional Internet Registries):
+### RIR
 
-  - **AFRINIC**: Africa
-  - **APNIC**: Asia and Pacific
-  - **ARIN**: North America
-  - **LACNIC**: Latin America
-  - **RIPE NCC**: Europe, Russia, Middle East
+**Regional Internet Registries**:
 
-- **Passive DNS** is a technique where IP to hostname mappings are made by recording the answers of other people's queries.
-
-- **ccTLDs**: country code top-level domains
-- **gTLD**: generic top-level domains
+- **AFRINIC**: Africa
+- **APNIC**: Asia and Pacific
+- **ARIN**: North America
+- **LACNIC**: Latin America
+- **RIPE NCC**: Europe, Russia, Middle East
 
 ## Resources
 
