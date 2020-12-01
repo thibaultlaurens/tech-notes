@@ -1,19 +1,35 @@
 # Infrastructure & Operations
 
-- google sre
-- CI / CD
-- artifacts
-- monitoring / alerting
-- logging
-- tracing
-- Iaac / ansible / terraform
-- hashistack
-- docker \( best practices / hardening \)
-- chaos engineering
+## DevOps and SRE
 
-- [Counting & Timing](https://code.flickr.net/2008/10/27/counting-timing/)
-- [Brendan Gregg Overview](http://www.brendangregg.com/overview.html)
-- [eBPF - Rethinking the Linux Kernel](https://www.infoq.com/presentations/facebook-google-bpf-linux-kernel/)
+- link to google review book
+
+## Instrastructure as Code
+
+- ansible
+- terraform
+
+## Observability
+
+- architecture Prom + alermanager + DB
+- architecture ELK
+- OpenTracing / Jaeger etc
+
+## Container Scheduling
+
+- hashistack
+- kubernetes
+- service mesh
+- ...
+
+## Release engineering
+
+- CI/CD - gitlab
+- Artifactory
+
+## Docker Hardening
+
+## Chaos Engineering
 
 ## Post Mortem Report
 
@@ -53,3 +69,9 @@ Include every actions taken, even the incorrect of ineffective ones.
 
 List all the measures that should be taken to prevent/avoid this type of incident to happen again in the future.
 Ex: logging, monitoring, code improvements, development workflow etc.
+
+## Resources
+
+- [Counting & Timing](https://code.flickr.net/2008/10/27/counting-timing/)
+- [Brendan Gregg Overview](http://www.brendangregg.com/overview.html)
+- [eBPF - Rethinking the Linux Kernel](https://www.infoq.com/presentations/facebook-google-bpf-linux-kernel/)
