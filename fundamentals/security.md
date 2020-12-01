@@ -2,11 +2,26 @@
 
 {% embed url="https://www.geeksforgeeks.org/computer-network-tutorials/\#nsc" %}
 
-- - tools \([https://sectools.org/](https://sectools.org/)\)
-  - cryptography
-  - reverse engineering
-  - bleu vs red teams
-  - web app sec \(owasp top 10\)
+- tools \([https://sectools.org/](https://sectools.org/)\)
+- cryptography
+- reverse engineering
+- bleu vs red teams
+
+## Cryptography
+
+## Reverse Engineering
+
+## Forensic
+
+## Pentesting
+
+## Threat Intel
+
+## Detection
+
+- Architecure
+- IPS and IDS (Snort vs Bro vs zeek vs [more](https://github.com/sbilly/awesome-security#ids--ips--host-ids--host-ips))
+- Fast Packet Processing
 
 ## Secure Programming
 
