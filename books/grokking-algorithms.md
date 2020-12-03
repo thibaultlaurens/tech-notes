@@ -503,6 +503,54 @@ How do you tell if a problem is NP-complete ?
 
 ## 9. Dynamic programming
 
+- Dynamic programming is useful when you are trying to optimize something given a **constraint**.
+- You can use dynamic programming when the problem can be broken down into **discrete subproblems**.
+- Every dynamic programming solution involves a **grid**.
+- The values in the cells are usually what you are trying to **optimize**.
+- Each cell is a subproblem, so think about **how you can divide your problem** into subproblems.
+- There is no formula for calculating a dynamic programming solution
+
+Exemple of dynamic programming problems:
+
+- The Knapsack problem:
+- Longest common substring and longest common subsequence
+
+Exemple of dynamic programming usages:
+
+- Biologists use the longest common subsequence to find similarities in DNA strands.
+- Diff tools (like git diff) use dynamic programming to find the difference between two files.
+- **Levenshtein distance** measures how similar two strings arewith dynamic programming (use for spell checking, copyright check etc.).
+
 ## 10. K-nearest neighbors
 
+### KNN
+
+- **KNN** is used for classification and regression and involves looking at k-nearest neighbors.
+- **Classification**: categorizarion into groups.
+- **Regression**: predicting a response (like a number).
+- **Feature extraction** means converting an item (like a fruit, a user, a picture) into a list of numbers that can be compared.
+- Picking good features is an important part of a successful KNN algorithm, we should try to avoid **bias**.
+
+### Finding similarities
+
+- **Pythagorian formula** can be used to find distance between multiple points: `distance^2 = (x1-x2)^2 + (y1+y2)^2 + (z1-z2)^2`
+- **Cosine similarity** compares the angles between vectors to find similarities.
+
+### Introduction to Machine Learning
+
+- **OCR** (Optical Character Recognition): Measures lines, points and curves on test characters.
+- **Training**: extracting features from a large set of data
+- **Naive Bayes classifiers** to figure out the probability of something being classified into "something"
+
 ## 11. Where to go next
+
+- Trees
+- Inverted Indexes
+- The Fourier Transform
+- Parallel algorithms
+- MapReduce
+- Bloom filters and HyperLogLog
+- The SHA algorithms
+- Locality-sensitive hashing
+- Diffie-Hellman key exchange
+- Linear programming
