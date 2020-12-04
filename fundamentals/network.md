@@ -30,3 +30,29 @@
 ## IP address standards
 
 {% embed url="https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/5-ip-tcp-basics" %}
+
+## Toolbox
+
+From this [article](https://towardsdatascience.com/networking-tools-every-developer-needs-to-know-e17c9159b180)
+
+### ping
+
+### dig
+
+### netcat
+
+### ip
+
+### tracepath
+
+### nmap
+
+### ss
+
+### tcpdump
+
+### curl
+
+- curl | jq
+
+### wget
