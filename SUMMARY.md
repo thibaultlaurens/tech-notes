@@ -6,9 +6,9 @@
 
 - [Software Engineering](fundamentals/management.md)
 - [Software Programming](fundamentals/programming.md)
-- [Compiler Design](fundamentals/compiler-design.md)
+- [Language and Compiler Design](fundamentals/compiler-design.md)
 - [Database Management System](fundamentals/data.md)
-- [Networking](fundamentals/network.md)
+- [Computer Networking](fundamentals/network.md)
 - [Security & Cryptography](fundamentals/security.md)
 - [Infrastructure & Operations](fundamentals/operations.md)
 - [Distributed Systems](fundamentals/distributed-systems.md)
@@ -17,14 +17,16 @@
 ## Books
 
 - [Grokking Algorithms](books/grokking-algorithms.md)
-- [Designing Data-Intensive Applications](books/designing-data-intensive-applications.md)
 - [Site Reliability Engineering](books/site-reliability-engineering.md)
+- [Designing Data-Intensive Applications](books/designing-data-intensive-applications.md)
+- [Structure and Interpretation of Computer Programs](books/structure-and-interpretation-of-computer-programs.md)
 
 ## Conferences
 
-- [CODE MESH 2016](conferences/code-mesh-2016.md)
+- [CODE MESH LDN 2016](conferences/code-mesh-2016.md)
 - [HACK.LU 2019](conferences/hack.lu-2019.md)
 - [DFRWS EU 2020](conferences/dfrws-eu-2020.md)
+- [QCON PLUS 2020](conferences/qcon-plus.md)
 
 ## Linux System Programming <a id="lsp"></a>
 
