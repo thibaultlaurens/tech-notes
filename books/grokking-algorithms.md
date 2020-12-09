@@ -67,7 +67,7 @@ Some common Big O run times sorted from fastest to slowest:
 - **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
 - **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
 
-![](../.gitbook/assets/big-o-complexity-chart.jpeg)
+![big-o-complexity-chart](../.gitbook/assets/big-o-complexity-chart.jpeg)
 
 ## 2. Selection Sort
 
@@ -185,7 +185,7 @@ The call stack is made up of **stack frames**, one for each method call. A stack
 - Information about the caller's stack frame
 - The return address: what the program should do after the function returns \(i.e.: where it should "return to"\).
 
-![](../.gitbook/assets/call-stack.png)
+![call-stack](../.gitbook/assets/call-stack.png)
 
 Each method call creates its own stack frame, taking up space on the call stack. That's important because it can impact the **space complexity** of an algorithm. Especially when we use **recursion**.
 
@@ -227,7 +227,7 @@ Divide-and-conquer algorithms have three parts:
 - **Conquer the subproblems** by solving them recursively. If they are small enough, solve the subproblems as base cases.
 - **Combine the solutions** to the subproblems into the solution for the original problem.
 
-![](../.gitbook/assets/divide-and-conquer.png)
+![divide-and-conquer](../.gitbook/assets/divide-and-conquer.png)
 
 {% hint style="info" %}
 The **Euclidean algorithm**, to compute the greatest common divisor \(**GCD**\) of two numbers by reducing the numbers to smaller and smaller equivalent subproblems, is one of the ancient algorithm using this technique \(which dates to several centuries BC\). Some authors consider that the name "divide and conquer" should be used only when each problem may generate two or more subproblems. The name **decrease and conquer** has been proposed instead for the single-subproblem class.

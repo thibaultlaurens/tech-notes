@@ -69,6 +69,14 @@ Summary of this [article](https://everythingisdata.wordpress.com/2009/10/17/numb
 
 Combination of this [article](https://lethain.com/introduction-to-architecting-systems-for-scale/) and this [chapter](https://www.aosabook.org/en/distsys.html) of the Architecture of Open Source Applications book.
 
+# NoSQL
+
+- https://linkedin.github.io/school-of-sre/databases_nosql/intro/
+
+# Big Data
+
+- https://linkedin.github.io/school-of-sre/big_data/intro/
+
 # Scalability, Availability & Stability Patterns
 
 - [https://www.slideshare.net/jboner/scalability-availability-stability-patterns](https://www.slideshare.net/jboner/scalability-availability-stability-patterns)

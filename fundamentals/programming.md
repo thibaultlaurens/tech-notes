@@ -188,6 +188,10 @@ Targets:
   watch       Watch file changes and build
 ```
 
+## Git
+
+- https://linkedin.github.io/school-of-sre/git/git-basics/
+
 ## Languages
 
 ### Erlang / Elixir

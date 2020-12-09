@@ -4,7 +4,7 @@
 
 ## Fundamentals
 
-- [Software Engineering](fundamentals/management.md)
+- [Software Engineering](fundamentals/engineering.md)
 - [Software Programming](fundamentals/programming.md)
 - [Language and Compiler Design](fundamentals/compiler-design.md)
 - [Database Management System](fundamentals/data.md)

@@ -1,5 +1,65 @@
 # Infrastructure & Operations
 
+## Linux Basics
+
+### Linux Architecture
+
+![linux-architecture](../.gitbook/assets/linux-architecture.png)
+
+- The Linux kernel is **monolithic** in nature.
+- **System calls** are used to interact with the Linux kernel space.
+- Kernel code can only be executed in **kernel mode**. Non-kernel code is executed in **user mode**.
+- Device drivers are used to communicate with the hardware devices.
+
+### File System Organization
+
+![linux-filesystem](../.gitbook/assets/linux-filesystem.png)
+
+- **bin**: User binaries (ps, grep, ping..).
+- **sbin**: System binaries (programs used for system administration: iptables, fdisk, ifconfig..).
+- **etc**: Configuration files (/etc/resolv.conf, /etc/logrotate.conf) and startup/shutdown shell scripts for programs.
+- **dev**: Device files (/dev/tty, /dev/stdin..).
+- **proc**: Process information (pseudo filesystem: /proc/{pid}) and system resources (/proc/uptime).
+- **var**: Variable files (files expected to grow: /var/log, /var/lib, /var/lock).
+- **tmp**: Temporary files (created by system and users, deleted on system reboot).
+- **usr**: User Programs (binaries, libs, documentation, source code for second level programs: less, cron, useradd..).
+- **home**: Home Directories (user related files and directories).
+- **boot**: Boot loader files (kernel initrd, vmlinux, grub files..).
+- **lib**: System libraries (ld\* and lib\*.so.\* for binaries under /bin and /sbin).
+- **opt**: Optional add-on Apps (for individual vendors).
+- **mnt**: Mount directory (for mounted devices and filesystems).
+- **media**: Removable devices.
+- **srv**: Service data (for server specific services data).
+
+### Command Line Basics
+
+- Navigating the filesystem: pwd, cd, ls
+- Manipulating files: touch, mkdir, rm, cp, mv
+- Viewing files: cat, head, tail, more, less
+- Text processing: grep, sed, sort
+- I/O redirection: >, >>, i>, i>&j (i and j are file descriptors), <, <>, |
+
+### Server administration
+
+- User/Group management: id, whoami, /etc/passwd, /etc/shadow, /etc/group
+- Commands for user management: useradd, passwd, usermod, userdel
+- Commands for group management: groupadd, groupmod, groupdel, gpasswd
+- File permission: chmod, chown, chgrp
+- SSH: ssh-keygen, ssh-copy-id, ssh {user}@{hostname/ip} command, scp {source} {dest}
+- procs and i/o management: ps, top, free, vmstat, df (disk free), du (disk usage)
+- systemd: systemctl [start|stop|restart|status|reload] name.service
+
+| Permission              | rwx | Binary | Decimal |
+| ----------------------- | --- | ------ | ------- |
+| Read, write and execute | rwx | 111    | 7       |
+| Read and write          | rw- | 110    | 6       |
+| Read and execute        | r-x | 101    | 5       |
+| Read only               | r-- | 100    | 4       |
+| Write and execute       | -wx | 011    | 3       |
+| Write only              | -w- | 010    | 2       |
+| Execute only            | --x | 001    | 1       |
+| None                    | --- | 000    | 0       |
+
 ## DevOps and SRE
 
 - link to google review book
@@ -14,6 +74,8 @@
 - architecture Prom + alermanager + DB
 - architecture ELK
 - OpenTracing / Jaeger etc
+
+![linux-observability](../.gitbook/assets/linux-observability.png)
 
 ## Container Scheduling
 
