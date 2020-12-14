@@ -273,6 +273,7 @@ Resources:
 - [PEP8](https://www.python.org/dev/peps/pep-0008/)
 - [Google Style Guide](http://google.github.io/styleguide/pyguide.html)
 - [What the f\*ck Python!](https://github.com/satwikkansal/wtfpython)
+- [Python behind the scenes](https://tenthousandmeters.com/tag/python-behind-the-scenes/)
 
 ### Javascript
 
@@ -280,3 +281,4 @@ Resources:
 
 - [ECMAScript 6 features](https://github.com/lukehoban/es6features)
 - [AirBnb style guide](https://github.com/airbnb/javascript).
+- [The modern JavaScript tutorial](https://javascript.info/)

@@ -4,7 +4,7 @@
 
 ### Linux Architecture
 
-![linux-architecture](../.gitbook/assets/linux-architecture.png)
+![linux-architecture](../.gitbook/assets/linux-architecture.svg)
 
 - The Linux kernel is **monolithic** in nature.
 - **System calls** are used to interact with the Linux kernel space.
@@ -89,7 +89,19 @@
 - CI/CD - gitlab
 - Artifactory
 
-## Docker Hardening
+## Docker Best Practices
+
+- **Run as non-root user**: Decrease the risk that container -> host priviledge escalation could occur (**PoLP**: Principle of Least Priviledge).
+- **Do not use a UID below 10000** In case of priviledge escalation, docker container UID may overlap with a more priviledged system user's UID.
+- **Use a static UID and GID**: To manipulate file permissions for files owned by your container. Use `10000:10001` such that `chown 10000:10001 files/` always works.
+- **Do not use latest, pin your image tags**: Pin image tags using a specific image version using `major.minor`, not major.minor.patch to get the latest security updates. Consider using [docker-lock](https://github.com/safe-waters/docker-lock).
+- **Use [tiny](https://github.com/krallin/tini) as your ENTRYPOINT**: To ensure that the default signal handlers work for the software you run in your Docker image and protect from software that accidentally creates zombie processes.
+- **Only store arguments in CMD**: The `ENTRYPOINT` should be the command name (`ENTRYPOINT ["/sbin/tini", "--", "myapp"]`) and `CMD` should only be arguments for the command (`CMD ["--foo", "1", "--bar=2"]`) so `docker run yourimage --help` works.
+
+Resources:
+
+- [Docker security](https://docs.docker.com/engine/security/)
+- [Dockerfile best practices ](https://github.com/hexops/dockerfile)
 
 ## Chaos Engineering
 
