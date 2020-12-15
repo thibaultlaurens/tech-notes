@@ -18,6 +18,7 @@
 - [Why Google Stores Billions of Lines of Code in a Single Repository](https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext)
 - [How to do a code review](https://google.github.io/eng-practices/review/reviewer/)
 - [Command Line Interface Guidelines](https://clig.dev/)
+- [12 Factor CLI Apps](https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46)
 
 ## Try
 
