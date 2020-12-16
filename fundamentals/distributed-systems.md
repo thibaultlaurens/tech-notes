@@ -1,7 +1,9 @@
 # Distributed Systems
 
+- https://cseweb.ucsd.edu/classes/sp16/cse291-e/applications/lecture.html
 - [A Distributed Systems Reading List](https://dancres.github.io/Pages/)
 - [Scalable Web Architecture and Distributed Systems](https://github.com/checkcheckzz/system-design-interview/blob/master/README.md#bk)
+- [A Note on Distributed System](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.41.7628)
 - [https://timilearning.com/1/](https://timilearning.com/1/)
 - [https://pdos.csail.mit.edu/6.824/schedule.html](https://pdos.csail.mit.edu/6.824/schedule.html)
 - [https://github.com/theanalyst/awesome-distributed-systems](https://github.com/theanalyst/awesome-distributed-systems)
@@ -68,6 +70,20 @@ Summary of this [article](https://everythingisdata.wordpress.com/2009/10/17/numb
 ## Introduction to architecting systems for scale
 
 Combination of this [article](https://lethain.com/introduction-to-architecting-systems-for-scale/) and this [chapter](https://www.aosabook.org/en/distsys.html) of the Architecture of Open Source Applications book.
+
+# Distributed Consensus Algorithms
+
+- Link to the codemesh talk
+
+## Paxos
+
+## Raft
+
+## Byzantine Fault Tolerance
+
+- Link to the codemesh talk
+
+# Conflict-free replicated data type
 
 # NoSQL
 

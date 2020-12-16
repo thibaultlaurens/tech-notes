@@ -6,6 +6,8 @@
 
 - https://www.geeksforgeeks.org/computer-network-tutorials/\#basics
 
+- https://cseweb.ucsd.edu/classes/sp16/cse291-e/applications/ln/lecture2.html
+
 ## Network types and topology
 
 - https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/2-network-types-topologies
