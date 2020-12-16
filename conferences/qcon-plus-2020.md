@@ -1,6 +1,6 @@
 # QCon Plus 2020
 
-### History of Infra as Code
+## History of Infra as Code
 
 By Andrew Clay Shafer - VP Transformation @RedHat
 
@@ -17,7 +17,7 @@ Links:
 - [Pulumi](https://www.pulumi.com/)
 - [OpenShift](https://www.openshift.com/).
 
-### Security and the Language of Intent
+## Security and the Language of Intent
 
 By Tracy Holmes - Developer Advocate @HashiCorp
 
@@ -33,7 +33,7 @@ Links:
 - [Hashicopr Sentinel](https://www.hashicorp.com/sentinel)
 - [Open Policy Agent](https://www.openpolicyagent.org/)
 
-### A Sticky Situation: How Netflix Gains Confidence in Changes
+## A Sticky Situation: How Netflix Gains Confidence in Changes
 
 By Haley Tucker - Senior Software Engineer, Resilience Team @Netflix
 
@@ -60,7 +60,7 @@ Links:
 - [Principles of chaos engineering](https://principlesofchaos.org/)
 - [ChAP: Chaos Automation Platform](https://netflixtechblog.com/chap-chaos-automation-platform-53e6d528371f)
 
-### Architecting Resilient Data
+## Architecting Resilient Data
 
 By Jim Walker - VP Product Marketing @CockroachDB
 
@@ -71,7 +71,7 @@ By Jim Walker - VP Product Marketing @CockroachDB
 - Limitations of active/passive (primary/secondary) strategies: costs, complexity (especially true with sharding), backups, synchronization/conflict issues..
 - Distributed SQL and active-active data try to bring the best of both SQL (transactions) and NoSQL (resilience) world.
 
-### Paving the Road to Production
+## Paving the Road to Production
 
 By Graham Jenson Infrastructure Tech Lead @Coinbase
 
