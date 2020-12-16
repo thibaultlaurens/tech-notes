@@ -105,6 +105,8 @@ Resources:
 
 ## Chaos Engineering
 
+- https://principlesofchaos.org/
+
 ## Post Mortem Report
 
 ### Title
