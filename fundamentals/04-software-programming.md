@@ -48,6 +48,8 @@
 ## Git
 
 - [https://linkedin.github.io/school-of-sre/git/git-basics/](https://linkedin.github.io/school-of-sre/git/git-basics/)
+- [Git Flow](https://www.atlassian.com/fr/git/tutorials/comparing-workflows/gitflow-workflow)
+- https://nvie.com/posts/a-successful-git-branching-model/
 
 ## Languages
 
