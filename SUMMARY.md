@@ -17,17 +17,17 @@
 
 ## Books
 
-* [Grokking Algorithms](books/grokking-algorithms.md)
-* [Site Reliability Engineering](books/site-reliability-engineering.md)
-* [Designing Data-Intensive Applications](books/designing-data-intensive-applications.md)
-* [Structure and Interpretation of Computer Programs](books/structure-and-interpretation-of-computer-programs.md)
+* [Grokking Algorithms](books/01-grokking-algorithms.md)
+* [Site Reliability Engineering](books/02-site-reliability-engineering.md)
+* [Designing Data-Intensive Applications](books/03-designing-data-intensive-applications.md)
+* [Structure and Interpretation of Computer Programs](books/04-structure-and-interpretation-of-computer-programs.md)
 
 ## Conferences
 
-* [CODE MESH LDN 2016](conferences/code-mesh-2016.md)
-* [HACK.LU 2019](conferences/hack.lu-2019.md)
-* [DFRWS EU 2020](conferences/dfrws-eu-2020.md)
-* [QCON PLUS 2020](conferences/qcon-plus-2020.md)
+* [CODE MESH LDN 2016](conferences/01-code-mesh-2016.md)
+* [HACK.LU 2019](conferences/02-hack.lu-2019.md)
+* [DFRWS EU 2020](conferences/03-dfrws-eu-2020.md)
+* [QCON PLUS 2020](conferences/04-qcon-plus-2020.md)
 
 ## Linux System Programming <a id="lsp"></a>
 
