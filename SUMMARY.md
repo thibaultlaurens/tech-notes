@@ -4,7 +4,7 @@
 
 ## Fundamentals
 
-* [Algorithms & Data structures](fundamentals/algorithms-and-data-structures.md)
+* [Algorithms & Data structures](fundamentals/01-algorithms-and-data-structures.md)
 * [Language and Compiler Design](fundamentals/compiler-design.md)
 * [Software Engineering](fundamentals/engineering.md)
 * [Software Programming](fundamentals/programming.md)
