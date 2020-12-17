@@ -4,9 +4,10 @@
 
 ## Fundamentals
 
+* [Algorithms & Data structures](fundamentals/algorithms-and-data-structures.md)
+* [Language and Compiler Design](fundamentals/compiler-design.md)
 * [Software Engineering](fundamentals/engineering.md)
 * [Software Programming](fundamentals/programming.md)
-* [Language and Compiler Design](fundamentals/compiler-design.md)
 * [Database Management System](fundamentals/data.md)
 * [Computer Networking](fundamentals/network.md)
 * [Security & Cryptography](fundamentals/security.md)
