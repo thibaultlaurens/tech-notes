@@ -61,11 +61,11 @@ Big O establishes **worst-case run time**: A simple / linear search algorithm \(
 
 Some common Big O run times sorted from fastest to slowest:
 
-- **O\(log n\)** also known as _log time_ \(ex: binary search\)
-- **O\(n\)**: also known as _linear time_ \(ex: simple search\)
-- **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
-- **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
-- **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
+* **O\(log n\)** also known as _log time_ \(ex: binary search\)
+* **O\(n\)**: also known as _linear time_ \(ex: simple search\)
+* **O\(n \* log n\)**: a fast sorting algorithm \(ex: quicksort, see chapter 4\)
+* **O\(n^2\)**: a slow sorting algorithm \(ex: selection sort, see chapter 2\)
+* **O\(n!\)**: a really slow algorithm \(ex: the traveling salesperson: he wants to hit a n number of cities while travelling the minimum distance\)
 
 ![big-o-complexity-chart](../.gitbook/assets/big-o-complexity-chart.jpeg)
 
@@ -77,19 +77,19 @@ Both Arrays and Linked Lists are **linear data structures**, but they have some 
 
 Arrays:
 
-- **Index based** data structure where each elements are associated with an index.
-- They are stored in **sequential** memory location.
-- They have a **fixed size**, specified during declaration and allocated during compile time.
-- Elements are accessed **directly** \(specifying the element index\), at **O\(1\)**.
-- Insertion and deletion is relatively slow \(as shifting is required\), at **O\(n\)**.
+* **Index based** data structure where each elements are associated with an index.
+* They are stored in **sequential** memory location.
+* They have a **fixed size**, specified during declaration and allocated during compile time.
+* Elements are accessed **directly** \(specifying the element index\), at **O\(1\)**.
+* Insertion and deletion is relatively slow \(as shifting is required\), at **O\(n\)**.
 
 Linked Lists:
 
-- **Reference based** data structure where each node consists of the data and the reference to the next element.
-- They are stored **randomly** in memory.
-- They have a **variable** number of elements and grow and shrink during run time.
-- Elements are accessed **sequentially** \(traversing the node, starting from the first one\) at **O\(n\)**.
-- Insertion and deletion is fast, at **O\(1\)**.
+* **Reference based** data structure where each node consists of the data and the reference to the next element.
+* They are stored **randomly** in memory.
+* They have a **variable** number of elements and grow and shrink during run time.
+* Elements are accessed **sequentially** \(traversing the node, starting from the first one\) at **O\(n\)**.
+* Insertion and deletion is fast, at **O\(1\)**.
 
 ### Selection Sort
 
@@ -167,8 +167,8 @@ countdown(10)
 
 A **Stack** is an **abstract data type** that serves as a collection of elements, with two main principal operations:
 
-- **Push**: Add an element to the collection
-- **Pop**: Remove the most recently added element that was not yet removed.
+* **Push**: Add an element to the collection
+* **Pop**: Remove the most recently added element that was not yet removed.
 
 The order in which elements come off a stack gives rise to its alternative name, **LIFO** \(last in, first out\). Additionally, a **peek** operation may give access to the top without modifying the stack.
 
@@ -180,10 +180,10 @@ A **call stack** is a stack data structure that stores information about the act
 
 The call stack is made up of **stack frames**, one for each method call. A stack frame usually stores:
 
-- Local variables
-- Arguments passed into the method
-- Information about the caller's stack frame
-- The return address: what the program should do after the function returns \(i.e.: where it should "return to"\).
+* Local variables
+* Arguments passed into the method
+* Information about the caller's stack frame
+* The return address: what the program should do after the function returns \(i.e.: where it should "return to"\).
 
 ![call-stack](../.gitbook/assets/call-stack.png)
 
@@ -223,9 +223,9 @@ Python interpreters don't support tail call optimization, this is for demonstrat
 
 Divide-and-conquer algorithms have three parts:
 
-- **Divide the problem** into a number of subproblems that are smaller instances of the same problem.
-- **Conquer the subproblems** by solving them recursively. If they are small enough, solve the subproblems as base cases.
-- **Combine the solutions** to the subproblems into the solution for the original problem.
+* **Divide the problem** into a number of subproblems that are smaller instances of the same problem.
+* **Conquer the subproblems** by solving them recursively. If they are small enough, solve the subproblems as base cases.
+* **Combine the solutions** to the subproblems into the solution for the original problem.
 
 ![divide-and-conquer](../.gitbook/assets/divide-and-conquer.png)
 
@@ -403,12 +403,12 @@ The **constant factor** in the big O notation is used to compare algorithms with
 
 ## 5. Hash Tables \(WIP\)
 
-- collisions are bad
-- hash tables are good at search, insert and delete
-- hash tables are good at modeling relationships from item to another
-- load factor &gt; 0.7 -&gt; resize the hash table
-- hash tables are good for caching data
-- hash tables are good for catching duplicates
+* collisions are bad
+* hash tables are good at search, insert and delete
+* hash tables are good at modeling relationships from item to another
+* load factor &gt; 0.7 -&gt; resize the hash table
+* hash tables are good for caching data
+* hash tables are good for catching duplicates
 
 A hash table \(**hash map**\) is a data structure that implements an **associative array abstract data type**, a structure that can map keys to values. A hash table uses a **hash function** to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored.
 
@@ -416,9 +416,9 @@ A hash table \(**hash map**\) is a data structure that implements an **associati
 
 Properties of a hashing function:
 
-- **Uniformity**: The hash function should map the expected inputs as evenly as possible over its output range.
-- **Efficiency**: The use of a hash function is a trade off between search time and data storage space. A hash table can be very large, very sparse, but very fast.
-- **Deterministic**: For a given input value it must always generate the same hash value.
+* **Uniformity**: The hash function should map the expected inputs as evenly as possible over its output range.
+* **Efficiency**: The use of a hash function is a trade off between search time and data storage space. A hash table can be very large, very sparse, but very fast.
+* **Deterministic**: For a given input value it must always generate the same hash value.
 
 ### Collisions
 
@@ -436,25 +436,25 @@ In many situations, hash tables turn out to be on average more efficient than se
 
 ### Queues
 
-- Data structure similar to stacks, you can't access random elements
-- There are only two operations: **enqueue** and **dequeue**
-- A queue is **FIFO**: First In First Out \(in contract to a FIFO stack\)
+* Data structure similar to stacks, you can't access random elements
+* There are only two operations: **enqueue** and **dequeue**
+* A queue is **FIFO**: First In First Out \(in contract to a FIFO stack\)
 
 ### Graphs
 
-- A graph models a set of connections. It models how different things are connected to one another
-- A graph is made up of **nodes** and **edges**
-- A node can be directly connected to other nodes, its **neighbors**, with edges.
-- A **directed graph** is a graph where edges points to a single direction \(uni-directional relationship\)
-- An **undirected graph** is a graph where edges doesn't have a direction \(bi-directional relationship\)
-- A **topological sort** makes an ordered list out of a graph by sorting relationships
-- A **tree** is a special graph where no nodes ever points back \(a directed graph with only one edge between nodes\)
+* A graph models a set of connections. It models how different things are connected to one another
+* A graph is made up of **nodes** and **edges**
+* A node can be directly connected to other nodes, its **neighbors**, with edges.
+* A **directed graph** is a graph where edges points to a single direction \(uni-directional relationship\)
+* An **undirected graph** is a graph where edges doesn't have a direction \(bi-directional relationship\)
+* A **topological sort** makes an ordered list out of a graph by sorting relationships
+* A **tree** is a special graph where no nodes ever points back \(a directed graph with only one edge between nodes\)
 
 ### Breadth-first search \(BFS\)
 
-- Run on graphs
-- Find if there is a path between two nodes
-- Find the shortest path between two nodes
+* Run on graphs
+* Find if there is a path between two nodes
+* Find the shortest path between two nodes
 
 How it works:
 
@@ -467,90 +467,91 @@ How it works:
 
 > Keeping a list of nodes that have been checked solved two potential issues:
 >
-> - We don't want to check nodes twice to increase performance
-> - We don't want to get stuck in an infinite loop
+> * We don't want to check nodes twice to increase performance
+> * We don't want to get stuck in an infinite loop
 
 Running time:
 
-- Search an entire graph means following each edges **O\(edges\)**
-- Adding each node to the queue \(in constant O\(1\) for each node\) means **O\(vertices\)**
-- BFT running time is **O\(V + E\)**
+* Search an entire graph means following each edges **O\(edges\)**
+* Adding each node to the queue \(in constant O\(1\) for each node\) means **O\(vertices\)**
+* BFT running time is **O\(V + E\)**
 
 ## 7. Dijkstra’s algorithm
 
-- **Weighted graph**
-- Breadth-first search is use to calculate the shortest path for an unweighted graph.
-- **Dijkstra's algorithm** is use to calculate the sortest path for a weighted graph.
-- Dijkstra's algorithm works when **all the weights are positive**.
-- In the case of negative weights, use the **Bellman-Ford algorithm**.
+* **Weighted graph**
+* Breadth-first search is use to calculate the shortest path for an unweighted graph.
+* **Dijkstra's algorithm** is use to calculate the sortest path for a weighted graph.
+* Dijkstra's algorithm works when **all the weights are positive**.
+* In the case of negative weights, use the **Bellman-Ford algorithm**.
 
 ## 8. Greedy algorithms
 
-- **Sets**
-- Operation on sets: **union**, **intersection**, **difference**
-- **Greedy algorithms** optimize locally, hoping to end up with a global optimum.
-- **NP-complete problems** have no know fast solution.
-- When dealing with NP-complete problems, your best bet is to use an **approximation algorithm**
-- Greedy algorithms are easy to write and fast to run, so they make good algorithms
+* **Sets**
+* Operation on sets: **union**, **intersection**, **difference**
+* **Greedy algorithms** optimize locally, hoping to end up with a global optimum.
+* **NP-complete problems** have no know fast solution.
+* When dealing with NP-complete problems, your best bet is to use an **approximation algorithm**
+* Greedy algorithms are easy to write and fast to run, so they make good algorithms
 
 How do you tell if a problem is NP-complete ?
 
-- The algorithm runs quickly with a handful of items but really slows down with more items.
-- "All combinations of X" usually points to an NP-complete problem.
-- Do you have to calculate "every possible version" of X because you can't break it down into smaller sub-problems ? Might be NP-complete.
-- If your problem involves a sequence (such as a sequence of cities, like in the travelling salesperson), and it's hard to solve, it might be NP-complete.
-- Can you restate your problem as the set-covering problem or the travelling salesperson problem? Then your problem is definitely NP-complete.
+* The algorithm runs quickly with a handful of items but really slows down with more items.
+* "All combinations of X" usually points to an NP-complete problem.
+* Do you have to calculate "every possible version" of X because you can't break it down into smaller sub-problems ? Might be NP-complete.
+* If your problem involves a sequence \(such as a sequence of cities, like in the travelling salesperson\), and it's hard to solve, it might be NP-complete.
+* Can you restate your problem as the set-covering problem or the travelling salesperson problem? Then your problem is definitely NP-complete.
 
 ## 9. Dynamic programming
 
-- Dynamic programming is useful when you are trying to optimize something given a **constraint**.
-- You can use dynamic programming when the problem can be broken down into **discrete subproblems**.
-- Every dynamic programming solution involves a **grid**.
-- The values in the cells are usually what you are trying to **optimize**.
-- Each cell is a subproblem, so think about **how you can divide your problem** into subproblems.
-- There is no formula for calculating a dynamic programming solution
+* Dynamic programming is useful when you are trying to optimize something given a **constraint**.
+* You can use dynamic programming when the problem can be broken down into **discrete subproblems**.
+* Every dynamic programming solution involves a **grid**.
+* The values in the cells are usually what you are trying to **optimize**.
+* Each cell is a subproblem, so think about **how you can divide your problem** into subproblems.
+* There is no formula for calculating a dynamic programming solution
 
 Exemple of dynamic programming problems:
 
-- The Knapsack problem:
-- Longest common substring and longest common subsequence
+* The Knapsack problem:
+* Longest common substring and longest common subsequence
 
 Exemple of dynamic programming usages:
 
-- Biologists use the longest common subsequence to find similarities in DNA strands.
-- Diff tools (like git diff) use dynamic programming to find the difference between two files.
-- **Levenshtein distance** measures how similar two strings arewith dynamic programming (use for spell checking, copyright check etc.).
+* Biologists use the longest common subsequence to find similarities in DNA strands.
+* Diff tools \(like git diff\) use dynamic programming to find the difference between two files.
+* **Levenshtein distance** measures how similar two strings arewith dynamic programming \(use for spell checking, copyright check etc.\).
 
 ## 10. K-nearest neighbors
 
 ### KNN
 
-- **KNN** is used for classification and regression and involves looking at k-nearest neighbors.
-- **Classification**: categorizarion into groups.
-- **Regression**: predicting a response (like a number).
-- **Feature extraction** means converting an item (like a fruit, a user, a picture) into a list of numbers that can be compared.
-- Picking good features is an important part of a successful KNN algorithm, we should try to avoid **bias**.
+* **KNN** is used for classification and regression and involves looking at k-nearest neighbors.
+* **Classification**: categorizarion into groups.
+* **Regression**: predicting a response \(like a number\).
+* **Feature extraction** means converting an item \(like a fruit, a user, a picture\) into a list of numbers that can be compared.
+* Picking good features is an important part of a successful KNN algorithm, we should try to avoid **bias**.
 
 ### Finding similarities
 
-- **Pythagorian formula** can be used to find distance between multiple points: `distance^2 = (x1-x2)^2 + (y1+y2)^2 + (z1-z2)^2`
-- **Cosine similarity** compares the angles between vectors to find similarities.
+* **Pythagorian formula** can be used to find distance between multiple points: `distance^2 = (x1-x2)^2 + (y1+y2)^2 + (z1-z2)^2`
+* **Cosine similarity** compares the angles between vectors to find similarities.
 
 ### Introduction to Machine Learning
 
-- **OCR** (Optical Character Recognition): Measures lines, points and curves on test characters.
-- **Training**: extracting features from a large set of data
-- **Naive Bayes classifiers** to figure out the probability of something being classified into "something"
+* **OCR** \(Optical Character Recognition\): Measures lines, points and curves on test characters.
+* **Training**: extracting features from a large set of data
+* **Naive Bayes classifiers** to figure out the probability of something being classified into "something"
 
 ## 11. Where to go next
 
-- Trees
-- Inverted Indexes
-- The Fourier Transform
-- Parallel algorithms
-- MapReduce
-- Bloom filters and HyperLogLog
-- The SHA algorithms
-- Locality-sensitive hashing
-- Diffie-Hellman key exchange
-- Linear programming
+* Trees
+* Inverted Indexes
+* The Fourier Transform
+* Parallel algorithms
+* MapReduce
+* Bloom filters and HyperLogLog
+* The SHA algorithms
+* Locality-sensitive hashing
+* Diffie-Hellman key exchange
+* Linear programming
+

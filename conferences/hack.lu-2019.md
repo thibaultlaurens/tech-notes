@@ -4,23 +4,23 @@
 
 Explain a theoretical bridge between hackers and other technologists; and a special group of end-users \(journalists and their sources\) who are, often without their prior knowledge, at the complete mercy of tools they barely understand under-the-hood.
 
-- [Freedom of the press fondation](https://freedom.press/)
-- [US Press Freedom Tracker](https://pressfreedomtracker.us/)
+* [Freedom of the press fondation](https://freedom.press/)
+* [US Press Freedom Tracker](https://pressfreedomtracker.us/)
 
 ## The Road to Hell is Paved with Bad Passwords
 
 Incident management of an embassy hacked by ISI
 
-- [Inside the 2014 hack of a Saudi embassy](https://www.csoonline.com/article/3386381/inside-the-2014-hack-of-a-saudi-embassy.html)
-- [Hackernoon article ](https://hackernoon.com/the-road-to-hell-is-paved-with-bad-passwords-ef54815873f9)
-- [Cyberwarfare](https://en.wikipedia.org/wiki/Cyberwarfare)
+* [Inside the 2014 hack of a Saudi embassy](https://www.csoonline.com/article/3386381/inside-the-2014-hack-of-a-saudi-embassy.html)
+* [Hackernoon article ](https://hackernoon.com/the-road-to-hell-is-paved-with-bad-passwords-ef54815873f9)
+* [Cyberwarfare](https://en.wikipedia.org/wiki/Cyberwarfare)
 
 ## Say Cheese - How I Ransomwared your DSLR Camera
 
 This is the first vulnerability research on the Picture Transfer Protocol, a vendor agnostic logical layer that is common to all modern-day cameras. As DSLR cameras are used by consumers and journalists alike, this opens up the door for future research on these sensitive embedded devices.
 
-- [Picture Transfer Protocol](https://en.wikipedia.org/wiki/Picture_Transfer_Protocol)
-- [Checkpoint GitHub account](https://github.com/CheckPointSW)
+* [Picture Transfer Protocol](https://en.wikipedia.org/wiki/Picture_Transfer_Protocol)
+* [Checkpoint GitHub account](https://github.com/CheckPointSW)
 
 ## Leveraging KVM as a debugging platform
 
@@ -58,18 +58,18 @@ Fileless Malware Infection and Linux Process Injection in Linux OS アドリア�
 
 Marion Marschalek, Intel STORM team
 
-- Bugify binaries by compromising the compiler ?
-  - no one is auditing build chains or final output when they have the source code
-  - usually not a problem because a compiler rarely introduces bugs and even rarely introduces a critical security bug
-  - but very interesting attack vector !
-- GCC : front-end to create a generic representation, middle-end produces GIMPLE \(language independent\), … \(language optimizations\), RTL, back-end produces machine code. High complexity, millions lines of code, long legacy
-- RTL : generic representation, proc independent, abstract description of final machine code
-- Hard to execute bug full control on final binary is easy. Stealth :
-  - mimicking optimizations fails,
-- delete instruction to override a crypto key in memory with 0s because memory not used after \[mitigated in recent compilers but an existing « bug » that could be forced\]
-  - configurable bugs
-  - very small modifications difficult to find through fuzzing : type confusions, off by one, unsign a signed type, shorten a key, kill a canary, attack mitigations
-- Target GCC built-ins made for machine optimization of standard lib C and are customizable
+* Bugify binaries by compromising the compiler ?
+  * no one is auditing build chains or final output when they have the source code
+  * usually not a problem because a compiler rarely introduces bugs and even rarely introduces a critical security bug
+  * but very interesting attack vector !
+* GCC : front-end to create a generic representation, middle-end produces GIMPLE \(language independent\), … \(language optimizations\), RTL, back-end produces machine code. High complexity, millions lines of code, long legacy
+* RTL : generic representation, proc independent, abstract description of final machine code
+* Hard to execute bug full control on final binary is easy. Stealth :
+  * mimicking optimizations fails,
+* delete instruction to override a crypto key in memory with 0s because memory not used after \[mitigated in recent compilers but an existing « bug » that could be forced\]
+  * configurable bugs
+  * very small modifications difficult to find through fuzzing : type confusions, off by one, unsign a signed type, shorten a key, kill a canary, attack mitigations
+* Target GCC built-ins made for machine optimization of standard lib C and are customizable
 
 Présentation très accessible abordant GCC internals, POC et réflexion sur la faisabilité d’attaques du compilateur
 
@@ -77,53 +77,54 @@ Présentation très accessible abordant GCC internals, POC et réflexion sur la 
 
 Kostiantyn Korsun, ex head of CERT-UA, ex iSIGHT, Berezhasecurity
 
-- Ukraine targeting by a lot of high level attacks against critical infrastructure \(Central election comity network in 2014, BlackEnergy in 2015, NotPetya in 2017, DanaBot…\)
-- \#FRD : Fuck Responsible Disclosure
-  - Expose non directly exploitable bugs to the public to have officials/critical companies fix the problems faster
-  - Legal : yes
-  - Started in October 2017 : open network disk of water supply company, email password available online for CERT-UA, open network disk of Kyiv electric supply company, of a nuclear power plant, plane plant, outdated PHP on State Financial, XSS everywhere, open network of National Police where everyone can search in records, open GIT of National Health with passwords to database full of personal health data.
-- Typical reactions are the 5 stages of grief : denial, anger, bargaining, depression, acceptance
-- Consequences : media, discharges, more investments
-- Now supported by gov/police
+* Ukraine targeting by a lot of high level attacks against critical infrastructure \(Central election comity network in 2014, BlackEnergy in 2015, NotPetya in 2017, DanaBot…\)
+* \#FRD : Fuck Responsible Disclosure
+  * Expose non directly exploitable bugs to the public to have officials/critical companies fix the problems faster
+  * Legal : yes
+  * Started in October 2017 : open network disk of water supply company, email password available online for CERT-UA, open network disk of Kyiv electric supply company, of a nuclear power plant, plane plant, outdated PHP on State Financial, XSS everywhere, open network of National Police where everyone can search in records, open GIT of National Health with passwords to database full of personal health data.
+* Typical reactions are the 5 stages of grief : denial, anger, bargaining, depression, acceptance
+* Consequences : media, discharges, more investments
+* Now supported by gov/police
 
 Equivalent de l’article 47 de la LPM 2013 en France. La légalité effective a été interrogée à plusieurs reprises dans les questions.
 
 ## What the log?! So many events, so little time…
 
-- EventList
-- MITTR Attack
-- Sigma
+* EventList
+* MITTR Attack
+* Sigma
 
 ## The Glitch In The Matrix
 
-- Gcc graphic overview
-- Gimple -&gt; RTL
-- Gcc vs llvm
+* Gcc graphic overview
+* Gimple -&gt; RTL
+* Gcc vs llvm
 
 ## DNS On Fire
 
 Warren Mercer and Rascagneres Paul, Cisco Talos
 
-- DNS hijacking : DNS administer, DNS system interface, DNS servers, Network infra, Requestor’s endpoint
-- DNSpionage :
-  - spearphishing email or social media message \(Linkedin\)
-  - domains similar to official ones and redirecting to them to host malicious documents : hr-wipro.com, hr-suncor.com
-  - Macros to drop DNSpionage : HTTP & DNS tunnel. One sample in debug mode.
-  - HTTP mode : DNS request to register to …..0ffice36o.com. Fake wikipedia page with base64 encoded commands.
-  - DNS mode : IP == ASCII encoded
-  - Monitoring through Cisco OpenDNS
-  - On IP used for exfilration, .gov. domains pointing to it in the past and Let’s Encrypt certificates found at the same time \(Police/Intel/Gov, emails/VPN gateways\)
-  - Main activity in september-november 2018 but first activity seen in Q1 2017
-  - Alleged Oilrig leak : nothing related to DNSpionage
-- Panel of ScareCrow, /Th!swasP@NEl in URL, close to panel name revealed by Lastline \(SAS 2019\)
-- webmask : MiTM via DNS redirection with middle east gov addresses in config file
-- very possible it has been used for DNSpionage
-- SeaTurtle :
-  - Espionage targeting middle east & north african gov departments, intel, oil & gas, military
-  - Responsible for a publicly confirmed case of a DNS registry compromise \(Netnod in Sweden : https://www.netnod.se/news/statement-on-man-in-the-middle-attack-against-netnod\)
-  - Steal credentials for DNS administration and update DNS servers
-  - Use it for MitM attacks to steal credentials \(VPN access\)
-  - No concern about reveal : they have intensified their activity after disclosure
-  - Attack multiple registrars, very aggressive, certificate abuse, steal certificates from victims infrastructure,
-  - July 2019 \(blog post\) : single use of name-servers \(per victim\), less &lt; 24h live, Middle East and North Africa, a non profit in Swiss
-- Protection : monitor your own DNS, monitor Certificate Transparency for your own names, patch, revoke and reset
+* DNS hijacking : DNS administer, DNS system interface, DNS servers, Network infra, Requestor’s endpoint
+* DNSpionage :
+  * spearphishing email or social media message \(Linkedin\)
+  * domains similar to official ones and redirecting to them to host malicious documents : hr-wipro.com, hr-suncor.com
+  * Macros to drop DNSpionage : HTTP & DNS tunnel. One sample in debug mode.
+  * HTTP mode : DNS request to register to …..0ffice36o.com. Fake wikipedia page with base64 encoded commands.
+  * DNS mode : IP == ASCII encoded
+  * Monitoring through Cisco OpenDNS
+  * On IP used for exfilration, .gov. domains pointing to it in the past and Let’s Encrypt certificates found at the same time \(Police/Intel/Gov, emails/VPN gateways\)
+  * Main activity in september-november 2018 but first activity seen in Q1 2017
+  * Alleged Oilrig leak : nothing related to DNSpionage
+* Panel of ScareCrow, /Th!swasP@NEl in URL, close to panel name revealed by Lastline \(SAS 2019\)
+* webmask : MiTM via DNS redirection with middle east gov addresses in config file
+* very possible it has been used for DNSpionage
+* SeaTurtle :
+  * Espionage targeting middle east & north african gov departments, intel, oil & gas, military
+  * Responsible for a publicly confirmed case of a DNS registry compromise \(Netnod in Sweden : [https://www.netnod.se/news/statement-on-man-in-the-middle-attack-against-netnod\](https://www.netnod.se/news/statement-on-man-in-the-middle-attack-against-netnod\)\)
+  * Steal credentials for DNS administration and update DNS servers
+  * Use it for MitM attacks to steal credentials \(VPN access\)
+  * No concern about reveal : they have intensified their activity after disclosure
+  * Attack multiple registrars, very aggressive, certificate abuse, steal certificates from victims infrastructure,
+  * July 2019 \(blog post\) : single use of name-servers \(per victim\), less &lt; 24h live, Middle East and North Africa, a non profit in Swiss
+* Protection : monitor your own DNS, monitor Certificate Transparency for your own names, patch, revoke and reset
+
