@@ -5,15 +5,15 @@
 ## Fundamentals
 
 * [Algorithms & Data structures](fundamentals/01-algorithms-and-data-structures.md)
-* [Language and Compiler Design](fundamentals/compiler-design.md)
-* [Software Engineering](fundamentals/engineering.md)
-* [Software Programming](fundamentals/programming.md)
-* [Database Management System](fundamentals/data.md)
-* [Computer Networking](fundamentals/network.md)
-* [Security & Cryptography](fundamentals/security.md)
-* [Infrastructure & Operations](fundamentals/operations.md)
-* [Distributed Systems](fundamentals/distributed-systems.md)
-* [Systems design](fundamentals/systems.md)
+* [Language and Compiler Design](fundamentals/02-language-and-compiler-design.md)
+* [Software Engineering](fundamentals/03-software-engineering.md)
+* [Software Programming](fundamentals/04-software-programming.md)
+* [Database Management System](fundamentals/05-database-management-system.md)
+* [Computer Networking](fundamentals/06-computer-network.md)
+* [Security & Cryptography](fundamentals/07-security-and-cryptography.md)
+* [Infrastructure & Operations](fundamentals/08-infrastructures-and-operations.md)
+* [Distributed Systems](fundamentals/09-distributed-systems.md)
+* [Systems design](fundamentals/10-systems-design.md)
 
 ## Books
 
