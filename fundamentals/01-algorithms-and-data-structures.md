@@ -1,6 +1,6 @@
 # Algorithms & Data structures
 
-## [Grokking Algorithms Review](https://docs.tlaurens.xyz/books/grokking-algorithms)
+## [Grokking Algorithms Book Review](https://docs.tlaurens.xyz/books/grokking-algorithms)
 
 **TLDR**:
 
