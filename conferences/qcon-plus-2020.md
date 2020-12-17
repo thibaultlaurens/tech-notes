@@ -2,36 +2,19 @@
 
 ## History of Infra as Code
 
-By Andrew Clay Shafer - VP Transformation @RedHat
+By Andrew Clay Shafer - VP Transformation @RedHat - [Link](https://plus.qconferences.com/plus2020/presentation/history-infra-code)
 
-- A language is a structured system of communication. Both our human and computer languages enable, shape, and constrain the concepts we can effectively express.
+A language is a structured system of communication. Both our human and computer languages enable, shape, and constrain the concepts we can effectively express. A whimsical look at the co-evolution of infrastructure and code starting from the beginning of time to the present with a look to the future. We'll walk through the progression of 'Infrastructure as Code' in theory and practice, some problems these developments solved and also some problems they revealed. What can we express today? What do we wish we could express? What will we express tomorrow?
+
+Takeway:
+
 - Infrastructure as Code:
   - Use all our software tricks: software development lifecycle, versionning, testing.
   - Be wary of the software pitfalls.
 - Everything is a software built on top of silicon.
 - Timeline from 1990 to 2010: **CFEngine -> bcfg2 -> Puppet -> Chef -> SaltStack -> Ansible**.
 - Control Loops: from **Current State** to **Desired State**.
-
-Links:
-
-- [Pulumi](https://www.pulumi.com/)
-- [OpenShift](https://www.openshift.com/).
-
-## Security and the Language of Intent
-
-By Tracy Holmes - Developer Advocate @HashiCorp
-
-- Infrastructure as code empowers developers and operators to scale systems and maximize availability, but what about improving security?
-- Exemple: how to secure a database ? (secrets, lock subnets and ports, low priviledges, encryption, ACL..)
-- Benefits of **Policy as Code**: Sandboxing, Codification, Version control, Testing, Automation, Balance dev experience and security
-- **HashiCorp Sentinel**: use policy as code to communicate and translate the security intentions you want and expect in your infrastructure.
-- Sentinel policy enforcement is only available in TF Cloud or TF Enterprise.
-- Open soutce alternative to Sentinal: OPA (**Open Policy Agent**)
-
-Links:
-
-- [Hashicopr Sentinel](https://www.hashicorp.com/sentinel)
-- [Open Policy Agent](https://www.openpolicyagent.org/)
+- Check [Pulumi](https://www.pulumi.com/) and [OpenShift](https://www.openshift.com/).
 
 ## A Sticky Situation: How Netflix Gains Confidence in Changes
 
@@ -59,6 +42,20 @@ Links:
 
 - [Principles of chaos engineering](https://principlesofchaos.org/)
 - [ChAP: Chaos Automation Platform](https://netflixtechblog.com/chap-chaos-automation-platform-53e6d528371f)
+
+## Security and the Language of Intent
+
+By Tracy Holmes - Developer Advocate @HashiCorp - [Link](https://plus.qconferences.com/plus2020/presentation/terraform-security)
+
+Infrastructure as code empowers developers and operators to scale systems and maximize availability, but what about improving security? The language of security can be difficult to remember and implement under delivery pressure. In this talk, I’ll discuss why the language of security for infrastructure is often lost in translation and how policy as code can help. By using tools such as HashiCorp Sentinel, you can use policy as code to communicate and translate the security intentions you want and expect in your infrastructure.
+
+Takeway:
+
+- Exemple: making a database secure can mean a lot of things: secrets, lock subnets and ports, low priviledges, encryption, ACL..
+- Benefits of **Policy as Code**: Sandboxing, Codification, Version control, Testing, Automation, Balance dev experience and security
+- [**Hashicopr Sentinel**](https://www.hashicorp.com/sentinel): use policy as code to communicate and translate the security intentions you want and expect in your infrastructure.
+- Sentinel policy enforcement is only available in TF Cloud or TF Enterprise.
+- Open soutce alternative to Sentinal: OPA ([**Open Policy Agent**](https://www.openpolicyagent.org/))
 
 ## Architecting Resilient Data
 
