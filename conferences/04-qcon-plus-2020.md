@@ -2,7 +2,7 @@
 
 ## Keynote: The SRE as a Diplomat
 
-By Johnny Boursiquot - SRE @ Salesforce/Heroku - [Link](https://plus.qconferences.com/plus2020/keynote/sre-diplomat)
+_Johnny Boursiquot - SRE @Salesforce/Heroku_
 
 No two organizations implement the practices of Site Reliability Engineering in the same manner and that fact is seldom recognized when rolling out an SRE function for the first time. While there exists a through-line of best practices, those that take on the task of championing SRE within their organization know that, even as a mandate, the implementation is one that requires close collaboration between engineers, operators, and leadership. As Site Reliability Engineering finds itself at the cross-roads of the needs of these stakeholders, the job becomes akin to that of the diplomat who must carefully initiate and facilitate strategic agreements that drive all parties towards the safe creation and maintenance of scalable and reliable software systems.
 
@@ -26,7 +26,7 @@ More than just Infrastructure as a Service, today we have libraries, languages, 
 
 ### History of Infra as Code
 
-By Andrew Clay Shafer - VP Transformation @RedHat - [Link](https://plus.qconferences.com/plus2020/presentation/history-infra-code)
+_Andrew Clay Shafer - VP Transformation @RedHat_
 
 A language is a structured system of communication. Both our human and computer languages enable, shape, and constrain the concepts we can effectively express. A whimsical look at the co-evolution of infrastructure and code starting from the beginning of time to the present with a look to the future. We'll walk through the progression of 'Infrastructure as Code' in theory and practice, some problems these developments solved and also some problems they revealed. What can we express today? What do we wish we could express? What will we express tomorrow?
 
@@ -39,7 +39,7 @@ Takeaway:
 
 ### Security and the Language of Intent
 
-By Tracy Holmes - Developer Advocate @HashiCorp - [Link](https://plus.qconferences.com/plus2020/presentation/terraform-security)
+_Tracy Holmes - Developer Advocate @HashiCorp_
 
 Infrastructure as code empowers developers and operators to scale systems and maximize availability, but what about improving security? The language of security can be difficult to remember and implement under delivery pressure. In this talk, I’ll discuss why the language of security for infrastructure is often lost in translation and how policy as code can help. By using tools such as HashiCorp Sentinel, you can use policy as code to communicate and translate the security intentions you want and expect in your infrastructure.
 
@@ -59,7 +59,7 @@ If your system is safety-sensitive, you may invest heavily in pre-production tes
 
 ### A Sticky Situation: How Netflix Gains Confidence in Changes
 
-By Haley Tucker - Senior Software Engineer, Resilience Team @Netflix - [Link](https://plus.qconferences.com/plus2020/presentation/sticky-situation-how-netflix-gains-confidence-changes)
+_Haley Tucker - Senior Software Engineer, Resilience Team @Netflix_
 
 How do you know whether a change will affect end users in a negative way? As interactions in distributed systems grow increasingly complex, it can be challenging to get an answer to this question.
 One approach is to use a canary in which we introduce a new service into the environment, users are randomly routed to that service, and we compare the performance of that service to the current production build. However, this doesn’t really tell us anything about what the end users are experiencing -- it focuses on service-level metrics. In reality, a service may be happily serving successful requests, yet the end user is not able to use your product.
@@ -85,7 +85,7 @@ Conclusion:
 
 ### Architecting Resilient Data
 
-By Jim Walker - VP Product Marketing @CockroachDB - [Link](https://plus.qconferences.com/plus2020/presentation/cockroach-labs-webinar)
+_Jim Walker - VP Product Marketing @CockroachDB_
 
 Our applications all fail at some point in time. It is unavoidable. Over the past few decades we’ve employed techniques to limit the impact of these moments through often complex and costly active/passive backup strategies. There has to be a better way. In this talk, Jim Walker from Cockroach Labs will walk through the concept of an active-active, always-on database that is rooted in the fundamental principles of distributed systems.
 
@@ -97,25 +97,30 @@ Takeaway:
 - Limitations of active/passive \(primary/secondary\) strategies: costs, complexity \(especially true with sharding\), backups, synchronization/conflict issues..
 - **Distributed SQL and active-active data** try to bring the best of both SQL \(transactions\) and NoSQL \(resilience\) world.
 
-## Resurgence of Functional Programming
-
-What was once a paradigm shift in how we thought of programming languages is now main stream in nearly all modern languages. Hear how software shops are infusing concepts like pure functions and immutablity into their architectures and design choices.
-
-### The Functional Evolution of Object-Oriented Programming
-
-// TODO
-
 ## Paths to Production: Deployment Pipelines as a Competitive Advantage
 
 Enabling developers to push to production at ever increasing velocity has become a competitive advantage. Paths to production examines how some of software’s most well known shops supercharge developers and keep their companies competitive by balancing speed and safety.
 
 ### Safe and Fast Deploys at Planet Scale
 
-// TODO
+_Mathias Schwarz Software Engineer @Uber_
+
+Can you write code, review, test, verify, and ship it safely to millions of users, all in the same day? Absolutely!
+Every week thousands of Uber engineers push out several thousand changes to millions of users. This means that during working hours, some part of the Uber system starts upgrading every single minute and that the system never runs one single version across the host fleet.
+In this talk, we will explore the lessons we learned as we scaled from a small engineering team using a single datacenter to thousands of engineers that continuously deploy changes across multiple cloud platforms, with a focus on maintaining fast and reliable delivery of software changes.
+
+Takeaway:
+
+- Uber: **4000 microservices in production** deployed in private DCs and public cloud (Google and Amazon)
+- **58k builds / week** and **5k deploys / week**
+- Infra abstractions for deployments: **DCs -> Regions -> Zones -> Servers**
+- Importent deploy system features: **consistent builds, zero downtime, outage prevention**
+- 2016: [μDeploy](https://eng.uber.com/micro-deploy-code/) + [uMonitor](https://eng.uber.com/observability-at-scale/) + white and black box custom testing tools
+- Today: "Up": **declarative deployments** (region placement, capacity, canaries, auto-scalling, dependencies) by developers built with a **continuous evaluation loop** to dynamically balance microservices accross zones
 
 ### Paving the Road to Production
 
-By Graham Jenson Infrastructure Tech Lead @Coinbase - [Link](https://plus.qconferences.com/plus2020/presentation/path-production-presentation)
+_Graham Jenson Infrastructure Tech Lead @Coinbase_
 
 "Paved roads" are the paths walked by developers to get their code into production. They are a contract that core teams (like infrastructure and security) have with developers about features and support they will receive if they tread a common path. The benefits of staying on a paved road for a developer is that they get a lot of functionality (like security, logging, metrics) out-of-the-box. For core teams, paved roads are a point of focus where even small improvements can have a big effect.
 In this talk, I will share my experience of creating "paved roads" and deploy pipelines at Coinbase for the past 5 years. Describing how these roads look and have scaled as the company grew from 10 to 500 engineers. I will also talk about the advantages of having a paved road, how to build new paved roads, and how applications might be moved onto one. I am hoping that this talk will convince you to pave your own roads to production.
@@ -127,13 +132,9 @@ Takeaway:
 - 2nd stage: AWS, docker, open culture, deploy first day, **move fast and break things**.
 - 3rd stage: **Use proper automation and deployment tools**. Had to build it \(CodeFlow\) to fit the special company need but also because such tools did not exist yet.
 - 4th stage: **The only way to scale is to document everything** \(think 100+ projects\), build more custom tool for specific developments/deployments, finally **build a framework** to keep it all consistent.
-- 5th stage: 4th stage was not enough so **Monorepo + Bazel** + custom CLI \(500+ projects to maintains\)
+- 5th stage: 4th stage was not enough so **Monorepo + [Bazel](https://bazel.build/)** + custom CLI \(500+ projects to maintains\)
 - Tomorrow: Time to **split the organization**.
 - Conclusion: Iterate and **improve ops/deployments continuously**, try to keep it consistent, don't build one road \(to production\) per car \(projects\). Instead, try to **build a highway** where everyone can drive \(be consistent, or you won't scale\).
-
-Links:
-
-- [Bazel](https://bazel.build/)
 
 ## Operating Microservices
 
@@ -141,7 +142,7 @@ Building and operating distributed systems is hard, and microservices are no dif
 
 ### From Monolith to Microservices
 
-By Sha Ma - VP of Software Engineering @GitHub - [Link](https://plus.qconferences.com/plus2020/presentation/operating-microservices-presentation)
+_Sha Ma - VP of Software Engineering @GitHub_
 
 Due to its low overhead and centralized management, companies often start building products under a monolithic architecture. But as team sizes grow and product use cases become more complicated, this often slows down software development and adds unnecessary friction in the deployment and troubleshooting processes.  
 In this talk, we aim to take a practical approach to software architecture decisions. We will be taking a deeper look at GitHub’s historical and current state, go over some internal and external factors, and discuss practical consideration points in how we started to tackle this migration. Then we will walk through some key concepts and best practices of implementing a microservices architecture that you can apply as you think about this transformation for your organization.
@@ -161,7 +162,7 @@ Takeaway:
 
 ### Solving Mysteries Faster with Observability
 
-By Elizabeth Carretto - Senior Software Engineer @Netflix - [Link](https://plus.qconferences.com/plus2020/presentation/solving-mysteries-faster-observability)
+_Elizabeth Carretto - Senior Software Engineer @Netflix_
 
 Investigating production issues in a microservice architecture can make you feel like a detective, combing through evidence and gathering clues to reconstruct the scene of a crime, all while the clock is ticking. You hop from log store to dashboard, digging for details as you strive to unravel what really happened. All this time spent investigating is expensive, for engineers as well as customers -- and even then, finding an issue is not the same as resolving it!
 Edgar is a tool used and built by Netflix engineers to quickly investigate and solve production issues. Edgar starts with distributed tracing, which shows a request’s path through a complex system. But the request’s path is only a small part of the data available about a request. Dozens of dashboards hold their own insights on what happened, and it takes time for engineers to jump between individual dashboards. Edgar strives to get all this data in one place, supplementing traces with additional context like log correlation, metadata about services, and intelligent analysis.
@@ -177,7 +178,7 @@ The pandemic has forced society and the infosec industry to adapt to challenging
 
 ### Failing Fast: The Impact of Bias When Speeding Up Application Security
 
-By Laura Bell - Founder and CEO of @safestack - [Link](https://plus.qconferences.com/plus2020/presentation/security-presentation)
+_Laura Bell - Founder and CEO of @Safestack_
 
 There is a lot of talk these days about going faster with security, DevSecOps and making security part of your lifecycle. What if _you_ are the reason this might be a pathway to failing fast at security? In this talk, we will explore how bias impacts how we secure our development lifecycles and examine 3 common biases that lead to big issues in this space. By looking at mistakes teams make when embracing application security and how bias plays into them, we can learn to avoid them and make security a key part of moving faster.
 
