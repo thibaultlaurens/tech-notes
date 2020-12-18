@@ -2,7 +2,7 @@
 
 ## Keynote: SpaceMonads
 
-_Conor McBride - Computer & Information Sciences Lecturer @ University of Strathclyde - [Link](https://www.codemesh.io/codemesh2016/conor-mcbride)_
+_Conor McBride - Computer & Information Sciences Lecturer @University of Strathclyde - [Link](https://www.codemesh.io/codemesh2016/conor-mcbride)_
 
 Livehacking in **Agda**, I'll show how space \(in this case, rectangular spaces on your screen\) has a **monadic structure**, and build something a little bit like a window-manager before your very eyes \(apart from the bits that are behind other windows, which will, of course, remain out of sight\). On the way, I'll need to refine some standard testing machinery to produce evidence about what is being tested, and demonstrate that Tony Hoare basically understood monads for dependent types before I was born. The video of this talk will scupper a homework I was thinking of setting my fourth-years, but I don't care.
 
@@ -43,7 +43,7 @@ Takeway:
 
 ## A Brief History of Distributed Programming: RPC
 
-_Caitie McCaffrey - Backend Brat & Distributed Systems Diva @ Twitter - [Link](https://www.codemesh.io/codemesh2016/caitie-mccaffrey)_
+_Caitie McCaffrey - Backend Brat & Distributed Systems Diva @Twitter - [Link](https://www.codemesh.io/codemesh2016/caitie-mccaffrey)_
 
 While many of the distributed systems we operate today are built with language like Java and Go, distributed programming has a long history of innovation and adoption of its ideas. This include innovations seen all throughout the various fields of computing: novel type systems for dynamic languages; the concept of the promise, now a standard programming technique in web development; and unified models of programming when data lives across nodes. Some of these ideas had major impact, while some fell incredibly short. Many technically superior ideas were not adopted simply because they were too “research” focused.
 
@@ -63,7 +63,7 @@ Takeways:
 
 ## Web Programming without Errors, and Coding without Typing
 
-_Jessica Kerr - Infrastructure Developer @ Stripe - [Link](https://www.codemesh.io/codemesh2016/jessica-kerr)_
+_Jessica Kerr - Infrastructure Developer @Stripe - [Link](https://www.codemesh.io/codemesh2016/jessica-kerr)_
 
 This session demonstrates two new ways of programming.
 
@@ -101,7 +101,7 @@ Takeways:
 
 ## Checmate: Lying, Cheating, and Winning with Containers in Networking
 
-_Sargun Dhillon - Distributed Systems Specialist @ Mesosphere - [Link](https://www.codemesh.io/codemesh2016/sargun-dhillon)_
+_Sargun Dhillon - Distributed Systems Specialist @Mesosphere - [Link](https://www.codemesh.io/codemesh2016/sargun-dhillon)_
 
 Containers have become ubiquitous in modern infrastructure. Containers have become the de facto mechanism of deploying and operating production software in recent years. Containerizaton technology has resulted in a fundamental paradigm shift in multitenant computing. Unfortunately, networking in containers never caught up with this modern mechanism. As opposed to manipulating the tenant's perspective of the system using the OS, containers are still using virtualization techniques. In this talk, we present Checmate, a system that is resident to the Linux kernel, that implements microsegmentation and load balancing of containers with nearly undetectable overhead. This system is powered by a control plane in Erlang, with a custom compiler to ease the creation of new Checmate rules. These components work together to provide a modern approach to container networking.
 
