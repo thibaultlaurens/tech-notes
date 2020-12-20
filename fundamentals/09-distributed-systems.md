@@ -2,27 +2,27 @@
 
 ## Distributed Systems
 
-* [https://cseweb.ucsd.edu/classes/sp16/cse291-e/applications/lecture.html](https://cseweb.ucsd.edu/classes/sp16/cse291-e/applications/lecture.html)
-* [A Distributed Systems Reading List](https://dancres.github.io/Pages/)
-* [Scalable Web Architecture and Distributed Systems](https://github.com/checkcheckzz/system-design-interview/blob/master/README.md#bk)
-* [A Note on Distributed System](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.41.7628)
-* [https://timilearning.com/1/](https://timilearning.com/1/)
-* [https://pdos.csail.mit.edu/6.824/schedule.html](https://pdos.csail.mit.edu/6.824/schedule.html)
-* [https://github.com/theanalyst/awesome-distributed-systems](https://github.com/theanalyst/awesome-distributed-systems)
-* [https://github.com/aphyr/distsys-class](https://github.com/aphyr/distsys-class)
-* [https://lethain.com/introduction-to-architecting-systems-for-scale/](https://lethain.com/introduction-to-architecting-systems-for-scale/)
-* [https://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/](https://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/)
-* [http://book.mixu.net/distsys/single-page.html](http://book.mixu.net/distsys/single-page.html)
-* [https://www.simpleorientedarchitecture.com/8-fallacies-of-distributed-systems/](https://www.simpleorientedarchitecture.com/8-fallacies-of-distributed-systems/)
-* [https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying)
-* [https://horicky.blogspot.com/2009/11/nosql-patterns.html](https://horicky.blogspot.com/2009/11/nosql-patterns.html)
-* [https://www.allthingsdistributed.com/2007/10/amazons\_dynamo.html](https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html)
-* [https://jepsen.io/analyses](https://jepsen.io/analyses)
-* [https://jepsen.io/consistency](https://jepsen.io/consistency)
-* [https://peter.bourgon.org/ok-log/](https://peter.bourgon.org/ok-log/)
-* [https://www.rabbitmq.com/tutorials/amqp-concepts.html](https://www.rabbitmq.com/tutorials/amqp-concepts.html)
-* [https://www.erlang-solutions.com/blog/an-introduction-to-rabbitmq-what-is-rabbitmq.html](https://www.erlang-solutions.com/blog/an-introduction-to-rabbitmq-what-is-rabbitmq.html)
-* [https://fabxc.org/tsdb/](https://fabxc.org/tsdb/)
+- [https://cseweb.ucsd.edu/classes/sp16/cse291-e/applications/lecture.html](https://cseweb.ucsd.edu/classes/sp16/cse291-e/applications/lecture.html)
+- [A Distributed Systems Reading List](https://dancres.github.io/Pages/)
+- [Scalable Web Architecture and Distributed Systems](https://github.com/checkcheckzz/system-design-interview/blob/master/README.md#bk)
+- [A Note on Distributed System](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.41.7628)
+- [https://timilearning.com/1/](https://timilearning.com/1/)
+- [https://pdos.csail.mit.edu/6.824/schedule.html](https://pdos.csail.mit.edu/6.824/schedule.html)
+- [https://github.com/theanalyst/awesome-distributed-systems](https://github.com/theanalyst/awesome-distributed-systems)
+- [https://github.com/aphyr/distsys-class](https://github.com/aphyr/distsys-class)
+- [https://lethain.com/introduction-to-architecting-systems-for-scale/](https://lethain.com/introduction-to-architecting-systems-for-scale/)
+- [https://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/](https://www.somethingsimilar.com/2013/01/14/notes-on-distributed-systems-for-young-bloods/)
+- [http://book.mixu.net/distsys/single-page.html](http://book.mixu.net/distsys/single-page.html)
+- [https://www.simpleorientedarchitecture.com/8-fallacies-of-distributed-systems/](https://www.simpleorientedarchitecture.com/8-fallacies-of-distributed-systems/)
+- [https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying)
+- [https://horicky.blogspot.com/2009/11/nosql-patterns.html](https://horicky.blogspot.com/2009/11/nosql-patterns.html)
+- [https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html](https://www.allthingsdistributed.com/2007/10/amazons_dynamo.html)
+- [https://jepsen.io/analyses](https://jepsen.io/analyses)
+- [https://jepsen.io/consistency](https://jepsen.io/consistency)
+- [https://peter.bourgon.org/ok-log/](https://peter.bourgon.org/ok-log/)
+- [https://www.rabbitmq.com/tutorials/amqp-concepts.html](https://www.rabbitmq.com/tutorials/amqp-concepts.html)
+- [https://www.erlang-solutions.com/blog/an-introduction-to-rabbitmq-what-is-rabbitmq.html](https://www.erlang-solutions.com/blog/an-introduction-to-rabbitmq-what-is-rabbitmq.html)
+- [https://fabxc.org/tsdb/](https://fabxc.org/tsdb/)
 
 ## Basic Knowledge
 
@@ -43,24 +43,24 @@ Summary of this [article](https://pages.cs.wisc.edu/~zuyu/files/fallacies.pdf).
 
 Summary of this [article](https://everythingisdata.wordpress.com/2009/10/17/numbers-everyone-should-know/). A table of the cost of some fundamental operations to be able to do quick _Back-of-the-envelope analysis_ and _Microbenchmarking_.
 
-| Operation | Time \(nanoseconds\) |
-| :--- | ---: |
-| L1 cache reference | 0.5 |
-| Branch mispredict | 5 |
-| L2 cache reference | 7 |
-| Mutex lock/unlock | 25 |
-| Main memory reference | 100 |
-| System call overhead | 400 |
-| Compress 1KB bytes with Zippy | 3 000 |
-| Context switch between processes | 3 000 |
-| Send 2K bytes over 1 Gbps network | 20 000 |
-| fork\(\) \(statically-linked binary\) | 70 000 |
-| fork\(\) \(dynamically-linked binary\) | 160 000 |
-| Read 1MB sequentially from memory | 250 000 |
-| Roundtrip within same datacenter | 500 000 |
-| Disk seek | 10 000 000 |
-| Read 1MB sequentially from disk | 20 000 000 |
-| Send packet CA -&gt; Netherlands -&gt; CA | 150 000 0000 |
+| Operation                                 | Time \(nanoseconds\) |
+| :---------------------------------------- | -------------------: |
+| L1 cache reference                        |                  0.5 |
+| Branch mispredict                         |                    5 |
+| L2 cache reference                        |                    7 |
+| Mutex lock/unlock                         |                   25 |
+| Main memory reference                     |                  100 |
+| System call overhead                      |                  400 |
+| Compress 1KB bytes with Zippy             |                3 000 |
+| Context switch between processes          |                3 000 |
+| Send 2K bytes over 1 Gbps network         |               20 000 |
+| fork\(\) \(statically-linked binary\)     |               70 000 |
+| fork\(\) \(dynamically-linked binary\)    |              160 000 |
+| Read 1MB sequentially from memory         |              250 000 |
+| Roundtrip within same datacenter          |              500 000 |
+| Disk seek                                 |           10 000 000 |
+| Read 1MB sequentially from disk           |           20 000 000 |
+| Send packet CA -&gt; Netherlands -&gt; CA |         150 000 0000 |
 
 ### Introduction to architecting systems for scale
 
@@ -68,7 +68,7 @@ Combination of this [article](https://lethain.com/introduction-to-architecting-s
 
 ## Distributed Consensus Algorithms
 
-* Link to the codemesh talk
+- Link to the codemesh talk
 
 ### Paxos
 
@@ -76,25 +76,40 @@ Combination of this [article](https://lethain.com/introduction-to-architecting-s
 
 ### Byzantine Fault Tolerance
 
-* Link to the codemesh talk
+- Link to the codemesh talk
 
 ## Conflict-free replicated data type
 
 ## NoSQL
 
-* [https://linkedin.github.io/school-of-sre/databases\_nosql/intro/](https://linkedin.github.io/school-of-sre/databases_nosql/intro/)
+- [https://linkedin.github.io/school-of-sre/databases_nosql/intro/](https://linkedin.github.io/school-of-sre/databases_nosql/intro/)
 
 ## Big Data
 
-* [https://linkedin.github.io/school-of-sre/big\_data/intro/](https://linkedin.github.io/school-of-sre/big_data/intro/)
+- [https://linkedin.github.io/school-of-sre/big_data/intro/](https://linkedin.github.io/school-of-sre/big_data/intro/)
+
+Big data architecture:
+
+- Lambda architecture: stream + batch processing
+- Kappa architecture: everything is a stream
+
+Streaming Message Delivery Guarantees:
+
+- At most once
+- At least once
+- Exactly once
+
+2 main implementations of streaming system:
+
+- Native Streaming (one by one processing)
+- Micro Batching (defined by size or time constant)
 
 ## Scalability, Availability & Stability Patterns
 
-* [https://www.slideshare.net/jboner/scalability-availability-stability-patterns](https://www.slideshare.net/jboner/scalability-availability-stability-patterns)
-* [https://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html](https://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html)
-* [https://horicky.blogspot.com/2009/11/nosql-patterns.html](https://horicky.blogspot.com/2009/11/nosql-patterns.html)
-* [https://tom-e-white.com/2007/11/consistent-hashing.html](https://tom-e-white.com/2007/11/consistent-hashing.html)
-* [https://www.microsoft.com/en-us/research/uploads/prod/2016/12/paxos-simple-Copy.pdf](https://www.microsoft.com/en-us/research/uploads/prod/2016/12/paxos-simple-Copy.pdf)
-* [https://github.com/henryr/cap-faq](https://github.com/henryr/cap-faq)
-* [http://ksat.me/a-plain-english-introduction-to-cap-theorem](http://ksat.me/a-plain-english-introduction-to-cap-theorem)
-
+- [https://www.slideshare.net/jboner/scalability-availability-stability-patterns](https://www.slideshare.net/jboner/scalability-availability-stability-patterns)
+- [https://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html](https://horicky.blogspot.com/2010/10/scalable-system-design-patterns.html)
+- [https://horicky.blogspot.com/2009/11/nosql-patterns.html](https://horicky.blogspot.com/2009/11/nosql-patterns.html)
+- [https://tom-e-white.com/2007/11/consistent-hashing.html](https://tom-e-white.com/2007/11/consistent-hashing.html)
+- [https://www.microsoft.com/en-us/research/uploads/prod/2016/12/paxos-simple-Copy.pdf](https://www.microsoft.com/en-us/research/uploads/prod/2016/12/paxos-simple-Copy.pdf)
+- [https://github.com/henryr/cap-faq](https://github.com/henryr/cap-faq)
+- [http://ksat.me/a-plain-english-introduction-to-cap-theorem](http://ksat.me/a-plain-english-introduction-to-cap-theorem)
