@@ -18,33 +18,6 @@
 
 ### Garbage Collection
 
-## Best practices
-
-### Design Pattern
-
-### SOLID Principles
-
-- [Single-responsibility principle](https://en.wikipedia.org/wiki/Single-responsibility_principle): Every module, class or function in a computer program should have responsibility over a single part of that program's functionality, which it should encapsulate.
-- [Open–closed principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle): Software entities \(classes, modules, functions, etc.\) should be open for extension, but closed for modification.
-- [Liskov substitution principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle): If S is a subtype of T, then objects of type T may be replaced with objects of type S without altering any of the desirable properties of the program.
-- [Interface segregation principle](https://en.wikipedia.org/wiki/Interface_segregation_principle): No client should be forced to depend on methods it does not use \(split interfaces that are very large into smaller and more specific ones\).
-- [Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle): High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details \(concrete implementations\) should depend on abstractions.
-
-### [The Twelve-Factor App](https://12factor.net/)
-
-- **Codebase**: One codebase tracked in revision control, many deploys
-- **Dependencies**: Explicitly declare and isolate dependencies
-- **Config**: Store config in the environment
-- **Backing services**: Treat backing services as attached resources
-- **Build, release, run**: Strictly separate build and run stages
-- **Processes**: Execute the app as one or more stateless processes
-- **Port binding**: Export services via port binding
-- **Concurrency**: Scale out via the process model
-- **Disposability**: Maximize robustness with fast startup and graceful shutdown
-- **Dev/prod parity**: Keep development, staging, and production as similar as possible
-- **Logs**: Treat logs as event streams
-- **Admin processes**: Run admin/management tasks as one-off processes
-
 ## Git
 
 Git is a **distributed version-control system** for tracking changes in any set of files, originally designed for coordinating work among programmers cooperating on source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows. It was created by **Linus Torvalds in 2005** for development of the Linux kernel. ([wikipedia](https://en.wikipedia.org/wiki/Git))
@@ -78,8 +51,6 @@ There are multiple ways to **reference to a version** of the code (except by com
 - **Stash**:
 - **Reset**:
 
-###
-
 ### References
 
 #### Hashes
@@ -91,7 +62,6 @@ The most direct way to reference a commit is via its **SHA-1 hash**. This acts a
 A ref is an indirect way of referring to a commit. It can be seen as a user-friendly alias for a commit hash. Tha's how git represents branches and tags internally. Refs are stored as normal text files in the `.git/refs` directory.
 
 ```
-$ tree .git/refs
 .git/refs
 ├── heads/
 │   └── master
@@ -254,6 +224,33 @@ Resources:
 - [ECMAScript 6 features](https://github.com/lukehoban/es6features)
 - [AirBnb style guide](https://github.com/airbnb/javascript).
 - [The modern JavaScript tutorial](https://javascript.info/)
+
+## Best practices
+
+### Design Pattern
+
+### SOLID Principles
+
+- [Single-responsibility principle](https://en.wikipedia.org/wiki/Single-responsibility_principle): Every module, class or function in a computer program should have responsibility over a single part of that program's functionality, which it should encapsulate.
+- [Open–closed principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle): Software entities \(classes, modules, functions, etc.\) should be open for extension, but closed for modification.
+- [Liskov substitution principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle): If S is a subtype of T, then objects of type T may be replaced with objects of type S without altering any of the desirable properties of the program.
+- [Interface segregation principle](https://en.wikipedia.org/wiki/Interface_segregation_principle): No client should be forced to depend on methods it does not use \(split interfaces that are very large into smaller and more specific ones\).
+- [Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle): High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details \(concrete implementations\) should depend on abstractions.
+
+### [The Twelve-Factor App](https://12factor.net/)
+
+- **Codebase**: One codebase tracked in revision control, many deploys
+- **Dependencies**: Explicitly declare and isolate dependencies
+- **Config**: Store config in the environment
+- **Backing services**: Treat backing services as attached resources
+- **Build, release, run**: Strictly separate build and run stages
+- **Processes**: Execute the app as one or more stateless processes
+- **Port binding**: Export services via port binding
+- **Concurrency**: Scale out via the process model
+- **Disposability**: Maximize robustness with fast startup and graceful shutdown
+- **Dev/prod parity**: Keep development, staging, and production as similar as possible
+- **Logs**: Treat logs as event streams
+- **Admin processes**: Run admin/management tasks as one-off processes
 
 ## Templates
 
