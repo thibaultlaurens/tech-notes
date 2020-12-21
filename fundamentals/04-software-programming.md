@@ -47,9 +47,122 @@
 
 ## Git
 
-- [https://linkedin.github.io/school-of-sre/git/git-basics/](https://linkedin.github.io/school-of-sre/git/git-basics/)
-- [Git Flow](https://www.atlassian.com/fr/git/tutorials/comparing-workflows/gitflow-workflow)
-- https://nvie.com/posts/a-successful-git-branching-model/
+Git is a **distributed version-control system** for tracking changes in any set of files, originally designed for coordinating work among programmers cooperating on source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows. It was created by **Linus Torvalds in 2005** for development of the Linux kernel. ([wikipedia](https://en.wikipedia.org/wiki/Git))
+
+### Basics
+
+#### Objects
+
+- All commits are stored as a **tree** like data structure internally by git. That means there can be two or more children commits of a given commit.
+- Everything in git is an **object**. Newly created files are stored as an object. Changes to file are stored as an objects and even commits are objects.
+- All the objects are stored in the `.git/objects/` directory.
+
+#### References
+
+There are multiple ways to **reference to a version** of the code (except by commit id)
+
+- a branch reference, stored in `.git/refs/heads` (ex: `.git/refs/heads/master` would point to a commit object).
+- `HEAD`: a reference to the current checked out commit, stored in a file at `.git/HEAD` (ex: on master branch, `.git/HEAD` would point to `.git/refs/heads/master`)
+- `HEAD~1`: a reference to the previous commit
+
+#### Branches
+
+- From a commit, multiple branches can be created and branches can also be merged. Using branches, there can exist multiple lines of histories and we can checkout to any of them and work on it.
+- Internally, git is just **a tree of commits**. Branch names are pointers to those commits in the tree. We use various git commands to work with the tree structure and references.
+- **Merges** options: directly merge the branch (creates a merge commit -> ugly history) or **rebase** (take the branch and "put its commits on top of another one" -> clean history)
+
+#### More
+
+- **Squash**:
+- **Amend**:
+- **Stash**:
+- **Reset**:
+
+###
+
+### References
+
+#### Hashes
+
+The most direct way to reference a commit is via its **SHA-1 hash**. This acts as the unique ID for each commit. To find the commit hash of an indirect reference: `git rev-parse [ref]`.
+
+#### Refs
+
+A ref is an indirect way of referring to a commit. It can be seen as a user-friendly alias for a commit hash. Tha's how git represents branches and tags internally. Refs are stored as normal text files in the `.git/refs` directory.
+
+```
+$ tree .git/refs
+.git/refs
+├── heads/
+│   └── master
+├── remotes/
+│   └── origin/
+│       ├── HEAD
+│       └── master
+└── tags/
+```
+
+- The `.git/refs/heads` directory defines all the local branches. Files matche the name of a branch, and inside the file is a commit hash of the tip of the branch.
+- The `.git/refs/tags` works the same way but contains tags instead of branches.
+- The`.git/refs/remote` contains all the remotes as sub-directories (like **origin**) with all the remote branches.
+
+#### Special Refs
+
+In addition to the `.git/refs` directory, there are a few special refs that reside in the top-level `.git` directory. These files contain different content depending on their type and the state of the repository. The **HEAD** ref can contain either a **symbolic ref** (a reference to another ref) or a commit hash.
+
+- **HEAD**: The currently checked-out commit/branch.
+- **FETCH_HEAD**: The most recently fetched branch from a remote repo.
+- **ORIG_HEAD**: A backup reference to HEAD before drastic changes to it.
+- **MERGE_HEAD**: The commit(s) that you’re merging into the current branch with git merge.
+- **CHERRY_PICK_HEAD**: The commit that you’re cherry-picking.
+
+#### Relative Refs
+
+- We can also refer to commits relative to another commit. The `~` character lets you reach **parent commits** (ex: `git show HEAD~2` displays the grandparent of HEAD). The `~` character will always follow the **first parent**.
+- To follow a **different parent**, use the `^` character. For a merge commit, `git show HEAD^2` will show the parent commit from the branch that was merged.
+- We can use more than one `^` character to move **more than one generation**. For a merge commit, `git show HEAD^2^1` will show the grandparent of HEAD that rests on the second parent.
+
+![relative-refs](../.gitbook/assets/git-relative-refs.svg)
+
+#### Refspecs
+
+A refspec **maps a branch in the local repository to a branch in a remote repository**. It is specified as `[+]<src>:<dst>` (the optional `+` sign forces the remote repository to perform a non-fast-forward update). It allows us to manage remote branches using local git commands and to configure some advanced git push and git fetch behavior (ex: to delete a remote branch).
+
+#### Reflog
+
+The reflog is git’s **safety net**. It records almost every change made in your repository, regardless of whether you committed a snapshot or not. You can think of it as a chronological history of everything you’ve done in your local repo. To view the reflog: `git reflog`.
+
+### Collaboration
+
+#### Worflows
+
+When working with a team on a Git managed project, it’s important to make sure the team is all in agreement on how the flow of changes will be applied.A
+
+- Centralized Worflow
+- Feature branch Worflow
+- Gitflow
+- GitHub flow
+- Forking Workflow
+
+![gitflow](../.gitbook/assets/git-gitflow.svg)
+
+### Miscellaneous
+
+- **Hooks**: Scripts that run automatically every time a particular event occurs in a git repository. They let you customize Git’s internal behavior and trigger customizable actions at key points in the development life cycle. They are stored in `.git/hooks`. Hooks are local to a git repository, and are **not copied over** to the new repository when doing a `git clone`.
+- **Submodules** (a pointer to a specific commit in another repository, easier to push into) vs **subtrees** (a copy of a repository that is pulled into a parent repository, easier to pull)
+- **git cherry-pick**: Enables arbitrary Git commits to be picked by reference and appended to the current working HEAD. Cherry picking is the act of picking a commit from a branch and applying it to another.
+- **Shallow clone**: Copy only recent revisions (pull down only the latest n commits of the repo’s history) with `git pull --depth [depth] [remote-url]`
+- **git gc**: Clean up orphaned or inaccessible commits and compress group of similar objects into "packs" (`./git/objects/pack`). GC runs automatically on `pull`, `merge`, `rebase` and `commit` commands.
+- **git prune**: Child command of `git gc` that cleans up unreachable or orphaned git objects.
+- **LFS** (Large File Storage): A git extension that reduces the impact of large files in your repository. Large files are replaced with **tiny pointer files** and downloaded lazily, during the checkout process rather than during cloning or fetching.
+
+### Resources
+
+- [Documentation](https://git-scm.com/doc)
+- [School of SRE](https://linkedin.github.io/school-of-sre/git/git-basics/)
+- [Learn Git](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
+- [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+- [GitHub flow](https://guides.github.com/introduction/flow/)
 
 ## Languages
 
