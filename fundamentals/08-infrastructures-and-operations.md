@@ -68,6 +68,7 @@
 
 - ansible
 - terraform
+- [GitOps](https://www.atlassian.com/git/tutorials/gitops)
 
 ## Observability
 
