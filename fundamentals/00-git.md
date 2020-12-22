@@ -160,6 +160,24 @@ The reflog is git’s **safety net**. It records almost every change made in you
 
 ## Stashes
 
+`git stash` temporarily shelves changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on. Stashing is handy if you need to quickly switch context and work on something else, but you're mid-way through a code change and aren't quite ready to commit.
+
+### Common Operations
+
+- Stash files: by default only staged and unstaged files, but untracked and ignored filed can be included.
+- Re-apply stash: **Pop** a stash to apply and remove the files or simply **apply** to keep the files in the stash. By default, the most recent stash (`stash@{0}` is used)
+- Manage multiple stashed: List and annotate stashed (with the `git stash save`)
+- Other operations: view stash diff, create a branch from a stash, create partial stashes..
+
+### Internals
+
+Stashes are actually encoded in your repository as commit objects. The special ref at `.git/refs/stash` points to your most recently created stash, and previously created stashes are referenced by the stash ref's reflog. This is why you refer to stashes by **stash@{n}**: you're actually referring to the nth reflog entry for the stash ref. Since a stash is just a commit, you can inspect it with git log.
+
+Depending on what you stashed, a single git stash operation creates either two or three new commits. The diagrams above show a stash with the `--all` flag:
+
+![git-stash-before](../.gitbook/assets/git-stash-before.svg)
+![git-stash-after](../.gitbook/assets/git-stash-after.svg)
+
 ## Collaboration
 
 ### Worflows
