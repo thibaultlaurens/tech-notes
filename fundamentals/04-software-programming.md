@@ -1,28 +1,61 @@
 # Software Programming
 
-## Programming concepts
-
-- [Programming Concepts](https://thecodeboss.dev/2014/10/programming-concepts-the-stack-and-the-heap/) \(faire toute la serie\)
-
-### The Stack and the Heap
-
-### Compiled and Interpreted languages
-
-### Concurrency
-
-### Static vs Dynamic type checking
-
-### Type Introspection and Reflection
-
-### Core functionnal Programming Concepts
-
-### Garbage Collection
-
 ## Git
 
-Git is a **distributed version-control system** for tracking changes in any set of files, originally designed for coordinating work among programmers cooperating on source code during software development. Its goals include speed, data integrity, and support for distributed, non-linear workflows. It was created by **Linus Torvalds in 2005** for development of the Linux kernel. ([wikipedia](https://en.wikipedia.org/wiki/Git))
+Git is a **distributed version-control system** for tracking changes in any set of files, originally designed for coordinating work among programmers cooperating on source code during software development. Its goals include **speed**, **data integrity**, and support for **distributed, non-linear workflows**. It was created by **Linus Torvalds in 2005** for development of the Linux kernel. ([wikipedia](https://en.wikipedia.org/wiki/Git))
 
-### Basics
+### Basic Concepts
+
+#### Repositories
+
+A Git repository is simply a database containing all the information needed to retain and manage the revisions and history of a project. A repository retains a complete copy of the entire project throughout its lifetime.
+
+Git maintains a set of configuration values within each repository. Unlike file data and other repository metadata, configuration settings are not propagated from one repository to another during a clone operation. Instead, Git manages and inspects configuration on a per-site, per-user, and per-repository basis.
+
+Within a repository, Git maintains two primary data structures, **the object store** and **the index**. All of this repository data is stored at the root of your working directory in a hidden subdirectory named `.git`. The object store is designed to be **efficiently copied during a clone operation**. The index is **transitory information**, is private to a repository, and can be created or modified on demand as needed.
+
+#### Object Types
+
+The object store contains your **original data files** and all the **log messages**, **author information**, **dates**, and other information required to rebuild any version or branch of the project. Git places only four types of objects in the object store: the blobs, trees, commits, and tags. These four atomic objects form the foundation of Git’s higher level data structures.
+
+- **Blobs**: Each version of a file is represented as a blob. Blob (**binary large object**), is a term that’s commonly used in computing to refer to some variable or file that can contain any data and whose internal structure is ignored by the program. A blob is treated as being opaque. A blob **holds a file’s data** but does not contain any metadata about the file or even its name.
+- **Trees**: A tree object represents **one level of directory information**. It records blob identifiers, path names, and a bit of metadata for all the files in one directory. It can also recursively reference other (sub)tree objects and thus build a complete hierarchy of files and subdirectories.
+- **Commits**: A commit object holds **metadata for each change introduced into the repository**, including the author, committer, commit date, and log message. Each commit points to a tree object that captures, in one complete snapshot, the state of the repository at the time the commit was performed. The initial commit, or root commit, has no parent. Most commits have one parent but they can reference multiple ones.
+- **Tags**: A tag object assigns an arbitrary yet presumably **human readable name to a specific object**, usually a commit. Although `9da581d910c9c4ac93557ca4859e767f5caf5169` refers to an exact and well-defined commit, a more familiar tag name like `Ver-1.0-Alpha` might make more sense!
+
+Over time, all the information in the object store changes and grows, tracking and modeling your project edits, additions, and deletions. To use disk space and network bandwidth efficiently, Git compresses and stores the objects in **pack files**, which are also placed in the object store.
+
+#### Index
+
+The index is a **temporary and dynamic binary file that describes the directory structure of the entire repository**. More specifically, the index captures a version of the project’s overall structure at some moment in time. The project’s state could be represented by a commit and a tree from any point in the project’s history, or it could be a future state toward which you are actively developing.
+
+It enables you to alter the contents of the index in methodical, well-defined steps. The index allows a separation between incremental development steps and the committal of those changes. As a developer, you execute Git commands to stage changes in the index. Changes usually add, delete, or edit some file or set of files. The index records and retains those changes, keeping them safe until you are ready to commit them. You can also remove or replace changes in the index. Thus, the index allows a gradual transition from one complex repository state to another, presumably better state.
+
+The index also plays an important role in **merges**, allowing multiple versions of the same file to be managed, inspected, and manipulated simultaneously.
+
+#### Content-Addressable Names
+
+The Git object store is organized and implemented as a **content-addressable storage system**. Specifically, each object in the object store has a unique name produced by applying `SHA1` to the contents of the object, yielding a SHA1 hash value. Because the complete contents of an object contribute to the hash value and the hash value is believed to be effectively unique to that particular content, the SHA1 hash is a sufficient index or name for that object in the object database.
+
+SHA1 values are **160-bit** values that are usually represented as a **40-digit hexadecimal number**, such as `9da581d910c9c4ac93557ca4859e767f5caf5169`. Sometimes, during display, SHA1 values are abbreviated to a smaller, unique prefix.
+
+#### Content Tracking
+
+It’s important to see Git as something more than a VCS: Git is a **content tracking system**. This distinction, however subtle, guides much of the design of Git and is perhaps the key reason it can perform internal data manipulations with relative ease. Git’s content tracking is manifested in two critical ways:
+
+- Git’s object store is based on the **hashed computation of the contents of its objects**, not on the file or directory names from the user’s original file layout. Thus, when Git places a file into the object store, it does so based on the hash of the data and not on the name of the file. In fact, Git does not track file or directory names, which are associated with files in secondary ways. Again, Git tracks content instead of files. If two separate files have exactly the same content, whether in the same or different directories, Git stores a single copy of that content as a blob within the object store, indexed by that SHA1 value.
+
+- Git’s internal database efficiently **stores every version of every file** (not their differences) as files go from one revision to the next. Because Git uses the hash of a file’s complete content as the name for that file, it must operate on each complete copy of the file. The typical user view of a file (with revisions and that appears to progress from one revision to another) is simply an artifact. Git computes this history as a set of changes between different blobs with varying hashes, rather than storing a file name and set of differences directly.
+
+#### Pack Files
+
+To avoid storing the complete content of every version of every file, Git uses a more efficient storage mechanism called a **pack file**. To create a packed file, Git first locates files whose content is very similar and stores the complete content for one of them. It then **computes the differences between similar files and stores just the differences**.
+
+Git does the file packing very cleverly. That is, Git can take any two files from anywhere within the repository and compute deltas between them if it thinks they might be similar enough to yield good data compression. Thus, Git has a fairly elaborate algorithm to locate and match up potential delta candidates globally within a repository. Furthermore, Git is able to construct a series of deltas from one version of a file to a second, to a third, etc.
+
+Git also maintains the knowledge of the original blob SHA1 for each complete file (either the complete content or as a reconstruction after deltas are applied) within the packed representation. This provides the basis for an index mechanism to locate objects within a pack. Packed files are stored in the object store alongside the other objects, under `.git/objects/pack`.
+
+### Basic
 
 #### Objects
 
@@ -30,26 +63,22 @@ Git is a **distributed version-control system** for tracking changes in any set 
 - Everything in git is an **object**. Newly created files are stored as an object. Changes to file are stored as an objects and even commits are objects.
 - All the objects are stored in the `.git/objects/` directory.
 
-#### References
-
-There are multiple ways to **reference to a version** of the code (except by commit id)
-
-- a branch reference, stored in `.git/refs/heads` (ex: `.git/refs/heads/master` would point to a commit object).
-- `HEAD`: a reference to the current checked out commit, stored in a file at `.git/HEAD` (ex: on master branch, `.git/HEAD` would point to `.git/refs/heads/master`)
-- `HEAD~1`: a reference to the previous commit
-
 #### Branches
 
 - From a commit, multiple branches can be created and branches can also be merged. Using branches, there can exist multiple lines of histories and we can checkout to any of them and work on it.
 - Internally, git is just **a tree of commits**. Branch names are pointers to those commits in the tree. We use various git commands to work with the tree structure and references.
 - **Merges** options: directly merge the branch (creates a merge commit -> ugly history) or **rebase** (take the branch and "put its commits on top of another one" -> clean history)
 
-#### More
+### The Three Trees
 
-- **Squash**:
-- **Amend**:
-- **Stash**:
-- **Reset**:
+| Command      | Scope        | Common use cases                                                     |
+| ------------ | ------------ | -------------------------------------------------------------------- |
+| git reset    | Commit-level | Discard commits in a private branch or throw away uncommited changes |
+| git reset    | File-level   | Unstage a file                                                       |
+| git checkout | Commit-level | Switch between branches or inspect old snapshots                     |
+| git checkout | File-level   | Discard changes in the working directory                             |
+| git revert   | Commit-level | Undo commits in a public branch                                      |
+| git revert   | File-level   | (N/A)                                                                |
 
 ### References
 
@@ -102,6 +131,8 @@ A refspec **maps a branch in the local repository to a branch in a remote reposi
 
 The reflog is git’s **safety net**. It records almost every change made in your repository, regardless of whether you committed a snapshot or not. You can think of it as a chronological history of everything you’ve done in your local repo. To view the reflog: `git reflog`.
 
+### Stashes
+
 ### Collaboration
 
 #### Worflows
@@ -118,6 +149,8 @@ When working with a team on a Git managed project, it’s important to make sure
 
 ### Miscellaneous
 
+- **Stash**:
+- **Bare repository**: A repository that doesn't have a working directory, making it impossible to edit files and commit changes. Hosted repositories should always be bare. They end in `.git`.
 - **Hooks**: Scripts that run automatically every time a particular event occurs in a git repository. They let you customize Git’s internal behavior and trigger customizable actions at key points in the development life cycle. They are stored in `.git/hooks`. Hooks are local to a git repository, and are **not copied over** to the new repository when doing a `git clone`.
 - **Submodules** (a pointer to a specific commit in another repository, easier to push into) vs **subtrees** (a copy of a repository that is pulled into a parent repository, easier to pull)
 - **git cherry-pick**: Enables arbitrary Git commits to be picked by reference and appended to the current working HEAD. Cherry picking is the act of picking a commit from a branch and applying it to another.
@@ -133,6 +166,24 @@ When working with a team on a Git managed project, it’s important to make sure
 - [Learn Git](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
 - [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
 - [GitHub flow](https://guides.github.com/introduction/flow/)
+
+## Programming concepts
+
+- [Programming Concepts](https://thecodeboss.dev/2014/10/programming-concepts-the-stack-and-the-heap/) \(faire toute la serie\)
+
+### The Stack and the Heap
+
+### Compiled and Interpreted languages
+
+### Concurrency
+
+### Static vs Dynamic type checking
+
+### Type Introspection and Reflection
+
+### Core functionnal Programming Concepts
+
+### Garbage Collection
 
 ## Languages
 
