@@ -63,11 +63,9 @@ Single commit repository data with five objects, one blob for the contents of ea
 
 If you make some changes and commit again, the next commit stores a pointer to the commit that came immediately before it. A branch in Git is simply a lightweight **movable pointer to one of these commits**.
 
-![object-model-2](../.gitbook/assets/git-object-model-2.png)
-
 From a commit, multiple branches can be created and there can exist multiple lines of histories. We can checkout to any of them and work on it. How does Git know what branch you’re currently on? It keeps a special pointer called **HEAD**.
 
-![object-model-3](../.gitbook/assets/git-object-model-3.png)
+![object-model-2](../.gitbook/assets/git-object-model-2.png)
 
 When we are ready, we can merge branches together. There are multiple **merge strategies**: recursive (default), resolve, octopus, ours... (more info [here](https://git-scm.com/docs/merge-strategies)). There are also multiple **merge type strategies**:
 
