@@ -175,8 +175,8 @@ Stashes are actually encoded in your repository as commit objects. The special r
 
 Depending on what you stashed, a single git stash operation creates either two or three new commits. The diagrams above show a stash with the `--all` flag:
 
-![git-stash-before](../.gitbook/assets/git-stash-before.svg)
-![git-stash-after](../.gitbook/assets/git-stash-after.svg)
+![git-stash-before](../.gitbook/assets/git-stash-before-.svg)
+![git-stash-after](../.gitbook/assets/git-stash-after-.svg)
 
 ## Collaboration
 
