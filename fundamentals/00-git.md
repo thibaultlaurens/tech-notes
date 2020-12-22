@@ -182,13 +182,13 @@ Depending on what you stashed, a single git stash operation creates either two o
 
 ### Worflows
 
-When working with a team on a Git managed project, it’s important to make sure the team is all in agreement on how the flow of changes will be applied.A
+When working with a team on a Git managed project, it’s important to make sure the team is all in agreement on how the flow of changes will be applied.
 
-- Centralized Worflow
-- Feature branch Worflow
-- Gitflow ([A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/))
-- [GitHub flow](https://guides.github.com/introduction/flow/)
-- Forking Workflow
+- Centralized Worflow: A central repository serves as the single point-of-entry for all changes to the project.
+- Feature branch Worflow: All feature development should take place in a dedicated branch instead of the master branch.
+- Gitflow ([A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)): Defines a strict branching model designed around the project release (see diagram above).
+- [GitHub flow](https://guides.github.com/introduction/flow/): Simpler than GitFlow for teams and projects where deployments are made regularly. Deploy from a branch for final testing before merging to main.
+- Forking Workflow: Instead of using a single server-side repository to act as the "central" codebase, it gives every developer a server-side repository. This means that each contributor has not one, but two Git repositories: a private local one and a public server-side one.
 
 ![gitflow](../.gitbook/assets/git-gitflow.svg)
 
