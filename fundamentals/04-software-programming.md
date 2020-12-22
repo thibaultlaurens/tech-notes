@@ -55,13 +55,14 @@ Git does the file packing very cleverly. That is, Git can take any two files fro
 
 Git also maintains the knowledge of the original blob SHA1 for each complete file (either the complete content or as a reconstruction after deltas are applied) within the packed representation. This provides the basis for an index mechanism to locate objects within a pack. Packed files are stored in the object store alongside the other objects, under `.git/objects/pack`.
 
+### The Object Store
+
+Single commit repository data:
+
+![object-model](../.gitbook/assets/git-object-model.png)
+![object-model-2](../.gitbook/assets/git-object-model-2.png)
+
 ### Basic
-
-#### Objects
-
-- All commits are stored as a **tree** like data structure internally by git. That means there can be two or more children commits of a given commit.
-- Everything in git is an **object**. Newly created files are stored as an object. Changes to file are stored as an objects and even commits are objects.
-- All the objects are stored in the `.git/objects/` directory.
 
 #### Branches
 
