@@ -55,20 +55,26 @@ Git does the file packing very cleverly. That is, Git can take any two files fro
 
 Git also maintains the knowledge of the original blob SHA1 for each complete file (either the complete content or as a reconstruction after deltas are applied) within the packed representation. This provides the basis for an index mechanism to locate objects within a pack. Packed files are stored in the object store alongside the other objects, under `.git/objects/pack`.
 
-### The Object Store
+### Object Store and Branches
 
-Single commit repository data:
+Single commit repository data with five objects, one blob for the contents of each of the three files, one tree that lists the contents of the directory and specifies which file names are stored as which blobs, and one commit with the pointer to that root tree and all the commit metadata:
 
 ![object-model](../.gitbook/assets/git-object-model.png)
+
+If you make some changes and commit again, the next commit stores a pointer to the commit that came immediately before it. A branch in Git is simply a lightweight **movable pointer to one of these commits**.
+
 ![object-model-2](../.gitbook/assets/git-object-model-2.png)
 
-### Basic
+From a commit, multiple branches can be created and there can exist multiple lines of histories. We can checkout to any of them and work on it. How does Git know what branch you’re currently on? It keeps a special pointer called **HEAD**.
 
-#### Branches
+![object-model-3](../.gitbook/assets/git-object-model-3.png)
 
-- From a commit, multiple branches can be created and branches can also be merged. Using branches, there can exist multiple lines of histories and we can checkout to any of them and work on it.
-- Internally, git is just **a tree of commits**. Branch names are pointers to those commits in the tree. We use various git commands to work with the tree structure and references.
-- **Merges** options: directly merge the branch (creates a merge commit -> ugly history) or **rebase** (take the branch and "put its commits on top of another one" -> clean history)
+When we are ready, we can merge branches together. There are multiple **merge strategies**: recursive (default), resolve, octopus, ours... (more info [here](https://git-scm.com/docs/merge-strategies)). There are also multiple **merge type strategies**:
+
+- **Explicit merges** (default): They create a new merge commit. This alters the commit history and explicitly shows where a merge was executed. The merge commit content is also explicit in the fact that it shows which commits were the parents of the merge commit. Some teams avoid explicit merges because arguably the merge commits add "noise" to the history of the project.
+- **Implicit merges**: Takes a series of commits from a specified branch head and applies them to the top of a target branch. Implicit merges are triggered by **rebase events** (or fast forward merges). During an interactive rebae, a **squash merge** will take the commits from a target branch and combine or squash them in to one commit.
+
+![git-rebase-squash](../.gitbook/assets/git-squash.svg)
 
 ### The Three Trees
 
