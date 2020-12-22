@@ -80,6 +80,22 @@ When we are ready, we can merge branches together. There are multiple **merge st
 
 ## The Three Trees
 
+The "three trees" are Git's internal state management system. Trees may be a misnomer, as they are not strictly traditional tree data-structures. They are, however, node and pointer-based data structures that Git uses to track a timeline of edits.
+
+### The working directory
+
+This tree is **in sync with the local filesystem** and is representative of the immediate changes made to the content in files and directories. Invoking `git status` shows that Git is aware of the changes to the file.
+
+### The Staging index
+
+This tree is tracking **Working Directory changes**, that have been promoted with git add, to be stored in the next commit. This tree is a complex internal caching mechanism. To inspect the state of the Staging Index tree we must utilize a lesser known Git command `git ls-files` (a debug utility).
+
+### The Commit history
+
+The final tree is the Commit History. The git commit command adds changes to a **permanent snapshot** that lives in the Commit History. This snapshot also includes the state of the Staging Index at the time of commit.
+
+### Commands
+
 | Command      | Scope        | Common use cases                                                     |
 | ------------ | ------------ | -------------------------------------------------------------------- |
 | git reset    | Commit-level | Discard commits in a private branch or throw away uncommited changes |
@@ -88,6 +104,8 @@ When we are ready, we can merge branches together. There are multiple **merge st
 | git checkout | File-level   | Discard changes in the working directory                             |
 | git revert   | Commit-level | Undo commits in a public branch                                      |
 | git revert   | File-level   | (N/A)                                                                |
+
+![git-reset-commit-level](../.gitbook/assets/git-reset.svg)
 
 ## References
 
