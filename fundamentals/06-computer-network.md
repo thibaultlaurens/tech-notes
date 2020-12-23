@@ -1,11 +1,5 @@
 # Computer Networking
 
-Leading organizations for standardization:
-
-- The **International Organization for Standardization** ([ISO](https://en.wikipedia.org/wiki/International_Organization_for_Standardization))
-- The **American National Standards Institute** ([ANSI](https://en.wikipedia.org/wiki/American_National_Standards_Institute))
-- The **Internet Engineering Task Force** ([IETF](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force))
-
 ## Network Types
 
 Common types of networks include the following:
@@ -64,6 +58,33 @@ The mesh topology is described as either a **physical mesh** or a **logical mesh
 The star topology is the most commonly used network topology. Each network device connects to a centralized hub or switch. Switches and hubs can be linked together to extend and build more extensive networks. This type of typology is, by far, the most robust and scalable.
 
 ## Network Standards
+
+### Organizations
+
+While network protocols provide a unified method for communication, network standards govern the hardware and software that uses them. Today, there are hundreds of thousands of hardware suppliers, yet all of their technology seamlessly integrates with your computer or network with minimal effort. Network standards provide a framework that enables the interoperability between devices.
+
+There are a several leading organizations for standardization including:
+
+- The **International Organization for Standardization** ([ISO](https://en.wikipedia.org/wiki/International_Organization_for_Standardization))
+- The **American National Standards Institute** ([ANSI](https://en.wikipedia.org/wiki/American_National_Standards_Institute))
+- The **Internet Engineering Task Force** ([IETF](https://en.wikipedia.org/wiki/Internet_Engineering_Task_Force))
+
+### IEEE 802
+
+The 802 specification covers all the physical networking standards for both Ethernet and wireless. The following table shows some of the more widely used standards.
+
+| 802    | Overview        | Basics of physical and logical networking concepts                              | Status      |
+| ------ | --------------- | ------------------------------------------------------------------------------- | ----------- |
+| 802.1  | Bridging        | Higher Layer LAN Protocols (Bridging LAN/MAN, OSI Layer 2)                      | Active      |
+| 802.2  | Logical Link    | The logical link control (LLC) specification                                    | Disbanded   |
+| 802.3  | Ethernet        | Provides asynchronous networking                                                | Active      |
+| 802.5  | Token ring      | The token-passing standard for shielded copper cables and twisted-pair cable    | Disbanded   |
+| 802.11 | Wi-Fi           | WLAN media access control (MAC) and physical layer (PHY) specification          | Active      |
+| 802.12 | Demand Priority | Ethernet data rate increased to 100 Mbps                                        | Disbanded   |
+| 802.15 | WPAN            | Support for wireless personal area networks (bluetooth, uwb, zigbee..)          | Active      |
+| 802.16 | WMAN            | Wireless metropolitan area networks Covers mobile and wireless broadband access | Hibernating |
+
+## Network Devices
 
 ## Network Protocols
 
