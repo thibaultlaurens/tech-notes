@@ -96,25 +96,40 @@ A MAC (**Media Access Control**) address, sometimes referred to as a hardware ad
 
 ### Repeaters
 
-A repeater operates at the physical layer. Its job is to regenerate the signal over the same network before the signal becomes too weak or corrupted so as to extend the length to which the signal can be transmitted over the same network. An important point to be noted about repeaters is that they do not amplify the signal. When the signal becomes weak, they copy the signal bit by bit and regenerate it at the original strength. It is a 2 port device.
+A repeater operates at the physical layer. Its job is to **regenerate the signal** over the same network before the signal becomes too weak or corrupted so as to extend the length to which the signal can be transmitted over the same network. An important point to be noted about repeaters is that they **do not amplify the signal**. When the signal becomes weak, they copy the signal bit by bit and regenerate it at the original strength. It is a 2 port device.
 
 ### Bridges
 
-A bridge divides a network into network segments and can filter and forward data packets between these segments. Bridges use the network device's MAC address to decide the data package's destination. Typically, a bridge is used to improve network performance by reducing unnecessary network traffic on network segments.
+A bridge **divides a network into network segments** and can filter and forward data packets between these segments. Bridges use the network device's MAC address to decide the data package's destination. Typically, a bridge is used to improve network performance by reducing unnecessary network traffic on network segments.
 
 ### Hubs
 
-A hub acts as a multiport repeater on a network. Hubs are used to connect more than one device and structure the layout of a network. For example, you can cascade hubs to create network branches or as an endpoint to create a star layout with multiple user type devices. Hubs contain multiple ports that act as an input/output Ethernet connection between the hub and a network device. A hub can operate at only one speed, which is the speed of the slowest network device on the network. It doesn't interpret or filter data packets and sends copies of each data packet to all attached devices.
+A hub acts as a **multiport repeater** on a network. Hubs are used to connect more than one device and structure the layout of a network. For example, you can cascade hubs to create network branches or as an endpoint to create a star layout with multiple user type devices. Hubs contain multiple ports that act as an input/output Ethernet connection between the hub and a network device. A hub can operate at only one speed, which is the speed of the slowest network device on the network. It doesn't interpret or filter data packets and sends copies of each data packet to all attached devices.
 
 ### Switches
 
+A switch **combines the functionality of a bridge and a hub**. It segments networks and can interpret and filter packet data to send it directly to an attached network device. Switches use the network device's MAC address to decide the data package's destination. A switch operates in **full-duplex mode**, which means it can send and receive data to and from network devices at the same time. The switch can perform error checking before forwarding data, that makes it very efficient as it does not forward packets that have errors and forward good packets selectively to correct port only. In other words, switch divides collision domain of hosts, but broadcast domain remains same.
+
+**Managed switches** offers the means to adjust the configuration, behavior, and operation of the switch. The commonly available options are **traffic priority**, **virtuals LANs** (create logical groups of devices, improve security and performance), **Spanning Tree Protocol** (define alternative network routes in case a cable or device fails, improve resilience), **port mirroring** (exports a copy of the network traffic to a single port for a network analyzer), **bandwidth rate-limiting** (fine control of the bandwidth used by specific ports), **MAC address filtering**...
+
 ### Routers
+
+Routers in an interconnected network maintain a **routing table** that lists the preferred route between each of the networks. The router acts as the start of **authority** for all the network devices on its network. Routing information is shared between routers by using a routing protocol like the **Border Gateway Protocol** (BGP).
+
+There are several distinct classifications or types of routers:
+
+- **Access routers**: Typically used in a home or small satellite offices, these routers tend to be low-cost devices with a simple routing need.
+- **Distribution routers**: These routers compile traffic routing data from multiple routers. Distribution routers come with more significant memory and processing power. This type of router is designed to hold vast quantities of routing information. It's often used to manage and control the quality of service across a WAN.
+- **Edge routers**: An edge router operates at the boundary between your network and other networks, for example, your local network and the internet. They act as gateways to filter traffic and route it internally or forward it based on the packet header. An edge router often comes with access control or firewalls to improve the security. It might also handle DHCP and DNS services.
+- **Core routers**: Sometimes called enterprise routers, these routers are designed for higher bandwidths. They're used to connect different buildings or geographic locations together. Core routers tend to have fewer features than edge routers because their primary focus is on minimizing packet loss and preventing congestion. They tend to do packet forwarding to edge routers.
 
 ### Gateway
 
 A gateway, as the name suggests, is a passage to connect two networks together that may work upon different networking models. They basically work as the messenger agents that take data from one system, interpret it, and transfer it to another system. Gateways are also called protocol converters and can operate at any network layer. Gateways are generally more complex than switch or router.
 
 ## Network Protocols
+
+- [Network protocols to use when you implement a network](https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/4-network-protocols)
 
 ### Network Protocols
 
