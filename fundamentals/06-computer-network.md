@@ -86,22 +86,78 @@ The 802 specification covers all the physical networking standards for both Ethe
 
 ## Network Devices
 
+- **Network Interface Card** (NIC): An expansion board you insert into a computer so the computer can be connected to a network. Most NICs are designed for a particular type of network, protocol, and media, although some can serve multiple networks. The NIC allows computers to communicate over a computer network, either by using cables or wirelessly. The NIC is both a physical layer and data link layer device, as it provides physical access to a networking medium and, for IEEE 802 and similar networks, provides a low-level addressing system through the use of MAC addresses that are uniquely assigned to network interfaces.
+
+- **MAC Address**: A MAC (Media Access Control) address, sometimes referred to as a hardware address or physical address, is an ID code that’s assigned to a network adapter or any device with built-in networking capability. The MAC address has a standard composition of six groups of 2 hexadecimal numbers separated by a colon or dash (48 bits). The first three numbers of the MAC address define the manufacturer's **Organizationally Unique Identifier** (OUI) and the remaining three numbers uniquely identify the device . For example, if the MAC address is AA-6A-BA-2B-68-C1 then the OUI is AA-6A-BA and 2B-68-C1 is the device ID.
+
+### Repeaters
+
+A repeater operates at the physical layer. Its job is to regenerate the signal over the same network before the signal becomes too weak or corrupted so as to extend the length to which the signal can be transmitted over the same network. An important point to be noted about repeaters is that they do not amplify the signal. When the signal becomes weak, they copy the signal bit by bit and regenerate it at the original strength. It is a 2 port device.
+
+### Bridges
+
+A bridge divides a network into network segments and can filter and forward data packets between these segments. Bridges use the network device's MAC address to decide the data package's destination. Typically, a bridge is used to improve network performance by reducing unnecessary network traffic on network segments.
+
+### Hubs
+
+A hub acts as a multiport repeater on a network. Hubs are used to connect more than one device and structure the layout of a network. For example, you can cascade hubs to create network branches or as an endpoint to create a star layout with multiple user type devices. Hubs contain multiple ports that act as an input/output Ethernet connection between the hub and a network device. A hub can operate at only one speed, which is the speed of the slowest network device on the network. It doesn't interpret or filter data packets and sends copies of each data packet to all attached devices.
+
+### Switches
+
+### Routers
+
+### Gateway
+
+A gateway, as the name suggests, is a passage to connect two networks together that may work upon different networking models. They basically work as the messenger agents that take data from one system, interpret it, and transfer it to another system. Gateways are also called protocol converters and can operate at any network layer. Gateways are generally more complex than switch or router.
+
 ## Network Protocols
 
-- [https://linkedin.github.io/school-of-sre/linux_networking/intro/](https://linkedin.github.io/school-of-sre/linux_networking/intro/)
-- [https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/4-network-protocols](https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/4-network-protocols)
-- dns: [https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197427\(v=ws.10\)](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197427%28v=ws.10%29)
-- dhcp
-- tcp / udp
-- OSI vs TCP/IP
-- SSL
-- TLS
+### Network Protocols
+
+- Network address
+- Data Packet
+- Datagram
+- Routing
+
+### Protocols Categories
+
+### Communication protocols
+
+### Security protocols
+
+### Management protocols
+
+- [School of SRE](https://linkedin.github.io/school-of-sre/linux_networking/intro/)
+- [Network Protocols](https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/4-network-protocols)
+
+## IP address standards and services
+
+- [TCP/IP Basics](https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/5-ip-tcp-basics)
+
+### ARP
+
+### TCP/IP
+
+- TCP/IP model layers
+
+### Internet Protocol standards
+
+- IPv4
+- Structure of an IPv4 address
+- Parts of an IPv4 address
+- IPv4 address classes
+- What is a subnet?
+- Special-use addresses
+- IPv4 address space exhaustion
+
+### Private IP addressing
+
+- IPv6
+- Structure of an IPv6 address
 
 ### DNS
 
-## IP address standards
-
-- [https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/5-ip-tcp-basics](https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/5-ip-tcp-basics)
+- [DNS Architecture](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197427%28v=ws.10%29)
 
 ## Toolbox
 
