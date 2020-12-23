@@ -86,9 +86,13 @@ The 802 specification covers all the physical networking standards for both Ethe
 
 ## Network Devices
 
-- **Network Interface Card** (NIC): An expansion board you insert into a computer so the computer can be connected to a network. Most NICs are designed for a particular type of network, protocol, and media, although some can serve multiple networks. The NIC allows computers to communicate over a computer network, either by using cables or wirelessly. The NIC is both a physical layer and data link layer device, as it provides physical access to a networking medium and, for IEEE 802 and similar networks, provides a low-level addressing system through the use of MAC addresses that are uniquely assigned to network interfaces.
+### Network Interface Card
 
-- **MAC Address**: A MAC (Media Access Control) address, sometimes referred to as a hardware address or physical address, is an ID code that’s assigned to a network adapter or any device with built-in networking capability. The MAC address has a standard composition of six groups of 2 hexadecimal numbers separated by a colon or dash (48 bits). The first three numbers of the MAC address define the manufacturer's **Organizationally Unique Identifier** (OUI) and the remaining three numbers uniquely identify the device . For example, if the MAC address is AA-6A-BA-2B-68-C1 then the OUI is AA-6A-BA and 2B-68-C1 is the device ID.
+An expansion board you insert into a computer so the computer can be connected to a network. Most NICs are designed for a particular type of network, protocol, and media, although some can serve multiple networks. The NIC allows computers to communicate over a computer network, either by using cables or wirelessly. The NIC is both a physical layer and data link layer device, as it provides physical access to a networking medium and, for IEEE 802 and similar networks, provides a low-level addressing system through the use of MAC addresses that are uniquely assigned to network interfaces.
+
+### MAC Address
+
+A MAC (**Media Access Control**) address, sometimes referred to as a hardware address or physical address, is an ID code that’s assigned to a network adapter or any device with built-in networking capability. The MAC address has a standard composition of six groups of 2 hexadecimal numbers separated by a colon or dash (48 bits). The first three numbers of the MAC address define the manufacturer's **Organizationally Unique Identifier** (OUI) and the remaining three numbers uniquely identify the device . For example, if the MAC address is AA-6A-BA-2B-68-C1 then the OUI is AA-6A-BA and 2B-68-C1 is the device ID.
 
 ### Repeaters
 
