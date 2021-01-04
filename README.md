@@ -26,9 +26,11 @@
 
 ## Tools To Try
 
-- [dive](https://github.com/wagoodman/dive)
-- [vagrant-hashistack](https://github.com/fredrikhgrelland/vagrant-hashistack)
-- [zoekt](https://github.com/google/zoekt)
-- [keymaster](https://github.com/Cloud-Foundations/keymaster)
-- [redcanary](https://redcanary.com/)
-- [spiffe](https://spiffe.io/)
+- [levant](https://github.com/hashicorp/levant): An open source templating and deployment tool for HashiCorp Nomad jobs
+- [checkov](https://github.com/bridgecrewio/checkov): Static code analysis tool for infrastructure-as-code
+- [dive](https://github.com/wagoodman/dive): A tool for exploring each layer in a docker image
+- [vagrant-hashistack](https://github.com/fredrikhgrelland/vagrant-hashistack): Hashistack in one click for development & testing
+- [sourcegraph](https://github.com/sourcegraph/sourcegraph): Universal code search
+- [zoekt](https://github.com/google/zoekt): Fast trigram based code search
+- [keymaster](https://github.com/Cloud-Foundations/keymaster): Short term certificate based identity system
+- [kuma](https://github.com/kumahq/kuma): The open-source control plane for service mesh
