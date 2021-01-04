@@ -2,7 +2,7 @@
 
 ![Tech Notes](.gitbook/assets/gitbook.png)
 
-## Resources
+## Long Term Resources
 
 - [School Of SRE](https://linkedin.github.io/school-of-sre/)
 - [Teach Yourself Computer Science](https://teachyourselfcs.com/)
@@ -11,7 +11,7 @@
 - [Coding Interview University](https://github.com/jwasham/coding-interview-university)
 - [Awesome Interviews](https://github.com/MaximAbramchuck/awesome-interview-questions)
 
-## Triage
+## Short Term Resources
 
 - [Managing my personal server in 2020](https://github.com/erebe/personal-server)
 - [BeyongCord](https://www.beyondcorp.com/)
@@ -20,12 +20,13 @@
 - [How to do a code review](https://google.github.io/eng-practices/review/reviewer/)
 - [Command Line Interface Guidelines](https://clig.dev/)
 - [12 Factor CLI Apps](https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46)
+- [Minimal safe Bash script template](https://betterdev.blog/minimal-safe-bash-script-template/)
+- [Linux Hardening Guide](https://madaidans-insecurities.github.io/guides/linux-hardening.html)
+- [Everything you should know about certificates and PKI](https://smallstep.com/blog/everything-pki/)
 
-## Try
+## Tools To Try
 
 - [dive](https://github.com/wagoodman/dive)
-- [gitconfig](https://github.com/thoughtbot/dotfiles/blob/master/gitconfig)
-- [starship](https://starship.rs/)
 - [vagrant-hashistack](https://github.com/fredrikhgrelland/vagrant-hashistack)
 - [zoekt](https://github.com/google/zoekt)
 - [keymaster](https://github.com/Cloud-Foundations/keymaster)
