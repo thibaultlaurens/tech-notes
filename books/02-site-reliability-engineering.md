@@ -101,7 +101,7 @@ The topology of a Google datacenter:
 ### System Software That "Organizes" the Hardware
 
 - **Managing Machines** with [Borg](https://research.google/pubs/pub43438/), a distributed cluster operating system.
-- **Storage** with many layers: the lowest layer **D** is a fileserver running on all machines, a layer on top of D **Colossus** creates a cluster-wide fileystem and several databases like services built on top of Colossus: [**Bigtable**](https://research.google/pubs/pub27898/) (NoSQL), [**Spanner**](https://research.google/pubs/pub39966/) (SQL), **Blobstore**
+- **Storage** with many layers: the lowest layer **D** is a fileserver running on all machines, a layer on top of D **Colossus** creates a cluster-wide fileystem and several databases like services built on top of Colossus: [Bigtable](https://research.google/pubs/pub27898/) (NoSQL), [Spanner](https://research.google/pubs/pub39966/) (SQL), **Blobstore**
 - **Networking**: with [OpenFlow](https://en.wikipedia.org/wiki/OpenFlow), Bandwidth Enforcer (BwE) and Global Software Load Balancer (GSLB)
 
 ### Other System Software
