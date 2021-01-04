@@ -1,7 +1,5 @@
 # Home
 
-![Tech Notes](.gitbook/assets/gitbook.png)
-
 ## Long Term Resources
 
 - [School Of SRE](https://linkedin.github.io/school-of-sre/)
