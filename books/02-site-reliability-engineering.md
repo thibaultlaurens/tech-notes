@@ -115,3 +115,73 @@ The topology of a Google datacenter:
 Appart froma a few groups that have their own open source repositories (Android, Chrome), engineers work from a single shared repository (a [monorepo](https://research.google/pubs/pub45424/)).
 
 ## 3. Embracing risk
+
+Extreme reliability (100%) comes at a cost: maximizing stability limits how fast new features can be developed and how quickly products can be delivered to users, and dramatically increases their costs.
+Also, users typically don't notice the difference between high reliability vs extreme reliability: if a user is on a smartphone with 99% reliability, they can’t tell the difference between 99.99% and 99.999% reliability.
+
+### Managing Risk
+
+Reliability isn’t linear in cost. It can easily cost 100x more to get one additional increment of reliability. Goal: make systems reliable enough, but not too reliable!
+The costliness has two dimensions:
+
+- Cost associated with redundant machine/compute resources.
+- Cost of building out features for reliability as opposed to "normal" features.
+
+### Measuring Service Risk
+
+Standard practice: identify metrics to represent the property of a system to optimize. For most services: **unplanned downtime** (the service availability, measured un number of "nines").
+
+- **Time based availability = uptime / (uptime + downtime)** (problematic for a globally distributed service. What does uptime really mean?).
+- **Aggregate availability = successful request / total requests** (not all requests are equal, but aggregate availability is an ok first order approximation).
+
+### Risk Tolerance of Services
+
+- Work with Product Owner to translate business objectives into explicit objectives.
+- Identify risk tolerance of consumer and infrastructure services (target level of availability, types of failures, costs).
+- Ex: consumer serving data from Bigtable need low latency and high reliability when teams using bigtable as a backing store for offline analysis need more throughput than reliability.
+
+### Motivation for Error Budgets
+
+An error budget provides a common incentive that allows both product development and SRE to focus on finding the right balance between innovation and reliability.
+
+## 4. Service Level Objectives
+
+### Service Level Terminology
+
+- **Indicators**: (SLI) a carefully defined quantitative measure of some aspect of the level of service that is provided (request latency, error rate, system throughput, availability).
+- **Objectives**: (SLO) a target value or range of values for a service level that is measured by an SLI (SLI <= SLO or lower SLO <= SLI <= upper SLO).
+- **Agreements**: (SLA) an explicit or implicit contract with your users that includes consequences of meeting (or missing) the SLOs they contain.
+
+### Indicators in Practice
+
+What do you and your users care about?
+
+- Too many indicators and its hard to pay attention / too few indicators and you might ignore important behavior.
+- Different classes of services should have different indicators.
+- User-facing: availability, latency, throughput.
+- Storage: latency, availability, durability.
+- Big data: throughput, end-to-end latency.
+- All systems care about correctness.
+
+Metric aggregation:
+
+- Use distributions over averages in most cases (ex: to avoid hiding tail latencies).
+- User studies show that people usually prefer slower average with better tail latency.
+- Standardize on common definitions: aggregation intervals, regions, measurements frequency, how data is acquired etc.
+
+### Objectives in Practice
+
+Defining Objectives:
+
+Choosing targets:
+
+- Don’t pick target based on current performance (current performance may require heroic effort).
+- Keep it simple
+- Avoid absolutes (it's unreasonable to talk about "infinite" scale or "always" available)
+- Have a few SLOs as possible (just enough to provide good coverage)
+- Perfection can wait (can always redefine SLOs over time)
+- SLOs set expectations (keep a safety margin and don't overachieve)
+
+### Agreements in Practice
+
+Crafting an SLA requires business and legal teams to pick appropriate consequences and penalties for a breach. The SRE role is to help them understand the likelihood and difficulty of meeting the SLOs containedd in the SLA. Be conservative in what your advertise to users.
