@@ -75,17 +75,9 @@ An SRE team is responsible for the **availability, latency, performance, efficie
 - 70% of outages are due to changes in a live system. Mitigation: implement progressive rollouts, monitoring and rollback
 - Remove humans from the loop, avoid standard human problems on repetitive tasks
 
-**Demand forecasting and capacity planning**
-
-**Provisioning**
-
-**Efficiency and performance**
-
 ## 2. The Production Environment at Google, from the Viewpoint of an SRE
 
 ### Hardware
-
-Terminology:
 
 - **Machine**: A piece of hardware (or perhaps a VM).
 - **Server**: A piece of software that implements a service.
@@ -154,7 +146,7 @@ An error budget provides a common incentive that allows both product development
 
 ### Indicators in Practice
 
-What do you and your users care about?
+**What do you and your users care about ?**
 
 - Too many indicators and its hard to pay attention / too few indicators and you might ignore important behavior.
 - Different classes of services should have different indicators.
@@ -165,13 +157,21 @@ What do you and your users care about?
 
 Metric aggregation:
 
-- Use distributions over averages in most cases (ex: to avoid hiding tail latencies).
-- User studies show that people usually prefer slower average with better tail latency.
+- Use **distributions over averages** in most cases (ex: to avoid hiding tail latencies).
+- User studies show that people usually prefer **slower average with better tail latency**.
 - Standardize on common definitions: aggregation intervals, regions, measurements frequency, how data is acquired etc.
 
 ### Objectives in Practice
 
 Defining Objectives:
+
+- Specify multiple SLO targets:
+  - 90% of _GET RPC_ calls will complete in < 1ms
+  - 99% of _GET RPC_ calls will complete in < 10ms
+  - 99.9% of _GET RPC_ calls will complete in < 100ms
+- Define separate objective for different workload:
+  - 95% of clients A (A care avout bulk processing) _SET RPC_ calls will complete in < 1s
+  - 99% of clients B (B cares about latency) _SET RPC_ calls with payload < 1kb will complete in < 10ms
 
 Choosing targets:
 
