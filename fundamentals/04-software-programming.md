@@ -113,7 +113,7 @@ Resources:
 
 ### GoF Design Patterns
 
-**Creational patterns** provide the capability to create objects based on a required criterion and in a controlled way:
+[**Creational patterns**](https://en.wikipedia.org/wiki/Creational_pattern) provide the capability to create objects based on a required criterion and in a controlled way:
 
 - **Abstract Factory**: Allows the creation of objects without specifying their concrete type.
 - **Builder**: Uses to create complex objects.
@@ -121,7 +121,7 @@ Resources:
 - **Prototype**: Creates a new object from an existing object.
 - **Singleton**: Ensures only one instance of an object is created.
 
-**Structural patterns** are about organizing different classes and objects to form larger structures and provide new functionality:
+[**Structural patterns**](https://en.wikipedia.org/wiki/Structural_pattern) are about organizing different classes and objects to form larger structures and provide new functionality:
 
 - **Adapter**: Allows for two incompatible classes to work together by wrapping an interface around one of the existing classes.
 - **Bridge**: Decouples an abstraction so two classes can vary independently.
@@ -131,7 +131,7 @@ Resources:
 - **Flyweight**: Reduces the cost of complex object models.
 - **Proxy**: Provides a placeholder interface to an underlying object to control access, reduce cost, or reduce complexity.
 
-**Behavioral patterns** are about identifying common communication patterns between objects and realize these patterns:
+[**Behavioral patterns**](https://en.wikipedia.org/wiki/Behavioral_pattern) are about identifying common communication patterns between objects and realize these patterns:
 
 - **Chain of Responsibility**: Delegates commands to a chain of processing objects.
 - **Command**: Creates objects which encapsulate actions and parameters.
