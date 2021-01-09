@@ -113,9 +113,7 @@ Resources:
 
 ### GoF Design Patterns
 
-#### Creational Patterns
-
-Creational patterns provide the capability to create objects based on a required criterion and in a controlled way.
+**Creational patterns** provide the capability to create objects based on a required criterion and in a controlled way:
 
 - **Abstract Factory**: Allows the creation of objects without specifying their concrete type.
 - **Builder**: Uses to create complex objects.
@@ -123,9 +121,7 @@ Creational patterns provide the capability to create objects based on a required
 - **Prototype**: Creates a new object from an existing object.
 - **Singleton**: Ensures only one instance of an object is created.
 
-#### Structural Patterns
-
-Structural patterns are about organizing different classes and objects to form larger structures and provide new functionality.
+**Structural patterns** are about organizing different classes and objects to form larger structures and provide new functionality:
 
 - **Adapter**: Allows for two incompatible classes to work together by wrapping an interface around one of the existing classes.
 - **Bridge**: Decouples an abstraction so two classes can vary independently.
@@ -135,9 +131,7 @@ Structural patterns are about organizing different classes and objects to form l
 - **Flyweight**: Reduces the cost of complex object models.
 - **Proxy**: Provides a placeholder interface to an underlying object to control access, reduce cost, or reduce complexity.
 
-#### Behavior Patterns
-
-Behavioral patterns are about identifying common communication patterns between objects and realize these patterns.
+**Behavioral patterns** are about identifying common communication patterns between objects and realize these patterns:
 
 - **Chain of Responsibility**: Delegates commands to a chain of processing objects.
 - **Command**: Creates objects which encapsulate actions and parameters.
@@ -153,11 +147,11 @@ Behavioral patterns are about identifying common communication patterns between 
 
 ### SOLID Principles
 
-- [Single-responsibility principle](https://en.wikipedia.org/wiki/Single-responsibility_principle): Every module, class or function in a computer program should have responsibility over a single part of that program's functionality, which it should encapsulate.
-- [Open–closed principle](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle): Software entities \(classes, modules, functions, etc.\) should be open for extension, but closed for modification.
-- [Liskov substitution principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle): If S is a subtype of T, then objects of type T may be replaced with objects of type S without altering any of the desirable properties of the program.
-- [Interface segregation principle](https://en.wikipedia.org/wiki/Interface_segregation_principle): No client should be forced to depend on methods it does not use \(split interfaces that are very large into smaller and more specific ones\).
-- [Dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle): High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details \(concrete implementations\) should depend on abstractions.
+- [**Single-responsibility principle**](https://en.wikipedia.org/wiki/Single-responsibility_principle): Every module, class or function in a computer program should have responsibility over a single part of that program's functionality, which it should encapsulate.
+- [**Open–closed principle**](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle): Software entities \(classes, modules, functions, etc.\) should be open for extension, but closed for modification.
+- [**Liskov substitution principle**](https://en.wikipedia.org/wiki/Liskov_substitution_principle): If S is a subtype of T, then objects of type T may be replaced with objects of type S without altering any of the desirable properties of the program.
+- [**Interface segregation principle**](https://en.wikipedia.org/wiki/Interface_segregation_principle): No client should be forced to depend on methods it does not use \(split interfaces that are very large into smaller and more specific ones\).
+- [**Dependency inversion principle**](https://en.wikipedia.org/wiki/Dependency_inversion_principle): High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details \(concrete implementations\) should depend on abstractions.
 
 ### [The Twelve-Factor App](https://12factor.net/)
 
