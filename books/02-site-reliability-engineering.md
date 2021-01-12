@@ -185,3 +185,53 @@ Choosing targets:
 ### Agreements in Practice
 
 Crafting an SLA requires business and legal teams to pick appropriate consequences and penalties for a breach. The SRE role is to help them understand the likelihood and difficulty of meeting the SLOs containedd in the SLA. Be conservative in what your advertise to users.
+
+## 5. Eliminating Toil
+
+### Toil Defined
+
+- **Manual**:
+- **Repetitive**:
+- **Automatable**:
+- **Tactical**:
+- **No enduring value**:
+- **O(n) with service growth**
+
+### What Qualifies as Engineering
+
+- **Software Engineering**
+- **System Engineeing**
+- **Toil**
+- **Overhead**
+
+### Is Toil Always Bad ?
+
+Predictable and repetitive tasks can be quite calming (low risk, low stress, quick win..), but too much toil is bad:
+
+- **Carreer Stagnation**
+- **Low morale**
+- **Creates confusion**
+- **Slows progress**
+- **Sets precedent**
+- **Promotes attribution**
+- **Causes breach of faith**
+
+## 6. Monitoring Distributed Systems
+
+## 7. The Evolution of Automation at Google
+
+### The Value of Automation
+
+- **Consistency**, the primary value of Automation.
+- **A platform** that can be extended and centralizes mistakes.
+- **Faster Repairs** that reduces Mean Time To Repair (MTTR)
+- **Faster Actions**:
+- **Time savings**:
+
+### A Hierarchy of Automation Classes
+
+1. **No automation**: Database master is failed over manually between locations.
+2. **Externally maintained system-specific automation**: An SRE has a failover script in his or her home directory.
+3. **Externally maintained generic automation**: The SRE adds database support to a "generic failover" script that everyone uses.
+4. **Internally maintained automation**: The database ships with its own failover script.
+5. **Systems that don't need automation**: The database notice problems, and automatically fails over without human intervention.
