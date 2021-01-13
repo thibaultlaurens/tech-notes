@@ -208,6 +208,14 @@ The following table lists some of the more common well-known port numbers:
 
 ### Protocol Stack
 
+#### Open Systems Interconnection (OSI) model
+
+![osi-model](../.gitbook/assets/osi-model.png)
+
+#### Internet Protocol Suite (IPS or TCP/IP) model
+
+![ips-model](../.gitbook/assets/network-models.jpg)
+
 ## IP address standards and services
 
 - [TCP/IP Basics](https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/5-ip-tcp-basics)
