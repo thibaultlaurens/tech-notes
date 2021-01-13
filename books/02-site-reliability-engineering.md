@@ -190,31 +190,31 @@ Crafting an SLA requires business and legal teams to pick appropriate consequenc
 
 ### Toil Defined
 
-- **Manual**:
-- **Repetitive**:
-- **Automatable**:
-- **Tactical**:
-- **No enduring value**:
-- **O(n) with service growth**
+- **Manual**, including manually running a script that automates some task.
+- **Repetitive**: performing the same task more than twice.
+- **Automatable**, except for tasks that need human judgment.
+- **Tactical**: interrupt-driven and reactive like handling a pager alert.
+- **No enduring value**: is the service in the same state once a task is finished ?
+- **O(n) with service growth**: is the task scaling linearly with service size, traffic volume, etc. ?
 
 ### What Qualifies as Engineering
 
-- **Software Engineering**
-- **System Engineeing**
-- **Toil**
-- **Overhead**
+- **Software Engineering**: writing or modifying code, in addition to any associated design and documentation work.
+- **System Engineeing**: configuring production systems, modifying configurations or documentating systems.
+- **Toil**: work directly tied to running a service that is repetitive, manual, etc.
+- **Overhead**: administrative work not tied directly to a running service (HR, team meeting etc.).
 
 ### Is Toil Always Bad ?
 
 Predictable and repetitive tasks can be quite calming (low risk, low stress, quick win..), but too much toil is bad:
 
-- **Carreer Stagnation**
-- **Low morale**
-- **Creates confusion**
-- **Slows progress**
-- **Sets precedent**
-- **Promotes attribution**
-- **Causes breach of faith**
+- **Carreer Stagnation**, if you spend yoo little time on projects.
+- **Low morale**: too much toil leads to burnout, boredom and discontent.
+- **Creates confusion**: confuse people about the SRE engineering nature.
+- **Slows progress** and reduce team velocity.
+- **Sets precedent**: the more toil you accept to do, the more you will be given by other teams.
+- **Promotes attrition**: team members will start looking for a more rewarding job.
+- **Causes breach of faith**: new hires will feel cheated, bad for morale.
 
 ## 6. Monitoring Distributed Systems
 
