@@ -5,16 +5,21 @@
 ## Fundamentals
 
 - [Git](fundamentals/00-git.md)
-- [Algorithms & Data structures](fundamentals/01-algorithms-and-data-structures.md)
+- [Algorithms & Data structures](books/01-grokking-algorithms.md)
 - [Language and Compiler Design](fundamentals/02-language-and-compiler-design.md)
 - [Software Engineering](fundamentals/03-software-engineering.md)
 - [Software Programming](fundamentals/04-software-programming.md)
 - [Database Management System](fundamentals/05-database-management-system.md)
 - [Computer Networking](fundamentals/06-computer-network.md)
-- [Security & Cryptography](fundamentals/07-security-and-cryptography.md)
-- [Infrastructure & Operations](fundamentals/08-infrastructures-and-operations.md)
-- [Distributed Systems](fundamentals/09-distributed-systems.md)
-- [Systems design](fundamentals/10-systems-design.md)
+
+## Advanced
+
+- [Algorithms & Data structures](advanced/01-algorithms-and-data-structures.md)
+- [Computer Networking](advanced/02-computer-network.md)
+- [Security & Cryptography](advanced/03-security-and-cryptography.md)
+- [Infrastructure & Operations](advanced/04-infrastructures-and-operations.md)
+- [Distributed Systems](advanced/05-distributed-systems.md)
+- [Systems design](advanced/06-systems-design.md)
 
 ## Books
 
