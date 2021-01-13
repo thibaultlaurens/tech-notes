@@ -47,10 +47,10 @@
 
 ### The seven principles of software testing
 
-- **Testing shows presence of defects:** The goal of software testing is to make the software fail. It \*\*\*\*can ensure that defects are present but it can not prove that software is defects free. Testing can reduce the number of defects but not removes all defects.
+- **Testing shows presence of defects:** The goal of software testing is to make the software fail. It can ensure that defects are present but it can not prove that software is defects free. Testing can reduce the number of defects but not removes all defects.
 - **Exhaustive testing is not possible:** The software can never test at every test cases \(in all possible inputs, valid or invalid, and pre-conditions\). It can test only some test cases and assume that software is correct and will produce the correct output in every test cases.
 - **Early Testing:** To find the defect in the software, early test activity shall be started. The defect detected in early phases of **SDLC** are less expensive.
-- **Defect clustering:** In a project, a small number of the module can contain most of the defects. The **Pareto Principle** applied \*\*\*\*to testing states that 80% of software defect comes from 20% of modules.
+- **Defect clustering:** In a project, a small number of the module can contain most of the defects. The **Pareto Principle** applied to testing states that 80% of software defect comes from 20% of modules.
 - **Pesticide paradox:** Repeating the same test cases again and again will not find new bugs.
 - **Testing is context dependent:** Testing approach depends on context of software developed. Different types of software need to perform different types of testing.
 - **Absence of errors fallacy:** If a built software is 99% bug-free but it does not follow the user requirement then it is unusable.
