@@ -35,7 +35,7 @@
 - [DFRWS EU 2020](conferences/03-dfrws-eu-2020.md)
 - [QCON PLUS 2020](conferences/04-qcon-plus-2020.md)
 
-## Linux System Programming <a id="lsp"></a>
+## Linux System Programming
 
 - [Files, Processes and Signals](lsp/01-files-processes-signals-and-timers.md)
 - [Threads and IPC](lsp/02-threads-and-ipc.md)
