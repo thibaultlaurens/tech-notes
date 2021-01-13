@@ -129,25 +129,84 @@ A gateway, as the name suggests, is a passage to connect two networks together t
 
 ## Network Protocols
 
-- [Network protocols to use when you implement a network](https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/4-network-protocols)
+- [School of SRE](https://linkedin.github.io/school-of-sre/linux_networking/intro/)
+- [Network Protocols](https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/4-network-protocols)
 
-### Network Protocols
+A network protocol is a set of **conditions and rules** that specify how network devices communicate on a given network. It provides a common framework for establishing and maintaining a communications channel, and how to handle errors or faults should they occur. Network protocols allow communication between different network-enabled devices.
 
-- Network address
-- Data Packet
-- Datagram
-- Routing
+### Definition
 
-### Protocols Categories
+- **Network address**: A unique identifier that identifies a network-enabled device. A network-enabled device might have more than one address type. We'll focus on only two: **MAC** and **IP** addresses. **Media Access Control** (MAC) address identifies the network interface at the hardware level. **Internet Protocol** (IP) address identifies the network interface at a software level.
+- **Data Packet**: A unit that's used to describe the message two devices on a network send each other. It consists of **raw data**, **headers**, and potentially also a **trailer**. The header contains several information items (sender and destination device addresses, size of the packet, protocol used, and packet number). The trailer deals with error checking.
+- **Datagram**: Considered the same as a data packet. It commonly refer to data packets of an unreliable service, where delivery can't be guaranteed.
+- **Routing**: In the context of networks, refers to the mechanism used to make sure that data packets follow the correct delivery path between the sending and receiving devices on different networks.
 
 ### Communication protocols
 
+Communication protocols focus on establishing and maintaining a connection between devices.
+
+The three foundational protocols of all internet-based networks are Transmission Control Protocol (TCP), Internet Protocol (IP), and User Datagram Protocol (UDP). These protocols are concerned with the logical transmission of data over the network.
+
+- **Transmission Control Protocol (TCP)**: TCP chunks up data into data packets that can be sent securely and quickly while minimizing the chance of data loss. It provides a stable and reliable mechanism for the delivery of data packets across an IP-based network. Even though TCP is an effective **connection-oriented** protocol, it has overhead.
+- **Internet Protocol (IP)**: IP is responsible for the **addressing** of a data packet. IP encapsulates the data packet to be delivered and adds an address header. The header contains information on the sender and recipient IP addresses. This protocol isn't concerned about the order in which the packets are sent or received. It also doesn't guarantee that a packet will be delivered, only the address.
+- **User Datagram Protocol (UDP)**: UDP is a **connectionless** protocol that offers a low-latency and loss-tolerant implementation. UDP is used with processes that don't need to verify that the recipient device received a datagram.
+
+The rest of the protocols that are commonly used are based on a type of application:
+
+- **Hypertext Transfer Protocol (HTTP)**: The HTTP protocol uses TCP/IP to deliver web page content from a server to your browser. HTTP can also handle the download and upload of files from remote servers.
+- **File Transfer Protocol (FTP)**: FTP is used to transfer files between different computers on a network. Typically, FTP is used to upload files to a server from a remote location. While you can use FTP to download files, web-based downloads are typically handled through HTTP.
+- **Post Office Protocol 3 (POP3)**: POP3 is one of three email protocols. It's most commonly used by an email client to allow you to receive emails. This protocol uses TCP for the management and delivery of an email.
+- **Simple Mail Transfer Protocol (SMTP)**: SMTP is another one of the three email protocols. It's most commonly used to send emails from an email client via an email server. This protocol uses the TCP for management and transmission of the email.
+- **Interactive Mail Access Protocol (IMAP)**: IMAP is the more powerful of the three email protocols. With IMAP and an email client, you can manage a single mailbox on an email server in your organization.
+
 ### Security protocols
+
+Network security protocols are designed to maintain the security of a network and of the data across a network. These protocols use encryption and cryptographic principles to secure messages. The leading network security protocols are:
+
+- **Secure Socket Layer (SSL)**: SSL is a standard encryption and security protocol. It provides a secure and encrypted connection between your computer and the target server or device that you accessed over the internet.
+- **Transport Layer Security (TLS)**: TLS is the successor to SSL and provides a stronger and more robust security encryption protocol. Based on the Internet Engineering Task Force (IETF) standard, it's designed to **stop message forgery and tampering and eavesdropping**. It's typically used to protect web browser communications, email, VoIP, and instant messaging. While TLS is now used, the replacement security protocol is often still called SSL.
+- **Hypertext Transfer Protocol Secure (HTTPS)**: HTTPS provides a more secure version of the standard HTTP protocol by using the TLS or SSL encryption standard. This combination of protocols ensures that all data transmitted between the server and the web browser is encrypted and secure from eavesdropping or data packet sniffing. The same principle is applied to the POP, SMTP, and IMAP protocols listed previously to create secure versions known as **POPS, SMTPS, and IMAPS**.
+- **Secure Shell (SSH)**: SSH is a cryptographic network security protocol that provides a secure data connection across a network. SSH is designed to support command-line execution of instructions, which includes remote authentication to servers. FTP uses many of the SSH functions to provide a secure file transfer mechanism.
+- **Kerberos**: This validation protocol provides a robust authentication for client-server based applications through secret-key cryptography. Kerberos assumes that all endpoints in the network are insecure. It enforces strong encryption for all communications and data at all times.
 
 ### Management protocols
 
-- [School of SRE](https://linkedin.github.io/school-of-sre/linux_networking/intro/)
-- [Network Protocols](https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/4-network-protocols)
+The focus of this type of protocol is the sustainability of the network by looking at faults and performance. Network administrators need to monitor their networks and any devices attached to them. Each device in your network exposes some indicators about the state and health of the device. These indicators are requested by the network administrator tool and can be used for monitoring and reporting.
+
+- **Simple Network Management Protocol (SNMP)**: SNMP is an internet protocol that allows for the collection of data from devices on your network and the management of those devices. The device has to support SNMP to gather information. Devices that typically support SNMP include switches, routers, servers, laptops, desktops, and printers.
+- **Internet Control Message Protocol (ICMP)**: ICMP is one of the protocols included within the Internet Protocol suite (IPS). It allows network-connected devices to send warning and error messages, along with operation information about the success or failure of a connection request, or if a service is unavailable. Unlike other network transport protocols like UDP and TCP, ICMP isn't used to send or receive data from devices on the network.
+
+### Ports
+
+A port is a logical construct that allows the **routing of incoming messages to specific processes**. There's a particular port for every type of IPS. A port is an **unsigned 16-bit** number in the range **0 to 65535** and is also known as a port number. Ports are assigned by the sending TCP or UDP layer based on the communications protocol used.
+
+There are three ranges of ports: **the well-known ports (0 to 1023), the registered ports (1024 to 49151), and the dynamic/private ports (49152 to 65535)**. Every port links to a specific service or communications protocol. It means that the target network device, say a server, can receive multiple requests on each port and service each of them without conflict.
+
+The **Internet Assigned Numbers Authority (IANA)** manages the allocation of port numbers, the regional assignment of IP addresses, and Domain Name System (DNS) root zones. IANA also manages a central repository for protocol names and the registry used in internet protocols.
+
+The following table lists some of the more common well-known port numbers:
+
+| Port number | Assignment                            |
+| ----------- | ------------------------------------- |
+| 15          | Netstat (network statistics)          |
+| 20          | FTP for data transfer                 |
+| 21          | FTP for command control               |
+| 22          | SSH for secure authentication         |
+| 23          | Telnet (unencrypted text messages)    |
+| 25          | SMTP for email routing                |
+| 43          | WHOIS                                 |
+| 53          | DNS service                           |
+| 80          | HTTP for use in the web               |
+| 88          | Kerberos                              |
+| 110         | POP3                                  |
+| 119         | Network News Transfer Protocol (NNTP) |
+| 123         | Network Time Protocol (NTP)           |
+| 143         | IMAP for management of digital mail   |
+| 161         | SNMP                                  |
+| 194         | Internet Relay Chat (IRC)             |
+| 443         | HTTPS (HTTP over TLS/SSL)             |
+
+### Protocol Stack
 
 ## IP address standards and services
 
