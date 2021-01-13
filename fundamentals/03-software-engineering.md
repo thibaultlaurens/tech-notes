@@ -83,7 +83,7 @@
 - Security testing
 - A/B testing
 
-## Architectural Decision Records (ADR)
+## Architectural Decision Records
 
 - [adr.github.io](https://adr.github.io/)
 - [Architecture decision record](https://github.com/joelparkerhenderson/architecture_decision_record)
@@ -97,19 +97,17 @@ Characteristics of a good ADR:
 - **Immutable record** - The decisions made in a previously published ADR should not be altered
 - **Specificity** - Each ADR should be about a single AD
 
-Characteristics of a good context in an ADR:
+Characteristics of good **context**:
 
 - Explain your organization's situation and business priorities
 - Include rationale and considerations based on social and skills makeups of your teams
 
-Characteristics of good Consequences in an ADR:
+Characteristics of good **consequences**:
 
 - Right approach - "We need to start doing X instead of Y"
 - Wrong approach - Do not explain the AD in terms of "Pros" and "Cons" of having made the particular AD
 
-A new ADR may take the place of a previous ADR:
-
-- When an AD is made that replaces or invalidates a previous ADR, a new ADR should be created
+A new ADR may take the place of a previous ADR: when an AD is made that **replaces or invalidates** a previous ADR, a new ADR should be created.
 
 ### ADR Template
 
