@@ -163,7 +163,7 @@ Metric aggregation:
 
 ### Objectives in Practice
 
-Defining Objectives:
+**Defining Objectives:**
 
 - Specify multiple SLO targets:
   - 90% of _GET RPC_ calls will complete in < 1ms
@@ -173,7 +173,7 @@ Defining Objectives:
   - 95% of clients A (A care avout bulk processing) _SET RPC_ calls will complete in < 1s
   - 99% of clients B (B cares about latency) _SET RPC_ calls with payload < 1kb will complete in < 10ms
 
-Choosing targets:
+**Choosing targets:**
 
 - Don’t pick target based on current performance (current performance may require heroic effort).
 - Keep it simple
@@ -218,6 +218,40 @@ Predictable and repetitive tasks can be quite calming (low risk, low stress, qui
 
 ## 6. Monitoring Distributed Systems
 
+### Definitions
+
+- **Monitoring**: collecting, processing, aggregating and displaying real-time quantitative data about a system.
+- **White-box monitoring**: monitoring based on metrics exposed by the internals of a system.
+- **Black-box monitoring**: monitoring externally visible behavior as a user would see it.
+- **Dashboard**: an application that provides a summary view of a service's core metrics.
+- **Alert**: a notification intended to be read by a human, classified as `tickets`, `email alerts`, `pages`.
+- **Root cause**: a defect in a software or system that, if repaired, instills confidence that it won't happen again in the same way.
+- **Node and machine**: used interchangeably to indicate a single instance of a running kernek in either a physical server, virtual machine or container.
+- **Push**: any change to a service's running software or it's configuration.
+
+### Why Monitor ?
+
+- **Analyzing long-term trends**
+- **Comparing over time or experiment groups**
+- **Alerting**
+- **Building dashboards**
+- **Conducting ad hoc retrospective analysis**
+
+### The Four Golden Signals
+
+- **Latency**: The time is takes to service a requests (or an error).
+- **Traffic**: How much demand is being placed on the system.
+- **Errors**: The rate of requests that fail (explicitly or implicitly).
+- **Saturation**: How "full" the service is.
+
+### Recommandations
+
+- **Symptoms vs Causes**: the monitoring system should address two questions: `What's broken?` (symptom) and `Why?` (cause).
+- **Black-Box vs White-Box**: use black-box for paging (alert on symptoms) and white-box for debugging (finding the cause).
+- **Worry about your tail**: system based uppon the mean of some quantity hides distributions and outliers, use histograms/quantiles instead.
+- **Choose an appropriate resolution for measurements**: different aspects of a system should be measured with different level of granularity.
+- **As simple as possible, not simpler** (and as a standalone system to avoid complexity).
+
 ## 7. The Evolution of Automation at Google
 
 ### The Value of Automation
@@ -235,3 +269,7 @@ Predictable and repetitive tasks can be quite calming (low risk, low stress, qui
 3. **Externally maintained generic automation**: The SRE adds database support to a "generic failover" script that everyone uses.
 4. **Internally maintained automation**: The database ships with its own failover script.
 5. **Systems that don't need automation**: The database notice problems, and automatically fails over without human intervention.
+
+## 8. Release Engineering
+
+## 9. Simplicity
