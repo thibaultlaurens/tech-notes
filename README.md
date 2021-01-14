@@ -32,3 +32,10 @@
 - [zoekt](https://github.com/google/zoekt): Fast trigram based code search
 - [keymaster](https://github.com/Cloud-Foundations/keymaster): Short term certificate based identity system
 - [kuma](https://github.com/kumahq/kuma): The open-source control plane for service mesh
+
+## Recommandations de sécurité ANSSI
+
+- [Systèmes d’information essentiels](https://www.ssi.gouv.fr/administration/guide/recommandations-pour-la-protection-des-systemes-dinformation-essentiels/)
+- [Système GNU/Linux](https://www.ssi.gouv.fr/guide/recommandations-de-securite-relatives-a-un-systeme-gnulinux/)
+- [Conteneurs Docker](https://www.ssi.gouv.fr/administration/guide/recommandations-de-securite-relatives-au-deploiement-de-conteneurs-docker/)
+- [TLS](https://www.ssi.gouv.fr/administration/guide/recommandations-de-securite-relatives-a-tls/)
