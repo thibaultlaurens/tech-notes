@@ -18,7 +18,7 @@
 - https://en.wikipedia.org/wiki/Systems\_development\_life\_cycle"
 - https://en.wikipedia.org/wiki/Software\_development\_process\#Waterfall\_development"
 
-### Systems development life cycle
+### Systems Development Life Cycle
 
 - System Investigation
 - Analysis
@@ -29,7 +29,7 @@
 - Operation and maintenance
 - Evaluation
 
-### Software development process
+### Software Development Process
 
 - Agile development
 - Incremental development
@@ -45,7 +45,7 @@
 
 - https://en.wikipedia.org/wiki/Software\_testing
 
-### The seven principles of software testing
+### The Seven Principles Of Software Testing
 
 - **Testing shows presence of defects:** The goal of software testing is to make the software fail. It can ensure that defects are present but it can not prove that software is defects free. Testing can reduce the number of defects but not removes all defects.
 - **Exhaustive testing is not possible:** The software can never test at every test cases \(in all possible inputs, valid or invalid, and pre-conditions\). It can test only some test cases and assume that software is correct and will produce the correct output in every test cases.
@@ -55,7 +55,7 @@
 - **Testing is context dependent:** Testing approach depends on context of software developed. Different types of software need to perform different types of testing.
 - **Absence of errors fallacy:** If a built software is 99% bug-free but it does not follow the user requirement then it is unusable.
 
-### Testing approach
+### Testing Approach
 
 **Static, Dynamic and passive testing:**
 
@@ -65,14 +65,14 @@
 - Black box testing
 - Grey box testing
 
-### Testing levels
+### Testing Levels
 
 - Unit testing
 - Integration testing
 - System testing
 - Acceptance testing
 
-### Testing types
+### Testing Types
 
 - Smoke testing
 - Regression testing
@@ -88,7 +88,7 @@
 - [adr.github.io](https://adr.github.io/)
 - [Architecture decision record](https://github.com/joelparkerhenderson/architecture_decision_record)
 
-### ADR best practices
+### ADR Best Practices
 
 Characteristics of a good ADR:
 

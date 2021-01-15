@@ -62,7 +62,7 @@ Summary of this [article](https://everythingisdata.wordpress.com/2009/10/17/numb
 | Read 1MB sequentially from disk           |           20 000 000 |
 | Send packet CA -&gt; Netherlands -&gt; CA |         150 000 0000 |
 
-### Introduction to architecting systems for scale
+### Introduction To Architecting Systems or Scale
 
 Combination of this [article](https://lethain.com/introduction-to-architecting-systems-for-scale/) and this [chapter](https://www.aosabook.org/en/distsys.html) of the Architecture of Open Source Applications book.
 

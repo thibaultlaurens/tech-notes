@@ -1,16 +1,16 @@
 # Software Programming
 
-## Programming concepts
+## Programming Concepts
 
 - [Programming Concepts](https://thecodeboss.dev/2014/10/programming-concepts-the-stack-and-the-heap/) \(faire toute la serie\)
 
-### The Stack and the Heap
+### The Stack And The Heap
 
-### Compiled and Interpreted languages
+### Compiled And Interpreted Languages
 
 ### Concurrency
 
-### Static vs Dynamic type checking
+### Static vs Dynamic Type Checking
 
 ### Type Introspection and Reflection
 
@@ -101,7 +101,7 @@ Resources:
 - [What the f\*ck Python!](https://github.com/satwikkansal/wtfpython)
 - [Python behind the scenes](https://tenthousandmeters.com/tag/python-behind-the-scenes/)
 
-### Javascript
+### JavaScript
 
 Resources:
 
@@ -109,7 +109,7 @@ Resources:
 - [AirBnb style guide](https://github.com/airbnb/javascript).
 - [The modern JavaScript tutorial](https://javascript.info/)
 
-## Best practices
+## Best Practices
 
 ### GoF Design Patterns
 
@@ -170,7 +170,7 @@ Resources:
 
 ## Templates
 
-### Self documenting Makefile
+### Self Documenting Makefile
 
 Avoid documentation of Make targets in a Readme.md or something similar: the Makefiles get updated, not the documentation. Add documentation for each target of the Makefile and view it as a make target \(eg. make help\).
 

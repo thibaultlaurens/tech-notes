@@ -53,7 +53,7 @@ Git does the file packing very cleverly. That is, Git can take any two files fro
 
 Git also maintains the knowledge of the original blob SHA1 for each complete file (either the complete content or as a reconstruction after deltas are applied) within the packed representation. This provides the basis for an index mechanism to locate objects within a pack. Packed files are stored in the object store alongside the other objects, under `.git/objects/pack`.
 
-## Working with objects
+## Working With Objects
 
 ### Commits
 

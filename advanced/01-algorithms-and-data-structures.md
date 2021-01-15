@@ -22,7 +22,7 @@
 - Radix Sort
 - Heap Sort
 
-## Heap-like data structures
+## Heap-like Data Structures
 
 - Heaps
 - Binomial Queues
@@ -30,7 +30,7 @@
 - Leftist Heaps
 - Skew Heaps
 
-## Graphs algorithms
+## Graphs Algorithms
 
 - Depth-First Search
 - Connected Components
@@ -40,7 +40,7 @@
 - Floyd-Warshall \(all pairs shortest paths\)
 - Kruskal Minimum Cost Spanning Tree Algorithm
 
-## Dynamic programming
+## Dynamic Programming
 
 - Calculating nth Fibonacci number
 - Making Change
