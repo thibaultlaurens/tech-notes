@@ -60,13 +60,7 @@
 | Execute only            | --x | 001    | 1       |
 | None                    | --- | 000    | 0       |
 
-## DevOps and Site Reliability Engineering
-
-### The DevOps Loop
-
-![The DevOps Loop](../.gitbook/assets/devops.png)
-
-### Site Reliability Engineering
+## Site Reliability Engineering
 
 Book Review: [Site Reliability Engineering](books/02-site-reliability-engineering.md)
 
