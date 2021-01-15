@@ -2,24 +2,21 @@
 
 - [Home](README.md)
 
-## Fundamentals
+## Notes
 
-- [Git](fundamentals/00-git.md)
-- [Algorithms & Data structures](books/01-grokking-algorithms.md)
-- [Language and Compiler Design](fundamentals/02-language-and-compiler-design.md)
-- [Software Engineering](fundamentals/03-software-engineering.md)
-- [Software Programming](fundamentals/04-software-programming.md)
-- [Database Management System](fundamentals/05-database-management-system.md)
-- [Computer Networking](fundamentals/06-computer-network.md)
-
-## Advanced
-
-- [Algorithms & Data structures](advanced/01-algorithms-and-data-structures.md)
-- [Computer Networking](advanced/02-computer-network.md)
-- [Security & Cryptography](advanced/03-security-and-cryptography.md)
-- [Infrastructure & Operations](advanced/04-infrastructures-and-operations.md)
-- [Distributed Systems](advanced/05-distributed-systems.md)
-- [Systems design](advanced/06-systems-design.md)
+- [Git](notes/01-git.md)
+- [Algorithms & Data Structures I](books/01-grokking-algorithms.md)
+- [Algorithms & Data Structures II](notes/02-algorithms-and-data-structures.md)
+- [Language and Compiler Design](notes/03-language-and-compiler-design.md)
+- [Software Engineering](notes/04-software-engineering.md)
+- [Software Programming](notes/05-software-programming.md)
+- [Database Management System](notes/06-database-management-system.md)
+- [Computer Networking I](notes/07-computer-network.md)
+- [Computer Networking II](notes/08-computer-network.md)
+- [Security & Cryptography](notes/09-security-and-cryptography.md)
+- [Infrastructure & Operations](notes/10-infrastructures-and-operations.md)
+- [Distributed Systems](notes/11-distributed-systems.md)
+- [Systems design](notes/12-systems-design.md)
 
 ## Books
 
