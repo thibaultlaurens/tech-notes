@@ -39,7 +39,7 @@
 - Text processing: grep, sed, sort
 - I/O redirection: &gt;, &gt;&gt;, i&gt;, i&gt;&j \(i and j are file descriptors\), &lt;, &lt;&gt;, \|
 
-### Server administration
+### Server Administration
 
 - User/Group management: id, whoami, /etc/passwd, /etc/shadow, /etc/group
 - Commands for user management: useradd, passwd, usermod, userdel
@@ -62,21 +62,48 @@
 
 ## DevOps and SRE
 
-- link to google review book
+Book Review: [Site Reliability Engineering](books/02-site-reliability-engineering.md)
 
 ## Instrastructure as Code
 
-- ansible
-- terraform
-- [GitOps](https://www.atlassian.com/git/tutorials/gitops)
+### Ansible Best Practices
+
+- `Become` only where necessary
+- Name all the `playbooks` and `tasks`.
+- Use modules before `run commands` (`command`, `shell`, `raw` and `script` module).
+- Set a default for every variable defined.
+- Explicitly assign the `state` parameter, even with it default value.
+- Prefer scalar variables over dictionaries.
+- Prefix variables with meaningful names.
+- Tag all the things.
+- Keep the number of tags low (use a closed set: `config`, `service`, `package`, `debug`).
+- Use native YAML notation instead of folded style.
+- Define debug `verbosity`.
+
+### Terraform
 
 ## Observability
 
-- architecture Prom + alermanager + DB
-- architecture ELK
-- OpenTracing / Jaeger etc
-
 ![linux-observability](../.gitbook/assets/linux-observability.png)
+
+### Syslog
+
+- https://stackify.com/syslog-101/
+- https://www.auvik.com/franklyit/blog/what-is-syslog/
+- https://www.dnsstuff.com/what-is-syslog
+- https://www.sumologic.com/syslog/
+
+### Logging
+
+//TODO: elastic stack architecture diagram
+
+### Monitoring
+
+//TODO: prom stack architecture diagram
+
+### Tracing
+
+//TODO: Opentracing / Jaeger architecture diagram
 
 ## Container Scheduling
 
@@ -85,7 +112,7 @@
 - service mesh
 - ...
 
-## Release engineering
+## Release Engineering
 
 - CI/CD - gitlab
 - Artifactory
