@@ -259,8 +259,8 @@ Predictable and repetitive tasks can be quite calming (low risk, low stress, qui
 - **Consistency**, the primary value of Automation.
 - **A platform** that can be extended and centralizes mistakes.
 - **Faster Repairs** that reduces Mean Time To Repair (MTTR)
-- **Faster Actions**:
-- **Time savings**:
+- **Faster Actions**
+- **Time savings**
 
 ### A Hierarchy of Automation Classes
 
@@ -272,4 +272,31 @@ Predictable and repetitive tasks can be quite calming (low risk, low stress, qui
 
 ## 8. Release Engineering
 
+### The Role of a Release Engineer
+
+- Work with SWEs and SREs to define how software is released
+- Area of expertise: source code management, compilers, build configuration languages, automated build tools, package managers, installers.
+
+### Philosophy
+
+- **Self-Service Model**: At scale, teams must be self-sufficient, build tools and best practices so release become automatic.
+- **High Velocity**: Vary between teams, could be "push on green" and deploy every build, could be hourly builds and deploys, etc.
+- **Hermetic Builds**: Build tools must allow consistency and repeatability, same version = same result.
+- **Enforcement of Policies and Procedures**: create gated procedures with human intervention for code change, release creation, release deployment etc.
+
+### Continous Build and Deployment
+
+- **Building**
+- **Branching**
+- **Testing**
+- **Packaging**
+- **Deployment**
+
 ## 9. Simplicity
+
+- **Stability vs Agility**: Reliable systems can increase agility and reliable rollouts make it easier to link changes to bugs.
+- **The virtue of boring**: See [No Silver Bullet](https://en.wikipedia.org/wiki/No_Silver_Bullet) about Essential vs Acidental complexity. SREs should push back when accidental complexity is introduced.
+- **Code is a liability**: remove dead code or other bloat
+- **Minimal APIs**: Smaller APIs are easier to test and more reliable.
+- **Modularity**: API versioning and as with code, avoid misc/util binaries/systems.
+- **Releases**: Small releases are easier to measure
