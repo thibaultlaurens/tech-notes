@@ -263,15 +263,14 @@ The Internet Protocol's local address space is split into **five logical classes
 
 For classes A, B, and C, the start and end IP addresses are **reserved** and shouldn't be used. Class D is reserved for multicast traffic only. Class E is reserved and can't be used on public networks, like the internet.
 
+- Special-use addresses
+- Private IP addressing
+
 #### Subnets
 
-- Special-use addresses
+#### IPv6
+
 - IPv4 address space exhaustion
-
-### Private IP addressing
-
-- IPv6
-- Structure of an IPv6 address
 
 ### DNS
 
