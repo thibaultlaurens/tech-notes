@@ -216,23 +216,55 @@ The following table lists some of the more common well-known port numbers:
 
 ![ips-model](../.gitbook/assets/network-models.jpg)
 
-## IP address standards and services
+## IP Address Standards
 
 - [TCP/IP Basics](https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/5-ip-tcp-basics)
 
 ### ARP
 
+The **Address Resolution Protocol** (ARP) is a communications protocol within the Internet Protocol suite. It's a request-response protocol used to resolve the **Media Access Control** (MAC) address for a given IP address. ARP supports many data link layer technologies, such as Internet Protocol version 4 (**IPv4**), DECnet, and PUP. When an Internet Protocol version 6 (**IPv6**) address is resolved, the **Neighbor Discovery Protocol** (NDP) is used instead of ARP. Without ARP, there would be no means to resolve an IP address to a physical device address.
+
+There's also the **Reverse Address Resolution Protocol** (RARP), which retrieves an IP address based on the given MAC address.
+
 ### TCP/IP
 
-- TCP/IP model layers
+The **Transmission Control Protocol/Internet Protocol** is a collection of different communication protocols that support and define how network-enabled devices interconnect with each other over an IP-based network. At its heart are two key protocols: **TCP** and **IP**. TCP/IP makes the internet possible, as well as private and public networks like intranets and extranets.
 
-### Internet Protocol standards
+TCP/IP defines the way data is shared between network-enabled devices by defining the end-to-end communication process. It manages how the message is broken down into **packets** of data, which are sometimes known as **datagrams**. TCP/IP also determines how the packet is **addressed and transmitted, routed, and received**. TCP/IP can determine the most efficient route across a network.
 
-- IPv4
-- Structure of an IPv4 address
-- Parts of an IPv4 address
-- IPv4 address classes
-- What is a subnet?
+The TCP/IP model is designed to be **stateless**. This design means the network stack treats each request as new because it isn't related to the previous request. One part of the TCP/IP model isn't stateless. The transport layer operates in a **stateful** mode because it maintains a connection until all the packets in the message are received.
+
+The TCP/IP model is made up of four distinct layers. Each layer uses a different type of protocol.
+
+- **Application layer**: The application layer is responsible for determining which communication protocols are used. This layer includes HyperText Transfer Protocol (HTTP), DNS, File Transfer Protocol (FTP), Internet Message Access Protocol (IMAP), Lightweight Directory Access Protocol (LDAP), Post Office Protocol (POP), Simple Mail Transfer Protocol (SMTP), Simple Network Management Protocol (SNMP), Secure Shell (SSH), Telnet, and TLS/SSL.
+- **Transport layer**: This layer splits the application data into manageable ordered chunks by using the right port for the application protocol that's used. The protocols associated with this layer are TCP and the User Datagram Protocol (UDP).
+- **Internet layer**: Also known as the network layer, this layer ensures the data packet gets to its destination. The protocols associated with this layer are IP, IPv4, IPv6, Internet Control Message Protocol (ICMP), and Internet Protocol Security (IPsec).
+- **Network access layer**: This layer is responsible for defining how the data is sent across the network. The protocols associated with this layer are ARP, MAC, Ethernet, digital subscriber line (DSL), and Integrated Services Digital Network (ISDN).
+
+### Internet Protocol Standards
+
+#### IPv4
+
+Internet Protocol version 4 was released in 1983 and is the standard for all packet-switch-based networks in use today. IPv4 uses a **32-bit address space** that gives an upper limit of 4,293,967,296 (**4.3 billion**) unique logical IP addresses. A large number of these available IP addresses are reserved for a specific purpose, for example, private networks, local hosts, internet relays, documentation, and subnets.
+
+The structure of an IPv4 address is four decimal numbers in the range of 0 to 255, each separated with a dot. It's also known as the dotted-decimal format (ex: 192.168.0.1). There are two parts to an IP address: the **network** and the **host**. The network part of an IP address covers the first set of decimal numbers (`192.168.0`.1). This number is unique to the network and specifies the **class** of the network. The host part of the IP address covers the next set of decimal numbers (192.168.0.`1`). This number represents the device and has to be unique within the network to avoid address conflicts.
+
+#### IPv4 address classes
+
+The Internet Protocol's local address space is split into **five logical classes** or ranges of IP addresses, each represented by a letter of the alphabet:
+
+| Class | Start address | End address     | Number of networks | IP addresses per network | Total IP addresses available | Subnet mask   |
+| ----- | ------------- | --------------- | ------------------ | ------------------------ | ---------------------------- | ------------- |
+| A     | 0.0.0.0       | 127.255.255.255 | 128                | 16,777,216               | 2,147,483,648                | 255.0.0.0     |
+| B     | 128.0.0.0     | 191.255.255.255 | 16,384             | 65,536                   | 1,073,741,824                | 255.255.0.0   |
+| C     | 192.0.0.0     | 223.255.255.255 | 2,097,152          | 256                      | 536,870,912                  | 255.255.255.0 |
+| D     | 224.0.0.0     | 239.255.255.255 | -                  | -                        | 268,435,456                  | -             |
+| E     | 240.0.0.0     | 255.255.255.255 | -                  | -                        | 268,435,456                  | -             |
+
+For classes A, B, and C, the start and end IP addresses are **reserved** and shouldn't be used. Class D is reserved for multicast traffic only. Class E is reserved and can't be used on public networks, like the internet.
+
+#### Subnets
+
 - Special-use addresses
 - IPv4 address space exhaustion
 
@@ -242,6 +274,12 @@ The following table lists some of the more common well-known port numbers:
 - Structure of an IPv6 address
 
 ### DNS
+
+The **Domain Name System** is a **decentralized lookup service** that translates a human-readable domain name or URL into the IP address of the server that's hosting the site or service. The worldwide distributed nature of DNS is a vital component of the internet. DNS has been in use since its inception in 1985.
+
+A DNS server serves two purposes. The first is to **maintain a cache** of recently searched-for domain names, which improves performance and reduces network traffic. The second is to act as the **start of authority** (SOA) for all the domains under it. When a DNS server is looking to resolve a domain name that isn't held in its cache, it starts with the highest level, the **dot**, and then works down the subdomains until it finds the DNS server acting as the SOA. Once found, it stores the IP address of the domain in its local cache.
+
+The DNS also holds specific records that relate to the domain. These records include the **SOA**, IP addressing (**A and AAAA**), SMTP email (**MX**), name servers (**NS**), and domain name alias (**CNAME**) records.
 
 ## Resources
 
