@@ -1,5 +1,19 @@
 # Algorithms & Data structures
 
+## Introduction
+
+**TLDR** from the [Grokking Algorithms Book Review](books/01-grokking-algorithms.md):
+
+- Big O notation: constant, linear, logarithmic, linearithmic, square root, quadratic, cubic, polynomial, exponential, factorial
+- Data structures: arrays, linked lists, hash tables, stacks, queues, graphs, sets
+- Design: Tail recursion and Divide and conquer
+- Search algorithms: linear search and binary search
+- Sorting algorithms: insertion sort and selection sort \(simple sorts\), merge sort and quicksort \(efficient sorts\)
+- Graph algorithms: Breadth-first search, Dijkstra’s algorithm, Bellman-Ford algorithm
+- Greedy algorithms and NP-complete problems
+- Dynamic Programming
+- K-nearest neighbors \(KNN\)
+
 ## Indexing
 
 - Binary Search Trees

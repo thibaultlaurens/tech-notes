@@ -5,8 +5,7 @@
 ## Notes
 
 - [Git](notes/01-git.md)
-- [Algorithms & Data Structures I](books/01-grokking-algorithms.md)
-- [Algorithms & Data Structures II](notes/02-algorithms-and-data-structures.md)
+- [Algorithms & Data Structures](notes/02-algorithms-and-data-structures.md)
 - [Language and Compiler Design](notes/03-language-and-compiler-design.md)
 - [Software Engineering](notes/04-software-engineering.md)
 - [Software Programming](notes/05-software-programming.md)

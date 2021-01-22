@@ -86,6 +86,7 @@ Combination of this [article](https://lethain.com/introduction-to-architecting-s
 
 ## Big Data
 
+- [Modern Big Data Architectures - Lambda & Kappa](https://luminousmen.com/post/modern-big-data-architectures-lambda-kappa)
 - [https://linkedin.github.io/school-of-sre/big_data/intro/](https://linkedin.github.io/school-of-sre/big_data/intro/)
 
 Big data architecture:
