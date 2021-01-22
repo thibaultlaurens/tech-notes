@@ -1,6 +1,6 @@
 # Computer Networking
 
-## Building Blocks of TCP
+## TCP
 
 - [Building Blocks of TCP](https://hpbn.co/building-blocks-of-tcp/)
 
@@ -14,7 +14,7 @@
 
 ### Optimizing for TCP
 
-## Building Blocks of UDP
+## UDP
 
 - [Building Blocks of UDP](https://hpbn.co/building-blocks-of-udp/)
 
@@ -65,10 +65,6 @@
 - [DNS Architecture](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197427%28v=ws.10%29)
 - [What Is DNS? | How DNS Works](https://www.cloudflare.com/learning/dns/what-is-dns/)
 
-## Public Key Infrastructure
-
-- [Everything you should know about certificates and PKI but are too afraid to ask](https://smallstep.com/blog/everything-pki/)
-
 ## Tunneling
 
 - [What is tunneling? | Tunneling in networking](https://www.cloudflare.com/learning/network-layer/what-is-tunneling/)
@@ -81,6 +77,10 @@
 
 - [What is a CDN? | How do CDNs work?](https://www.cloudflare.com/learning/cdn/what-is-a-cdn/)
 - [Content delivery network](https://en.wikipedia.org/wiki/Content_delivery_network)
+
+## PKI
+
+- [Everything you should know about certificates and PKI but are too afraid to ask](https://smallstep.com/blog/everything-pki/)
 
 ## Toolbox
 
