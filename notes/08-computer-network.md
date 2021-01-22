@@ -1,6 +1,6 @@
 # Computer Networking
 
-## DNS
+## DNS Architecture
 
 - [DNS Architecture](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197427%28v=ws.10%29)
 
@@ -56,7 +56,7 @@
 
 ## Toolbox
 
-From this [article](https://towardsdatascience.com/networking-tools-every-developer-needs-to-know-e17c9159b180)
+- [Networking Tools Every Developer Needs to Know](https://towardsdatascience.com/networking-tools-every-developer-needs-to-know-e17c9159b180)
 
 - **ping**
 - **dig**
@@ -66,5 +66,15 @@ From this [article](https://towardsdatascience.com/networking-tools-every-develo
 - **nmap**
 - **ss**
 - **tcpdump**
-- **curl**: `curl | jq`
+- **curl**
 - **wget**
+
+## Resources
+
+- [Computer Network Tutorials](https://www.geeksforgeeks.org/computer-network-tutorials)
+- [DNS Architecture](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197427%28v=ws.10%29)
+- [Building Blocks of TCP](https://hpbn.co/building-blocks-of-tcp/)
+- [Building Blocks of UDP](https://hpbn.co/building-blocks-of-udp/)
+- [Transport Layer Security (TLS)](https://hpbn.co/transport-layer-security-tls/)
+- [Everything you should know about certificates and PKI but are too afraid to ask](https://smallstep.com/blog/everything-pki/)
+- [Networking Tools Every Developer Needs to Know](https://towardsdatascience.com/networking-tools-every-developer-needs-to-know-e17c9159b180)

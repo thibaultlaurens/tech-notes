@@ -129,9 +129,6 @@ A gateway, as the name suggests, is a passage to connect two networks together t
 
 ## Network Protocols
 
-- [School of SRE](https://linkedin.github.io/school-of-sre/linux_networking/intro/)
-- [Network Protocols](https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/4-network-protocols)
-
 A network protocol is a set of **conditions and rules** that specify how network devices communicate on a given network. It provides a common framework for establishing and maintaining a communications channel, and how to handle errors or faults should they occur. Network protocols allow communication between different network-enabled devices.
 
 ### Definition
@@ -218,8 +215,6 @@ The following table lists some of the more common well-known port numbers:
 
 ## IP Address Standards
 
-- [TCP/IP Basics](https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/5-ip-tcp-basics)
-
 ### ARP
 
 The **Address Resolution Protocol** (ARP) is a communications protocol within the Internet Protocol suite. It's a request-response protocol used to resolve the **Media Access Control** (MAC) address for a given IP address. ARP supports many data link layer technologies, such as Internet Protocol version 4 (**IPv4**), DECnet, and PUP. When an Internet Protocol version 6 (**IPv6**) address is resolved, the **Neighbor Discovery Protocol** (NDP) is used instead of ARP. Without ARP, there would be no means to resolve an IP address to a physical device address.
@@ -285,5 +280,5 @@ The DNS also holds specific records that relate to the domain. These records inc
 - [Networking in a Day](https://cseweb.ucsd.edu/classes/sp16/cse291-e/applications/ln/lecture2.html)
 - [Network Fundamentals Study Guide](https://www.webopedia.com/reference/network-fundamentals-study-guide/)
 - [Fundamentals of computer networking](https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/)
-- [Computer Network Tutorials](https://www.geeksforgeeks.org/computer-network-tutorials)
 - [The Internet](https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet)
+- [Linux Networking Fundamentals](https://linkedin.github.io/school-of-sre/linux_networking/intro/)
