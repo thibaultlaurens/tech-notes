@@ -62,7 +62,7 @@
 
 ## Site Reliability Engineering
 
-Book Review: [Site Reliability Engineering](books/02-site-reliability-engineering.md)
+See the [Site Reliability Engineering](books/02-site-reliability-engineering.md) book review.
 
 ![Hierarchy of Service Reliability](../.gitbook/assets/reliability-hierarchy.jpg)
 

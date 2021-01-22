@@ -2,7 +2,9 @@
 
 ## Introduction
 
-**TLDR** from the [Grokking Algorithms Book Review](books/01-grokking-algorithms.md):
+See the [Grokking Algorithms](books/01-grokking-algorithms.md) book review.
+
+**TLDR**:
 
 - Big O notation: constant, linear, logarithmic, linearithmic, square root, quadratic, cubic, polynomial, exponential, factorial
 - Data structures: arrays, linked lists, hash tables, stacks, queues, graphs, sets
