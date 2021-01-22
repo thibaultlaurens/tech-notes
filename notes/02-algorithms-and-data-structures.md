@@ -2,7 +2,7 @@
 
 ## Introduction
 
-See the [Grokking Algorithms](books/01-grokking-algorithms.md) book review.
+See the [Grokking Algorithms](https://docs.tlaurens.xyz/books/01-grokking-algorithms) book review.
 
 **TLDR**:
 
