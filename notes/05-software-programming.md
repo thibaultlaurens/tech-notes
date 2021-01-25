@@ -145,13 +145,20 @@ Resources:
 - **Template Method**: Defines the skeleton of an algorithm as an abstract class, allowing its sub-classes to provide concrete behavior.
 - **Visitor**: Separates an algorithm from an object structure by moving the hierarchy of methods into one object.
 
-### SOLID Principles
+### Coding Principles
 
-- [**Single-responsibility principle**](https://en.wikipedia.org/wiki/Single-responsibility_principle): Every module, class or function in a computer program should have responsibility over a single part of that program's functionality, which it should encapsulate.
-- [**Open–closed principle**](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle): Software entities \(classes, modules, functions, etc.\) should be open for extension, but closed for modification.
-- [**Liskov substitution principle**](https://en.wikipedia.org/wiki/Liskov_substitution_principle): If S is a subtype of T, then objects of type T may be replaced with objects of type S without altering any of the desirable properties of the program.
-- [**Interface segregation principle**](https://en.wikipedia.org/wiki/Interface_segregation_principle): No client should be forced to depend on methods it does not use \(split interfaces that are very large into smaller and more specific ones\).
-- [**Dependency inversion principle**](https://en.wikipedia.org/wiki/Dependency_inversion_principle): High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details \(concrete implementations\) should depend on abstractions.
+- **Keep It Stupid Simple** (KISS): Keep your code **very** simple.
+- **Don't Repeat Yourself** (DRY): Every repetitive behavior in the code should be extracted for later reuse.
+- **You Aren't Gonna Need It** (YAGNI): Do not leave any code that's meant only for future extendability.
+- **Single Level of Abstraction Principle** (SLAP): Functions should do just one thing (), and they should do it well (don´t mix different levels of abstraction).
+
+**SOLID**:
+
+- [**Single-responsibility principle**](https://en.wikipedia.org/wiki/Single-responsibility_principle) (SRP): Every module, class or function in a computer program should have responsibility over a single part of that program's functionality, which it should encapsulate.
+- [**Open–closed principle**](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) (OCP): Software entities \(classes, modules, functions, etc.\) should be open for extension, but closed for modification.
+- [**Liskov substitution principle**](https://en.wikipedia.org/wiki/Liskov_substitution_principle) (LSP): If S is a subtype of T, then objects of type T may be replaced with objects of type S without altering any of the desirable properties of the program.
+- [**Interface segregation principle**](https://en.wikipedia.org/wiki/Interface_segregation_principle) (ISP): No client should be forced to depend on methods it does not use \(split interfaces that are very large into smaller and more specific ones\).
+- [**Dependency inversion principle**](https://en.wikipedia.org/wiki/Dependency_inversion_principle) (DIP): High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details \(concrete implementations\) should depend on abstractions.
 
 ### [The Twelve-Factor App](https://12factor.net/)
 
