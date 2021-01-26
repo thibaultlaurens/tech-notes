@@ -161,12 +161,6 @@
 
 #### Pharming
 
-## Detection
-
-- Architecure
-- IPS and IDS \(Snort vs Bro vs zeek vs [more](https://github.com/sbilly/awesome-security#ids--ips--host-ids--host-ips)\)
-- Fast Packet Processing
-
 ## Secure Programming
 
 ### [OWASP Top Ten](https://owasp.org/www-project-top-ten/) Web Application Security Risks:
@@ -272,6 +266,12 @@ Today the services are provided by **PTI** \(Public Technical Identifiers\), a p
 - **ARIN**: North America
 - **LACNIC**: Latin America
 - **RIPE NCC**: Europe, Russia, Middle East
+
+## Detection
+
+- Architecure
+- IPS and IDS \(Snort vs Bro vs zeek vs [more](https://github.com/sbilly/awesome-security#ids--ips--host-ids--host-ips)\)
+- Fast Packet Processing
 
 ## Resources
 

@@ -23,6 +23,7 @@
 - [Site Reliability Engineering](books/02-site-reliability-engineering.md)
 - [Designing Data-Intensive Applications](books/03-designing-data-intensive-applications.md)
 - [Structure and Interpretation of Computer Programs](books/04-structure-and-interpretation-of-computer-programs.md)
+- [Crypto 101](books/05-crypto101.md)
 
 ## Conferences
 
