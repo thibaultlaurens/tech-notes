@@ -1,53 +1,165 @@
 # Security & Cryptography
 
-- [https://linkedin.github.io/school-of-sre/security/intro/](https://linkedin.github.io/school-of-sre/security/intro/)
-- [https://www.geeksforgeeks.org/computer-network-tutorials/\#nsc](https://www.geeksforgeeks.org/computer-network-tutorials/#nsc)
-- tools \([https://sectools.org/](https://sectools.org/)\)
-- cryptography
-- reverse engineering
-- bleu vs red teams
+## Fundamentals of Security
 
-## Cryptography Fundamentals
+### Core Pillars of Information Security (CIA)
 
-- https://www.crypto101.io/
+- **Confidentiality**: only allow access to data for which the user is permitted
+- **Integrity**: ensure data is not tampered or altered by unauthorized users
+- **Availability**: ensure systems and data are available to authorized users when they need it
 
-### Exclusive or
+### Security Principles
 
-### Block ciphers
+- Minimize attack surface area
+- Establish secure defaults
+- Principle of Least privilege
+- Principle of Defense in depth
+- Fail securely
+- Don’t trust services
+- Separation of duties
+- Avoid security by obscurity
+- Keep security simple
+- Fix security issues correctly
+- Reliability & Security
 
-### Stream ciphers
+### Authentication vs Authorization:
 
-### Key exchange
+- Authentication
+- Autorization
+- OpenID
+- OAuth
 
-### Public-key encryption
+### Cryptography
 
-### Hash functions
+- Block ciphers
+- Stream ciphers
+- Key exchange
+- Public-key encryption
+- Hash functions
+- Digital Certificates
+- CA Enrollment process
 
-### Message authentication codes
+### Login Security
 
-### Signature algorithms
+- SSH
+- Kerberos
+- Certificate Chain
+- TLS Handshake
+- "Perfect" Forward Secrecy
 
-### Key derivation functions
+## Network Security
 
-### Random number generators
+### Introduction
 
-## Cryptosystems
+#### TCP/IP
 
-- https://www.crypto101.io/
+#### Public Key Infrastructure
 
-### SSL and TLS
+#### IPSec
 
-### OpenPGP and GPG
+#### PGP and S/MIME
 
-### Off The Record Messaging
+#### SSL/TLS
 
-## Reverse Engineering
+### Network Perimeter Security
 
-## Forensic
+#### General Firewall Framework
 
-## Pentesting
+#### Packet Filters
 
-## Threat Intel
+#### Circuit Gateways
+
+#### Application Gateways(ALG)
+
+#### Trusted Systems & Bastion Hosts
+
+### Scanning and Packet Capturing
+
+#### Nmap
+
+#### WireShark
+
+#### IDS
+
+### TCP/IP Security Issues
+
+#### IP Spoofing
+
+#### Covert Channel
+
+#### IP Fragmentation Attack
+
+#### Connection Hijacking
+
+#### Buffer Overflow
+
+#### ARP Spoofing
+
+#### DNS Spoofing
+
+## Attacks & Defense
+
+### DNS
+
+#### Cache Poisoning Attack
+
+#### DNSSEC
+
+### BGP
+
+#### How BGP Works
+
+#### BGP Vulnerabilities
+
+#### BGP Security
+
+### Web-Based Attacks
+
+#### HTTP Response Splitting Attacks
+
+#### Cross-Site Request Forgery (CSRF or XSRF)
+
+#### Cross-Site Scripting (XSS)
+
+#### DOM XSS Attacks
+
+#### Clickjacking
+
+#### SQL injection
+
+### Security Breach
+
+#### Denial of Service Attacks
+
+#### Distributed Denial of Service Attacks
+
+#### Wiretapping
+
+#### Backdoors
+
+### Malicious Attacks
+
+#### Birthday Attack
+
+#### Brute-Force Password Attacks
+
+#### Dictionary Password Attacks
+
+#### Replay Attacks
+
+#### Man-in-the-Middle Attacks
+
+#### Masquerading
+
+#### Eavesdropping
+
+#### Social Engineering
+
+#### Phreaking
+
+#### Phishing
+
+#### Pharming
 
 ## Detection
 
@@ -163,16 +275,17 @@ Today the services are provided by **PTI** \(Public Technical Identifiers\), a p
 
 ## Resources
 
-- Video Lessons: [Hacker101](https://www.hacker101.com/videos)
-- The Open Web Application Security Project: [OWASP](https://owasp.org/)
-- OWASP Web Security Testing Guide**:** [WSTG](https://owasp.org/www-project-web-security-testing-guide/)
-- Master the art of bug hunting: [Bugcrowd University](https://github.com/bugcrowd/bugcrowd_university)
-- Top 125 Network Security Tools: [SecTools.Org](https://sectools.org/)
+- [Hacker101 Video Lessons](https://www.hacker101.com/videos)
+- [The Open Web Application Security Project](https://owasp.org/)
+- [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
+- [Bugcrowd University](https://github.com/bugcrowd/bugcrowd_university)
+- [Top 125 Network Security Tools](https://sectools.org/)
 - [A Quick Linux Server Hardening Checklist](https://securecompliance.co/linux-server-hardening-checklist/)
 - [How To Secure A Linux Server](https://github.com/imthenachoman/How-To-Secure-A-Linux-Server)
 - [PGP and You](https://thoughtbot.com/blog/pgp-and-you)
-- [Exploiting Stack Overflows](http://repository.root-me.org/Exploitation%20-%20Syst%C3%A8me/Unix/EN%20-%20Exploiting%20Stack%20Buffer%20Overflows%20in%20the%20Linux%20x86%20Kernel.pdf)
-- [https://attack.mitre.org/groups/](https://attack.mitre.org/groups/)
-- [https://stribika.github.io/2015/01/04/secure-secure-shell.html](https://stribika.github.io/2015/01/04/secure-secure-shell.html)
-- [https://en.wikipedia.org/wiki/Pretty_Good_Privacy\#OpenPGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP)
-- [https://en.wikipedia.org/wiki/X.509](https://en.wikipedia.org/wiki/X.509)
+- [MITRE ATT&CK](https://attack.mitre.org/)
+- [Secure Secure Shell](https://stribika.github.io/2015/01/04/secure-secure-shell.html)
+- [Wikipedia OpenPGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy#OpenPGP)
+- [Wikipedia X.509](https://en.wikipedia.org/wiki/X.509)
+- [Scholl of SRE - Security](https://linkedin.github.io/school-of-sre/security/intro/)
+- [Geeksforgeeks - Network Security and Cryptography](https://www.geeksforgeeks.org/computer-network-tutorials/#nsc)

@@ -2,14 +2,14 @@
 
 ## Definitions
 
-* [https://www.geeksforgeeks.org/introduction-of-dbms-database-management-system-set-1/](https://www.geeksforgeeks.org/introduction-of-dbms-database-management-system-set-1/)
-* [https://selectstarsql.com/](https://selectstarsql.com/)
-* [https://rakyll.medium.com/things-i-wished-more-developers-knew-about-databases-2d0178464f78](https://rakyll.medium.com/things-i-wished-more-developers-knew-about-databases-2d0178464f78)
-* [https://linkedin.github.io/school-of-sre/databases\_sql/intro/](https://linkedin.github.io/school-of-sre/databases_sql/intro/)
+- [https://www.geeksforgeeks.org/introduction-of-dbms-database-management-system-set-1/](https://www.geeksforgeeks.org/introduction-of-dbms-database-management-system-set-1/)
+- [https://selectstarsql.com/](https://selectstarsql.com/)
+- [https://rakyll.medium.com/things-i-wished-more-developers-knew-about-databases-2d0178464f78](https://rakyll.medium.com/things-i-wished-more-developers-knew-about-databases-2d0178464f78)
+- [https://linkedin.github.io/school-of-sre/databases_sql/intro/](https://linkedin.github.io/school-of-sre/databases_sql/intro/)
 
 ## Introduction
 
-## Entity Relatioship Model
+## Entity Relationship Model
 
 ## Relational Model
 
@@ -28,4 +28,3 @@
 ## Advanced Topics
 
 ## SQL
-
