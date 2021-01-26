@@ -213,41 +213,43 @@
 - X-Frame-Options
 - X-XSS-Protection
 
-## OSINT
+## Cyber Threat Intelligence
 
-### Shadowserver
+### OSINT
+
+#### Shadowserver
 
 - The Shadowserver Foundation is a nonprofit security organization that **gathers and analyzes data on malicious internet activity** \(including malware, botnets, and computer fraud\), sends daily network reports to subscribers, and works with law enforcement organizations around the world in cybercrime investigations. Established in 2004 as a "volunteer watchdog group", it liaises with national governments, CSIRTs, network providers, academic institutions, financial institutions, Fortune 500 companies, and end users to improve Internet security, enhance product capability, advance research, and dismantle criminal infrastructure.
 
-### Microsoft
+#### Microsoft
 
 - **CTIP**\(\)
 - **DCU** \(Digital Crimes Unit\)
 
-### VirusTotal
+#### VirusTotal
 
 Analyze suspicious files and URLs to detect types of malware
 
-### Rapid7
+#### Rapid7
 
-### Shodan
+#### Shodan
 
 All of the useful information about the target domain or IP address you could want, like open ports, used technology stack and possible vulnerabilities etc.
 
-### Farsight
+#### Farsight
 
 - **DNSDB**: A database that stores and indexes both the passive DNS data available via Farsight Security Information Exchange as well as the authoritative DNS data that various zone operators make available.
 - **Passive DNS** is a technique where IP to hostname mappings are made by recording the answers of other people's queries.
 
-### Censys
+#### Censys
 
-### WHOIS
+#### WHOIS
 
 - provides the registration details, also known as the WHOIS record data, of a domain name, an IP address, or an email address.
 - **ccTLDs**: country code top-level domains
 - **gTLD**: generic top-level domains
 
-### IANA
+#### IANA
 
 The **Internet Assigned Numbers Authority** is responsible for coordinating some of the key elements that keep the Internet running smoothly. IANA allocates and maintains unique codes and numbering systems that are used in the technical standards \("protocols"\) that drive the Internet:
 
@@ -257,7 +259,7 @@ The **Internet Assigned Numbers Authority** is responsible for coordinating some
 
 Today the services are provided by **PTI** \(Public Technical Identifiers\), a purpose-built organization for providing the IANA functions to the community. PTI is an affiliate of **ICANN** \(Internet Corporation for Assigned Names and Numbers\), an internationally-organised non-profit organisation set up by the Internet community to coordinate our areas of responsibilities
 
-### RIR
+#### RIR
 
 **Regional Internet Registries**:
 
