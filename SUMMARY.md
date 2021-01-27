@@ -2,28 +2,26 @@
 
 - [Home](README.md)
 
-## Notes
+## Fundamentals
 
-- [Git](notes/01-git.md)
-- [Algorithms & Data Structures](notes/02-algorithms-and-data-structures.md)
-- [Language and Compiler Design](notes/03-language-and-compiler-design.md)
-- [Software Engineering](notes/04-software-engineering.md)
-- [Software Programming](notes/05-software-programming.md)
-- [Database Management System](notes/06-database-management-system.md)
-- [Computer Networking I](notes/07-computer-network.md)
-- [Computer Networking II](notes/08-computer-network.md)
-- [Security & Cryptography](notes/09-security-and-cryptography.md)
-- [Infrastructure & Operations](notes/10-infrastructures-and-operations.md)
-- [Distributed Systems](notes/11-distributed-systems.md)
-- [Systems design](notes/12-systems-design.md)
+- [Git](fundamentals/01-git.md)
+- [Grokking Algorithms](fundamentals/02-grokking-algorithms.md)
+- [Language and Compiler Design](fundamentals/03-language-and-compiler-design.md)
+- [Software Engineering](fundamentals/04-software-engineering.md)
+- [Database Management System](fundamentals/05-database-management-system.md)
+- [Computer Networking](fundamentals/06-computer-networking.md)
 
-## Books
+## Advanced
 
-- [Grokking Algorithms](books/01-grokking-algorithms.md)
-- [Site Reliability Engineering](books/02-site-reliability-engineering.md)
-- [Designing Data-Intensive Applications](books/03-designing-data-intensive-applications.md)
-- [Structure and Interpretation of Computer Programs](books/04-structure-and-interpretation-of-computer-programs.md)
-- [Crypto 101](books/05-crypto101.md)
+- [Algorithms & Data Structures](advanced/01-algorithms-and-data-structures.md)
+- [Software Programming](advanced/02-software-programming.md)
+- [Computer Networking](advanced/03-computer-networking.md)
+- [Information Security](advanced/04-information-security.md)
+- [Cryptography](advanced/05-cryptography.md)
+- [Infrastructure & Operations](advanced/06-infrastructures-and-operations.md)
+- [Distributed Systems](advanced/07-distributed-systems.md)
+- [Systems design](advanced/08-systems-design.md)
+- [Site Reliability Engineering](advanced/09-site-reliability-engineering.md)
 
 ## Conferences
 
@@ -38,3 +36,8 @@
 - [Threads and IPC](lsp/02-threads-and-ipc.md)
 - [Security and Isolation API](lsp/03-security-and-isolation-api.md)
 - [Shared Libraries](lsp/04-shared-libraries.md)
+
+## Todo
+
+- [Designing Data-Intensive Applications](todo/01-designing-data-intensive-applications.md)
+- [Structure and Interpretation of Computer Programs](todo/02-structure-and-interpretation-of-computer-programs.md)

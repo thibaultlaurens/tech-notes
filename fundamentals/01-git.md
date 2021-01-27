@@ -206,6 +206,6 @@ When working with a team on a Git managed project, it’s important to make sure
 
 ## Resources
 
-- [Documentation](https://git-scm.com/doc)
-- [Learn Git](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
-- [Basic Git Concepts](https://www.oreilly.com/library/view/version-control-with/9781449345037/ch04.html)
+- [Git Documentation](https://git-scm.com/doc)
+- [Atlassian Learn Git](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud)
+- [O'Reilly Basic Git Concepts](https://www.oreilly.com/library/view/version-control-with/9781449345037/ch04.html)

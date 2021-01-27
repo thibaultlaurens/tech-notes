@@ -12,7 +12,7 @@
 ## Short Term Resources
 
 - [Managing my personal server in 2020](https://github.com/erebe/personal-server)
-- [BeyongCord](https://www.beyondcorp.com/)
+- [BeyongCorp](https://www.beyondcorp.com/)
 - [Innersource](https://resources.github.com/whitepapers/introduction-to-innersource/)
 - [Why Google Stores Billions of Lines of Code in a Single Repository](https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext)
 - [How to do a code review](https://google.github.io/eng-practices/review/reviewer/)
