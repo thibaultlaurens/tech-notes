@@ -2,7 +2,7 @@
 description: How Google runs production systems.
 ---
 
-# Site Reliability Engineering
+# Site Reliability Engineering (Book)
 
 - [Google SRE book review](https://danluu.com/google-sre-book/)
 
