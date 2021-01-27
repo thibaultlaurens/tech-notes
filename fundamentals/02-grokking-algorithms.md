@@ -556,13 +556,13 @@ Exemple of dynamic programming usages:
 
 ## 11. Where to go next
 
-- Trees
-- Inverted Indexes
-- The Fourier Transform
-- Parallel algorithms
-- MapReduce
-- Bloom filters and HyperLogLog
-- The SHA algorithms
-- Locality-sensitive hashing
-- Diffie-Hellman key exchange
-- Linear programming
+- **Trees**:
+- **Inverted Indexes**:
+- **The Fourier Transform**:
+- **Parallel algorithms**:
+- **MapReduce**:
+- **Bloom filters and HyperLogLog**:
+- **The SHA algorithms**:
+- **Locality-sensitive hashing**:
+- **Diffie-Hellman key exchange**:
+- **Linear programming**:
