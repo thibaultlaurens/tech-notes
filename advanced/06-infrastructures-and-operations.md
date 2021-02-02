@@ -107,12 +107,40 @@ See the [Site Reliability Engineering](https://docs.tlaurens.xyz/books/02-site-r
 
 //TODO: Opentracing / Jaeger architecture diagram
 
-## Container Scheduling
+## Service Mesh
 
-- hashistack
-- kubernetes
-- service mesh
-- ...
+Operationnal challenges from moving from monolithic architecture to (micro) services oriented architecture:
+
+- **Service Discovery**
+- **Configuration Distribution**
+- **Access Segmentation**
+
+### Consul
+
+#### Key features
+
+- **Service Discovery**: Clients can register a service and other clients can use Consul to discover providers of a given service.
+- **Health Checking**: Clients can provide health checks, either associated with a given service or with the local node. This information can be used by an operator to monitor cluster health, and it is used by the service discovery components to route traffic away from unhealthy hosts.
+- **KV Store**: Hierarchical key/value store available for application for any number of purposes, including dynamic configuration, feature flagging, coordination, leader election, and more. The simple HTTP API makes it easy to use.
+- **Secure Service Communication**: Consul can generate and distribute TLS certificates for services to establish mutual TLS connections. `Intentions` can be used to define which services are allowed to communicate. Service segmentation can be easily managed with intentions that can be changed in real time instead of using complex network topologies and static firewall rules.
+- **Multi Datacenter**: Consul supports multiple datacenters out of the box. This means users of Consul do not have to worry about building additional layers of abstraction to grow to multiple regions.
+
+#### Security
+
+#### Architecture
+
+#### Istio
+
+#### Envoy
+
+## Container Orchestration
+
+### Hashicorp Stack
+
+![Hashicorp Tools](../.gitbook/assets/hashistack-1.webp)
+![Hashicorp Stack](../.gitbook/assets/hashistack-2.webp)
+
+### Kubernetes
 
 ## Release Engineering
 
