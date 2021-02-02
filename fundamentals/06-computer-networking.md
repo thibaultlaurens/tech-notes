@@ -236,9 +236,7 @@ The TCP/IP model is made up of four distinct layers. Each layer uses a different
 - **Internet layer**: Also known as the network layer, this layer ensures the data packet gets to its destination. The protocols associated with this layer are IP, IPv4, IPv6, Internet Control Message Protocol (ICMP), and Internet Protocol Security (IPsec).
 - **Network access layer**: This layer is responsible for defining how the data is sent across the network. The protocols associated with this layer are ARP, MAC, Ethernet, digital subscriber line (DSL), and Integrated Services Digital Network (ISDN).
 
-### Internet Protocol Standards
-
-#### IPv4
+### IPv4
 
 Internet Protocol version 4 was released in 1983 and is the standard for all packet-switch-based networks in use today. IPv4 uses a **32-bit address space** that gives an upper limit of 4,293,967,296 (**4.3 billion**) unique logical IP addresses. A large number of these available IP addresses are reserved for a specific purpose, for example, private networks, local hosts, internet relays, documentation, and subnets.
 
@@ -250,7 +248,7 @@ IP address construction by network classes:
 - Class B network: Everything before the second period indicates the network.
 - Class C network: Everything before the third period indicates the network
 
-#### IPv4 address classes
+### IPv4 address classes
 
 The Internet Protocol's local address space is split into **five logical classes** or ranges of IP addresses, each represented by a letter of the alphabet:
 
@@ -264,7 +262,7 @@ The Internet Protocol's local address space is split into **five logical classes
 
 For classes A, B, and C, the start and end IP addresses are **reserved** and shouldn't be used. Class D is reserved for multicast traffic only. Class E is reserved and can't be used on public networks, like the internet.
 
-#### Classless Inter-Domain Routing (CIDR)
+### Classless Inter-Domain Routing (CIDR)
 
 The routing scheme described above hit limits. In effect, all of the class A an B networks were assigned many ages ago and no one wanted class C addresses (the networks were just too small to be managable).
 
@@ -274,7 +272,7 @@ For today, we are still using a band-aid from the 1990s: **Classes Inter-Domain 
 
 The beauty of this is that it allows the combination of adjoining class C networks into larger networks (networks large enough to be useful to reasonably sized organizations). This system made a whole bunch of new, useful, networks available, in tunable sizes. It worked so well that we are still using it, and mostly not IPv6.
 
-#### Special-use addresses
+### Special-use addresses
 
 Each of the classes has restrictions on the ranges of IP addresses that can be used. This table shows the more common ones:
 
@@ -287,7 +285,7 @@ Each of the classes has restrictions on the ranges of IP addresses that can be u
 | 192.168.0.0–192.168.255.255 | Private network | Used for local communications within a private network   |
 | 255.255.255.255             | Subnet          | Reserved for the "limited broadcast" destination address |
 
-#### Private IP addressing
+### Private IP addressing
 
 In classes A, B, and C, a range of IP addresses are set aside for private networks. These IP ranges aren't accessible via the internet. All public routers ignore any packets sent to them that contain such an address.
 
@@ -301,7 +299,7 @@ Network devices on a private network can't communicate with devices on a public 
 
 The only way to connect two private networks in different geographical areas is to use a **Virtual Private Network** (VPN). A VPN encapsulates each private network packet. The VPN can further encrypt the packet before it sends it across a public network from one private network to another private network.
 
-#### Subnets
+### Subnets
 
 A **subnet**, or subnetwork, is **a network inside a network**. Subnets make networks more efficient. Through subnetting, network traffic can travel a shorter distance without passing through unnecessary routers to reach its destination (packets will be sorted and routed by subnet).
 
@@ -320,7 +318,7 @@ So, routers **within** a particular network are configured to know the network n
 
 A more common way to define the subnet and the routing prefix is to use the **CIDR** notation. For example, 198.51.100.0/24 is the same as using the dotted-decimal format subnet mask 255.255.255.0. It offers an address range of 198.51.100.0 to 198.51.100.255.
 
-#### IPv6
+### IPv6
 
 IPv6 is the latest version of the IP standard. It was designed and developed by the **Internet Engineering Task Force** (IETF) to address the problem of IPv4 logical address exhaustion and to eventually replace the IPv4 standard. It was adopted as a recognized internet standard in July 2017.
 
