@@ -242,7 +242,13 @@ The TCP/IP model is made up of four distinct layers. Each layer uses a different
 
 Internet Protocol version 4 was released in 1983 and is the standard for all packet-switch-based networks in use today. IPv4 uses a **32-bit address space** that gives an upper limit of 4,293,967,296 (**4.3 billion**) unique logical IP addresses. A large number of these available IP addresses are reserved for a specific purpose, for example, private networks, local hosts, internet relays, documentation, and subnets.
 
-The structure of an IPv4 address is four decimal numbers in the range of 0 to 255, each separated with a dot. It's also known as the dotted-decimal format (ex: 192.168.0.1). There are two parts to an IP address: the **network** and the **host**. The network part of an IP address covers the first set of decimal numbers (`192.168.0`.1). This number is unique to the network and specifies the **class** of the network. The host part of the IP address covers the next set of decimal numbers (192.168.0.`1`). This number represents the device and has to be unique within the network to avoid address conflicts.
+The structure of an IPv4 address is four decimal numbers in the range of 0 to 255, each separated with a dot. It's also known as the dotted-decimal format (ex: 192.168.0.1). There are two parts to an IP address: the **network** and the **host**. The network part of an IP address covers the first set of decimal numbers. This number is unique to the network and specifies the **class** of the network. The host part of the IP address covers the next set of decimal numbers. This number represents the device and has to be unique within the network to avoid address conflicts.
+
+IP address construction by network classes:
+
+- Class A network: Everything before the first period indicates the network (`10`.0.113.112), and everything after it specifies the device within that network (10.`0.113.112`)
+- Class B network: Everything before the second period indicates the network.
+- Class C network: Everything before the third period indicates the network
 
 #### IPv4 address classes
 
@@ -258,14 +264,83 @@ The Internet Protocol's local address space is split into **five logical classes
 
 For classes A, B, and C, the start and end IP addresses are **reserved** and shouldn't be used. Class D is reserved for multicast traffic only. Class E is reserved and can't be used on public networks, like the internet.
 
-- Special-use addresses
-- Private IP addressing
+#### Classless Inter-Domain Routing (CIDR)
+
+The routing scheme described above hit limits. In effect, all of the class A an B networks were assigned many ages ago and no one wanted class C addresses (the networks were just too small to be managable).
+
+**IPv6** solves this problem using 128-bit addresses. Unfortunately, the Internet is composed and used by many networks managed by many organizations and can't be switch instantly on a "Flag Day". So, instead organizations are transitioning internally to IPv6, and converting to IPv4 as needed for external use, with the hope of eventually being able to drop IPv4, because it has fallen into disuse. We are a long way from that goal.
+
+For today, we are still using a band-aid from the 1990s: **Classes Inter-Domain Routing**. Routers will still react to routing as described above. But, the backbone routers were upgraded to accept classless addresses. Instead of relying on the first few bits to describe the network/host division, CIDR communicates this directly. For example: `73.93.0.0/15` describes an address with 15 network bits and 17 host bits.
+
+The beauty of this is that it allows the combination of adjoining class C networks into larger networks (networks large enough to be useful to reasonably sized organizations). This system made a whole bunch of new, useful, networks available, in tunable sizes. It worked so well that we are still using it, and mostly not IPv6.
+
+#### Special-use addresses
+
+Each of the classes has restrictions on the ranges of IP addresses that can be used. This table shows the more common ones:
+
+| Address range               | Scope           | Description                                              |
+| --------------------------- | --------------- | -------------------------------------------------------- |
+| 10.0.0.0–10.255.255.255     | Private network | Used for local communications within a private network   |
+| 127.0.0.0–127.255.255.255   | Host            | Used for loopback addresses                              |
+| 172.16.0.0–172.31.255.255   | Private network | Used for local communications within a private network   |
+| 192.88.99.0–192.88.99.255   | Internet        | Reserved                                                 |
+| 192.168.0.0–192.168.255.255 | Private network | Used for local communications within a private network   |
+| 255.255.255.255             | Subnet          | Reserved for the "limited broadcast" destination address |
+
+#### Private IP addressing
+
+In classes A, B, and C, a range of IP addresses are set aside for private networks. These IP ranges aren't accessible via the internet. All public routers ignore any packets sent to them that contain such an address.
+
+| Name         | CIDR block     | Address range               | Number of addresses | Classful description                   |
+| ------------ | -------------- | --------------------------- | ------------------- | -------------------------------------- |
+| 24-bit block | 10.0.0.0/8     | 10.0.0.0–10.255.255.255     | 16,777,216          | Single class A                         |
+| 20-bit block | 172.16.0.0/12  | 172.16.0.0–172.31.255.255   | 1,048,576           | Contiguous range of 16 class B blocks  |
+| 16-bit block | 192.168.0.0/16 | 192.168.0.0–192.168.255.255 | 65,536              | Contiguous range of 256 class C blocks |
+
+Network devices on a private network can't communicate with devices on a public network. Communication can happen only through **Network Address Translation** (NAT) at a routing gateway.
+
+The only way to connect two private networks in different geographical areas is to use a **Virtual Private Network** (VPN). A VPN encapsulates each private network packet. The VPN can further encrypt the packet before it sends it across a public network from one private network to another private network.
 
 #### Subnets
 
+A **subnet**, or subnetwork, is **a network inside a network**. Subnets make networks more efficient. Through subnetting, network traffic can travel a shorter distance without passing through unnecessary routers to reach its destination (packets will be sorted and routed by subnet).
+
+Because an IP address is limited to indicating the network and the device address, IP addresses cannot be used to indicate which subnet an IP packet should go to. Routers within a network use something called a **subnet mask** to sort data into subnetworks. Subnet masks are not indicated within data packets traversing the Internet — those packets only indicate the destination IP address, which a router will match with a subnet.
+
+To do so, we can actually take the left side of the `host` bits and interprete it as a subnetwork number and use only the right portion as a host number. We put 1s into the bits that represent the subnet number and 0s into the bits that represent the host number. When this mask is logically ANDed with the IP address, it leaves only the subnet number. For example:
+
+```
+IP address        192.168.5.10   11000000.10101000.00000101.00001010
+Subnet Mask       255.255.255.0  11111111.11111111.11111111.00000000
+Network Portion   192.168.5.0    11000000.10101000.00000101.00000000
+Host Portion        0.0.0.10     00000000.00000000.00000000.00001010
+```
+
+So, routers **within** a particular network are configured to know the network number **and** network mask associated with it. When presented with an address, they perform a logical AND with the network mask to find the subnet number. Routers know which mask to use, because they know the subnet number and mask associated with each of their directly connected legs.
+
+A more common way to define the subnet and the routing prefix is to use the **CIDR** notation. For example, 198.51.100.0/24 is the same as using the dotted-decimal format subnet mask 255.255.255.0. It offers an address range of 198.51.100.0 to 198.51.100.255.
+
 #### IPv6
 
-- IPv4 address space exhaustion
+IPv6 is the latest version of the IP standard. It was designed and developed by the **Internet Engineering Task Force** (IETF) to address the problem of IPv4 logical address exhaustion and to eventually replace the IPv4 standard. It was adopted as a recognized internet standard in July 2017.
+
+IPv6 uses a **128 bit** address space, which allows 2128 addresses. This amount is approximately 7.9x1028 times more than IPv4. IPv4 and IPv6 weren't designed to be interoperable, which has slowed down the transition to the newer IPv6 standard. IPv6 also introduced several benefits:
+
+- **Simplified network configuration**: IPv6 has address autoconfiguration built into the protocol. For example, a router broadcasts the network prefix and the network device can append its MAC address to self-assign a unique IPv6 address.
+- **Security**: IPsec is built into IPv6.
+- **New service support**: IPv6 eliminates the need for NAT, which makes it easier to create peer-to-peer networks.
+- **Multicast and anycast functionality**: Multicast allows for the broadcast of messages in a one-to-many fashion. Anycast allows a single destination to have multiple routing paths to two or more endpoint destinations.
+
+Structure of an IPv6 address:
+
+The structure of IPv6 is different from IPv4. Instead of four decimal numbers, it uses **eight groups of four hexadecimal numbers** called a hexadectet. Each hexadectet is separated with a colon. A full IPv6 address looks like this: `2001:0db8:0000:0000:0000:8a2e:0370:7334`.
+
+The new standard allows for the address to be simplified by using the following rules:
+
+- One or more leading zeros from any group can be removed, so `0042` becomes `42`.
+- Consecutive sections of zeros are replaced with a double colon (`::`), which can be used **only once** in an address.
+
+The shortened version of the IPv6 example is `2001:db8::8a2e:370:7334`. Notice that all the instances of 0000 are removed.
 
 ### DNS
 
@@ -277,8 +352,8 @@ The DNS also holds specific records that relate to the domain. These records inc
 
 ## Resources
 
-- [Networking in a Day](https://cseweb.ucsd.edu/classes/sp16/cse291-e/applications/ln/lecture2.html)
-- [Network Fundamentals Study Guide](https://www.webopedia.com/reference/network-fundamentals-study-guide/)
-- [Fundamentals of computer networking](https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/)
-- [The Internet](https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet)
-- [Linux Networking Fundamentals](https://linkedin.github.io/school-of-sre/linux_networking/intro/)
+- [CSEWEB - Networking in a Day](https://cseweb.ucsd.edu/classes/sp16/cse291-e/applications/ln/lecture2.html)
+- [Webopedia - Network Fundamentals Study Guide](https://www.webopedia.com/reference/network-fundamentals-study-guide/)
+- [Microsoft - Fundamentals of computer networking](https://docs.microsoft.com/en-us/learn/modules/network-fundamentals/)
+- [Khan Academy - The Internet](https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet)
+- [Scholl of SRE - Linux Networking Fundamentals](https://linkedin.github.io/school-of-sre/linux_networking/intro/)
