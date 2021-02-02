@@ -137,9 +137,9 @@ Operationnal challenges from moving from monolithic architecture to (micro) serv
 
 ### Hashicorp Stack
 
-![Hashicorp Tools](../.gitbook/assets/hashistack-1.webp)
-
 ![Hashicorp Stack](../.gitbook/assets/hashistack-2.webp)
+
+![Hashicorp Tools](../.gitbook/assets/hashistack-1.webp)
 
 ### Kubernetes
 
