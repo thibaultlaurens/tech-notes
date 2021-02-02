@@ -129,15 +129,16 @@ Operationnal challenges from moving from monolithic architecture to (micro) serv
 
 #### Architecture
 
-#### Istio
+### Istio
 
-#### Envoy
+### Envoy
 
 ## Container Orchestration
 
 ### Hashicorp Stack
 
 ![Hashicorp Tools](../.gitbook/assets/hashistack-1.webp)
+
 ![Hashicorp Stack](../.gitbook/assets/hashistack-2.webp)
 
 ### Kubernetes
