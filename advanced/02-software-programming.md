@@ -84,6 +84,23 @@
 - **Logs**: Treat logs as event streams
 - **Admin processes**: Run admin/management tasks as one-off processes
 
+### [Semantic Versioning](https://semver.org/)
+
+In the world of software management there exists a dreaded place called "dependency hell":
+
+- If the dependency specifications are too tight, you are in danger of version lock (the inability to upgrade a package without having to release new versions of every dependent package).
+- If dependencies are specified too loosely, you will inevitably be bitten by version promiscuit.
+
+The solution: given a version number MAJOR.MINOR.PATCH, increment the:
+
+1. **MAJOR** version when you make incompatible API changes,
+2. **MINOR** version when you add functionality in a backwards compatible manner, and
+3. **PATCH** version when you make backwards compatible bug fixes.
+
+Additional labels for pre-release and build metadata are available as extensions to the **MAJOR.MINOR.PATCH** format.
+
+[Regex](https://regex101.com/r/vkijKf/1/) to check a SemVer string: `^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$`
+
 ## Languages
 
 ### Erlang / Elixir
