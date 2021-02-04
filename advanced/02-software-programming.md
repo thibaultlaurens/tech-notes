@@ -112,7 +112,7 @@ Resources:
 - How to write systems using Erlang: [Programming Rules and Conventions](http://www.erlang.se/doc/programming_rules.shtml)
 - [Erlang Coding Standards & Guidelines](https://github.com/inaka/erlang_guidelines)
 - Quick syntax introduction: [Erlang/Elixir Syntax: A Crash Course](https://elixir-lang.org/crash-course.html)
-- Community:[ ](https://github.com/christopheradams/elixir_style_guide)[Elixir Style Guide](https://github.com/christopheradams/elixir_style_guide)
+- Community [Elixir Style Guide](https://github.com/christopheradams/elixir_style_guide)
 
 ### Golang
 
