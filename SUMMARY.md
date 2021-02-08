@@ -1,6 +1,7 @@
 # Table of contents
 
 - [Home](README.md)
+- [Resume Tips](resume-tips.md)
 
 ## Fundamentals
 
