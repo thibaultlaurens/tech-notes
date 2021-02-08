@@ -1,4 +1,4 @@
-## Resume Tips
+# Resume Tips
 
 ## Basics
 
@@ -54,7 +54,3 @@ Include any relevant leadership positions, awards, university honors, scholarshi
 - Tools
 - SaaS Services
 - OSes
-
-## Sample
-
-![resume-sample](../.gitbook/assets/resume-sample.png)
