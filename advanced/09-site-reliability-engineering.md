@@ -300,3 +300,85 @@ Predictable and repetitive tasks can be quite calming (low risk, low stress, qui
 - **Minimal APIs**: Smaller APIs are easier to test and more reliable.
 - **Modularity**: API versioning and as with code, avoid misc/util binaries/systems.
 - **Releases**: Small releases are easier to measure
+
+## 10. Practical Alerting from Time-Series Data
+
+### Borgmon
+
+- Similar-ish to Prometheus.
+- **Common data exposition format enables mass data collection**.
+- Data is used for both dashboards and alerts.
+- Formalized a legacy data format, "varz", which allowed metrics to be viewed via HTTP (`http://foo:80/varz`).
+- Adding a metric only requires a single declaration in code: low user-cost to add new metric.
+- Borgmon fetches `/varz` from each target periodically.
+- `/varz` also includes synthetic data like health check, if name was resolved, etc.
+
+### Time Series Arena
+
+- Data is stored in-memory and regularly checkpointed to disk.
+- The data points have the form `(timestamp, value)` and are stored in chronological lists called **time-series**.
+- Each time-series is named by a unique set of **labels**, of the form `name=value`.
+- Fixed sized block of memory with a GC that expires oldest entries when the arena is full.
+- Conceptually a 2D array with time on one axis and items on the other axis.
+- 24 bytes for a data point -> 1M unique time series for 12 hours at 1 minute intervals = 17 GB
+
+### Borgmon rules
+
+- Simple **algebraic expressions** that compute time-series from other time-series.
+- Rules can query the history of a single time-series (the time axis).
+- Rules can query differemt subset of labels from many time-series at once (the space axis).
+- Rules can apply many **mathematical operations**.
+- Rules are evaluated in parallel on a threadpool where possible.
+
+### Counters vs. gauges
+
+- **Counters** are non-decreasing.
+- **Gauges** can take any value.
+- Counters preferred to gauges because gauges can lose information depending on sampling interval.
+
+### Altering
+
+- Borgmon rules can trigger alerts.
+- Have a minimum duration to prevent **flapping**.
+- Minimum duration is usually set to two multiple duration cycles so that missed collections don’t trigger an alert.
+- An AlertManager is responsible for routing notifications to the correct destination.
+
+Alertmanager config:
+
+- **Inhibit** certain alerts when others are active
+- **Deduplicate** alerts from multiple borgmon
+- **Fan-in or fan-out** alerts based on their labelsets.
+
+### Prober
+
+- Black-box monitoring that monitors what the user sees.
+- Can be queried with varz or directly send alerts to Altertmanager.
+
+### Configuration
+
+- Separation between definition of rules and targets being monitored
+
+## 11. Being on-call
+
+Typical response time:
+
+- 5 minutes for user-facing or other time-critical tasks.
+- 30 minutes for less time-sensitive stuff.
+
+Response times linked to SLOs:
+
+- 99.99% for a quarter is 13 minutes of downtime; clearly can’t have response time above 13 minutes
+- Services with looser SLOs can have response times in the 10s of minutes
+
+Primary vs secondary on-call rotation:
+
+- Work distribution varies by team.
+- In some teams, the secondary rotation will be the backup of the primary rotation.
+- In other teams, the secondary rotation will handle non-urgent / non-paging events while the primary rotation handles pages.
+
+Balanced on-call:
+
+- **Quantity**: percent of time on-call (50% of SRE time goes into engineering. Of the remainder, no more than 25% should be spent on-call).
+- **Quality**: number of incidents that occur while on call. On average, dealing with an incident (incl root-cause analysis, remediation, writing postmortem, fixing bug, etc.) takes 6 hours. More than 2 incidents in a 12-hour on-call shift would be bad.
+
+## 12. Effective Troubleshooting
