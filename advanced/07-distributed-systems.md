@@ -2,7 +2,8 @@
 
 ## Distributed Systems
 
-- [https://cseweb.ucsd.edu/classes/sp16/cse291-e/applications/lecture.html](https://cseweb.ucsd.edu/classes/sp16/cse291-e/applications/lecture.html)
+- [Distributed Systems lecture series](https://www.youtube.com/playlist?list=PLeKd45zvjcDFUEv_ohr_HdUFe97RItdiB)
+- [CSE 291 Lecture Resources](https://cseweb.ucsd.edu/classes/sp16/cse291-e/applications/lecture.html)
 - [A Distributed Systems Reading List](https://dancres.github.io/Pages/)
 - [Scalable Web Architecture and Distributed Systems](https://github.com/checkcheckzz/system-design-interview/blob/master/README.md#bk)
 - [A Note on Distributed System](https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.41.7628)

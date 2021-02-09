@@ -275,6 +275,13 @@ Today the services are provided by **PTI** \(Public Technical Identifiers\), a p
 - IPS and IDS \(Snort vs Bro vs zeek vs [more](https://github.com/sbilly/awesome-security#ids--ips--host-ids--host-ips)\)
 - Fast Packet Processing
 
+## Recommandations de sécurité ANSSI
+
+- [Systèmes d’information essentiels](https://www.ssi.gouv.fr/administration/guide/recommandations-pour-la-protection-des-systemes-dinformation-essentiels/)
+- [Système GNU/Linux](https://www.ssi.gouv.fr/guide/recommandations-de-securite-relatives-a-un-systeme-gnulinux/)
+- [Conteneurs Docker](https://www.ssi.gouv.fr/administration/guide/recommandations-de-securite-relatives-au-deploiement-de-conteneurs-docker/)
+- [TLS](https://www.ssi.gouv.fr/administration/guide/recommandations-de-securite-relatives-a-tls/)
+
 ## Resources
 
 - [Hacker101 Video Lessons](https://www.hacker101.com/videos)
