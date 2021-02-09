@@ -31,6 +31,8 @@
 - [keymaster](https://github.com/Cloud-Foundations/keymaster): Short term certificate based identity system
 - [kuma](https://github.com/kumahq/kuma): The open-source control plane for service mesh
 - [healthchecks](https://github.com/healthchecks/healthchecks): A cron monitoring tool written in Python & Django
+- [gatus](https://github.com/TwinProduction/gatus): Automated service health dashboard
 - [pulumi](https://github.com/pulumi/pulumi): Modern Infrastructure as Code. Any cloud, any language
 - [opa](https://github.com/open-policy-agent/opa): An open source, general-purpose policy engine.
 - [cfssl](https://github.com/cloudflare/cfssl): Cloudflare's PKI and TLS toolkit
+- [falco](https://github.com/falcosecurity/falco): Cloud Native Runtime Security
