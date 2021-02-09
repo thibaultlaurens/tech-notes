@@ -80,7 +80,13 @@
 
 ## PKI
 
+### Introduction
+
 - [Everything you should know about certificates and PKI but are too afraid to ask](https://smallstep.com/blog/everything-pki/)
+
+### Deployment Best Practices
+
+- [SSL and TLS Deployment Best Practices](https://github.com/ssllabs/research/wiki/SSL-and-TLS-Deployment-Best-Practices)
 
 ## Toolbox
 
