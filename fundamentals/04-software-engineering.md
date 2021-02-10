@@ -109,25 +109,68 @@ Characteristics of good **consequences**:
 
 A new ADR may take the place of a previous ADR: when an AD is made that **replaces or invalidates** a previous ADR, a new ADR should be created.
 
-### ADR Template
+[### MADR Template](https://adr.github.io/madr)
 
-#### Title [#ADR_NUMBER]
+```
+# [Short title of solved problem and solution] [#ADR_NUMBER]
 
-##### Status
+- Status: [proposed | rejected | accepted | deprecated | … | superseded by [ADR-0005](0005-example.md)] <!-- optional -->
+- Deciders: [list everyone involved in the decision] <!-- optional -->
+- Date: [YYYY-MM-DD when the decision was last updated] <!-- optional -->
 
-What is the status, such as proposed, accepted, rejected, deprecated, superseded, etc.?
+Technical Story: [description | ticket/issue URL] <!-- optional -->
 
-##### Context
+## Context and Problem Statement
 
-What is the issue that we're seeing that is motivating this decision or change?
+[Describe the context and problem statement, e.g., in free form using two to three sentences. You may want to articulate the problem in form of a question.]
 
-##### Decision
+## Decision Drivers <!-- optional -->
 
-What is the change that we're proposing and/or doing?
+- [driver 1, e.g., a force, facing concern, …]
+- [driver 2, e.g., a force, facing concern, …]
+- … <!-- numbers of drivers can vary -->
 
-##### Consequences
+## Considered Options
 
-What becomes easier or more difficult to do because of this change?
+- [option 1]
+- [option 2]
+- … <!-- numbers of options can vary -->
+
+## Decision Outcome
+
+Chosen option: "[option 1]", because [justification. e.g., only option, which meets k.o. criterion decision driver | which resolves force force | … | comes out best (see below)].
+
+### Positive Consequences <!-- optional -->
+
+- [e.g., improvement of quality attribute satisfaction, follow-up decisions required, …]
+- …
+
+### Negative Consequences <!-- optional -->
+
+- [e.g., compromising quality attribute, follow-up decisions required, …]
+- …
+
+## Pros and Cons of the Options <!-- optional -->
+
+### [option 1]
+
+[example | description | pointer to more information | …] <!-- optional -->
+
+- Good, because [argument a]
+- Good, because [argument b]
+- Bad, because [argument c]
+- … <!-- numbers of pros and cons can vary -->
+
+### [option n]
+
+...
+
+## Links <!-- optional -->
+
+- [Link type] [Link to ADR] <!-- example: Refined by [ADR-0005](0005-example.md) -->
+- … <!-- numbers of links can vary -->
+
+```
 
 ## Resources
 

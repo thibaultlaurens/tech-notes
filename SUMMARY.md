@@ -9,20 +9,20 @@
 - [Grokking Algorithms](fundamentals/02-grokking-algorithms.md)
 - [Language and Compiler Design](fundamentals/03-language-and-compiler-design.md)
 - [Software Engineering](fundamentals/04-software-engineering.md)
-- [Database Management System](fundamentals/05-database-management-system.md)
-- [Computer Networking](fundamentals/06-computer-networking.md)
+- [Software Programming](fundamentals/05-software-programming.md)
+- [Database Management System](fundamentals/06-database-management-system.md)
+- [Computer Networking](fundamentals/07-computer-networking.md)
+- [Infrastructure & Operations](fundamentals/08-infrastructures-and-operations.md)
 
 ## Advanced
 
 - [Algorithms & Data Structures](advanced/01-algorithms-and-data-structures.md)
-- [Software Programming](advanced/02-software-programming.md)
-- [Computer Networking](advanced/03-computer-networking.md)
-- [Information Security](advanced/04-information-security.md)
-- [Cryptography](advanced/05-cryptography.md)
-- [Infrastructure & Operations](advanced/06-infrastructures-and-operations.md)
-- [Distributed Systems](advanced/07-distributed-systems.md)
-- [Systems design](advanced/08-systems-design.md)
-- [Site Reliability Engineering](advanced/09-site-reliability-engineering.md)
+- [Computer Networking](advanced/02-computer-networking.md)
+- [Information Security](advanced/03-information-security.md)
+- [Cryptography](advanced/04-cryptography.md)
+- [Distributed Systems](advanced/05-distributed-systems.md)
+- [Systems design](advanced/06-systems-design.md)
+- [Site Reliability Engineering](advanced/07-site-reliability-engineering.md)
 
 ## Conferences
 

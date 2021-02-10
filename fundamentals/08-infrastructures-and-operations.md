@@ -176,7 +176,8 @@ Resources:
 
 ### Post Mortem Report
 
-#### Title [#INCIDENT_NUMBER]
+```
+# Title [#INCIDENT_NUMBER]
 
 - One line summary
 - Start date
@@ -184,7 +185,7 @@ Resources:
 - Project / Ecosystem / Perimeter / Environment
 - Infrastructure
 
-#### Summary
+## Summary
 
 Brief description of the incident. Include general informations, like for instance:
 
@@ -192,22 +193,23 @@ Brief description of the incident. Include general informations, like for instan
 - Type of incident: complete downtime, loss of data, partial interruption of normal operation etc.
 - People impacted by the incident: end users, business owners, developpers etc.
 
-#### Root Cause
+## Root Cause
 
 Detailed desciption of what caused the incident.
 
-#### Remediation
+## Remediation
 
 Description of all the actions taken to resolve the incident. Include every actions taken, even the incorrect of ineffective ones.
 
-#### Prevention
+## Prevention
 
 List all the measures that should be taken to prevent/avoid this type of incident to happen again in the future. Ex: logging, monitoring, code improvements, development workflow etc.
 
-#### Timeline
+## Timeline
 
 Precise timeline of the different issues that happened during the incident, including:
 
 - Starting date of the incident
 - Date when actions were taken to mitigate the incident
 - Resolution date of the incident
+```
