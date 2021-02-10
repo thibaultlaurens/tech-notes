@@ -85,9 +85,6 @@
 
 ## Architectural Decision Records
 
-- [adr.github.io](https://adr.github.io/)
-- [Architecture decision record](https://github.com/joelparkerhenderson/architecture_decision_record)
-
 ### ADR Best Practices
 
 Characteristics of a good ADR:
@@ -109,7 +106,7 @@ Characteristics of good **consequences**:
 
 A new ADR may take the place of a previous ADR: when an AD is made that **replaces or invalidates** a previous ADR, a new ADR should be created.
 
-[### MADR Template](https://adr.github.io/madr)
+### [MADR](https://adr.github.io/madr) Template
 
 ```
 # [Short title of solved problem and solution] [#ADR_NUMBER]
@@ -175,3 +172,5 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 ## Resources
 
 - [Software Engineering/](https://www.geeksforgeeks.org/software-engineering/)
+- [ADR GitHub organization](https://adr.github.io/)
+- [Architecture decision record](https://github.com/joelparkerhenderson/architecture_decision_record)
