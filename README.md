@@ -20,6 +20,7 @@
 - [12 Factor CLI Apps](https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46)
 - [Minimal safe Bash script template](https://betterdev.blog/minimal-safe-bash-script-template/)
 - [Linux Hardening Guide](https://madaidans-insecurities.github.io/guides/linux-hardening.html)
+- [Envoy Life of a request](https://www.envoyproxy.io/docs/envoy/latest/intro/life_of_a_request)
 
 ## Tools To Try
 
