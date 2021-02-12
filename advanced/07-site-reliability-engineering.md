@@ -382,3 +382,23 @@ Balanced on-call:
 - **Quality**: number of incidents that occur while on call. On average, dealing with an incident (incl root-cause analysis, remediation, writing postmortem, fixing bug, etc.) takes 6 hours. More than 2 incidents in a 12-hour on-call shift would be bad.
 
 ## 12. Effective Troubleshooting
+
+### Theory
+
+- Effective troubleshooting depends on 2 factors: a **solid knowledge of the system** and an understanding on **how to troubleshoot generatically**.
+- Process: Problem report -> Triage -> Examine -> Diagnose -> Test / Treat (loop back to `Examine` ) -> Cure
+
+**Common pitfalls**:
+
+- Looking at symptoms that aren't relevant or misunderstanding the meaning of system metrics
+- Misunderstanding how to change the system to test hypothesis
+- Coming up with improbable theories or latching on causes of past problems
+
+### Practice
+
+- **Problem report**: should tell the **expected** behavior, the **actual** behavior and how to **reproduce** the behavior.
+- **Triage**: the response to the report should be appropriate for the problem's impact. Do not try to find a root cause as quickly as possible but **try to make the system work as well as it can**.
+- **Examine**: what each component in the system is doing. Use metrics and logs, instrument a client etc.
+- **Diagnose**: **divide and conquer** with system's components, ask "what", "where" and "why" the system is doing, check what touched it last (systems have some king of inertia).
+- **Test** and **Treat**: Use experimental method to rule out hypothesis and find the root cause, consider the obvious first, take notes, be **careful with side effects** when testing (ex: verbose logging may increase latency).
+- **Cure**: and prove that a given factor caused a problem (hard in practice, reproducing in production may notbe an option), write a postmortem.
