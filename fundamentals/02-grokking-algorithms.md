@@ -556,7 +556,7 @@ Exemple of dynamic programming usages:
 
 ## 11. Where to go next
 
-- **Binary Search Tree (BST)** also called ordered or sorted binary tree: For every nodes, the node on the left are **smaller** in value, and the nodes to the right are **larger** in value. Searching in a BST is **O(Log n)** time on average and **O(n)** time in the worst case. Insertions and deletions take **O(Log n)** too (making it better than a sorted array). Exemple of BSTs: [B-trees](https://en.wikipedia.org/wiki/B-tree), [Red-black tree](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree), [Heaps](<https://en.wikipedia.org/wiki/Heap_(data_structure)>) and [Splay trees](https://en.wikipedia.org/wiki/Splay_tree).
+- **Binary Search Tree (BST)** also called ordered or sorted binary tree: For every nodes, the node on the left are **smaller** in value, and the nodes to the right are **larger** in value. Searching in a BST is **O(Log n)** time on average and **O(n)** time in the worst case. Insertions and deletions take **O(Log n)** too (making it better than a sorted array). Exemple of BSTs: [B-trees](https://en.wikipedia.org/wiki/B-tree), [Red-black tree](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree), [Heaps](https://en.wikipedia.org/wiki/Heap_data_structure) and [Splay trees](https://en.wikipedia.org/wiki/Splay_tree).
 
 - **Inverted Indexes**: An index data structure storing a mapping from content, such as words or numbers, to its locations in a document or a set of documents. The purpose of an inverted index is to allow **fast full-text searches**, at a cost of increased processing when a document is added to the database.
 
