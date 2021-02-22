@@ -560,7 +560,7 @@ Exemple of dynamic programming usages:
 
 - **Inverted Indexes**: An index data structure storing a mapping from content, such as words or numbers, to its locations in a document or a set of documents. The purpose of an inverted index is to allow **fast full-text searches**, at a cost of increased processing when a document is added to the database.
 
-- **The Fourier Transform (FT)**: A mathematical transform that decomposes functions depending on space or time into functions depending on spatial or temporal frequency, such as the expression of a musical chord in terms of the volumes and frequencies of its constituent notes.
+- **Fourier Transform (FT)**: A mathematical transform that decomposes functions depending on space or time into functions depending on spatial or temporal frequency, such as the expression of a musical chord in terms of the volumes and frequencies of its constituent notes.
 
 - **Parallel algorithm**: An algorithm which can do **multiple operations in a given time**.
 
@@ -570,7 +570,7 @@ Exemple of dynamic programming usages:
 
 - **HyperLogLog**: An algorithm for the **count-distinct problem**, approximating the number of distinct elements in a **multiset**. Calculating the exact **cardinality** of a multiset requires an amount of memory proportional to the cardinality, which is impractical for very large data sets. Probabilistic cardinality estimators, such as the HyperLogLog algorithm, use significantly less memory than this, at the cost of obtaining only an **approximation of the cardinality**.
 
-- **The Secure Hash Algorithms (SHA)**: A family of cryptographic functions that work by transforming the data using a **hash function** (an algorithm that consists of **bitwise operations**, **modular additions**, and **compression functions**. The hash function then produces a **fixed-size string** that looks nothing like the original. These algorithms are designed to be **one-way functions**, meaning that once they’re transformed into their respective hash values, it’s virtually impossible to transform them back into the original data.
+- **Secure Hash Algorithms (SHA)**: A family of cryptographic functions that work by transforming the data using a **hash function** (an algorithm that consists of **bitwise operations**, **modular additions**, and **compression functions**. The hash function then produces a **fixed-size string** that looks nothing like the original. These algorithms are designed to be **one-way functions**, meaning that once they’re transformed into their respective hash values, it’s virtually impossible to transform them back into the original data.
 
 - **Locality-Sensitive Hashing (LSH)**: An algorithmic technique that hashes similar input items into the same "buckets" with high probability. (The number of buckets are much smaller than the universe of possible input items.) Since similar items end up in the same buckets, this technique can be used for **data clustering** and **nearest neighbor search**. It differs from conventional hashing techniques in that **hash collisions are maximized**, not minimized.
 
