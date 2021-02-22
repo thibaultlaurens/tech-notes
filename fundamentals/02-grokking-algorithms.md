@@ -488,7 +488,7 @@ Running time:
 - Adding each node to the queue \(in constant O\(1\) for each node\) means **O\(vertices\)**
 - BFT running time is **O\(V + E\)**
 
-## 7. Dijkstra’s algorithm
+## 7. Dijkstra’s algorithm (WIP)
 
 - **Weighted graph**
 - Breadth-first search is use to calculate the shortest path for an unweighted graph.
@@ -496,7 +496,7 @@ Running time:
 - Dijkstra's algorithm works when **all the weights are positive**.
 - In the case of negative weights, use the **Bellman-Ford algorithm**.
 
-## 8. Greedy algorithms
+## 8. Greedy algorithms (WIP)
 
 - **Sets**
 - Operation on sets: **union**, **intersection**, **difference**
@@ -513,7 +513,7 @@ How do you tell if a problem is NP-complete ?
 - If your problem involves a sequence \(such as a sequence of cities, like in the travelling salesperson\), and it's hard to solve, it might be NP-complete.
 - Can you restate your problem as the set-covering problem or the travelling salesperson problem? Then your problem is definitely NP-complete.
 
-## 9. Dynamic programming
+## 9. Dynamic programming (WIP)
 
 - Dynamic programming is useful when you are trying to optimize something given a **constraint**.
 - You can use dynamic programming when the problem can be broken down into **discrete subproblems**.
@@ -533,7 +533,7 @@ Exemple of dynamic programming usages:
 - Diff tools \(like git diff\) use dynamic programming to find the difference between two files.
 - **Levenshtein distance** measures how similar two strings arewith dynamic programming \(use for spell checking, copyright check etc.\).
 
-## 10. K-nearest neighbors
+## 10. K-nearest neighbors (WIP)
 
 ### KNN
 
@@ -556,13 +556,24 @@ Exemple of dynamic programming usages:
 
 ## 11. Where to go next
 
-- **Trees**:
-- **Inverted Indexes**:
-- **The Fourier Transform**:
-- **Parallel algorithms**:
-- **MapReduce**:
-- **Bloom filters and HyperLogLog**:
-- **The SHA algorithms**:
-- **Locality-sensitive hashing**:
-- **Diffie-Hellman key exchange**:
-- **Linear programming**:
+**Binary Search Tree (BST)** also called ordered or sorted binary tree: For every nodes, the node on the left are **smaller** in value, and the nodes to the right are **larger** in value. Searching in a BST is **O(Log n)** time on average and **O(n)** time in the worst case. Insertions and deletions take **O(Log n)** too (making it better than a sorted array). Exemple of BSTs: [B-trees](https://en.wikipedia.org/wiki/B-tree), [Red-black tree](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree), [Heaps](<https://en.wikipedia.org/wiki/Heap_(data_structure)>) and [Splay trees](https://en.wikipedia.org/wiki/Splay_tree).
+
+**Inverted Indexes**: An index data structure storing a mapping from content, such as words or numbers, to its locations in a document or a set of documents. The purpose of an inverted index is to allow **fast full-text searches**, at a cost of increased processing when a document is added to the database.
+
+**The Fourier Transform (FT)**: A mathematical transform that decomposes functions depending on space or time into functions depending on spatial or temporal frequency, such as the expression of a musical chord in terms of the volumes and frequencies of its constituent notes.
+
+**Parallel algorithms**: An algorithm which can do **multiple operations in a given time**.
+
+**MapReduce**: A **parallel and distributed** (across multiple machines) algorithm composed of a **map** function (a function applied to each member of the array) and a **reduce** function (which performs a summary operation).
+
+**Bloom filters**: A space-efficient **probabilistic data structure**, that is used to test whether an element is **a member of a set**. False positive matches are possible, but false negatives are not – in other words, a query returns either "possibly in set" or "definitely not in set".
+
+**HyperLogLog**: An algorithm for the **count-distinct problem**, approximating the number of distinct elements in a **multiset**. Calculating the exact **cardinality** of a multiset requires an amount of memory proportional to the cardinality, which is impractical for very large data sets. Probabilistic cardinality estimators, such as the HyperLogLog algorithm, use significantly less memory than this, at the cost of obtaining only an **approximation of the cardinality**.
+
+**The Secure Hash Algorithms (SHA)**: A family of cryptographic functions that work by transforming the data using a **hash function** (an algorithm that consists of **bitwise operations**, **modular additions**, and **compression functions**. The hash function then produces a **fixed-size string** that looks nothing like the original. These algorithms are designed to be **one-way functions**, meaning that once they’re transformed into their respective hash values, it’s virtually impossible to transform them back into the original data.
+
+**Locality-Sensitive Hashing (LSH)**: An algorithmic technique that hashes similar input items into the same "buckets" with high probability. (The number of buckets are much smaller than the universe of possible input items.) Since similar items end up in the same buckets, this technique can be used for **data clustering** and **nearest neighbor search**. It differs from conventional hashing techniques in that **hash collisions are maximized**, not minimized.
+
+**Diffie-Hellman key exchange**: A method of securely exchanging **cryptographic keys** over a public channel. Each party generates a public/private key pair and distributes the public key. After obtaining an authentic copy of each other's public keys, Alice and Bob can compute a shared secret offline. The shared secret can be used, for instance, as the key for a symmetric cipher.
+
+**Linear programming (LP)**: A method to achieve the best outcome (such as maximum profit or lowest cost) in a **mathematical model** whose requirements are represented by **linear relationships**. Linear programming is a special case of mathematical programming (also known as mathematical optimization).
