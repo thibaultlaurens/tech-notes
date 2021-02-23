@@ -558,11 +558,14 @@ Exemple of dynamic programming usages:
 
 - **Binary Search Tree (BST)** also called ordered or sorted binary tree: For every nodes, the node on the left are **smaller** in value, and the nodes to the right are **larger** in value. Searching in a BST is **O(Log n)** time on average and **O(n)** time in the worst case. Insertions and deletions take **O(Log n)** too (making it better than a sorted array). Exemple of BSTs: [B-trees](https://en.wikipedia.org/wiki/B-tree), [Red-black tree](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree), [Heaps](https://en.wikipedia.org/wiki/Heap_data_structure) and [Splay trees](https://en.wikipedia.org/wiki/Splay_tree).
   <br/>
+  <br/>
 - **Inverted Indexes**: An index data structure storing a mapping from content, such as words or numbers, to its locations in a document or a set of documents. The purpose of an inverted index is to allow **fast full-text searches**, at a cost of increased processing when a document is added to the database.
   <br/>
+  <br/>
 - **Fourier Transform (FT)**: A mathematical transform that decomposes functions depending on space or time into functions depending on spatial or temporal frequency, such as the expression of a musical chord in terms of the volumes and frequencies of its constituent notes.
-
+  <br/>
 - **Parallel algorithm**: An algorithm which can do **multiple operations in a given time**.
+  <br/>
 
 - **MapReduce**: A **parallel and distributed** (across multiple machines) algorithm composed of a **map** function (a function applied to each member of the array) and a **reduce** function (which performs a summary operation).
 
