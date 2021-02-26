@@ -75,6 +75,10 @@ Combination of this [article](https://lethain.com/introduction-to-architecting-s
 
 ### Raft
 
+- https://nexteven.com/making-sense-of-the-raft-distributed-consensus-algorithm%e2%80%8a-%e2%80%8apart-1/
+- https://nexteven.com/making-sense-of-the-raft-distributed-consensus-algorithm%e2%80%8a-%e2%80%8apart-2/
+- https://nexteven.com/making-sense-of-the-raft-distributed-consensus-algorithm%e2%80%8a-%e2%80%8apart-3/
+
 ### Byzantine Fault Tolerance
 
 - Link to the codemesh talk
