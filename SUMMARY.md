@@ -5,7 +5,7 @@
 ## Fundamentals
 
 - [Git](fundamentals/01-git.md)
-- [Grokking Algorithms](fundamentals/02-grokking-algorithms.md)
+- [Algorithms & Data Structures](fundamentals/02-algorithms-and-data-structures.md)
 - [Language and Compiler Design](fundamentals/03-language-and-compiler-design.md)
 - [Software Engineering](fundamentals/04-software-engineering.md)
 - [Software Programming](fundamentals/05-software-programming.md)
