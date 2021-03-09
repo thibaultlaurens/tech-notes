@@ -443,13 +443,13 @@ Ideally, the hash function will assign each key to a unique bucket, but most has
 
 #### Separate Chaining (open hashing)
 
-**Separate chaining** is one of the most commonly used collision resolution techniques. It is usually implemented using **linked lists**. In separate chaining, each element of the hash table is a linked list. To store an element in the hash table you must insert it into a specific linked list. If there is any collision (i.e. two different elements have same hash value) then store both the elements in the same linked list.
+Separate chaining is one of the most commonly used collision resolution techniques. It is usually implemented using **linked lists**. In separate chaining, each element of the hash table is a linked list. To store an element in the hash table you must insert it into a specific linked list. If there is any collision (i.e. two different elements have same hash value) then store both the elements in the same linked list.
 
 ![Hash collision resolved by separate chaining.](../.gitbook/assets/hash-collision-separate-chaining.png)
 
 #### Open Addressing (closed hashing)
 
-In **Open Addressing**, instead of in linked lists, all entry records are stored in the array itself. When a new entry has to be inserted, the hash index of the hashed value is computed and then the array is examined (starting with the hashed index). If the slot at the hashed index is unoccupied, then the entry record is inserted in slot at the hashed index else it proceeds in some probe sequence **until it finds an unoccupied slot**.
+In Open Addressing, instead of in linked lists, all entry records are stored in the array itself. When a new entry has to be inserted, the hash index of the hashed value is computed and then the array is examined (starting with the hashed index). If the slot at the hashed index is unoccupied, then the entry record is inserted in slot at the hashed index else it proceeds in some probe sequence **until it finds an unoccupied slot**.
 
 Well-known probe sequences include:
 
@@ -506,47 +506,95 @@ In many situations, hash tables turn out to be on average more efficient than se
 - Hash tables are used for caching data (ex: a web server).
 - Hash tables are good for catching duplicates.
 
-## 6. Breadth-first Search \(WIP\)
+## 6. Breadth-first Search
 
 ### Queues
 
-- Data structure similar to stacks, you can't access random elements
-- There are only two operations: **enqueue** and **dequeue**
-- A queue is **FIFO**: First In First Out \(in contract to a FIFO stack\)
+- Data structure similar to stacks, you **can't access random elements**.
+- A queue is a collection of entities that are maintained in a **sequence** and can be modified by the addition of entities at one end of the sequence and the removal of entities from the other end of the sequence.
+- The end of the sequence at which elements are added is called the **tail**, and the end at which elements are removed is called the **head**.
+- There are only two main operations: **enqueue** (add an element to the rear of the queue) and **dequeue** (removing an element from the front).
+- Other operations may be allowed like **peek** that returns the value of the next element to be dequeued without dequeuing it.
+- A queue is **FIFO**: First In First Out \(a stack is LIFO: Last In, First Out\).
+- An efficient implementation is one that can perform the operations (en-queuing and de-queuing) in O(1) time (ex: by using a double linked list).
 
 ### Graphs
 
-- A graph models a set of connections. It models how different things are connected to one another
-- A graph is made up of **nodes** and **edges**
+- A graph models a set of connections. It models how different things are connected to one another.
+- A graph is made up of **nodes** and **edges**.
 - A node can be directly connected to other nodes, its **neighbors**, with edges.
-- A **directed graph** is a graph where edges points to a single direction \(uni-directional relationship\)
-- An **undirected graph** is a graph where edges doesn't have a direction \(bi-directional relationship\)
-- A **topological sort** makes an ordered list out of a graph by sorting relationships
-- A **tree** is a special graph where no nodes ever points back \(a directed graph with only one edge between nodes\)
+- A **directed graph** is a graph where edges points to a single direction \(uni-directional relationship\).
+- An **undirected graph** is a graph where edges doesn't have a direction \(bi-directional relationship\).
+- A **topological sort** makes an ordered list out of a graph by sorting relationships.
+- A **tree** is a special graph where no nodes ever points back \(a directed graph with only one edge between nodes\).
+- A **complete** graph is a graph where an edge exists from every vertex to all of the other vertices.
+
+![Graphs](../.gitbook/assets/graphs.jpeg)
 
 ### Breadth-first search \(BFS\)
 
-- Run on graphs
-- Find if there is a path between two nodes
-- Find the shortest path between two nodes
+Breadth-first search is an algorithm for **traversing** or **searching** tree or graph data structures. It starts at the **tree root** (or some arbitrary node of a graph, sometimes referred to as a **search key**), and explores all of the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level. It uses the opposite strategy of **Depth-first search (DFS)**, which instead explores the node branch as far as possible before being forced to backtrack and expand other nodes.
 
 How it works:
 
-1. Build hash tables that keep tracks of node's connections
-2. Build a queue that contain nodes to check, start with the first-degree nodes \(that's how we get the shortest path\)
-3. Create an array to keep track of nodes that have been already checked
-4. Pop a node from the queue, until it's a node that hasn't been checked before
-5. If the node match: we are done
-6. If it doesn't match: add the node to the array of checked node, add all the node connection to the queue, loop back to `4`
+1. Build hash tables that keep tracks of node's connections.
+2. Build a queue that contain nodes to check, start with the first-degree nodes \(that's how we get the shortest path\).
+3. Create an array to keep track of nodes that have been already checked.
+4. Pop a node from the queue, until it's a node that hasn't been checked before.
+5. If the node match: we are done.
+6. If it doesn't match: add the node to the array of checked node, add all the node connection to the queue, loop back to `4`.
 
-> Keeping a list of nodes that have been checked solved two potential issues:
->
-> - We don't want to check nodes twice to increase performance
-> - We don't want to get stuck in an infinite loop
+```python
+from collections import deque
+
+def person_is_seller(name):
+    # name must end with "m"
+    return name[-1] == 'm'
+
+graph = {}
+graph["you"] = ["alice", "bob", "claire"]
+graph["bob"] = ["anuj", "peggy"]
+graph["alice"] = ["peggy"]
+graph["claire"] = ["thom", "jonny"]
+graph["anuj"] = []
+graph["peggy"] = []
+graph["thom"] = []
+graph["jonny"] = []
+
+def search(name):
+    search_queue = deque()
+    search_queue += graph[name]
+
+    # keep track of which people you've searched before.
+    searched = []
+
+    while search_queue:
+        person = search_queue.popleft()
+
+        # only search the person if it hasn't been already searched.
+        if person not in searched:
+            if person_is_seller(person):
+                print(person + " is a mango seller!")
+                return True
+            else:
+                # add the person connection to the queue.
+                search_queue += graph[person]
+
+                # mark this person as searched.
+                searched.append(person)
+    return False
+
+search("you")
+```
+
+Keeping a list of nodes that have been checked solved two potential issues:
+
+- We don't want to check nodes twice to increase performance
+- We don't want to get stuck in an infinite loop
 
 Running time:
 
-- Search an entire graph means following each edges **O\(edges\)**
+- Searching an entire graph means following each edges **O\(edges\)**
 - Adding each node to the queue \(in constant O\(1\) for each node\) means **O\(vertices\)**
 - BFT running time is **O\(V + E\)**
 
