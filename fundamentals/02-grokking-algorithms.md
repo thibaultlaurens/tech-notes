@@ -413,36 +413,98 @@ Partition of [8, 7] done with pivot 7: array is now [1, 2, 4, 5, 7, 8]
 The **constant factor** in the big O notation is used to compare algorithms with the same run time. On the average case, let's say Quicksort run at **k1 \* n log n** and merge sort at **k2 \* n log n**. k1 is actually smaller than k2, so Quicksort would be faster than merge sort on average case, even though it is slower on worst case.
 {% endhint %}
 
-## 5. Hash Tables \(WIP\)
-
-- collisions are bad
-- hash tables are good at search, insert and delete
-- hash tables are good at modeling relationships from item to another
-- load factor &gt; 0.7 -&gt; resize the hash table
-- hash tables are good for caching data
-- hash tables are good for catching duplicates
+## 5. Hash Tables
 
 A hash table \(**hash map**\) is a data structure that implements an **associative array abstract data type**, a structure that can map keys to values. A hash table uses a **hash function** to compute an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. During lookup, the key is hashed and the resulting hash indicates where the corresponding value is stored.
 
+Hashing is implemented in two steps:
+
+1. An element is converted into an integer by using a hash function. This element can be used as an index to store the original element, which falls into the hash table.
+2. The element is stored in the hash table where it can be quickly retrieved using hashed key.
+
+```
+hash = hashfunc(key)
+index = hash % array_size
+```
+
+In this method, the hash is independent of the array size and it is then reduced to an index (a number between 0 and array_size − 1) by using the modulo operator (%).
+
 ### Hash functions
 
-Properties of a hashing function:
+A hash function is any function that can be used to map a data set of an arbitrary size to a data set of a fixed size, which falls into the hash table. The values returned by a hash function are called hash values, hash codes, hash sums, or simply hashes. Properties of a hash function:
 
 - **Uniformity**: The hash function should map the expected inputs as evenly as possible over its output range.
 - **Efficiency**: The use of a hash function is a trade off between search time and data storage space. A hash table can be very large, very sparse, but very fast.
 - **Deterministic**: For a given input value it must always generate the same hash value.
 
-### Collisions
+### Collisions Handling
 
-Ideally, the hash function will assign each key to a unique bucket, but most hash table designs employ an imperfect hash function, which might cause hash **collisions** where the hash function generates the same index for more than one key. Such collisions are typically accommodated in some way. \# TODO: more info
+Ideally, the hash function will assign each key to a unique bucket, but most hash table designs employ an imperfect hash function, which might cause hash **collisions** where the hash function generates the same index for more than one key. Such collisions are typically accommodated in some way.
 
-### Performance
+#### Separate Chaining (open hashing)
+
+**Separate chaining** is one of the most commonly used collision resolution techniques. It is usually implemented using **linked lists**. In separate chaining, each element of the hash table is a linked list. To store an element in the hash table you must insert it into a specific linked list. If there is any collision (i.e. two different elements have same hash value) then store both the elements in the same linked list.
+
+![Hash collision resolved by separate chaining.](../.gitbook/assets/hash-collision-separate-chaining.png)
+
+#### Open Addressing (closed hashing)
+
+In **Open Addressing**, instead of in linked lists, all entry records are stored in the array itself. When a new entry has to be inserted, the hash index of the hashed value is computed and then the array is examined (starting with the hashed index). If the slot at the hashed index is unoccupied, then the entry record is inserted in slot at the hashed index else it proceeds in some probe sequence **until it finds an unoccupied slot**.
+
+Well-known probe sequences include:
+
+- **Linear probing**, in which the interval between probes is fixed (usually 1). Because of good CPU cache utilization and high performance this algorithm is most widely used on modern computer architectures in hash table implementations.
+- **Quadratic probing**, in which the interval between probes is increased by adding the successive outputs of a quadratic polynomial to the starting value given by the original hash computation.
+- **Double hashing**, in which the interval between probes is computed by a second hash function.
+
+![Hash collision resolved by open addressing with linear probing (interval=1).](../.gitbook/assets/hash-collision-open-addressing.png)
+
+Note that "Ted Baker" has a unique hash, but nevertheless collided with "Sandra Dee", that had previously collided with "John Smith".
+
+### Load Factor
 
 In a well dimensioned hash table, the average cost \(number of instructions\) for each lookup is independent of the number of elements stored in the table. Many hash table designs also allow arbitrary insertions and deletions of key-value pairs, at constant average cost per operation.
+
+A critical statistic for a hash table is the **load factor**, defined as:
+
+```
+load factor = n / k
+```
+
+Where:
+
+- n is the number of entries occupied in the hash table.
+- k is the number of buckets.
+
+As the load factor grows larger, the hash table becomes slower, and it may even fail to work (depending on the method used). The expected constant time property of a hash table assumes that the load factor be kept below some bound. For a fixed number of buckets, the time for a lookup grows with the number of entries, and therefore the desired constant time is not achieved. In some implementations, the solution is to automatically grow (**usually, double**) the size of the table when the load factor bound is reached (usually **0.7**), thus forcing to re-hash all entries.
+
+### Dynamic Resizing
+
+When an insert is made such that the number of entries in a hash table exceeds the product of the load factor and the current capacity then the hash table will need to be **rehashed**. Rehashing includes increasing the size of the underlying data structure and mapping existing items to new bucket locations.
+
+**Resizing by copying all entries**: A common approach is to automatically trigger a complete resizing when the load factor exceeds some threshold **rmax**. Then a new larger table is allocated, each entry is removed from the old table, and inserted into the new table. When all entries have been removed from the old table then the old table is returned to the free storage pool. Likewise, when the load factor falls below a second threshold **rmin**, all entries are moved to a new smaller table.
+
+**Incremental resizing**: Some hash table implementations, notably in real-time systems, cannot pay the price of enlarging the hash table all at once, because it may interrupt time-critical operations. If one cannot avoid dynamic resizing, a solution is to perform the resizing gradually:
+
+- During the resize, allocate the new hash table, but keep the old table unchanged.
+- In each lookup or delete operation, check both tables.
+- Perform insertion operations only in the new table.
+- At each insertion also move r elements from the old table to the new table.
+- When all elements are removed from the old table, deallocate it.
 
 ### Use cases
 
 In many situations, hash tables turn out to be on average more efficient than search trees or any other table lookup structure. For this reason, they are widely used in many kinds of computer software, particularly for associative arrays, database indexing, caches, and sets.
+
+### Takeaway
+
+- We can make a hash table by combining a hash function with an array.
+- Collisions are bad, we need a hash function that minimize them.
+- Hash tables have very fast search, insert and delete.
+- Hash tables are good at modeling relationships from one item to another item.
+- Once the load factor is > 0.7, it's time to resize the hash table.
+- Hash tables are used for caching data (ex: a web server).
+- Hash tables are good for catching duplicates.
 
 ## 6. Breadth-first Search \(WIP\)
 
