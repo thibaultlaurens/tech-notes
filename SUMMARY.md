@@ -1,7 +1,6 @@
 # Table of contents
 
 - [Home](README.md)
-- [Resume Tips](resume-tips.md)
 
 ## Fundamentals
 
@@ -37,6 +36,10 @@
 - [Threads and IPC](lsp/02-threads-and-ipc.md)
 - [Security and Isolation API](lsp/03-security-and-isolation-api.md)
 - [Shared Libraries](lsp/04-shared-libraries.md)
+
+## Misc
+
+- [Resume Tips](misc/resume-tips.md)
 
 ## Todo
 
