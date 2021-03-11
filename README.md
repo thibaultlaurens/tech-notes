@@ -1,6 +1,6 @@
 # Home
 
-## Resources
+## Main Resources
 
 - [School Of SRE](https://linkedin.github.io/school-of-sre/)
 - [Teach Yourself Computer Science](https://teachyourselfcs.com/)
@@ -8,11 +8,13 @@
 - [40 Key Computer Science Concepts Explained In Layman’s Terms](http://carlcheo.com/compsci)
 - [Coding Interview University](https://github.com/jwasham/coding-interview-university)
 - [Awesome Interviews](https://github.com/MaximAbramchuck/awesome-interview-questions)
+- [The System Design Primer](https://github.com/donnemartin/system-design-primer)
+- [The Architecture of Open Source Applications](https://aosabook.org/en/index.html)
 
 ## Reading list
 
 - [Managing my personal server in 2020](https://github.com/erebe/personal-server)
-- [BeyongCorp](https://www.beyondcorp.com/)
+- [BeyondCorp](https://www.beyondcorp.com/)
 - [Innersource](https://resources.github.com/whitepapers/introduction-to-innersource/)
 - [Why Google Stores Billions of Lines of Code in a Single Repository](https://cacm.acm.org/magazines/2016/7/204032-why-google-stores-billions-of-lines-of-code-in-a-single-repository/fulltext)
 - [How to do a code review](https://google.github.io/eng-practices/review/reviewer/)
@@ -21,6 +23,9 @@
 - [Minimal safe Bash script template](https://betterdev.blog/minimal-safe-bash-script-template/)
 - [Linux Hardening Guide](https://madaidans-insecurities.github.io/guides/linux-hardening.html)
 - [Envoy Life of a request](https://www.envoyproxy.io/docs/envoy/latest/intro/life_of_a_request)
+- [A brief history of the UUID](https://segment.com/blog/a-brief-history-of-the-uuid/?ct=t%28DevOpsLinks_64%29)
+- [How DNSSEC Works](https://www.cloudflare.com/en-gb/dns/dnssec/how-dnssec-works/)
+- [The DNSSEC Root Signing Ceremony](https://www.cloudflare.com/en-gb/dns/dnssec/root-signing-ceremony/)
 
 ## Tools To Try
 
@@ -37,3 +42,5 @@
 - [opa](https://github.com/open-policy-agent/opa): An open source, general-purpose policy engine.
 - [cfssl](https://github.com/cloudflare/cfssl): Cloudflare's PKI and TLS toolkit
 - [falco](https://github.com/falcosecurity/falco): Cloud Native Runtime Security
+- [backstage](https://github.com/backstage/backstage): An open platform for building developer portals
+- [rancher](https://github.com/rancher/rancher): Complete container management platform

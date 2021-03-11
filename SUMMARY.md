@@ -12,6 +12,7 @@
 - [Database Management System](fundamentals/06-database-management-system.md)
 - [Computer Networking](fundamentals/07-computer-networking.md)
 - [Infrastructure & Operations](fundamentals/08-infrastructures-and-operations.md)
+- [Systems Design](fundamentals/09-systems-design.md)
 
 ## Advanced
 
@@ -19,7 +20,6 @@
 - [Computer Networking](advanced/02-computer-networking.md)
 - [Information Security](advanced/03-information-security.md)
 - [Cryptography](advanced/04-cryptography.md)
-- [Systems design](advanced/05-systems-design.md)
 - [Distributed Systems](advanced/06-distributed-systems.md)
 - [Site Reliability Engineering](advanced/07-site-reliability-engineering.md)
 

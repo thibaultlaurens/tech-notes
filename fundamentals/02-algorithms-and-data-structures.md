@@ -708,4 +708,10 @@ A method of securely exchanging **cryptographic keys** over a public channel. Ea
 
 ### Linear programming (LP)
 
-A method to achieve the best outcome (such as maximum profit or lowest cost) in a **mathematical model** whose requirements are represented by **linear relationships**. Linear programming is a special case of mathematical programming (also known as mathematical optimization).
+A method to achieve the best outcome (such as maximum profit or lowest cost) in a **mathematical model** whose requirements are represented by **linear relationships**. Linear
+programming is a special case of mathematical programming (also known as mathematical optimization).
+
+## Resources
+
+- [Grokking Algorithms Book](https://www.manning.com/books/grokking-algorithms)
+- [Grokking Algorithms Code](https://github.com/egonSchiele/grokking_algorithms)
