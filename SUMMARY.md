@@ -20,8 +20,8 @@
 - [Computer Networking](advanced/02-computer-networking.md)
 - [Information Security](advanced/03-information-security.md)
 - [Cryptography](advanced/04-cryptography.md)
-- [Distributed Systems](advanced/06-distributed-systems.md)
-- [Site Reliability Engineering](advanced/07-site-reliability-engineering.md)
+- [Distributed Systems](advanced/05-distributed-systems.md)
+- [Site Reliability Engineering](advanced/06-site-reliability-engineering.md)
 
 ## Conferences
 
