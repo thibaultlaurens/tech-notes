@@ -25,9 +25,7 @@
 - [https://www.erlang-solutions.com/blog/an-introduction-to-rabbitmq-what-is-rabbitmq.html](https://www.erlang-solutions.com/blog/an-introduction-to-rabbitmq-what-is-rabbitmq.html)
 - [https://fabxc.org/tsdb/](https://fabxc.org/tsdb/)
 
-## Basic Knowledge
-
-### Fallacies of Distributed Computing
+## Fallacies of Distributed Computing
 
 Summary of this [article](https://pages.cs.wisc.edu/~zuyu/files/fallacies.pdf).
 
@@ -39,33 +37,6 @@ Summary of this [article](https://pages.cs.wisc.edu/~zuyu/files/fallacies.pdf).
 6. **There is one administrator**: Provide tools to diagnose and find problems. Include tools for monitoring on-going operations. Design interoperability contracts. Facilitate upgrades.
 7. **Transport cost is zero**: Going from the application level to the transport level is not free \(information need to be serialized into bits to get data into the wire\). The costs \(as in cash money\) for setting and running the network are not free: hardware, peoplel bandwidth etc.
 8. **The network is homogeneous**: should not cause too much trouble at the IP layer but is quite relevant at the application level. Assume interoperability will be needed sooner or later and be ready to support it from day one. Do not rely on proprietary protocols. Use standard technologies that are widely accepted.
-
-### Numbers Everyone Should Know
-
-Summary of this [article](https://everythingisdata.wordpress.com/2009/10/17/numbers-everyone-should-know/). A table of the cost of some fundamental operations to be able to do quick _Back-of-the-envelope analysis_ and _Microbenchmarking_.
-
-| Operation                                 | Time \(nanoseconds\) |
-| :---------------------------------------- | -------------------: |
-| L1 cache reference                        |                  0.5 |
-| Branch mispredict                         |                    5 |
-| L2 cache reference                        |                    7 |
-| Mutex lock/unlock                         |                   25 |
-| Main memory reference                     |                  100 |
-| System call overhead                      |                  400 |
-| Compress 1KB bytes with Zippy             |                3 000 |
-| Context switch between processes          |                3 000 |
-| Send 2K bytes over 1 Gbps network         |               20 000 |
-| fork\(\) \(statically-linked binary\)     |               70 000 |
-| fork\(\) \(dynamically-linked binary\)    |              160 000 |
-| Read 1MB sequentially from memory         |              250 000 |
-| Roundtrip within same datacenter          |              500 000 |
-| Disk seek                                 |           10 000 000 |
-| Read 1MB sequentially from disk           |           20 000 000 |
-| Send packet CA -&gt; Netherlands -&gt; CA |         150 000 0000 |
-
-### Introduction To Architecting Systems or Scale
-
-Combination of this [article](https://lethain.com/introduction-to-architecting-systems-for-scale/) and this [chapter](https://www.aosabook.org/en/distsys.html) of the Architecture of Open Source Applications book.
 
 ## Distributed Consensus Algorithms
 
