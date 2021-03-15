@@ -44,3 +44,5 @@
 - [falco](https://github.com/falcosecurity/falco): Cloud Native Runtime Security
 - [backstage](https://github.com/backstage/backstage): An open platform for building developer portals
 - [rancher](https://github.com/rancher/rancher): Complete container management platform
+- [fleet](https://github.com/linuxserver/fleet): Status and image fleet metadata management application for Docker images
+- [homer](https://github.com/bastienwirtz/homer): A very simple static homepage for your server.
