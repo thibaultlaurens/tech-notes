@@ -65,8 +65,6 @@ Rate limiting is generally put in place as a defensive measure for services. The
 - **Control flow**: Distribute work more evenly between workers by limiting the flow into each worker, preventing a single worker from accumulating a queue of unprocessed items while other workers are idle.
 - **Avoid excess costs**: If an underlying resource is capable of auto-scaling to meet demand, but the budget for that resource usage is limited; to prevent experiments from running out of control and accumulating large bills. Good practice to set initial quotas that can be increased on demand.
 
-![Rate Limiter](../.gitbook/assets/rate-limiter.png)
-
 ### Algorithms for Rate Limiting
 
 There are various algorithms for rate limiting, each with its benefits and drawbacks. Let’s review each of them so we can pick the best one for our needs.
@@ -95,6 +93,10 @@ The disadvantage of the leaky bucket:
 - It provides no guarantee that requests will be processed in a fixed amount of time.
 
 #### Fixed Window
+
+The algorithm divides the timeline into fix-sized time windows and assign a counter for each window. Each incoming request increments the counter for the window. Once the counter reaches the threshold, new requests are dropped until a new time window starts. The current timestamp floor typically defines the windows, so 12:00:03, with a 60 second window length, would be in the 12:00:00 window.
+
+![Fixed Window](../.gitbook/assets/fixed-window.png)
 
 #### Sliding Log
 
