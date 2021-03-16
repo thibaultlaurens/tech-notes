@@ -139,7 +139,7 @@ The disadvantage of the sliding window:
 
 - It results in an approximate value, but the value is very close to an accurate value.
 
-### Distributed Systems Considerations
+### Distributed Systems
 
 #### Synchronization Policies
 
