@@ -98,6 +98,17 @@ The algorithm divides the timeline into fix-sized time windows and assign a coun
 
 ![Fixed Window](../.gitbook/assets/fixed-window.png)
 
+The advantage of the fixed window:
+
+- Easy to implement.
+- Less memory requirement since we are storing the only count in a given time window.
+- Ensures more recent requests get processed without being starved by old requests (as the counter resets after every window).
+
+The disadvantage of the fixed window:
+
+- A single burst of traffic that occurs near the boundary of a window can result in twice the rate of requests being processed.
+- Many consumers waiting for a reset window can stampede the server at the same time.
+
 #### Sliding Log
 
 #### Sliding Window
