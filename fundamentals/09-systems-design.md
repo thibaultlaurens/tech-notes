@@ -73,11 +73,26 @@ There are various algorithms for rate limiting, each with its benefits and drawb
 
 #### Token Bucket
 
-The token bucket algorithm is based on an analogy of a fixed capacity bucket into which tokens are added at a fixed rate. When a request is made, the bucket is inspected to see if it contains sufficient tokens at that time. If so, the appropriate number of tokens are removed ("cashed in"), and the request is passed. The request is rejected if there are insufficient tokens in the bucket, and the contents of the bucket are not changed.
+The token bucket algorithm is based on an analogy of a **fixed capacity bucket into which tokens are added at a fixed rate**. When a request is made, the bucket is inspected to see if it contains sufficient tokens at that time. If so, the appropriate number of tokens are removed ("cashed in"), and the request is passed. The request is rejected if there are insufficient tokens in the bucket, and the contents of the bucket are not changed.
 
 ![Token Bucket](../.gitbook/assets/token-bucket.png)
 
 #### Leaky Bucket
+
+When registering a request, the system appends it to the end of a **FIFO queue**. Requests are pulled from the queue and processed at a regular interval. If the queue is full, then additional requests are discarded (or leaked).
+
+![Leaky Bucket](../.gitbook/assets/leaky-bucket.png)
+
+The advantage of the leaky bucket:
+
+- It smoothens burst of requests by processing them at a constant rate.
+- It is easy to implement.
+- The size of the queue used will be constant, hence it is memory efficient.
+
+The disadvantage of the leaky bucket:
+
+- A burst of traffic can fill-up the queue with old requests in a time slot and the new request might starve
+- It provides no guarantee that requests will be processed in a fixed amount of time.
 
 #### Fixed Window
 
