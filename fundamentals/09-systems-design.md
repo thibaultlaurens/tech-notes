@@ -1,6 +1,6 @@
 # Systems Design
 
-## Introduction Systems Design
+## Introduction to Systems Design
 
 - https://lethain.com/introduction-to-architecting-systems-for-scale/
 - https://www.aosabook.org/en/distsys.html
