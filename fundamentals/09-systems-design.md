@@ -77,24 +77,24 @@ The token bucket algorithm is based on an analogy of a **fixed capacity bucket i
 
 #### Leaky Bucket
 
-When registering a request, the system appends it to the end of a **FIFO queue**. Requests are pulled from the queue and processed at a regular interval. If the queue is full, then additional requests are discarded (or leaked).
+When registering a request, the system **appends it to the end of a FIFO queue**. Requests are pulled from the queue and **processed at a regular interval**. If the queue is full, then additional requests are discarded (or leaked).
 
 ![Leaky Bucket](../.gitbook/assets/leaky-bucket.png)
 
 The advantage of the leaky bucket:
 
+- Easy to implement.
 - It smoothens burst of requests by processing them at a constant rate.
-- It is easy to implement.
 - The size of the queue used will be constant, hence it is memory efficient.
 
 The disadvantage of the leaky bucket:
 
-- A burst of traffic can fill-up the queue with old requests in a time slot and the new request might starve
+- A burst of traffic can fill-up the queue with old requests in a time slot and the new request might starve.
 - It provides no guarantee that requests will be processed in a fixed amount of time.
 
 #### Fixed Window
 
-The algorithm divides the timeline into fix-sized time windows and assign a counter for each window. Each incoming request increments the counter for the window. Once the counter reaches the threshold, new requests are dropped until a new time window starts. The current timestamp floor typically defines the windows, so 12:00:03, with a 60 second window length, would be in the 12:00:00 window.
+The algorithm **divides the timeline into fix-sized time windows and assign a counter for each window**. Each incoming request increments the counter for the window. Once the counter reaches the threshold, new requests are dropped until a new time window starts. The current timestamp floor typically defines the windows, so 12:00:03, with a 60 second window length, would be in the 12:00:00 window.
 
 ![Fixed Window](../.gitbook/assets/fixed-window.png)
 
@@ -111,7 +111,33 @@ The disadvantage of the fixed window:
 
 #### Sliding Log
 
+The algorithm involves **tracking a time-stamped log for each consumer's request**. The system stores these logs in a time-sorted hash set or table. It also discards logs with timestamps beyond a threshold. When a new request comes in, we calculate the sum of logs to determine the request rate. If the request would exceed the threshold rate, then it is held.
+
+![Sliding Log](../.gitbook/assets/sliding-log.png)
+
+The advantage of the sliding log:
+
+- Does not suffer from the boundary conditions of fixed windows: enforcement of the rate limit will remain precise
+
+The disadvantage of the sliding log:
+
+- Can be costly to store a log for every request. It’s also expensive to compute because each request requires calculating a summation over the consumer’s prior requests, potentially across a cluster of servers. As a result, it does not scale well to handle large bursts of traffic or denial of service attacks.
+
 #### Sliding Window
+
+Sliding Window is a **hybrid approach that combines the fixed window algorithm's low processing cost and the sliding log's improved boundary conditions**. Like the fixed window algorithm, we track a counter for each fixed window. Next, we account for a weighted value of the previous window’s request rate based on the current timestamp to smooth out bursts of traffic. For example, if the current window is 25% through, we weigh the previous window’s count by 75%. The relatively small number of data points needed to track per key allows us to scale and distribute across large clusters.
+
+![Sliding Window](../.gitbook/assets/sliding-window.png)
+
+The advantage of the sliding window:
+
+- Easy to implement.
+- Soothens the traffic spikes problem we had in the fixed window method
+- It has very little memory usage: we need to store only 2 numbers per counter.
+
+The disadvantage of the sliding window:
+
+- It results in an approximate value, but the value is very close to an accurate value.
 
 ### System Architecture
 
