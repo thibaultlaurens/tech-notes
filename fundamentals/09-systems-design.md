@@ -54,6 +54,39 @@
 
 ## Rate Limiter
 
+### Introduction to rate limiting
+
+In a network system, a rate limiter is used to control the rate of traffic sent by a client or a service. In the HTTP world, a rate limiter limits the number of client requests allowed to be sent over a specified period. If the API request count exceed the threshold defined by the rate limiter, all the excess calls are rejected.
+
+Rate limiting is generally put in place as a defensive measure for services. The benefits of using an API rate limiter:
+
+- **Prevent resource starvation**: Caused by Denial of Service (DoS) attack, either intentional or unintentional.
+- **Manage policies and quotas**: When the capacity of a service is shared among many users or consumers, it can apply rate limiting per user to provide fair and reasonable use, without affecting other users.
+- **Control flow**: Distribute work more evenly between workers by limiting the flow into each worker, preventing a single worker from accumulating a queue of unprocessed items while other workers are idle.
+- **Avoid excess costs**: If an underlying resource is capable of auto-scaling to meet demand, but the budget for that resource usage is limited; to prevent experiments from running out of control and accumulating large bills. Good practice to set initial quotas that can be increased on demand.
+
+![Rate Limiter](../.gitbook/assets/rate-limiter.png)
+
+### Algorithms for Rate Limiting
+
+There are various algorithms for rate limiting, each with its benefits and drawbacks. Let’s review each of them so we can pick the best one for our needs.
+
+#### Token Bucket
+
+The token bucket algorithm is based on an analogy of a fixed capacity bucket into which tokens are added at a fixed rate. When a request is made, the bucket is inspected to see if it contains sufficient tokens at that time. If so, the appropriate number of tokens are removed ("cashed in"), and the request is passed. The request is rejected if there are insufficient tokens in the bucket, and the contents of the bucket are not changed.
+
+![Token Bucket](../.gitbook/assets/token-bucket.png)
+
+#### Leaky Bucket
+
+#### Fixed Window
+
+#### Sliding Log
+
+#### Sliding Window
+
+### System Architecture
+
 ## Consistent Hashing
 
 ## Key-Value Store
