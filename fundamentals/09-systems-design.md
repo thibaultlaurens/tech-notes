@@ -54,7 +54,7 @@
 
 ## Rate Limiter
 
-### Introduction to rate limiting
+### Introduction
 
 In a network system, a rate limiter is used to control the rate of traffic sent by a client or a service. In the HTTP world, a rate limiter limits the number of client requests allowed to be sent over a specified period. If the API request count exceed the threshold defined by the rate limiter, all the excess calls are rejected.
 
@@ -65,7 +65,7 @@ Rate limiting is generally put in place as a defensive measure for services. The
 - **Control flow**: Distribute work more evenly between workers by limiting the flow into each worker, preventing a single worker from accumulating a queue of unprocessed items while other workers are idle.
 - **Avoid excess costs**: If an underlying resource is capable of auto-scaling to meet demand, but the budget for that resource usage is limited; to prevent experiments from running out of control and accumulating large bills. Good practice to set initial quotas that can be increased on demand.
 
-### Algorithms for Rate Limiting
+### Algorithms
 
 There are various algorithms for rate limiting, each with its benefits and drawbacks. Let’s review each of them so we can pick the best one for our needs.
 
@@ -139,7 +139,7 @@ The disadvantage of the sliding window:
 
 - It results in an approximate value, but the value is very close to an accurate value.
 
-### Rate Limiting in Distributed Systems
+### Distributed Systems Considerations
 
 #### Synchronization Policies
 
