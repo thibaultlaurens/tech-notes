@@ -152,6 +152,7 @@ Resources:
 - Common good practices for go packages: [Style guideline for Go packages](https://rakyll.org/style-packages/)
 - [Network Programming with Go](https://tumregels.github.io/Network-Programming-with-Go/)
 - Collection of Technical Interview Questions solved with Go: [go-interview](https://github.com/shomali11/go-interview/blob/master/README.md)
+- [Darker Corners of Go](https://rytisbiel.com/2021/03/06/darker-corners-of-go/)
 
 ### Python
 
@@ -180,7 +181,7 @@ Resources:
 Resources:
 
 - [PEP8](https://www.python.org/dev/peps/pep-0008/)
-- [Google Style Guide](http://google.github.io/styleguide/pyguide.html)
+- [Google Python Style Guide](http://google.github.io/styleguide/pyguide.html)
 - [What the f\*ck Python!](https://github.com/satwikkansal/wtfpython)
 - [Python behind the scenes](https://tenthousandmeters.com/tag/python-behind-the-scenes/)
 
@@ -189,8 +190,15 @@ Resources:
 Resources:
 
 - [ECMAScript 6 features](https://github.com/lukehoban/es6features)
-- [AirBnb style guide](https://github.com/airbnb/javascript).
+- [AirBnb style guide](https://github.com/airbnb/javascript)
 - [The modern JavaScript tutorial](https://javascript.info/)
+- [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)
+
+### Bash
+
+Resources:
+
+- [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
 
 ## Templates
 
