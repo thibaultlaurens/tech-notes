@@ -8,10 +8,11 @@
 - [Algorithms & Data Structures](fundamentals/02-algorithms-and-data-structures.md)
 - [Language and Compiler Design](fundamentals/03-language-and-compiler-design.md)
 - [Software Engineering](fundamentals/04-software-engineering.md)
-- [Database Management System](fundamentals/05-database-management-system.md)
-- [Computer Networking](fundamentals/06-computer-networking.md)
-- [Infrastructure & Operations](fundamentals/07-infrastructures-and-operations.md)
-- [Systems Design](fundamentals/08-systems-design.md)
+- [Software Programming](fundamentals/05-software-programming.md)
+- [Database Management System](fundamentals/06-database-management-system.md)
+- [Computer Networking](fundamentals/07-computer-networking.md)
+- [Infrastructure & Operations](fundamentals/08-infrastructures-and-operations.md)
+- [Systems Design](fundamentals/09-systems-design.md)
 
 ## Advanced
 
