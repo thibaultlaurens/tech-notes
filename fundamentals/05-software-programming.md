@@ -32,6 +32,35 @@ The importance of the stack and the heap really comes into play with **non-garba
 
 ### Compiled And Interpreted Languages
 
+We depend on tools such as compilation and interpretation in order to get our written code into a form that the computer can execute. Code can either be executed natively through the operating system after it is converted to machine code (via compilation) or can be evaluated line by line through another program which handles executing the code instead of the operating system itself (via interpretation).
+
+A compiled language is one where the program, once compiled, is expressed in the instructions of the target machine; this machine code is undecipherable by humans. An interpreted language is one where the instructions are not directly executed by the target machine, but instead read and executed by some other program (which normally is written in the language of the native machine). Both compilation and interpretation offer benefits and pitfalls, which is mainly what we’re going to talk about.
+
+A lot of programming languages have both compiled and interpretated implementations, and thus we can’t really classify an entire language as being compiled or interpreted – only a specific **implementation**.
+
+#### Compiled Languages
+
+The major advantage of compiled languages over interpreted languages is their **execution speed**. Because compiled languages are converted directly into machine code, they run significantly faster and more efficiently than interpreted languages, especially considering the complexity of statements in some of the more modern scripting languages which are interpreted.
+
+Lower-level languages tend to be compiled because efficiency is usually more of a concern than cross-platform support. Additionally, because compiled languages are converted directly into machine code, this gives the developer much more control over hardware aspects such as memory management and CPU usage. Examples of pure compiled languages include C, C++, Rust and Go.
+
+Some of the pitfalls of compiled languages:
+
+- The extra step of manually compiling the program on every changes.
+- Platform dependent: the compiled machine code is specific to the machine that is executing it.
+
+#### Interpreted Languages
+
+In contrast to compiled languages, interpreted languages do not require machine code in order to execute the program; instead, interpreters will run through a program line by line and execute each command. In the early days of interpretation, this posed a disadvantage compared to compiled languages because it took significantly more time to execute the program, but with the advent of new technologies such as **just-in-time compilation**, this gap is narrowing. Examples of some common interpreted languages include PHP, Perl, Ruby, and Python.
+
+#### Bytecode Languages
+
+Bytecode languages are a type of programming language that fall under the categories of both compiled and interpreted languages because they employ both compilation and interpretation to execute code. The JVM (Java Virtual Machine) and the .Net framework are the most common examples of platforms running bytecode languages.
+
+In a bytecode language, the first step is to compile the current program from its human-readable language into bytecode. Bytecode is a form of **instruction set** that is designed to be efficiently executed by an interpreter and is composed of compact numeric codes, constants, and memory references. From this point, the bytecode is passed to a virtual machine which acts as the interpreter, which then proceeds to interpret the code as a standard interpreter would.
+
+In bytecode languages, there is a **delay** when the program is first run in order to compile the code into bytecode, but the execution speed is increased considerably compared to standard interpreted languages because the bytecode is optimized for the interpreter. The largest benefit of bytecode languages is platform independence with a much faster execution speed than interpreted languages. Similar to how interpreted languages make use of just-in-time compilation, the virtual machines that interpret bytecode can also make use of this technique to enhance execution speed.
+
 ### Concurrency
 
 ### Static vs Dynamic Type Checking
@@ -42,7 +71,7 @@ The importance of the stack and the heap really comes into play with **non-garba
 
 ### Garbage Collection
 
-## Programming Paradigms
+## Programming Paradigms (TODO)
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Programming_paradigm)
 - [Programming Paradigms](https://cs.lmu.edu/~ray/notes/paradigms/)
@@ -388,3 +417,7 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 - … <!-- numbers of links can vary -->
 
 ```
+
+## Resources
+
+- [Programming Concepts](https://thecodeboss.dev/2014/10/programming-concepts-the-stack-and-the-heap/)
