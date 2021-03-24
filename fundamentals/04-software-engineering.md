@@ -14,33 +14,33 @@
 
 ## Systems Development Life Cycle
 
-SDLC phases defined by the US Department of Justice:
+**SDLC** phases defined by the US Department of Justice:
 
-### Initiation
+### Initiation Phase
 
 - A business need or opportunity is identified.
 - A Project Manager is appointed.
 - The business need is documented in a **Concept Proposal**.
 
-### System Concept Development
+### System Concept Development Phase
 
 - Review of the **feasibility and appropriateness** of the concept.
 - A **Systems Boundary Document** identifies the scope of the system.
 - Senior Official approval is required.
 
-### Planning
+### Planning Phase
 
 - Describe **how the business will operate** once the system is implemented.
 - To ensure the products provide the required capability on-time and within budget, **project resources, activities, schedules, tools, and reviews are defined**.
 - Security certification and accreditation activities begin with the identification of system security requirements and the completion of a high level vulnerability assessment.
 
-### Requirements Analysis
+### Requirements Analysis Phase
 
 - **Functional user requirements** are formally defined and delineate the requirements in terms of **data, system performance, security, and maintainability requirements** for the system.
 - All requirements are defined to a level of detail sufficient for systems design to proceed.
 - All requirements need to be **measurable and testable** and relate to the business need or opportunity identified in the Initiation phase.
 
-### Design
+### Design Phase
 
 - The operating environment is established, major subsystems and their inputs and outputs are defined.
 - **Everything requiring user input or approval must be documented and reviewed by the user**.
@@ -49,13 +49,13 @@ SDLC phases defined by the US Department of Justice:
 - Each subsystem is partitioned into one or more design units or modules.
 - **Detailed logic specifications are prepared for each software module**.
 
-### Development
+### Development Phase
 
 - The detailed specifications produced during the design phase are **translated into hardware, communications, and executable software**.
 - Software shall be unit tested, integrated, and retested in a systematic manner.
 - Hardware is assembled and tested.
 
-### Integration and Test
+### Integration and Test Phase
 
 - The various components of the system are integrated and systematically tested.
 - The user tests the system to ensure that the **functional requirements are satisfied** by the developed or modified system.
@@ -67,26 +67,26 @@ SDLC phases defined by the US Department of Justice:
 - The system is **monitored for continued performance** in accordance with user requirements, and needed system modifications are incorporated.
 - The operational system is periodically assessed through In-Process Reviews to determine how the system can be made more efficient and effective.
 
-### Disposition
+### Disposition Phase
 
 - Ensure the **orderly termination** of the system and **preserve the vital information about the system** so that some or all of the information may be reactivated in the future if necessary.
 - Particular emphasis is given to proper **preservation of the data processed by the system**.
 
 ## Software Development Processes
 
-### Agile development
+### Agile Development
 
 A group of software development methodologies based on **iterative development**, where requirements and solutions evolve via collaboration between self-organizing cross-functional teams. It uses iterative development as a basis but advocates a lighter and more people-centric viewpoint than traditional approaches. Agile processes fundamentally incorporate iteration and the continuous feedback that it provides to successively refine and deliver a software system.
 
-### Incremental development
+### Incremental Development
 
 Various methods are acceptable for **combining linear and iterative systems development** methodologies, with the primary objective of each being to reduce inherent project risk by breaking a project into smaller segments and providing more ease-of-change during the development process. (ex: series of mini-Waterfalls for each parts of the system VS initial software concept, requirements analysis, and design of architecture and system core are defined via Waterfall, followed by incremental implementation etc.)
 
-### Rapid application development \(RAD\)
+### Rapid Application Development \(RAD\)
 
 Favors iterative development and the rapid construction of **prototypes** instead of large amounts of up-front planning. The "planning" of software developed using RAD is interleaved with writing the software itself. The lack of extensive pre-planning generally allows software to be written much faster, and makes it easier to change requirements.
 
-### Spiral development
+### Spiral Development
 
 Combines some key aspect of the waterfall model and rapid prototyping methodologies, in an effort to combine advantages of top-down and bottom-up concepts. It provided emphasis in a key area many felt had been neglected by other methodologies: deliberate **iterative risk analysis**, particularly suited to large-scale complex systems.
 
