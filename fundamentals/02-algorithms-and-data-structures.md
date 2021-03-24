@@ -740,7 +740,7 @@ Exemple of dynamic programming usages:
 - **Feature extraction** means converting an item \(like a fruit, a user, a picture\) into a list of numbers that can be compared.
 - Picking good features is an important part of a successful KNN algorithm, we should try to avoid **bias**.
 
-![KNN](../.gitbook/assets/knn.jpeg)
+![KNN](../.gitbook/assets/knn.jpg)
 
 ### Finding similarities
 
