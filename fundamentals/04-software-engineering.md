@@ -5,7 +5,7 @@
 ## Objectives
 
 - **Maintainability:** The software should be able to evolve to meet changing requirements.
-- **Correctness:** Requirements specified in the **SRS** should be correctly implemented.
+- **Correctness:** Requirements specified in the **SRS** (Software Requirements Specification) should be correctly implemented.
 - **Reusability:** The different modules of the product can easily be reused to develop new products.
 - **Testability:** The software facilitates both the establishment of test criteria and the evaluation of the software with respect to those criteria.
 - **Reliability:** The program can be expected to perform its desired function over an arbitrary time period.
@@ -17,6 +17,62 @@
 ### Systems Development Life Cycle
 
 SDLC phases defined by the US Department of Justice:
+
+#### Initiation
+
+- A business need or opportunity is identified.
+- A Project Manager is appointed.
+- The business need is documented in a **Concept Proposal**.
+
+#### System Concept Development
+
+- Review of the **feasibility and appropriateness** of the concept.
+- A **Systems Boundary Document** identifies the scope of the system.
+- Senior Official approval is required.
+
+#### Planning
+
+- Describe **how the business will operate** once the system is implemented.
+- To ensure the products provide the required capability on-time and within budget, **project resources, activities, schedules, tools, and reviews are defined**.
+- Security certification and accreditation activities begin with the identification of system security requirements and the completion of a high level vulnerability assessment.
+
+#### Requirements Analysis
+
+- **Functional user requirements** are formally defined and delineate the requirements in terms of **data, system performance, security, and maintainability requirements** for the system.
+- All requirements are defined to a level of detail sufficient for systems design to proceed.
+- All requirements need to be **measurable and testable** and relate to the business need or opportunity identified in the Initiation phase.
+
+#### Design
+
+- The operating environment is established, major subsystems and their inputs and outputs are defined.
+- **Everything requiring user input or approval must be documented and reviewed by the user**.
+- The physical characteristics of the system are specified and a detailed design is prepared.
+- Subsystems identified during design are used to create a detailed structure of the system.
+- Each subsystem is partitioned into one or more design units or modules.
+- **Detailed logic specifications are prepared for each software module**.
+
+#### Development
+
+- The detailed specifications produced during the design phase are **translated into hardware, communications, and executable software**.
+- Software shall be unit tested, integrated, and retested in a systematic manner.
+- Hardware is assembled and tested.
+
+#### Integration and Test
+
+- The various components of the system are integrated and systematically tested.
+- The user tests the system to ensure that the **functional requirements are satisfied** by the developed or modified system.
+- The system must undergo certification and accreditation activities.
+
+#### Operations and Maintenance
+
+- The system or system modifications are installed and made operational in a production environment.
+- The system is **monitored for continued performance** in accordance with user requirements, and needed system modifications are incorporated.
+- The operational system is periodically assessed through In-Process Reviews to determine how the system can be made more efficient and effective.
+
+#### Disposition
+
+- Ensure the **orderly termination** of the system and **preserve the vital information about the system** so that some or all of the information may be reactivated in the future if necessary.
+- Particular emphasis is given to proper **preservation of the data processed by the system**.
 
 - **Initiation**: The initiation of a project begins when a business need or opportunity is identified. A Project Manager should be appointed to manage the project. This business need is documented in a **Concept Proposal**.
 - **System Concept Development**: The approaches for accomplishing the concept are reviewed for **feasibility and appropriateness**. The **Systems Boundary Document** identifies the scope of the system and requires Senior Official approval.
