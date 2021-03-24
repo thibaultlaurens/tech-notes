@@ -63,6 +63,34 @@ In bytecode languages, there is a **delay** when the program is first run in ord
 
 ### Concurrency
 
+Concurrency is a property of systems (program, network, computer, etc.) in which **several computations** are executing simultaneously, and potentially interacting with each other. The computations start, run, and complete in overlapping time periods; they can run at the exact same instant (e.g. parallelism), but are not required to.
+
+Concurrency is implemented in programming logic by explicitly giving computations or processes within a system their own separate execution point or **thread** of control. This allows these computations to avoid waiting for all other computations to complete – as is the case in sequential programming.
+
+#### Concurrent vs Parallel Computing
+
+In parallel computing, execution occurs at the **exact same instant** typically with the goal of optimizing modular computations. This forces parallel computing to utilize more than one processing core because each thread of control is running simultaneously and takes up the core’s entire clock cycle for the duration of execution. This differs from concurrent computing which focuses on the lifetime of the computations overlapping and not necessarily their moments of execution. For example, the execution steps of a process can be broken up into time slices, and if the entire process doesn’t finish during its time slice then it can be paused while another process begins.
+
+#### Why use Concurrent Programming ?
+
+The ultimate benefit of concurrent programming is to utilize the resources of the executing machine to the fullest extent. This typically results in a speed boost in execution time because the program is no longer subject to normal sequential behavior. Multi-core CPUs optimize the total execution time of a process with multiple threads by spreading the load across all cores.
+
+Multithreading allows a program to run on multiple threads while still under the same parent process, thus providing the benefits of parallelization (faster execution, more efficient use of the computer’s resources, etc.) but also carrying with it the problems of parallelization too (discussed more below), which is why some languages make use of a mechanism called the **Global Interpreter Lock (GIL)**.
+
+The GIL is found most commonly in the standard implementations of Python and Ruby (CPython and Ruby MRI, respectively), and prevents more than one thread from executing at a time – even on multi-core processors. This might seem like a massive design flaw, but the GIL exists to prevent any thread-unsafe activities – meaning that all code executing on a thread does not manipulate any shared data structures in a manner that risks the safe execution of the other threads. Typically language implementations with a GIL increase the speed of single-threaded programs and make integrations with C libraries easier (because they are often not thread-safe), but all at the price of losing multithreading capabilities.
+
+However, if concurrency through a language implementation with a GIL is a strong concern, there are usually ways around this hindrance. While multithreading is not an option, applications interpreted through a GIL can still be designed to run on different processes entirely – each one with their own GIL.
+
+#### Problems with Concurrent Programming
+
+Because the idea behind concurrency is to execute computations simultaneously, the potential exists for these separate tasks to access and unintentionally distort shared resources among them (e.g. **thread-unsafe behavior**). When shared resources are accessed, a programmatic arbiter is typically involved which handles the allocation of those resources – but this type of activity can ultimately create indeterminacy and lead to issues such as **deadlock** (where multiple computations are waiting on each other to finish, and thus never do), and **starvation** (where resources are constantly denied to a certain task).
+
+This makes **coordination** when executing concurrent tasks extremely important because even areas where the developer has little control – such as memory allocation on the stack or the heap – can become indeterminate.
+
+#### The Future of Concurrent Programming
+
+Countless models have been built to better understand concurrency and describe various theories, such as the **Actor Model**, **CSP Model**, and **Disruptor Model**. However, just as with most programming concepts, there is no silver bullet for concurrent programming.
+
 ### Static vs Dynamic Type Checking
 
 ### Type Introspection and Reflection
