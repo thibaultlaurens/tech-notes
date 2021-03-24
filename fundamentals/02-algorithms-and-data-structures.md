@@ -729,26 +729,29 @@ Exemple of dynamic programming usages:
 - Diff tools \(like git diff\) use dynamic programming to find the difference between two files.
 - **Levenshtein distance** measures how similar two strings arewith dynamic programming \(use for spell checking, copyright check etc.\).
 
-## 10. K-nearest neighbors (WIP)
+## 10. K-nearest neighbors
 
 ### KNN
 
-- **KNN** is used for classification and regression and involves looking at k-nearest neighbors.
-- **Classification**: categorizarion into groups.
-- **Regression**: predicting a response \(like a number\).
+- **KNN** algorithm is used for classification and regression and involves looking at k-nearest neighbors (input of the algorithm).
+- **Classification**: categorizarion into groups. The output of KNN is a class membership. An object is classified by a plurality vote of its neighbors, with the object being assigned to the class most common among its k nearest neighbors.
+- **Regression**: predicting a response \(like a number\). The output of KNN is the property value for the object. This value is the average of the values of k nearest neighbors
+- A useful technique can be to assign **weights** to the contributions of the neighbors, so that the nearer neighbors contribute more to the average than the more distant ones. A common weighting scheme consists in giving each neighbor a weight of **1/d**, where d is the distance to the neighbor.
 - **Feature extraction** means converting an item \(like a fruit, a user, a picture\) into a list of numbers that can be compared.
 - Picking good features is an important part of a successful KNN algorithm, we should try to avoid **bias**.
 
+![KNN](../.gitbook/assets/knn.jpeg)
+
 ### Finding similarities
 
-- **Pythagorian formula** can be used to find distance between multiple points: `distance^2 = (x1-x2)^2 + (y1+y2)^2 + (z1-z2)^2`
+- **Pythagorian formula** can be used to find distance between multiple points: `distance^2 = (x1-x2)^2 + (y1+y2)^2 + (z1-z2)^2`.
 - **Cosine similarity** compares the angles between vectors to find similarities.
 
 ### Introduction to Machine Learning
 
 - **OCR** \(Optical Character Recognition\): Measures lines, points and curves on test characters.
-- **Training**: extracting features from a large set of data
-- **Naive Bayes classifiers** to figure out the probability of something being classified into "something"
+- **Training**: extracting features from a large set of data.
+- **Naive Bayes classifiers** to figure out the probability of something being classified into "something".
 
 ## 11. Where to go next
 
