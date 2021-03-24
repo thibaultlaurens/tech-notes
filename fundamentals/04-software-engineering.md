@@ -107,8 +107,6 @@ May be considered an extension of the waterfall model. Instead of moving down in
 - **Customer collaboration** over contract negotiation.
 - **Responding to change** over following a plan.
 
-## Software Requirements (TODO)
-
 ## Software Testing (TODO)
 
 - https://en.wikipedia.org/wiki/Software\_testing
@@ -169,7 +167,7 @@ May be considered an extension of the waterfall model. Instead of moving down in
 
 ### Garbage Collection
 
-## Best Practices
+## Programming Best Practices
 
 ### GoF Design Patterns
 
@@ -252,11 +250,11 @@ Additional labels for pre-release and build metadata are available as extensions
 
 [Regex](https://regex101.com/r/vkijKf/1/) to check a SemVer string: `^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$`
 
-## Languages
+## Programming Languages
 
 ### Erlang / Elixir
 
-Resources:
+#### Resources
 
 - High level concepts of Erlang: [The Zen of Erlang](https://ferd.ca/the-zen-of-erlang.html)
 - Learning tutorial: [Learn You Some Erlang for Great Good!](https://learnyousomeerlang.com/introduction#about-this-tutorial)
@@ -267,7 +265,7 @@ Resources:
 
 ### Golang
 
-[Go Proverbs](https://go-proverbs.github.io/):
+#### [Go Proverbs](https://go-proverbs.github.io/):
 
 - Don't communicate by sharing memory, share memory by communicating.
 - Concurrency is not parallelism.
@@ -289,7 +287,7 @@ Resources:
 - Documentation is for users.
 - Don't panic.
 
-Resources:
+#### Resources
 
 - Tips for writing clear, idiomatic Go code: [Effective Go](https://golang.org/doc/effective_go.html)
 - Common comments made during reviews of Go code: [CodeReviewComments](https://github.com/golang/go/wiki/CodeReviewComments)
@@ -307,7 +305,7 @@ Resources:
 
 ### Python
 
-[The Zen of Python](https://www.python.org/dev/peps/pep-0020/)
+#### [The Zen of Python](https://www.python.org/dev/peps/pep-0020/)
 
 - Beautiful is better than ugly.
 - Explicit is better than implicit.
@@ -329,7 +327,7 @@ Resources:
 - If the implementation is easy to explain, it may be a good idea.
 - Namespaces are one honking great idea -- let's do more of those!
 
-Resources:
+#### Resources
 
 - [PEP8](https://www.python.org/dev/peps/pep-0008/)
 - [Google Python Style Guide](http://google.github.io/styleguide/pyguide.html)
@@ -338,7 +336,7 @@ Resources:
 
 ### JavaScript
 
-Resources:
+#### Resources
 
 - [ECMAScript 6 features](https://github.com/lukehoban/es6features)
 - [AirBnb style guide](https://github.com/airbnb/javascript)
@@ -347,7 +345,7 @@ Resources:
 
 ### Bash
 
-Resources:
+#### Resources
 
 - [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
 
