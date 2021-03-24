@@ -6,7 +6,7 @@
 
 - [Git](fundamentals/01-git.md)
 - [Algorithms & Data Structures](fundamentals/02-algorithms-and-data-structures.md)
-- [Language and Compiler Design](fundamentals/03-language-and-compiler-design.md)
+- [Compiler Design](fundamentals/03-compiler-design.md)
 - [Software Engineering](fundamentals/04-software-engineering.md)
 - [Software Programming](fundamentals/05-software-programming.md)
 - [Database Management System](fundamentals/06-database-management-system.md)

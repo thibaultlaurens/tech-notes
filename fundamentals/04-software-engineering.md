@@ -61,7 +61,7 @@
 - The user tests the system to ensure that the **functional requirements are satisfied** by the developed or modified system.
 - The system must undergo certification and accreditation activities.
 
-### Operations and Maintenance
+### Operations and Maintenance Phase
 
 - The system or system modifications are installed and made operational in a production environment.
 - The system is **monitored for continued performance** in accordance with user requirements, and needed system modifications are incorporated.
@@ -151,4 +151,4 @@ May be considered an extension of the waterfall model. Instead of moving down in
 
 - [US Department of Justice SDLC](https://www.justice.gov/archive/jmd/irm/lifecycle/ch1.htm#para1.2)
 - [Agile Manifesto](https://agilemanifesto.org/)
-- [Software Engineering/](https://www.geeksforgeeks.org/software-engineering/)
+- [Geeks for Geeks Software Engineering](https://www.geeksforgeeks.org/software-engineering/)
