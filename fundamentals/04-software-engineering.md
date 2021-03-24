@@ -41,7 +41,7 @@
 
 ## Software Requirements
 
-## Software Testing and Debugging
+## Software Testing
 
 - https://en.wikipedia.org/wiki/Software\_testing
 
