@@ -535,6 +535,8 @@ In many situations, hash tables turn out to be on average more efficient than se
 
 Breadth-first search is an algorithm for **traversing** or **searching** tree or graph data structures. It starts at the **tree root** (or some arbitrary node of a graph, sometimes referred to as a **search key**), and explores all of the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level. It uses the opposite strategy of **Depth-first search (DFS)**, which instead explores the node branch as far as possible before being forced to backtrack and expand other nodes.
 
+![DFS vs BFS](../.gitbook/assets/bfs-vs-dfs.jpeg)
+
 How it works:
 
 1. Build hash tables that keep tracks of node's connections.
@@ -600,9 +602,18 @@ Running time:
 
 ## 7. Dijkstra’s algorithm (WIP)
 
-- **Weighted graph**
-- Breadth-first search is use to calculate the shortest path for an unweighted graph.
-- **Dijkstra's algorithm** is use to calculate the sortest path for a weighted graph.
+**Dijkstra's algorithm** is used to calculate the shortest path for a **weighted graph**.
+
+How it works:
+
+1. Find the "cheapest" node: the node we can get to with the smallest weight.
+2. Check whether there is a cheaper path to the neighbors of this node. If so, update their costs.
+3. Repeat until we have done this for every node in the graph.
+4. Calculate the final path.
+
+![Dijkstra](../.gitbook/assets/dijkstra.jpeg)
+
+- Dijkstra's algorithm works when **there is no cycles**.
 - Dijkstra's algorithm works when **all the weights are positive**.
 - In the case of negative weights, use the **Bellman-Ford algorithm**.
 
