@@ -265,7 +265,7 @@ Additional labels for pre-release and build metadata are available as extensions
 
 ### Golang
 
-#### [Go Proverbs](https://go-proverbs.github.io/):
+#### [Go Proverbs](https://go-proverbs.github.io/)
 
 - Don't communicate by sharing memory, share memory by communicating.
 - Concurrency is not parallelism.
