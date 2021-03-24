@@ -600,7 +600,7 @@ Running time:
 - Adding each node to the queue \(in constant O\(1\) for each node\) means **O\(vertices\)**
 - BFT running time is **O\(V + E\)**
 
-## 7. Dijkstra’s algorithm (WIP)
+## 7. Dijkstra’s algorithm
 
 **Dijkstra's algorithm** is used to calculate the shortest path for a **weighted graph**.
 
