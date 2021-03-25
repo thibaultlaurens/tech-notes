@@ -30,6 +30,8 @@ Compared to the stack, the heap is **slower to access** because variables are sc
 
 The importance of the stack and the heap really comes into play with **non-garbage collected languages** where you need to manage memory yourself – and while modern languages do abstract away the need for this, they’re all still doing it under the scenes. Different languages use the stack and the heap differently; C and C++ allocate to the stack automatically, and you as the developer manually have to allocate and deallocate from the heap, where more modern languages such as Go and Java allocate to both the stack and the heap automatically, and have a garbage collector that handles heap deallocation on its own. Languages like Ruby and Python allocate everything on the heap and don’t use a stack at all.
 
+![Memory layout of a process](../.gitbook/assets/stack-heap.jpg)
+
 ### Compiled And Interpreted Languages
 
 We depend on tools such as compilation and interpretation in order to get our written code into a form that the computer can execute. Code can either be executed natively through the operating system after it is converted to machine code (via compilation) or can be evaluated line by line through another program which handles executing the code instead of the operating system itself (via interpretation).
