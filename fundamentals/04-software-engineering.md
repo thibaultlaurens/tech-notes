@@ -92,7 +92,7 @@ Favors iterative development and the rapid construction of **prototypes** instea
 
 Combines some key aspect of the waterfall model and rapid prototyping methodologies, in an effort to combine advantages of top-down and bottom-up concepts. It provided emphasis in a key area many felt had been neglected by other methodologies: deliberate **iterative risk analysis**, particularly suited to large-scale complex systems.
 
-![Spiral](../.gitbook/assets/spiral.png)
+![Spiral](../.gitbook/assets/spiral.jpg)
 
 ### Waterfall Model
 
