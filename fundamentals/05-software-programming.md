@@ -73,6 +73,8 @@ Concurrency is implemented in programming logic by explicitly giving computation
 
 In parallel computing, execution occurs at the **exact same instant** typically with the goal of optimizing modular computations. This forces parallel computing to utilize more than one processing core because each thread of control is running simultaneously and takes up the core’s entire clock cycle for the duration of execution. This differs from concurrent computing which focuses on the lifetime of the computations overlapping and not necessarily their moments of execution. For example, the execution steps of a process can be broken up into time slices, and if the entire process doesn’t finish during its time slice then it can be paused while another process begins.
 
+![Concurrency and Parallelism](../.gitbook/assets/concurrent-parallelism.jpg)
+
 #### Why use Concurrent Programming ?
 
 The ultimate benefit of concurrent programming is to utilize the resources of the executing machine to the fullest extent. This typically results in a speed boost in execution time because the program is no longer subject to normal sequential behavior. Multi-core CPUs optimize the total execution time of a process with multiple threads by spreading the load across all cores.
