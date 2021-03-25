@@ -14,8 +14,6 @@
 
 ## Systems Development Life Cycle
 
-**SDLC** phases defined by the US Department of Justice:
-
 ### Initiation Phase
 
 - A business need or opportunity is identified.
@@ -78,6 +76,8 @@
 
 A group of software development methodologies based on **iterative development**, where requirements and solutions evolve via collaboration between self-organizing cross-functional teams. It uses iterative development as a basis but advocates a lighter and more people-centric viewpoint than traditional approaches. Agile processes fundamentally incorporate iteration and the continuous feedback that it provides to successively refine and deliver a software system.
 
+![Scrum](../.gitbook/assets/scrum.png)
+
 ### Incremental Development
 
 Various methods are acceptable for **combining linear and iterative systems development** methodologies, with the primary objective of each being to reduce inherent project risk by breaking a project into smaller segments and providing more ease-of-change during the development process. (ex: series of mini-Waterfalls for each parts of the system VS initial software concept, requirements analysis, and design of architecture and system core are defined via Waterfall, followed by incremental implementation etc.)
@@ -86,9 +86,13 @@ Various methods are acceptable for **combining linear and iterative systems deve
 
 Favors iterative development and the rapid construction of **prototypes** instead of large amounts of up-front planning. The "planning" of software developed using RAD is interleaved with writing the software itself. The lack of extensive pre-planning generally allows software to be written much faster, and makes it easier to change requirements.
 
+![RAD](../.gitbook/assets/rad.png)
+
 ### Spiral Development
 
 Combines some key aspect of the waterfall model and rapid prototyping methodologies, in an effort to combine advantages of top-down and bottom-up concepts. It provided emphasis in a key area many felt had been neglected by other methodologies: deliberate **iterative risk analysis**, particularly suited to large-scale complex systems.
+
+![Spiral](../.gitbook/assets/spiral.png)
 
 ### Waterfall Model
 
@@ -97,6 +101,8 @@ A sequential development approach, in which development is seen as flowing stead
 ### V-Shaped Model
 
 May be considered an extension of the waterfall model. Instead of moving down in a linear way, the process steps are bent upwards after the coding phase, to form the typical V shape. The V-Model demonstrates the relationships between each phase of the development life cycle and its **associated phase of testing**.
+
+![V-Shaped](../.gitbook/assets/v-shaped.webp)
 
 ## Agile Manifesto
 

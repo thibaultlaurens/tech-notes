@@ -10,8 +10,6 @@ Both the stack and the heap refer to different locations where memory is managed
 
 #### The Stack
 
-<div class=text-justify>
-
 The stack is a region of RAM that gets created on every thread that your application is running on. It works in a **LIFO** (Last In, First Out) manner, meaning that as soon as you allocate ("push") memory on to the stack, that chunk of memory will be the first to be deallocated ("popped"). Every time a function declares a new variable, it is "pushed" onto the stack, and after that variable falls out of scope (such as when the function closes), that variable will be deallocated from the stack automatically. Once a stack variable is freed, that region of memory becomes available for other stack variables.
 
 Due to the pushing and popping nature of the stack, memory management is very logical and is able to be handled completely by the CPU; this makes it very quick, especially since each byte in the stack tends to be reused very frequently which means it tends to be **mapped to the processor’s cache**.
@@ -19,8 +17,6 @@ Due to the pushing and popping nature of the stack, memory management is very lo
 However, there are some cons to this form of strict management. The size of the stack is a fixed value, and allocating more onto the stack than it can hold will result in a **stack overflow**. The size of the stack is decided when the thread is created, and each variable has a maximum size that it can occupy based on its data type; this prevents certain variables such as integers from ever growing beyond a certain value, and forces more complex data types such as arrays to specify their size prior to runtime since the stack won’t let them be resized. Variables allocated on the stack also are always **local** in nature because they are always next in line to be popped (unless more variables are pushed prior to the popping of earlier variables).
 
 Overall, the stack really exceeds in managing memory in the most efficient way possible – but what if you need data structures that can be dynamic, such as a dynamically sized array, or what if you need global variables? This is where the heap comes into play.
-
-</div>
 
 #### The Heap
 
