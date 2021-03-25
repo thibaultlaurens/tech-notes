@@ -102,7 +102,7 @@ A sequential development approach, in which development is seen as flowing stead
 
 May be considered an extension of the waterfall model. Instead of moving down in a linear way, the process steps are bent upwards after the coding phase, to form the typical V shape. The V-Model demonstrates the relationships between each phase of the development life cycle and its **associated phase of testing**.
 
-![V-Shaped](../.gitbook/assets/v-shaped.webp)
+![V-Shaped](../.gitbook/assets/v-model.png)
 
 ## Agile Manifesto
 
