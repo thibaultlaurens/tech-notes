@@ -246,9 +246,9 @@ Revision History
 
 ## Resources
 
+- [Geeks for Geeks Software Engineering](https://www.geeksforgeeks.org/software-engineering/)
 - [US Department of Justice SDLC](https://www.justice.gov/archive/jmd/irm/lifecycle/ch1.htm#para1.2)
 - [Agile Manifesto](https://agilemanifesto.org/)
-- [Geeks for Geeks Software Engineering](https://www.geeksforgeeks.org/software-engineering/)
 - [SRS Template](https://github.com/jam01/SRS-Template/blob/master/template.md)
 - [SDD Template](https://github.com/jam01/SDD-Template/blob/master/template.md)
 - [Wikipedia Sotfware Testing](https://en.wikipedia.org/wiki/Software_testing)
