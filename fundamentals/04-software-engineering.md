@@ -209,9 +209,7 @@ Revision History
 3. Appendixes
 ```
 
-## Software Testing (TODO)
-
-- https://en.wikipedia.org/wiki/Software\_testing
+## Software Testing
 
 ### The Seven Principles Of Software Testing
 
