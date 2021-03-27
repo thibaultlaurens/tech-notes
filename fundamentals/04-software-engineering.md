@@ -111,6 +111,104 @@ May be considered an extension of the waterfall model. Instead of moving down in
 - **Customer collaboration** over contract negotiation.
 - **Responding to change** over following a plan.
 
+## Software Requirements Specification (IEEE 29148)
+
+### Presentation
+
+A software requirements specification (**SRS**) is a description of a software system to be developed. It is modeled after **business requirements specification**. The software requirements specification lays out **functional** and **non-functional** requirements, and it may include a set of **use cases** that describe user interactions that the software must provide to the user for perfect interaction.
+
+Software requirements specification establishes the **basis for an agreement** between customers and contractors or suppliers on how the software product should function. Software requirements specification is a rigorous assessment of requirements before the more specific system design stages, and its goal is to reduce later redesign. It should also provide a realistic basis for estimating product costs, risks, and schedules.
+
+**Requirements smells**: subjective language, ambiguous adverbs and adjectives, superlatives and negative statements.
+
+### Structure
+
+```
+Revision History
+1. Introduction
+    1.1 Document Purpose
+    1.2 Product Scope
+    1.3 Definitions, Acronyms and Abbreviations
+    1.4 References
+    1.5 Document Overview
+2. Product Overview
+    2.1 Product Perspective
+    2.2 Product Functions
+    2.3 Product Constraints
+    2.4 User Characteristics
+    2.5 Assumptions and Dependencies
+    2.6 Apportioning of Requirements
+3. Requirements
+    3.1 External Interfaces
+        3.1.1 User Interfaces
+        3.1.2 Hardware Interfaces
+        3.1.3 Software Interfaces
+    3.2 Functional
+    3.3 Quality of Service
+        3.3.1 Performance
+        3.3.2 Security
+        3.3.3 Reliability
+        3.3.4 Availability
+    3.4 Compliance
+    3.5 Design and Implementation
+        3.5.1 Installation
+        3.5.2 Distribution
+        3.5.3 Maintainability
+        3.5.4 Reusability
+        3.5.5 Portability
+        3.5.6 Cost
+        3.5.7 Deadline
+        3.5.8 Proof of Concept
+4. Verification
+5. Appendixes
+```
+
+## Software Design Description (IEEE 1016)
+
+### Presentation
+
+A software design description (**SDD**) is a representation of a software design that is used to record design information, address design concerns and communicate to the design’s stakeholders. An SDD usually accompanies an architecture diagram with pointers to detailed feature specifications of smaller pieces of the design. Practically, the description is required to coordinate a large team under a single vision, needs to be a stable reference, and outline all parts of the software and how they will work.
+
+The SDD usually contains the following information:
+
+- The **data design** describes structures that reside within the software. Attributes and relationships between data objects dictate the choice of data structures.
+- The **architecture design** uses information flowing characteristics, and maps them into the program structure. The transformation mapping method is applied to exhibit distinct boundaries between incoming and outgoing data. The data flow diagrams allocate control input, processing and output along three separate modules.
+- The **interface design** describes internal and external program interfaces, as well as the design of the human interface.
+- The **procedural design** describes structured programming concepts using graphical, tabular and textual notations.
+
+### Structure
+
+```
+Revision History
+1. Introduction
+    1.1 Document Purpose
+    1.2 Product Scope
+    1.3 Definitions, Acronyms and Abbreviations
+    1.4 References
+    1.5 Document Overview
+2. Design
+    2.1 Stakeholder concerns
+    2.2 Selected Viewpoints
+        2.2.1 Context
+        2.2.2 Composition
+        2.2.3 Logical
+        2.2.4 Dependency
+        2.2.5 Information
+        2.2.6 Patterns
+        2.2.7 Interface
+        2.2.8 Structure
+        2.2.9 Interaction
+        2.2.10 State dynamics
+        2.2.11 Algorithm
+        2.2.12 Resources
+        2.2.13 Physical
+        2.2.14 Deployment
+        2.2.15 Concurrency
+        2.2.16 Behavioral
+    2.3 Design Views
+3. Appendixes
+```
+
 ## Software Testing (TODO)
 
 - https://en.wikipedia.org/wiki/Software\_testing
@@ -158,3 +256,5 @@ May be considered an extension of the waterfall model. Instead of moving down in
 - [US Department of Justice SDLC](https://www.justice.gov/archive/jmd/irm/lifecycle/ch1.htm#para1.2)
 - [Agile Manifesto](https://agilemanifesto.org/)
 - [Geeks for Geeks Software Engineering](https://www.geeksforgeeks.org/software-engineering/)
+- [SRS Template](https://github.com/jam01/SRS-Template/blob/master/template.md)
+- [SDD Template](https://github.com/jam01/SDD-Template/blob/master/template.md)
