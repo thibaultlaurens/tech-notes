@@ -78,6 +78,13 @@ A group of software development methodologies based on **iterative development**
 
 ![Scrum](../.gitbook/assets/scrum.png)
 
+**Agile Manifesto**:
+
+- **Individuals and interactions** over processes and tools.
+- **Working software** over comprehensive documentation.
+- **Customer collaboration** over contract negotiation.
+- **Responding to change** over following a plan.
+
 ### Incremental Development
 
 Various methods are acceptable for **combining linear and iterative systems development** methodologies, with the primary objective of each being to reduce inherent project risk by breaking a project into smaller segments and providing more ease-of-change during the development process. (ex: series of mini-Waterfalls for each parts of the system VS initial software concept, requirements analysis, and design of architecture and system core are defined via Waterfall, followed by incremental implementation etc.)
@@ -103,13 +110,6 @@ A sequential development approach, in which development is seen as flowing stead
 May be considered an extension of the waterfall model. Instead of moving down in a linear way, the process steps are bent upwards after the coding phase, to form the typical V shape. The V-Model demonstrates the relationships between each phase of the development life cycle and its **associated phase of testing**.
 
 ![V-Shaped](../.gitbook/assets/v-model.png)
-
-## Agile Manifesto
-
-- **Individuals and interactions** over processes and tools.
-- **Working software** over comprehensive documentation.
-- **Customer collaboration** over contract negotiation.
-- **Responding to change** over following a plan.
 
 ## Software Requirements Specification (IEEE 29148)
 
