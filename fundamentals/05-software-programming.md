@@ -2,11 +2,9 @@
 
 ## Programming Concepts (TODO)
 
-- [Programming Concepts](https://thecodeboss.dev/2014/10/programming-concepts-the-stack-and-the-heap/) \(faire toute la serie\)
+- [Programming Concepts](https://thecodeboss.dev/2014/10/programming-concepts-the-stack-and-the-heap/)
 
 ### The Stack And The Heap
-
-Both the stack and the heap refer to different locations where memory is managed, but with significantly different strategies.
 
 #### The Stack
 
