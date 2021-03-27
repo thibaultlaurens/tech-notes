@@ -225,31 +225,26 @@ Revision History
 
 ### Testing Approach
 
-**Static, Dynamic and passive testing:**
-
-**The "box" approach:**
-
-- White box testing
-- Black box testing
-- Grey box testing
+- **White box testing**: Verifies the internal structures or workings of a program, as opposed to the functionality exposed to the end-user. Choose inputs to exercise paths through the code and determine the appropriate outputs. It can be applied at the unit, integration, and system levels of the software testing process, it is usually done at the unit level. It can test paths within a unit, paths between units during integration, and between subsystems during a system–level test. Techniques used in white-box testing: API testing, Code coverage, Fault injection, Mutation testing, Static testing.
+- **Black box testing**: Treats the software as a "black box", examining functionality without any knowledge of internal implementation, without seeing the source code. The testers are only aware of what the software is supposed to do, not how it does it. Black-box testing methods include: equivalence partitioning, boundary value analysis, all-pairs testing, state transition tables, decision table testing, fuzz testing, model-based testing, use case testing, exploratory testing, and specification-based testing.
+- **Grey box testing**: Involves having knowledge of internal data structures and algorithms for purposes of designing tests while executing those tests at the black-box level. The tester will often have access to both the source code and the executable binary. Grey-box testing may also include reverse engineering to determine, for instance, boundary values or error messages.
 
 ### Testing Levels
 
-- Unit testing
-- Integration testing
-- System testing
-- Acceptance testing
+- **Unit testing**: Refers to tests that verify the functionality of a specific section of code, usually at the function level. In an object-oriented environment, this is usually at the class level, and the minimal unit tests include the constructors and destructors.
+- **Integration testing**: Any type of software testing that seeks to verify the interfaces between components against a software design.
+- **System testing**: A completely integrated system to verify that the system meets its requirements.
+- **Acceptance testing**: user acceptance, operational acceptance, contractual and regulatory acceptance, alpha and beta testing.
 
 ### Testing Types
 
-- Smoke testing
-- Regression testing
-- Acceptance testing
-- Alpha / Beta testing
-- Performance testing
-- Usability testing
-- Security testing
-- A/B testing
+- **Smoke testing**: Consists of minimal attempts to operate the software, designed to determine whether there are any basic problems that will prevent it from working at all.
+- **Regression testing**: Seeks to uncover software regressions, as degraded or lost features, including old bugs that have come back. Such regressions occur whenever software functionality that was previously working correctly, stops working as intended. Typically, regressions occur as an unintended consequence of program changes.
+- **Destructive testing**: Attempts to cause the software or a sub-system to fail.
+- **Performance testing**: Executed to determine how a system or sub-system performs in terms of responsiveness and stability under a particular workload. It can also serve to investigate, measure, validate or verify other quality attributes of the system, such as scalability, reliability and resource usage.
+- **Usability testing**: Check if the user interface is easy to use and understand.
+- **Security testing**: Prevents security vulnerabilities and system intrusion and validate specific requirements such as confidentiality, integrity, authentication, availability, authorization and non-repudiation.
+- **A/B testing**: A method of running a controlled experiment to determine if a proposed change is more effective than the current approach. Customers are routed to either a current version (control) of a feature, or to a modified version (treatment) and data is collected to determine which version is better at achieving the desired outcome.
 
 ## Resources
 
@@ -258,3 +253,4 @@ Revision History
 - [Geeks for Geeks Software Engineering](https://www.geeksforgeeks.org/software-engineering/)
 - [SRS Template](https://github.com/jam01/SRS-Template/blob/master/template.md)
 - [SDD Template](https://github.com/jam01/SDD-Template/blob/master/template.md)
+- [Wikipedia Sotfware Testing](https://en.wikipedia.org/wiki/Software_testing)
