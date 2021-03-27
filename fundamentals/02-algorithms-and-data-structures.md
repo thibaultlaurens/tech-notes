@@ -4,6 +4,8 @@ description: Based on the "Grokking Algorithms" book.
 
 # Algorithms & Data structures
 
+TLDR:
+
 - **Big O notation**: constant, linear, logarithmic, linearithmic, square root, quadratic, cubic, polynomial, exponential, factorial
 - **Data structures**: arrays, linked lists, hash tables, stacks, queues, graphs, sets
 - **Design**: Tail recursion and Divide and conquer
