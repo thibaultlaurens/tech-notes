@@ -757,13 +757,20 @@ Greedy algorithms may **fail to find the globally optimal solution** because the
 
 ### NP-Complete Problems
 
+They are problems for which **no efficient solution algorithm has been found**. Many significant computer-science problems belong to this class: the traveling salesman problem, satisfiability problems, graph-covering problems, etc.
+
+So-called easy problems can be solved by computer algorithms that run in **polynomial time**; i.e., for a problem of size n, the time or number of steps needed to find the solution is a polynomial function of n. Algorithms for solving hard problems, on the other hand, require times that are **exponential functions of the problem size n**. Polynomial-time algorithms are considered to be efficient, while exponential-time algorithms are considered inefficient.
+
+A problem is called **NP** (**nondeterministic polynomial**) if its solution can be guessed and verified in polynomial time; nondeterministic means that no particular rule is followed to make the guess. **If a problem is NP and all other NP problems are polynomial-time reducible to it, the problem is NP-complete**. Thus, finding an efficient algorithm for any NP-complete problem implies that an efficient algorithm can be found for all such problems, since any problem belonging to this class can be recast into any other member of the class.
 How do you tell if a problem is NP-complete ?
 
 - The algorithm runs quickly with a handful of items but really slows down with more items.
-- "All combinations of X" usually points to an NP-complete problem.
-- Do you have to calculate "every possible version" of X because you can't break it down into smaller sub-problems ? Might be NP-complete.
+- **All combinations of X** usually points to an NP-complete problem.
+- Do you have to calculate **every possible version of X** because you can't break it down into smaller sub-problems ? Might be NP-complete.
 - If your problem involves a sequence \(such as a sequence of cities, like in the travelling salesperson\), and it's hard to solve, it might be NP-complete.
 - Can you restate your problem as the set-covering problem or the travelling salesperson problem? Then your problem is definitely NP-complete.
+
+![P, NP, NP-complete, and NP-hard set of problems](../.gitbook/assets/np-problems.webp)
 
 ### Takeaway
 
