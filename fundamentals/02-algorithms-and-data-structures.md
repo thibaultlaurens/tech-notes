@@ -768,7 +768,7 @@ How do you tell if a problem is NP-complete ?
 - The algorithm runs quickly with a handful of items but really slows down with more items.
 - **All combinations of X** usually points to an NP-complete problem.
 - Do you have to calculate **every possible version of X** because you can't break it down into smaller sub-problems ? Might be NP-complete.
-- If your problem involves a sequence \(such as a sequence of cities, like in the travelling salesperson\), and it's hard to solve, it might be NP-complete.
+- If your problem **involves a sequence** \(such as a sequence of cities, like in the travelling salesperson\), and it's hard to solve, it might be NP-complete.
 - Can you restate your problem as the set-covering problem or the travelling salesperson problem? Then your problem is definitely NP-complete.
 
 ![P, NP, NP-complete, and NP-hard set of problems](../.gitbook/assets/np-problems.webp)
