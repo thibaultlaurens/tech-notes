@@ -65,7 +65,7 @@ Step 2: guessing 9 (index 8) in [9, 10]
 Found 9 at index is 8
 ```
 
-### Big O notation
+### Big O Notation
 
 Big O notation tells how **fast** an algorithm **running time grows**. Big O notation is written `O(n)` where `O` means "Big O" and `n` is the number of operations.
 
@@ -186,7 +186,7 @@ The order in which elements come off a stack gives rise to its alternative name,
 
 Considered as a linear data structure, or more abstractly a sequential collection, the push and pop operations occur only at **one end of the structure**, referred to as the **top** of the stack. This data structure makes it possible to implement a stack as a singly linked list and a pointer to the top element. A stack may be implemented to have a **bounded capacity**. If the stack is full and does not contain enough space to accept an entity to be pushed, the stack is then considered to be in an **overflow** state.
 
-### The call stack
+### The Call Stack
 
 A **call stack** is a stack data structure that stores information about the active subroutines of a computer program. A subroutine is a sequence of program instructions that perform a specific task, packaged as a unit and can be used in programs wherever the task should be performed. Think of a subroutine as a method or a function. The main purpose of the call stack is to keep track of the point to which each active subroutine should return control when it finishes executing.
 
@@ -201,7 +201,7 @@ The call stack is made up of **stack frames**, one for each method call. A stack
 
 Each method call creates its own stack frame, taking up space on the call stack. That's important because it can impact the **space complexity** of an algorithm. Especially when we use **recursion**.
 
-### Tail recursion
+### Tail Recursion
 
 A recursive function is **tail recursive** when recursive call is the last thing executed by the function. Modern compilers do **tail call elimination** to optimize the tail recursive code. The idea used by compilers to optimize tail-recursive functions is simple: since the recursive call is the last statement, there is nothing left to do in the current function, so saving the current function’s stack frame is of no use. Tail call elimination reduces **space complexity** of recursion **from O\(N\) to O\(1\)**. As function call is eliminated, no new stack frames are created and the function is executed in **constant memory space**.
 
@@ -492,7 +492,7 @@ When an insert is made such that the number of entries in a hash table exceeds t
 - At each insertion also move r elements from the old table to the new table.
 - When all elements are removed from the old table, deallocate it.
 
-### Use cases
+### Use Cases
 
 In many situations, hash tables turn out to be on average more efficient than search trees or any other table lookup structure. For this reason, they are widely used in many kinds of computer software, particularly for associative arrays, database indexing, caches, and sets.
 
@@ -531,7 +531,7 @@ In many situations, hash tables turn out to be on average more efficient than se
 
 ![Graphs](../.gitbook/assets/graphs.jpeg)
 
-### Breadth-first search \(BFS\)
+### Breadth-First Search \(BFS\)
 
 Breadth-first search is an algorithm for **traversing** or **searching** tree or graph data structures. It starts at the **tree root** (or some arbitrary node of a graph, sometimes referred to as a **search key**), and explores all of the neighbor nodes at the present depth prior to moving on to the nodes at the next depth level. It uses the opposite strategy of **Depth-first search (DFS)**, which instead explores the node branch as far as possible before being forced to backtrack and expand other nodes.
 
@@ -692,14 +692,22 @@ print(costs)
 - Dijkstra's algorithm works when **all the weights are positive**.
 - In the case of negative weights, use the **Bellman-Ford algorithm**.
 
-## 8. Greedy algorithms (WIP)
+## 8. Greedy algorithms
 
-- **Sets**
-- Operation on sets: **union**, **intersection**, **difference**
-- **Greedy algorithms** optimize locally, hoping to end up with a global optimum.
-- **NP-complete problems** have no know fast solution.
-- When dealing with NP-complete problems, your best bet is to use an **approximation algorithm**
-- Greedy algorithms are easy to write and fast to run, so they make good algorithms
+### Algebra Of Sets
+
+There are several fundamental operations for constructing new sets from given sets:
+
+- The **union** of A and B is the set of all things that are members of either A or B: `{1, 2} ∪ {2, 3} = {1, 2, 3}`.
+- The **intersection** of A and B is the set of all things that are members of both A and B: `{1, 2} ∩ {2, 3} = {2}`.
+- The **difference** of A and B is the set of all elements that are members of A, but not members of B: `{1, 2, 3, 4} \ {1, 3} = {2, 4}`.
+- The **product** of two sets A and B is the set of all ordered pairs (a, b) such that a is a member of A and b is a member of B: `{1, 2} × {1, 2} = {(1, 1), (1, 2), (2, 1), (2, 2)}`.
+
+![Set Theory Symbols](../.gitbook/assets/set-theory-symbols.jpg)
+
+### The Set-Covering Problem
+
+### NP-Complete Problems
 
 How do you tell if a problem is NP-complete ?
 
@@ -708,6 +716,13 @@ How do you tell if a problem is NP-complete ?
 - Do you have to calculate "every possible version" of X because you can't break it down into smaller sub-problems ? Might be NP-complete.
 - If your problem involves a sequence \(such as a sequence of cities, like in the travelling salesperson\), and it's hard to solve, it might be NP-complete.
 - Can you restate your problem as the set-covering problem or the travelling salesperson problem? Then your problem is definitely NP-complete.
+
+### Takeaway
+
+- **Greedy algorithms** optimize locally, hoping to end up with a global optimum.
+- **NP-complete problems** have no know fast solution.
+- When dealing with NP-complete problems, your best bet is to use an **approximation algorithm**.
+- Greedy algorithms are easy to write and fast to run, so they make good algorithms.
 
 ## 9. Dynamic programming (WIP)
 
