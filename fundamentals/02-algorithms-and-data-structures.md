@@ -707,6 +707,47 @@ There are several fundamental operations for constructing new sets from given se
 
 ### The Set-Covering Problem
 
+The problem: you are a radio show and you want to reach the maximum of listeners (inside US states), but with a minimum of number of stations to play on. Each station covers a region, and there are overlaps.
+
+The brute force approach with `O(2^n)`:
+
+- 1. List every possible subset of stations with a **power set**: so `2^n` possible subsets
+- 2. From these, pick the set with the smaller number of stations
+
+**Greedy algorithms** (approximation) to the recue! Let's build up a solution piece by piece, by always choosing the next piece that offers the most obvious and immediate benefit:
+
+- 1. Pick the station that covers the most state that hasn't been covered yet (even if some states have been covered already).
+- 2. Repeat until all states are covered.
+
+This will run un `O(n^2)` time.
+
+```python
+states_needed = set(["mt", "wa", "or", "id", "nv", "ut", "ca", "az"])
+
+stations = {}
+stations["kone"] = set(["id", "nv", "ut"])
+stations["ktwo"] = set(["wa", "id", "mt"])
+stations["kthree"] = set(["or", "nv", "ca"])
+stations["kfour"] = set(["nv", "ut"])
+stations["kfive"] = set(["ca", "az"])
+
+final_stations = set()
+
+while states_needed:
+  best_station = None
+  states_covered = set()
+  for station, states_for_station in stations.items():
+    covered = states_needed & states_for_station
+    if len(covered) > len(states_covered):
+      best_station = station
+      states_covered = covered
+
+  states_needed -= states_covered
+  final_stations.add(best_station)
+
+print(final_stations)
+```
+
 ### NP-Complete Problems
 
 How do you tell if a problem is NP-complete ?
