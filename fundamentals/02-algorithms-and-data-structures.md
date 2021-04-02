@@ -748,6 +748,13 @@ while states_needed:
 print(final_stations)
 ```
 
+If both of the properties below are true, a greedy algorithm can be used to solve the problem.
+
+- **Greedy choice property**: A global (overall) optimal solution can be reached by choosing the optimal choice at each step.
+- **Optimal substructure**: A problem has an optimal substructure if an optimal solution to the entire problem contains the optimal solutions to the sub-problems.
+
+Greedy algorithms may **fail to find the globally optimal solution** because they do not consider all the data.
+
 ### NP-Complete Problems
 
 How do you tell if a problem is NP-complete ?
