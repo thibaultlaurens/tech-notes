@@ -2,13 +2,13 @@
 description: Based on the "Grokking Algorithms" book.
 ---
 
-# Algorithms & Data structures
+# Algorithms & Data Structures
 
 TLDR:
 
 - **Big O notation**: constant, linear, logarithmic, linearithmic, square root, quadratic, cubic, polynomial, exponential, factorial
 - **Data structures**: arrays, linked lists, hash tables, stacks, queues, graphs, sets
-- **Design**: Tail recursion and Divide and conquer
+- **Tail recursion** and **Divide and conquer**
 - **Search algorithms**: linear search and binary search
 - **Sorting algorithms**: insertion sort and selection sort \(simple sorts\), merge sort and quicksort \(efficient sorts\)
 - **Graph algorithms**: Breadth-first search, Dijkstra’s algorithm, Bellman-Ford algorithm
@@ -30,7 +30,7 @@ def binary_search(list, item):
     start = 0
     end = len(list) - 1
 
-    step = 0
+    step = 1
     while (start <= end):
         # rounds the result down to the nearest whole number
         mid = (start + end) // 2
@@ -39,7 +39,7 @@ def binary_search(list, item):
 
         # found the item
         if item == guess:
-            print(f"Found {item} at index is {mid}")
+            print(f"Found {item} at index {mid}")
             return mid
 
         # guess is too high
@@ -59,17 +59,17 @@ binary_search(sorted_list, 9)
 Output:
 
 ```text
-Step 0: guessing 5 (index 4) in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-Step 1: guessing 8 (index 7) in [6, 7, 8, 9, 10]
-Step 2: guessing 9 (index 8) in [9, 10]
-Found 9 at index is 8
+Step 1: guessing 5 (index 4) in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+Step 2: guessing 8 (index 7) in [6, 7, 8, 9, 10]
+Step 3: guessing 9 (index 8) in [9, 10]
+Found 9 at index 8
 ```
 
 ### Big O Notation
 
 Big O notation tells how **fast** an algorithm **running time grows**. Big O notation is written `O(n)` where `O` means "Big O" and `n` is the number of operations.
 
-Big O establishes **worst-case run time**: A simple / linear search algorithm \(a sequential search is made over all items one by on\) takes **O\(n\)** time to run. However, if the first entry match the search, it only took **O\(1\)**.
+Big O establishes **worst-case run time**: A simple / linear search algorithm \(a sequential search is made over all items one by one\) takes **O\(n\)** time to run. However, if the first entry match the search, it only took **O\(1\)**.
 
 Some common Big O run times sorted from fastest to slowest:
 
@@ -107,10 +107,10 @@ Linked Lists:
 
 Selection sort is a simple **in-place comparison-based** sorting algorithm. It has **O\(n^2\)** complexity. The list is divided into two parts, the sorted part at the left end and the unsorted part at the right end. Initially, the sorted part is empty and the unsorted part is the entire list.
 
-The smallest element is selected from the unsorted array and **swapped** with the leftmost element, and that element becomes a part of the sorted array. This process continues moving unsorted array boundary by one element to the right.
+The smallest element is selected from the unsorted array and **swapped** with the leftmost element, and that element becomes a part of the sorted array. This process continues, moving unsorted array boundary by one element to the right.
 
 {% hint style="info" %}
-**In-place** means that the algorithm does **not use extra space for manipulating the input** but may require a small though non constant extra space for its operation. Usually, this space is O\(log n\), though sometimes anything in o\(n\) \(Smaller than linear\) is allowed.
+**In-place** means that the algorithm does **not use extra space for manipulating the input** but may require a small though non constant extra space for its operation. Usually, this space is O\(log n\), though sometimes anything in O\(n\) \(Smaller than linear\) is allowed.
 {% endhint %}
 
 Example with python 3:
@@ -157,7 +157,7 @@ Another simple sort algorithm is **insertion sort**. Insertion sort works by tak
 
 ## 3. Recursion
 
-### Recursion
+### Definition
 
 A program is called **recursive** when an entity calls itself \(vs an **iterative** program when there is a loop\).
 
@@ -179,12 +179,12 @@ countdown(10)
 
 A **Stack** is an **abstract data type** that serves as a collection of elements, with two main principal operations:
 
-- **Push**: Add an element to the collection
+- **Push**: Add an element to the collection.
 - **Pop**: Remove the most recently added element that was not yet removed.
 
 The order in which elements come off a stack gives rise to its alternative name, **LIFO** \(last in, first out\). Additionally, a **peek** operation may give access to the top without modifying the stack.
 
-Considered as a linear data structure, or more abstractly a sequential collection, the push and pop operations occur only at **one end of the structure**, referred to as the **top** of the stack. This data structure makes it possible to implement a stack as a singly linked list and a pointer to the top element. A stack may be implemented to have a **bounded capacity**. If the stack is full and does not contain enough space to accept an entity to be pushed, the stack is then considered to be in an **overflow** state.
+Considered as a linear data structure, or more abstractly a sequential collection, the push and pop operations occur only at **one end of the structure**, referred to as the **top** of the stack. This data structure makes it possible to implement a stack as a single linked list and a pointer to the top element. A stack may be implemented to have a **bounded capacity**. If the stack is full and does not contain enough space to accept an entity to be pushed, the stack is then considered to be in an **overflow** state.
 
 ### The Call Stack
 
@@ -214,7 +214,7 @@ def fact(n):
     return n * fact(n-1)
 ```
 
-The value returned by fact\(n-1\) is used in fact\(n\), so the call to fact\(n-1\) is not the last thing done by fact\(n\). A tail recursive function would use one more argument to accumulate the factorial value:
+The value returned by `fact(n-1)` is used in `fact(n)`, so the call to `fact(n-1)` is not the last thing done by `fact(n)`. A tail recursive function would use one more argument to accumulate the factorial value:
 
 ```python
 def fact(n, acc = 1):
@@ -429,7 +429,7 @@ index = hash % array_size
 
 In this method, the hash is independent of the array size and it is then reduced to an index (a number between 0 and array_size − 1) by using the modulo operator (%).
 
-### Hash functions
+### Hash Functions
 
 A hash function is any function that can be used to map a data set of an arbitrary size to a data set of a fixed size, which falls into the hash table. The values returned by a hash function are called hash values, hash codes, hash sums, or simply hashes. Properties of a hash function:
 
@@ -441,13 +441,13 @@ A hash function is any function that can be used to map a data set of an arbitra
 
 Ideally, the hash function will assign each key to a unique bucket, but most hash table designs employ an imperfect hash function, which might cause hash **collisions** where the hash function generates the same index for more than one key. Such collisions are typically accommodated in some way.
 
-#### Separate Chaining (open hashing)
+#### Separate Chaining (Open Hashing)
 
 Separate chaining is one of the most commonly used collision resolution techniques. It is usually implemented using **linked lists**. In separate chaining, each element of the hash table is a linked list. To store an element in the hash table you must insert it into a specific linked list. If there is any collision (i.e. two different elements have same hash value) then store both the elements in the same linked list.
 
 ![Hash collision resolved by separate chaining.](../.gitbook/assets/hash-collision-separate-chaining.png)
 
-#### Open Addressing (closed hashing)
+#### Open Addressing (Closed Hashing)
 
 In Open Addressing, instead of in linked lists, all entry records are stored in the array itself. When a new entry has to be inserted, the hash index of the hashed value is computed and then the array is examined (starting with the hashed index). If the slot at the hashed index is unoccupied, then the entry record is inserted in slot at the hashed index else it proceeds in some probe sequence **until it finds an unoccupied slot**.
 
@@ -506,7 +506,7 @@ In many situations, hash tables turn out to be on average more efficient than se
 - Hash tables are used for caching data (ex: a web server).
 - Hash tables are good for catching duplicates.
 
-## 6. Breadth-first Search
+## 6. Breadth-First Search
 
 ### Queues
 
@@ -600,7 +600,7 @@ Running time:
 - Adding each node to the queue \(in constant O\(1\) for each node\) means **O\(vertices\)**
 - BFT running time is **O\(V + E\)**
 
-## 7. Dijkstra’s algorithm
+## 7. Dijkstra’s Algorithm
 
 **Dijkstra's algorithm** is used to calculate the shortest path for a **weighted graph**.
 
@@ -692,7 +692,7 @@ print(costs)
 - Dijkstra's algorithm works when **all the weights are positive**.
 - In the case of negative weights, use the **Bellman-Ford algorithm**.
 
-## 8. Greedy algorithms
+## 8. Greedy Algorithms
 
 ### Algebra Of Sets
 
@@ -800,7 +800,7 @@ Exemple of dynamic programming usages:
 - Diff tools \(like git diff\) use dynamic programming to find the difference between two files.
 - **Levenshtein distance** measures how similar two strings arewith dynamic programming \(use for spell checking, copyright check etc.\).
 
-## 10. K-nearest neighbors
+## 10. K-Nearest Neighbors
 
 ### KNN
 
@@ -813,7 +813,7 @@ Exemple of dynamic programming usages:
 
 ![KNN](../.gitbook/assets/knn.jpg)
 
-### Finding similarities
+### Finding Similarities
 
 - **Pythagorian formula** can be used to find distance between multiple points: `distance^2 = (x1-x2)^2 + (y1+y2)^2 + (z1-z2)^2`.
 - **Cosine similarity** compares the angles between vectors to find similarities.
@@ -838,7 +838,7 @@ An index data structure storing a mapping from content, such as words or numbers
 
 A mathematical transform that decomposes functions depending on space or time into functions depending on spatial or temporal frequency, such as the expression of a musical chord in terms of the volumes and frequencies of its constituent notes.
 
-### Parallel algorithm
+### Parallel Algorithm
 
 An algorithm which can do **multiple operations in a given time**.
 
@@ -846,7 +846,7 @@ An algorithm which can do **multiple operations in a given time**.
 
 A **parallel and distributed** (across multiple machines) algorithm composed of a **map** function (a function applied to each member of the array) and a **reduce** function (which performs a summary operation).
 
-### Bloom filters
+### Bloom Filters
 
 A space-efficient **probabilistic data structure**, that is used to test whether an element is **a member of a set**. False positive matches are possible, but false negatives are not – in other words, a query returns either "possibly in set" or "definitely not in set".
 
@@ -862,11 +862,11 @@ A family of cryptographic functions that work by transforming the data using a *
 
 An algorithmic technique that hashes similar input items into the same "buckets" with high probability. (The number of buckets are much smaller than the universe of possible input items.) Since similar items end up in the same buckets, this technique can be used for **data clustering** and **nearest neighbor search**. It differs from conventional hashing techniques in that **hash collisions are maximized**, not minimized.
 
-### Diffie-Hellman key exchange
+### Diffie-Hellman Key Exchange
 
 A method of securely exchanging **cryptographic keys** over a public channel. Each party generates a public/private key pair and distributes the public key. After obtaining an authentic copy of each other's public keys, Alice and Bob can compute a shared secret offline. The shared secret can be used, for instance, as the key for a symmetric cipher.
 
-### Linear programming (LP)
+### Linear Programming (LP)
 
 A method to achieve the best outcome (such as maximum profit or lowest cost) in a **mathematical model** whose requirements are represented by **linear relationships**. Linear
 programming is a special case of mathematical programming (also known as mathematical optimization).
