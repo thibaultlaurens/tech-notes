@@ -242,8 +242,10 @@ Divide-and-conquer algorithms have three parts:
 ![divide-and-conquer](../.gitbook/assets/divide-and-conquer.png)
 
 {% hint style="info" %}
-The **Euclidean algorithm**, to compute the greatest common divisor \(**GCD**\) of two numbers by reducing the numbers to smaller and smaller equivalent subproblems, is one of the ancient algorithm using this technique \(which dates to several centuries BC\). Some authors consider that the name "divide and conquer" should be used only when each problem may generate two or more subproblems. The name **decrease and conquer** has been proposed instead for the single-subproblem class.
+The **Euclidean algorithm**, to compute the greatest common divisor \(**GCD**\) of two numbers by reducing the numbers to smaller and smaller equivalent subproblems, is one of the ancient algorithm using this technique \(which dates to several centuries BC\).
 {% endhint %}
+
+Some authors consider that the name "divide and conquer" should be used only when each problem may generate two or more subproblems. The name **decrease and conquer** has been proposed instead for the single-subproblem class
 
 Using Divide and Conquer to find Fibonacci numbers:
 
@@ -293,7 +295,7 @@ Example with python 3:
 
 ```python
 def merge_sort(arr):
-    # base caae
+    # base case
     if len(arr) <= 1:
         return arr
 
@@ -410,7 +412,7 @@ Partition of [8, 7] done with pivot 7: array is now [1, 2, 4, 5, 7, 8]
 {% hint style="info" %}
 **Pivot selection** is an important part of quick sort. Selecting the first or last element in a nearly sorted or reversed sorted array degrades the performance to **O\(n^2\)** because all the elements will go to only one partition. Pivot should be chosen **randomly** or by using the **median value of the first, the last, and the middle element** of the array.
 
-The **constant factor** in the big O notation is used to compare algorithms with the same run time. On the average case, let's say Quicksort run at **k1 \* n log n** and merge sort at **k2 \* n log n**. k1 is actually smaller than k2, so Quicksort would be faster than merge sort on average case, even though it is slower on worst case.
+The **constant factor** in the big O notation is used to compare algorithms with the same run time. On the average case, let's say Quicksort run at **k1 \* n log n** and merge sort at **k2 \* n log n**. k1 is actually smaller than k2 and Quicksort is faster than merge sort on average case, even though it is slower on worst case.
 {% endhint %}
 
 ## 5. Hash Tables
