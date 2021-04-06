@@ -5,7 +5,6 @@
 - [School Of SRE](https://linkedin.github.io/school-of-sre/)
 - [Teach Yourself Computer Science](https://teachyourselfcs.com/)
 - [Every Programmer Should Know](https://github.com/mtdvio/every-programmer-should-know)
-- [40 Key Computer Science Concepts Explained In Layman’s Terms](http://carlcheo.com/compsci)
 - [Coding Interview University](https://github.com/jwasham/coding-interview-university)
 - [Awesome Interviews](https://github.com/MaximAbramchuck/awesome-interview-questions)
 - [The System Design Primer](https://github.com/donnemartin/system-design-primer)
