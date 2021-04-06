@@ -782,19 +782,292 @@ How do you tell if a problem is NP-complete ?
 - When dealing with NP-complete problems, your best bet is to use an **approximation algorithm**.
 - Greedy algorithms are easy to write and fast to run, so they make good algorithms.
 
-## 9. Dynamic programming (WIP)
+## 9. Dynamic programming
+
+### Presentation
+
+Dynamic Programming (DP) is an algorithmic technique for **solving an optimization problem** by breaking it down into simpler subproblems and utilizing the fact that the optimal solution to the overall problem **depends upon the optimal solution to its subproblems**.
+
+Let’s take the example of the Fibonacci numbers. The first few Fibonacci numbers are 0, 1, 1, 2, 3, 5, and 8, and they continue on from there. If we are asked to calculate the nth Fibonacci number, we can do that with the following equation:
+
+```
+Fib(n) = Fib(n-1) + Fib(n-2), for n > 1
+```
+
+To solve the overall problem (i.e. Fib(n)), we broke it down into two smaller subproblems (which are Fib(n-1) and Fib(n-2)). This shows that we can use DP to solve this problem.
+
+### Characteristics
+
+Let’s take a look at what are the characteristics of a problem that tells us that we can apply DP to solve it.
+
+#### Overlapping Subproblems
+
+Subproblems are smaller versions of the original problem. Any problem has overlapping sub-problems if finding its solution involves solving the same subproblem multiple times. Take the example of the Fibonacci numbers; to find the fib(4), we need to break it down into the following sub-problems:
+
+![Recursion tree for calculating Fibonacci numbers](../.gitbook/assets/recursion-tree-fib.png)
+
+We can clearly see the overlapping subproblem pattern here: fib(2) has been evaluated twice and fib(1) has been evaluated three times.
+
+#### Optimal Substructure Property
+
+Any problem has optimal substructure property if its overall optimal solution can be constructed from the optimal solutions of its subproblems. For Fibonacci numbers, as we know:
+
+```
+Fib(n) = Fib(n-1) + Fib(n-2)
+```
+
+This clearly shows that a problem of size `n` has been reduced to subproblems of size `n-1` and `n-2`. Therefore, Fibonacci numbers have optimal substructure property.
+
+### Methods
+
+DP offers two methods to solve a problem.
+
+#### Top-down with Memoization
+
+In this approach, we try to solve the bigger problem by **recursively** finding the solution to smaller sub-problems. Whenever we solve a sub-problem, we cache its result so that we don't end up solving it repeatedly if it's called multiple times. Instead, we can just return the saved result. This technique of storing the results of already solved subproblems is called **Memoization**.
+
+Non-DP recursive solution for finding the nth Fibonacci number:
+
+```python
+def fib(n):
+  if n < 2:
+    return n
+
+  return fib(n - 1) + fib(n - 2)
+```
+
+Now, let’s make use of memoization with an array to store the already solved subproblems:
+
+```python
+def fib(n):
+  memoize = [-1 for x in range(n+1)]
+  return fib_rec(memoize, n)
+
+
+def fib_rec(memoize, n):
+  if n < 2:
+    return n
+
+  # if we have already solved this subproblem, simply return the result from the cache
+  if memoize[n] >= 0:
+    return memoize[n]
+
+  memoize[n] = fib_rec(memoize, n - 1) + fib_rec(memoize, n - 2)
+  return memoize[n]
+```
+
+#### Bottom-up with Tabulation
+
+Tabulation is the opposite of the top-down approach and avoids recursion. In this approach, we solve the problem "bottom-up" (i.e. by solving all the related sub-problems first). This is typically done by **filling up an n-dimensional table**. Based on the results in the table, the solution to the top/original problem is then computed.
+
+**Tabulation is the opposite of Memoization**, as in Memoization we solve the problem and maintain a map of already solved sub-problems. In other words, in memoization, we do it top-down in the sense that we solve the top problem first (which typically recurses down to solve the sub-problems).
+
+Let’s apply Tabulation to our example of Fibonacci numbers. Since we know that every Fibonacci number is the sum of the two preceding numbers, we can use this fact to populate our table. Here is the code for our bottom-up dynamic programming approach:
+
+```python
+def fib(n):
+  dp = [0, 1]
+  for i in range(2, n + 1):
+    dp.append(dp[i - 1] + dp[i - 2])
+
+  return dp[n]
+```
+
+### The Knapsack Problem
+
+#### Presentation
+
+Given the weights and profits of `N` items, we are asked to put these items in a knapsack that has a capacity `C`. The goal is to get the maximum profit from the items in the knapsack. Each item can only be selected once, as we don’t have multiple quantities of any item.
+
+Example, we want to carry some fruits in the knapsack to get maximum profit. Here are the weights and profits of the fruits:
+
+```
+Items: { Apple, Orange, Banana, Melon }
+Weights: { 2, 3, 1, 4 }
+Profits: { 4, 5, 3, 7 }
+Knapsack capacity: 5
+```
+
+Let’s try to put different combinations of fruits in the knapsack, such that their total weight is not more than 5:
+
+```
+Apple + Orange (total weight 5) => 9 profit
+Apple + Banana (total weight 3) => 7 profit
+Orange + Banana (total weight 4) => 8 profit
+Banana + Melon (total weight 5) => 10 profit
+```
+
+This shows that Banana + Melon is the best combination, as it gives us the maximum profit and the total weight does not exceed the capacity.
+
+#### Brute-Force
+
+A basic brute-force solution could be to **try all combinations of the given items** (as we did above), allowing us to choose the one with maximum profit and a weight that doesn’t exceed ‘C.’ Take the example of four items (A, B, C, and D), as shown in the diagram below. To try all the combinations, our algorithm will look like:
+
+```python
+def solve_knapsack(profits, weights, capacity):
+  return knapsack_recursive(profits, weights, capacity, 0)
+
+def knapsack_recursive(profits, weights, capacity, currentIndex):
+  # base checks
+  if capacity <= 0 or currentIndex >= len(profits):
+    return 0
+
+  # recursive call after choosing the element at the currentIndex
+  # if the weight of the element at currentIndex exceeds the capacity, we shouldn't process this
+  profit1 = 0
+  if weights[currentIndex] <= capacity:
+    profit1 = profits[currentIndex] + knapsack_recursive(profits, weights, capacity - weights[currentIndex], currentIndex + 1)
+
+  # recursive call after excluding the element at the currentIndex
+  profit2 = knapsack_recursive(profits, weights, capacity, currentIndex + 1)
+
+  return max(profit1, profit2)
+
+solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 7)
+```
+
+![Brute-force Knapsack](../.gitbook/assets/knapsack-brute-force.png)
+
+The above algorithm’s time complexity is exponential `O(2^n)`, where `n` represents the total number of items. This can also be confirmed from the above recursion tree. As we can see that we will have a total of `31` recursive calls – calculated through `(2n) + (2n)−1`, which is asymptotically equivalent to `O(2^n)`.
+
+The space complexity is `O(n)`. This space will be used to store the recursion stack. Since our recursive algorithm works in a **depth-first** fashion, which means, we can’t have more than `n` recursive calls on the call stack at any time.
+
+#### Top-down DP with Memoization
+
+We can use memoization to overcome the overlapping sub-problems. To reiterate, memoization is when we store the results of all the previously solved sub-problems and return the results from memory if we encounter a problem that has already been solved.
+
+Since we have two changing values (capacity and currentIndex) in our recursive function `knapsack_recursive`, we can use a two-dimensional array to store the results of all the solved sub-problems. We need to store results for every sub-array (i.e., for every possible index `i`) and for every possible capacity `c`.
+
+```python
+def solve_knapsack(profits, weights, capacity):
+  # create a two dimensional array for Memoization, each element is initialized to '-1'
+  dp = [[-1 for x in range(capacity+1)] for y in range(len(profits))]
+  return knapsack_recursive(dp, profits, weights, capacity, 0)
+
+def knapsack_recursive(dp, profits, weights, capacity, currentIndex):
+  # base checks
+  if capacity <= 0 or currentIndex >= len(profits):
+    return 0
+
+  # if we have already solved a similar problem, return the result from memory
+  if dp[currentIndex][capacity] != -1:
+    return dp[currentIndex][capacity]
+
+  # recursive call after choosing the element at the currentIndex
+  # if the weight of the element at currentIndex exceeds the capacity, we shouldn't process this
+  profit1 = 0
+  if weights[currentIndex] <= capacity:
+    profit1 = profits[currentIndex] + knapsack_recursive(dp, profits, weights, capacity - weights[currentIndex], currentIndex + 1)
+
+  # recursive call after excluding the element at the currentIndex
+  profit2 = knapsack_recursive(dp, profits, weights, capacity, currentIndex + 1)
+
+  dp[currentIndex][capacity] = max(profit1, profit2)
+  return dp[currentIndex][capacity]
+
+solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 7)
+```
+
+Since our memoization array `dp[profits.length][capacity+1]` stores the results for all the subproblems, we can conclude that we will not have more than `N∗C` subproblems (where `N` is the number of items and `C` is the knapsack capacity). This means that our time complexity will be `O(N∗C)`.
+
+The above algorithm will be using `O(N∗C)` space for the memoization array. Other than that, we will use `O(N)` space for the recursion call-stack. So the total space complexity will be `O(N∗C+N)`, which is asymptotically equivalent to `O(N∗C)`.
+
+#### Bottom-up DP with Tabulation
+
+Let’s try to populate our `dp[][]` array from the above solution, working in a bottom-up fashion. Essentially, we want to find the **maximum profit for every sub-array and for every possible capacity**. This means, `dp[i][c]` will represent the maximum knapsack profit for capacity `c` calculated from the first `i` items.
+
+So, for each item at index `i` (0 <= i < items.length) and capacity `c` (0 <= c <= capacity), we have two options:
+
+- Exclude the item at index `i`. In this case, we will take whatever profit we get from the sub-array excluding this item => `dp[i-1][c]`
+- Include the item at index `i` if its weight is not more than the capacity. In this case, we include its profit plus whatever profit we get from the remaining capacity and from remaining items => `profits[i] + dp[i-1]c-weights[i]]`
+
+Finally, our optimal solution will be the maximum of the above two values:
+
+```python
+dp[i][c] = max(dp[i-1][c], profits[i] + dp[i-1][c-weights[i]])
+```
+
+![Bottom-up DP Knapsack](../.gitbook/assets/knapssack-dp-grid.png)
+
+Here is the code for our bottom-up dynamic programming approach:
+
+```python
+def solve_knapsack(profits, weights, capacity):
+  # basic checks
+  n = len(profits)
+  if capacity <= 0 or n == 0 or len(weights) != n:
+    return 0
+
+  dp = [[0 for x in range(capacity+1)] for y in range(n)]
+
+  # populate the capacity = 0 columns, with '0' capacity we have '0' profit
+  for i in range(0, n):
+    dp[i][0] = 0
+
+  # if we have only one weight, we will take it if it is not more than the capacity
+  for c in range(0, capacity+1):
+    if weights[0] <= c:
+      dp[0][c] = profits[0]
+
+  # process all sub-arrays for all the capacities
+  for i in range(1, n):
+    for c in range(1, capacity+1):
+      profit1, profit2 = 0, 0
+      # include the item, if it is not more than the capacity
+      if weights[i] <= c:
+        profit1 = profits[i] + dp[i - 1][c - weights[i]]
+      # exclude the item
+      profit2 = dp[i - 1][c]
+      # take maximum
+      dp[i][c] = max(profit1, profit2)
+
+  # maximum profit will be at the bottom-right corner.
+  return dp[n - 1][capacity]
+
+solve_knapsack([1, 6, 10, 16], [1, 2, 3, 5], 7)
+```
+
+The above solution has a time and space complexity of `O(N∗C)`, where `N` represents total items, and `C` is the maximum capacity.
+
+Bonus: We can further improve our bottom-up DP solution with an algorithm that has `O(C)` space complexity.
+
+```python
+def solve_knapsack(profits, weights, capacity):
+  # basic checks
+  n = len(profits)
+  if capacity <= 0 or n == 0 or len(weights) != n:
+    return 0
+
+  dp = [0 for x in range(capacity+1)]
+
+  # if we have only one weight, we will take it if it is not more than the capacity
+  for c in range(0, capacity+1):
+    if weights[0] <= c:
+      dp[c] = profits[0]
+
+  # process all sub-arrays for all the capacities
+  for i in range(1, n):
+    for c in range(capacity, -1, -1):
+      profit1, profit2 = 0, 0
+      # include the item, if it is not more than the capacity
+      if weights[i] <= c:
+        profit1 = profits[i] + dp[c - weights[i]]
+      # exclude the item
+      profit2 = dp[c]
+      # take maximum
+      dp[c] = max(profit1, profit2)
+
+  return dp[capacity]
+```
+
+### Takeaway
 
 - Dynamic programming is useful when you are trying to optimize something given a **constraint**.
 - You can use dynamic programming when the problem can be broken down into **discrete subproblems**.
 - Every dynamic programming solution involves a **grid**.
 - The values in the cells are usually what you are trying to **optimize**.
 - Each cell is a subproblem, so think about **how you can divide your problem** into subproblems.
-- There is no formula for calculating a dynamic programming solution
-
-Exemple of dynamic programming problems:
-
-- The Knapsack problem:
-- Longest common substring and longest common subsequence
+- There is no formula for calculating a dynamic programming solution.
 
 Exemple of dynamic programming usages:
 
