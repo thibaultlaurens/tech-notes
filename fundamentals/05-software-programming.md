@@ -258,10 +258,9 @@ Additional labels for pre-release and build metadata are available as extensions
 
 - Tips for writing clear, idiomatic Go code: [Effective Go](https://golang.org/doc/effective_go.html)
 - Common comments made during reviews of Go code: [CodeReviewComments](https://github.com/golang/go/wiki/CodeReviewComments)
-- Small supplement to CodeReviewComments: [Idiomatic Go](https://dmitri.shuralyov.com/idiomatic-go#use-consistent-spelling-of-certain-words)
+- Small supplement to CodeReviewComments: [Idiomatic Go](https://dmitri.shuralyov.com/idiomatic-go)
 - Real world advice for writing maintainable Go programs: [Practical Go](https://dave.cheney.net/practical-go/presentations/qcon-china.html)
 - Language Design in the Service of Software Engineering: [Go at Google](https://talks.golang.org/2012/splash.article)
-- [Idiomatic Go](https://dmitri.shuralyov.com/idiomatic-go#use-consistent-spelling-of-certain-words)
 - The Dos and Don'ts of writing Go code at Uber: [Uber Go Style Guide](https://github.com/uber-go/guide/blob/master/style.md)
 - Programming in an industrial context: [Go for Industrial Programming](https://peter.bourgon.org/go-for-industrial-programming/)
 - Best practices from 2016: [Go best practices, six years in](https://peter.bourgon.org/go-best-practices-2016/)

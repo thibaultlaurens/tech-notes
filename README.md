@@ -45,4 +45,5 @@
 - [rancher](https://github.com/rancher/rancher): Complete container management platform
 - [fleet](https://github.com/linuxserver/fleet): Status and image fleet metadata management application for Docker images
 - [homer](https://github.com/bastienwirtz/homer): A very simple static homepage for your server.
-- [teleport](https://github.com/gravitational/teleport): Certificate authority and access plane for SSH, Kubernetes, web applications, and databases .
+- [teleport](https://github.com/gravitational/teleport): Certificate authority and access plane for SSH, Kubernetes, web applications, and databases.
+- [k6](https://github.com/k6io/k6): A modern load testing tool.
