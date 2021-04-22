@@ -37,10 +37,6 @@
 - [Security and Isolation API](lsp/03-security-and-isolation-api.md)
 - [Shared Libraries](lsp/04-shared-libraries.md)
 
-## Misc
-
-- [Resume Tips](misc/resume-tips.md)
-
 ## Todo
 
 - [Designing Data-Intensive Applications](todo/01-designing-data-intensive-applications.md)
