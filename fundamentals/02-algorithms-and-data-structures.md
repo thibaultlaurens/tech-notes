@@ -168,9 +168,9 @@ Example with python 3:
 ```python
 def countdown(i):
     print(i)
-    if i <= 1:      # Base case
+    if i <= 1:      # base case
         return
-    countdown(i-1)  # Recursive case
+    countdown(i-1)  # recursive case
 
 countdown(10)
 ```
@@ -257,11 +257,11 @@ Let's look at the Fibonacci numbers, starting with a list `[0, 1]`:
 
 ```text
 # [0, 1]
-0 + 1 = 1       # 3rd fib number
+0 + 1 = 1       # 2nd fib number
 # [0, 1, 1]
-1 + 1 = 2       # 4th fib number
+1 + 1 = 2       # 3rd fib number
 # [0, 1, 1, 2]
-2 + 1 = 3       # 5th fib number
+2 + 1 = 3       # 4th fib number
 # [0, 1, 1, 2, 3]
 ```
 
@@ -320,7 +320,7 @@ def merge_sort(arr):
             j += 1
         k += 1
 
-    # Checking if any element was left
+    # check if any element was left
     while i < len(left):
         arr[k] = left[i]
         i += 1
