@@ -150,17 +150,42 @@ Operationnal challenges from moving from monolithic architecture to (micro) serv
 
 ## Docker Best Practices
 
-- **Run as non-root user**: Decrease the risk that container -&gt; host priviledge escalation could occur \(**PoLP**: Principle of Least Priviledge\).
+### Images
+
+- **Use the smalest base image possible**: Use a scratch, distroless or alpine base image where possible, minimize the content of the image to reduce the attack surface.
+- **Build immutable images**: All executable code should be added at image build time and not at container runtime.
 - **Do not use a UID below 10000** In case of priviledge escalation, docker container UID may overlap with a more priviledged system user's UID.
 - **Use a static UID and GID**: To manipulate file permissions for files owned by your container. Use `10000:10001` such that `chown 10000:10001 files/` always works.
 - **Do not use latest, pin your image tags**: Pin image tags using a specific image version using `major.minor`, not major.minor.patch to get the latest security updates. Consider using [docker-lock](https://github.com/safe-waters/docker-lock).
 - **Use** [**tiny**](https://github.com/krallin/tini) **as your ENTRYPOINT**: To ensure that the default signal handlers work for the software you run in your Docker image and protect from software that accidentally creates zombie processes.
 - **Only store arguments in CMD**: The `ENTRYPOINT` should be the command name \(`ENTRYPOINT ["/sbin/tini", "--", "myapp"]`\) and `CMD` should only be arguments for the command \(`CMD ["--foo", "1", "--bar=2"]`\) so `docker run yourimage --help` works.
+- **Use daemonless builds** or at least, don't build docker images in production clusters.
 
-Resources:
+### Containers
+
+- **Run as non-root user**: Decrease the risk that container -&gt; host priviledge escalation could occur \(**PoLP**: Principle of Least Priviledge\).
+- **Do not run with --priviledged flag**: This will grant a bigger set of linux capabilities to the container. The default set is already bad enough.
+- **Drop capabilities that aren't needed for each containers**.
+- **Run immutable containers**: Run containers with `--read-only` flag if possible.
+- **Do not mount sensitive directories from the host**: `/`. `/etc`. `/bin` etc.
+- **Do not mount the docker socket**: `/var/run/docker.sock`send instructions to the docker daemon that runs as root on the host.
+- **Scan containers for vulnerabilities**.
+- **Use runtime protection tool**: To ensure that only expected executables are running inside containers.
+
+### Hosts
+
+- **Use hosts exclusively for running containers**.
+- **Use a Thin OS**: RancherOS, Fedora CoreOS or VMware Photon OS are specifically designed for container hosts.
+- **Keep the hosts up to date with the latest security releases**.
+- **Secrets**: Encrypt at rest and in transit, use a temporary filesystem, use a secret management system for storage and rotation.
+- **Enable SELinux if possible**: To constrain what a process is allowed to do in terms of system calls.
+- **Use Seccomp or AppArmor profile**: System-wide enforcement of policies that control the actions and resources that each program on a system can perform (Mandatory Access Control). The default docker profiles are a good starting point.
+
+### Resources
 
 - [Docker security](https://docs.docker.com/engine/security/)
 - [Dockerfile best practices ](https://github.com/hexops/dockerfile)
+- [Container Security](https://www.oreilly.com/library/view/container-security/9781492056690/)
 
 ## Chaos Engineering
 
