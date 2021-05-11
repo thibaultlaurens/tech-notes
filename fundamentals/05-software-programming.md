@@ -134,7 +134,7 @@ When we say that a language is statically or dynamically-typed, we are referring
 
 ### Type Introspection
 
-**Type introspection** is the ability of a program to examine the type or properties of an object at runtime. the types of questions you might want to ask are what type is this object, or is it an instance of a certain class. Some languages even allow you to traverse the inheritance hierarchy to see if your object is derived from an inherited base class.
+**Type introspection** is the ability of a program to **examine the type or properties of an object at runtime**. the types of questions you might want to ask are what type is this object, or is it an instance of a certain class. Some languages even allow you to traverse the inheritance hierarchy to see if your object is derived from an inherited base class.
 
 ```
 // java
@@ -150,7 +150,7 @@ If type introspection allows you to inspect an object’s attributes at runtime,
 
 Because of the runtime-specific nature of reflection, it’s more difficult to implement it in a statically-typed language compared to a dynamically-typed language. However, it is by no means impossible, as Java, C#, and other modern statically-typed languages allow for both type introspection and reflection.
 
-It's also easier to implement in interpreted language implementations compared to compiled language implementations. This is because as functions, objects, and other data structures are created and invoked at runtime, some sort of runtime system must exist to allocate memory properly. In an interpreted language implementation, this is simple because the interpreter by default usually provides the runtime system, but compiled language implementations must provide an additional compiler and interpreter that watches program execution throughout its runtime to allow reflection to occur.
+It's also easier to implement in interpreted language implementations compared to compiled language implementations. This is because as functions, objects, and other data structures are **created and invoked at runtime**, some sort of runtime system must exist to allocate memory properly. In an interpreted language implementation, this is simple because the interpreter by default usually provides the runtime system, but compiled language implementations must provide an additional compiler and interpreter that watches program execution throughout its runtime to allow reflection to occur.
 
 While it has obvious benefits, code that uses reflection is much more difficult to read than non-reflective code, it may make documentation-searching and debugging more difficult, and it opens the doors for really bad things such as code-injection via **eval** statements.
 
@@ -173,7 +173,25 @@ eval("Foo().hello()")
 
 ## Core Functionnal Programming Concepts
 
+### Functions are Pure
+
+### First-Class and Higher-Order Functions
+
+### Variables are Immutable
+
+### Referential Transparency
+
+### Lambda Calculus
+
 ## Garbage Collection
+
+### What is it ?
+
+### Why do we need it ?
+
+### How and when does it run ?
+
+### Algorithms
 
 ## Programming Best Practices
 
