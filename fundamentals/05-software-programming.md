@@ -193,6 +193,16 @@ eval("Foo().hello()")
 
 ### Algorithms
 
+#### Reference Counting
+
+#### Mark-Sweep
+
+#### Mark-Compact
+
+#### Copying
+
+#### Generational
+
 ## Programming Best Practices
 
 ### GoF Design Patterns
