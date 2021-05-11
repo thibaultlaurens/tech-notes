@@ -124,6 +124,8 @@ A **weakly-typed language** on the other hand is a language in which variables a
 
 Static/dynamic type system tells **when** type safety is enforced, and its strong/weak type system tells **how** type safety is enforced.
 
+![Type Checking vs Type Systems](../.gitbook/assets/type-checking.png)
+
 #### Static/Dynamic Type Checking == Compiled/Interpreted Languages
 
 When we say that a language is statically or dynamically-typed, we are referring to that **language as a whole**. For example, no matter what version of Java you use, it will always be statically-typed. This is different from whether a language is compiled or interpreted, because in that statement we are referring to a **specific language implementation**. In theory, any language can be compiled or interpreted. The most common implementation of Java is to compile to bytecode, and have the JVM interpret that bytecode – but there are other implementations of Java that compile directly to machine code or that just interpret Java code as is.
