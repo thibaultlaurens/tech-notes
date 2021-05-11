@@ -1,12 +1,8 @@
 # Software Programming
 
-## Programming Concepts (TODO)
+## The Stack And The Heap
 
-- [Programming Concepts](https://thecodeboss.dev/2014/10/programming-concepts-the-stack-and-the-heap/)
-
-### The Stack And The Heap
-
-#### The Stack
+### The Stack
 
 The stack is a region of RAM that gets created on every thread that your application is running on. It works in a **LIFO** (Last In, First Out) manner, meaning that as soon as you allocate ("push") memory on to the stack, that chunk of memory will be the first to be deallocated ("popped"). Every time a function declares a new variable, it is "pushed" onto the stack, and after that variable falls out of scope (such as when the function closes), that variable will be deallocated from the stack automatically. Once a stack variable is freed, that region of memory becomes available for other stack variables.
 
@@ -16,7 +12,7 @@ However, there are some cons to this form of strict management. The size of the 
 
 Overall, the stack really exceeds in managing memory in the most efficient way possible – but what if you need data structures that can be dynamic, such as a dynamically sized array, or what if you need global variables? This is where the heap comes into play.
 
-#### The Heap
+### The Heap
 
 The heap is a memory store also in RAM that allows for **dynamic memory allocation**, and does not work on a stack-like basis; it’s more just a hub of storage for you to define your variables. Once you allocate a memory location on the heap to store a variable, that variable can be **accessed at any point in time** not only throughout just the thread, but throughout the application’s entire life. This is how you can define global variables. Once an application ends, all of the allocated memory locations are reclaimed by the CPU. The heap size is set on application startup, but unlike the stack there are no size restrictions on the heap (aside from the physical limitations of your machine), which means it can get ever larger as you allocate more memory to it. This is what allows you to create variables that can be dynamically resized, since the heap itself is dynamic in size.
 
@@ -24,13 +20,13 @@ You interact with the heap via **references** (pointers), which are variables wh
 
 Compared to the stack, the heap is **slower to access** because variables are scattered across memory instead of always sitting at the top of the stack. Improper memory management of the heap can also slow down reading from the heap; however, this shouldn’t detract from its importance – you absolutely need it to create any type of variable dynamically, or global variables.
 
-#### Final Thoughts
+### Final Thoughts
 
 The importance of the stack and the heap really comes into play with **non-garbage collected languages** where you need to manage memory yourself – and while modern languages do abstract away the need for this, they’re all still doing it under the scene. Different languages use the stack and the heap differently; C and C++ allocate to the stack automatically, and you as the developer manually have to allocate and deallocate from the heap, where more modern languages such as Go and Java allocate to both the stack and the heap automatically, and have a garbage collector that handles heap deallocation on its own. Languages like Ruby and Python allocate everything on the heap and don’t use a stack at all.
 
 ![Memory layout of a process](../.gitbook/assets/stack-heap.jpg)
 
-### Compiled And Interpreted Languages
+## Compiled And Interpreted Languages
 
 We depend on tools such as compilation and interpretation in order to get our written code into a form that the computer can execute. Code can either be executed natively through the operating system after it is converted to machine code (via **compilation**) or can be evaluated line by line through another program which handles executing the code instead of the operating system itself (via **interpretation**).
 
@@ -38,7 +34,7 @@ A compiled language is one where the program, once compiled, is expressed in the
 
 A lot of programming languages have both compiled and interpretated implementations, and thus we can’t really classify an entire language as being compiled or interpreted – only a specific **implementation**.
 
-#### Compiled Languages
+### Compiled Languages
 
 The major advantage of compiled languages over interpreted languages is their **execution speed**. Because compiled languages are converted directly into machine code, they run significantly faster and more efficiently than interpreted languages, especially considering the complexity of statements in some of the more modern scripting languages which are interpreted.
 
@@ -49,11 +45,11 @@ Some of the pitfalls of compiled languages:
 - The extra step of manually compiling the program on every changes.
 - Platform dependent: the compiled machine code is specific to the machine that is executing it.
 
-#### Interpreted Languages
+### Interpreted Languages
 
 In contrast to compiled languages, interpreted languages do not require machine code in order to execute the program; instead, interpreters will run through a program line by line and execute each command. In the early days of interpretation, this posed a disadvantage compared to compiled languages because it took significantly more time to execute the program, but with the advent of new technologies such as **just-in-time compilation**, this gap is narrowing. Examples of some common interpreted languages include PHP, Perl, Ruby, and Python.
 
-#### Bytecode Languages
+### Bytecode Languages
 
 Bytecode languages are a type of programming language that fall under the categories of both compiled and interpreted languages because they employ both compilation and interpretation to execute code. The JVM (Java Virtual Machine) and the .Net framework are the most common examples of platforms running bytecode languages.
 
@@ -61,19 +57,19 @@ In a bytecode language, the first step is to compile the current program from it
 
 In bytecode languages, there is a **delay** when the program is first run in order to compile the code into bytecode, but the execution speed is increased considerably compared to standard interpreted languages because the bytecode is optimized for the interpreter. The largest benefit of bytecode languages is platform independence with a much faster execution speed than interpreted languages. Similar to how interpreted languages make use of just-in-time compilation, the virtual machines that interpret bytecode can also make use of this technique to enhance execution speed.
 
-### Concurrency
+## Concurrency
 
 Concurrency is a property of systems (program, network, computer, etc.) in which **several computations are executing simultaneously**, and potentially interacting with each other. The computations start, run, and complete in overlapping time periods; they can run at the exact same instant (e.g. **parallelism**), but are not required to.
 
 Concurrency is implemented in programming logic by explicitly giving computations or processes within a system their own separate execution point or **thread** of control. This allows these computations to avoid waiting for all other computations to complete – as is the case in sequential programming.
 
-#### Concurrent vs Parallel Computing
+### Concurrent vs Parallel Computing
 
 In parallel computing, execution occurs at the **exact same instant** typically with the goal of optimizing modular computations. This forces parallel computing to utilize more than one processing core because each thread of control is running simultaneously and takes up the core’s entire clock cycle for the duration of execution. This differs from concurrent computing which focuses on the lifetime of the computations overlapping and not necessarily their moments of execution. For example, the execution steps of a process can be broken up into time slices, and if the entire process doesn’t finish during its time slice then it can be paused while another process begins.
 
 ![Concurrency and Parallelism](../.gitbook/assets/concurrent-parallelism.jpg)
 
-#### Why use Concurrent Programming ?
+### Why use Concurrent Programming ?
 
 The ultimate benefit of concurrent programming is to utilize the resources of the executing machine to the fullest extent. This typically results in a speed boost in execution time because the program is no longer subject to normal sequential behavior. Multi-core CPUs optimize the total execution time of a process with multiple threads by spreading the load across all cores.
 
@@ -83,21 +79,21 @@ The GIL is found most commonly in the standard implementations of Python and Rub
 
 However, if concurrency through a language implementation with a GIL is a strong concern, there are usually ways around this hindrance. While multithreading is not an option, applications interpreted through a GIL can still be designed to run on different processes entirely – each one with their own GIL.
 
-#### Problems with Concurrent Programming
+### Problems
 
 Because the idea behind concurrency is to execute computations simultaneously, the potential exists for these separate tasks to access and unintentionally distort shared resources among them (e.g. **thread-unsafe behavior**). When shared resources are accessed, a programmatic **arbiter** is typically involved which handles the allocation of those resources – but this type of activity can ultimately create indeterminacy and lead to issues such as **deadlock** (where multiple computations are waiting on each other to finish, and thus never do), and **starvation** (where resources are constantly denied to a certain task).
 
 This makes **coordination** when executing concurrent tasks extremely important because even areas where the developer has little control – such as memory allocation on the stack or the heap – can become indeterminate.
 
-#### The Future of Concurrent Programming
+### The Future
 
 Countless models have been built to better understand concurrency and describe various theories, such as the **Actor Model**, **CSP Model**, and **Disruptor Model**. However, just as with most programming concepts, there is no silver bullet for concurrent programming.
 
-### Static vs Dynamic Type Checking
+## Static vs Dynamic Type Checking
 
 **Static** and **dynamic** type checking refer to two different type systems. A **type system** is a collection of rules that assign a property called **type** to various constructs in a computer program, such as variables, expressions, functions or modules, with the end goal of verifying that data is represented properly throughout a program.
 
-#### A Type
+### A Type
 
 Also known as a **data type**, is a classification identifying one of various types of data. A type describes the possible values of a structure (such as a variable), the semantic meaning of that structure, and how the values of that structure can be stored in memory. Types can be broken down into categories:
 
@@ -106,21 +102,21 @@ Also known as a **data type**, is a classification identifying one of various ty
 - **Abstract types**: types that do not have a specific implementation (can be represented via multiple types), such as a hashes, sets, queues, and stacks.
 - **Other types**: such as pointers (a type which holds as its value a reference to a different memory location) and functions.
 
-#### Type Checking
+### Type Checking
 
 **Type checking** is the process of verifying and enforcing the constraints of types. It can occur either at **compile time** (i.e. statically) or at **runtime** (i.e. dynamically). Type checking is all about ensuring that the program is **type-safe**, meaning that the possibility of type errors is kept to a minimum. A type error is an erroneous program behavior in which an operation occurs (or trys to occur) on a particular data type that it’s not meant to occur on (e.g. adding a string and an integer together).
 
-#### Static Type Checking
+### Static Type Checking
 
 A language is statically-typed if the type of a variable is known at **compile time**. The big benefit of static type checking is that it allows many type errors to be caught early in the development cycle. Static typing usually results in compiled code that executes more quickly because when the compiler knows the exact data types that are in use, it can produce optimized machine code (i.e. faster and/or using less memory).
 
-#### Dynamic Type Checking
+### Dynamic Type Checking
 
 Dynamic type checking is the process of verifying the type safety of a program at **runtime**. Most type-safe languages include some form of dynamic type checking, even if they also have a static type checker. The reason for this is that many useful features or properties are difficult or impossible to verify statically (e.g **downcasting**, **late binding**, **reflection**). Dynamic type checking typically results in less optimized code than does static type checking; it also includes the possibility of runtime type errors and forces runtime checks to occur for every execution of the program.
 
-#### Common Misconceptions
+### Common Misconceptions
 
-##### Static/Dynamic Type Checking == Strong/Weak Type Systems
+#### Static/Dynamic Type Checking == Strong/Weak Type Systems
 
 A **strongly-typed language** is one in which variables are bound to specific data types, and will result in type errors if types do not match up as expected in the expression – **regardless of when type checking occurs**. Strongly-typed languages have high degrees of **type safety**. We often associate statically-typed languages such as Java and C# as strongly-typed (which they are) because data types are explicitly defined when initializing a variable. Languages such as ruby, python, and javascript which do not require manually defining a type when declaring a variable make use of **type inference** – the ability to programmatically infer the type of a variable based on its value. Type inference is a separate feature of a language that is unrelated to any of its type systems.
 
@@ -128,48 +124,21 @@ A **weakly-typed language** on the other hand is a language in which variables a
 
 Static/dynamic type system tells **when** type safety is enforced, and its strong/weak type system tells **how** type safety is enforced.
 
-##### Static/Dynamic Type Checking == Compiled/Interpreted Languages
+#### Static/Dynamic Type Checking == Compiled/Interpreted Languages
 
 When we say that a language is statically or dynamically-typed, we are referring to that **language as a whole**. For example, no matter what version of Java you use, it will always be statically-typed. This is different from whether a language is compiled or interpreted, because in that statement we are referring to a **specific language implementation**. In theory, any language can be compiled or interpreted. The most common implementation of Java is to compile to bytecode, and have the JVM interpret that bytecode – but there are other implementations of Java that compile directly to machine code or that just interpret Java code as is.
 
-### Type Introspection and Reflection
+## Type Introspection and Reflection
 
-### Core functionnal Programming Concepts
+### Type Introspection
 
-### Garbage Collection
+### Reflection
 
-## Programming Paradigms (TODO)
+## Core Object Oriented Programming Concepts
 
-- [Wikipedia](https://en.wikipedia.org/wiki/Programming_paradigm)
-- [Programming Paradigms](https://cs.lmu.edu/~ray/notes/paradigms/)
-- [Introduction of Programming Paradigms](https://www.geeksforgeeks.org/introduction-of-programming-paradigms/)
-- [A must know for all programmers](https://hackr.io/blog/programming-paradigms)
+## Core Functionnal Programming Concepts
 
-### Imperative
-
-### Declarative
-
-### Structured
-
-### Procedural
-
-### Functional
-
-### Function-Level
-
-### Event-Driven
-
-### Flow-Driven
-
-### Logic
-
-### Constaint
-
-### Aspect-Oriented
-
-### Reflective
-
-### Array
+## Garbage Collection
 
 ## Programming Best Practices
 
@@ -483,7 +452,6 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 
 - [Link type] [Link to ADR] <!-- example: Refined by [ADR-0005](0005-example.md) -->
 - … <!-- numbers of links can vary -->
-
 ```
 
 ## Resources
