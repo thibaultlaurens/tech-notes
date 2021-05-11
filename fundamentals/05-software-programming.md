@@ -12,7 +12,7 @@ The stack is a region of RAM that gets created on every thread that your applica
 
 Due to the pushing and popping nature of the stack, memory management is very logical and is able to be handled completely by the CPU; this makes it very quick, especially since each byte in the stack tends to be reused very frequently which means it tends to be **mapped to the processor’s cache**.
 
-However, there are some cons to this form of strict management. The size of the stack is a fixed value, and allocating more onto the stack than it can hold will result in a **stack overflow**. The size of the stack is decided when the thread is created, and each variable has a maximum size that it can occupy based on its data type; this prevents certain variables such as integers from ever growing beyond a certain value, and forces more complex data types such as arrays to specify their size prior to runtime since the stack won’t let them be resized. Variables allocated on the stack also are always **local** in nature because they are always next in line to be popped (unless more variables are pushed prior to the popping of earlier variables).
+However, there are some cons to this form of strict management. The size of the stack is a fixed value, and allocating more onto the stack than it can hold will result in a **stack overflow**. The size of the stack is decided when the thread is created, and each variable has a maximum size that it can occupy based on its data type; this prevents certain variables such as integers from ever growing beyond a certain value, and forces more complex data types such as arrays to specify their size prior to runtime since the stack won’t let them be resized. Variables allocated on the stack are always **local** in nature because they are always next in line to be popped (unless more variables are pushed prior to the popping of earlier variables).
 
 Overall, the stack really exceeds in managing memory in the most efficient way possible – but what if you need data structures that can be dynamic, such as a dynamically sized array, or what if you need global variables? This is where the heap comes into play.
 
@@ -26,13 +26,13 @@ Compared to the stack, the heap is **slower to access** because variables are sc
 
 #### Final Thoughts
 
-The importance of the stack and the heap really comes into play with **non-garbage collected languages** where you need to manage memory yourself – and while modern languages do abstract away the need for this, they’re all still doing it under the scenes. Different languages use the stack and the heap differently; C and C++ allocate to the stack automatically, and you as the developer manually have to allocate and deallocate from the heap, where more modern languages such as Go and Java allocate to both the stack and the heap automatically, and have a garbage collector that handles heap deallocation on its own. Languages like Ruby and Python allocate everything on the heap and don’t use a stack at all.
+The importance of the stack and the heap really comes into play with **non-garbage collected languages** where you need to manage memory yourself – and while modern languages do abstract away the need for this, they’re all still doing it under the scene. Different languages use the stack and the heap differently; C and C++ allocate to the stack automatically, and you as the developer manually have to allocate and deallocate from the heap, where more modern languages such as Go and Java allocate to both the stack and the heap automatically, and have a garbage collector that handles heap deallocation on its own. Languages like Ruby and Python allocate everything on the heap and don’t use a stack at all.
 
 ![Memory layout of a process](../.gitbook/assets/stack-heap.jpg)
 
 ### Compiled And Interpreted Languages
 
-We depend on tools such as compilation and interpretation in order to get our written code into a form that the computer can execute. Code can either be executed natively through the operating system after it is converted to machine code (via compilation) or can be evaluated line by line through another program which handles executing the code instead of the operating system itself (via interpretation).
+We depend on tools such as compilation and interpretation in order to get our written code into a form that the computer can execute. Code can either be executed natively through the operating system after it is converted to machine code (via **compilation**) or can be evaluated line by line through another program which handles executing the code instead of the operating system itself (via **interpretation**).
 
 A compiled language is one where the program, once compiled, is expressed in the instructions of the target machine; this machine code is undecipherable by humans. An interpreted language is one where the instructions are not directly executed by the target machine, but instead read and executed by some other program (which normally is written in the language of the native machine). Both compilation and interpretation offer benefits and pitfalls, which is mainly what we’re going to talk about.
 
@@ -42,7 +42,7 @@ A lot of programming languages have both compiled and interpretated implementati
 
 The major advantage of compiled languages over interpreted languages is their **execution speed**. Because compiled languages are converted directly into machine code, they run significantly faster and more efficiently than interpreted languages, especially considering the complexity of statements in some of the more modern scripting languages which are interpreted.
 
-Lower-level languages tend to be compiled because efficiency is usually more of a concern than cross-platform support. Additionally, because compiled languages are converted directly into machine code, this gives the developer much more control over hardware aspects such as memory management and CPU usage. Examples of pure compiled languages include C, C++, Rust and Go.
+Lower-level languages tend to be compiled because efficiency is usually more of a concern than cross-platform support. Additionally, because compiled languages are converted directly into machine code, it gives the developer much more control over hardware aspects such as memory management and CPU usage. Examples of pure compiled languages include C, C++, Rust and Go.
 
 Some of the pitfalls of compiled languages:
 
@@ -63,7 +63,7 @@ In bytecode languages, there is a **delay** when the program is first run in ord
 
 ### Concurrency
 
-Concurrency is a property of systems (program, network, computer, etc.) in which **several computations** are executing simultaneously, and potentially interacting with each other. The computations start, run, and complete in overlapping time periods; they can run at the exact same instant (e.g. parallelism), but are not required to.
+Concurrency is a property of systems (program, network, computer, etc.) in which **several computations are executing simultaneously**, and potentially interacting with each other. The computations start, run, and complete in overlapping time periods; they can run at the exact same instant (e.g. **parallelism**), but are not required to.
 
 Concurrency is implemented in programming logic by explicitly giving computations or processes within a system their own separate execution point or **thread** of control. This allows these computations to avoid waiting for all other computations to complete – as is the case in sequential programming.
 
@@ -85,7 +85,7 @@ However, if concurrency through a language implementation with a GIL is a strong
 
 #### Problems with Concurrent Programming
 
-Because the idea behind concurrency is to execute computations simultaneously, the potential exists for these separate tasks to access and unintentionally distort shared resources among them (e.g. **thread-unsafe behavior**). When shared resources are accessed, a programmatic arbiter is typically involved which handles the allocation of those resources – but this type of activity can ultimately create indeterminacy and lead to issues such as **deadlock** (where multiple computations are waiting on each other to finish, and thus never do), and **starvation** (where resources are constantly denied to a certain task).
+Because the idea behind concurrency is to execute computations simultaneously, the potential exists for these separate tasks to access and unintentionally distort shared resources among them (e.g. **thread-unsafe behavior**). When shared resources are accessed, a programmatic **arbiter** is typically involved which handles the allocation of those resources – but this type of activity can ultimately create indeterminacy and lead to issues such as **deadlock** (where multiple computations are waiting on each other to finish, and thus never do), and **starvation** (where resources are constantly denied to a certain task).
 
 This makes **coordination** when executing concurrent tasks extremely important because even areas where the developer has little control – such as memory allocation on the stack or the heap – can become indeterminate.
 
@@ -94,6 +94,43 @@ This makes **coordination** when executing concurrent tasks extremely important 
 Countless models have been built to better understand concurrency and describe various theories, such as the **Actor Model**, **CSP Model**, and **Disruptor Model**. However, just as with most programming concepts, there is no silver bullet for concurrent programming.
 
 ### Static vs Dynamic Type Checking
+
+**Static** and **dynamic** type checking refer to two different type systems. A **type system** is a collection of rules that assign a property called **type** to various constructs in a computer program, such as variables, expressions, functions or modules, with the end goal of verifying that data is represented properly throughout a program.
+
+#### A Type
+
+Also known as a **data type**, is a classification identifying one of various types of data. A type describes the possible values of a structure (such as a variable), the semantic meaning of that structure, and how the values of that structure can be stored in memory. Types can be broken down into categories:
+
+- **Primitive types**: some common primitive types are integers, booleans, floats, and characters.
+- **Composite types**: composed of multiple primitive types (e.g. arrays). They are all considered **data structures**.
+- **Abstract types**: types that do not have a specific implementation (can be represented via multiple types), such as a hashes, sets, queues, and stacks.
+- **Other types**: such as pointers (a type which holds as its value a reference to a different memory location) and functions.
+
+#### Type Checking
+
+**Type checking** is the process of verifying and enforcing the constraints of types. It can occur either at **compile time** (i.e. statically) or at **runtime** (i.e. dynamically). Type checking is all about ensuring that the program is **type-safe**, meaning that the possibility of type errors is kept to a minimum. A type error is an erroneous program behavior in which an operation occurs (or trys to occur) on a particular data type that it’s not meant to occur on (e.g. adding a string and an integer together).
+
+#### Static Type Checking
+
+A language is statically-typed if the type of a variable is known at **compile time**. The big benefit of static type checking is that it allows many type errors to be caught early in the development cycle. Static typing usually results in compiled code that executes more quickly because when the compiler knows the exact data types that are in use, it can produce optimized machine code (i.e. faster and/or using less memory).
+
+#### Dynamic Type Checking
+
+Dynamic type checking is the process of verifying the type safety of a program at **runtime**. Most type-safe languages include some form of dynamic type checking, even if they also have a static type checker. The reason for this is that many useful features or properties are difficult or impossible to verify statically (e.g **downcasting**, **late binding**, **reflection**). Dynamic type checking typically results in less optimized code than does static type checking; it also includes the possibility of runtime type errors and forces runtime checks to occur for every execution of the program.
+
+#### Common Misconceptions
+
+##### Static/Dynamic Type Checking == Strong/Weak Type Systems
+
+A **strongly-typed language** is one in which variables are bound to specific data types, and will result in type errors if types do not match up as expected in the expression – **regardless of when type checking occurs**. Strongly-typed languages have high degrees of **type safety**. We often associate statically-typed languages such as Java and C# as strongly-typed (which they are) because data types are explicitly defined when initializing a variable. Languages such as ruby, python, and javascript which do not require manually defining a type when declaring a variable make use of **type inference** – the ability to programmatically infer the type of a variable based on its value. Type inference is a separate feature of a language that is unrelated to any of its type systems.
+
+A **weakly-typed language** on the other hand is a language in which variables are not bound to a specific data type; they still have a type, but type safety constraints are lower compared to strongly-typed languages. PHP (dynamically typed) and C (statically typed) are two weakly-typed languages.
+
+Static/dynamic type system tells **when** type safety is enforced, and its strong/weak type system tells **how** type safety is enforced.
+
+##### Static/Dynamic Type Checking == Compiled/Interpreted Languages
+
+When we say that a language is statically or dynamically-typed, we are referring to that **language as a whole**. For example, no matter what version of Java you use, it will always be statically-typed. This is different from whether a language is compiled or interpreted, because in that statement we are referring to a **specific language implementation**. In theory, any language can be compiled or interpreted. The most common implementation of Java is to compile to bytecode, and have the JVM interpret that bytecode – but there are other implementations of Java that compile directly to machine code or that just interpret Java code as is.
 
 ### Type Introspection and Reflection
 
