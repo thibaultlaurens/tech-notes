@@ -25,6 +25,7 @@
 - [How DNSSEC Works](https://www.cloudflare.com/en-gb/dns/dnssec/how-dnssec-works/)
 - [The DNSSEC Root Signing Ceremony](https://www.cloudflare.com/en-gb/dns/dnssec/root-signing-ceremony/)
 - [The Architecture Behind A One-Person Tech Startup](https://anthonynsimon.com/blog/one-man-saas-architecture/)
+- [Kubernetes The Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
 
 ## Tools To Try
 
@@ -43,3 +44,5 @@
 - [homer](https://github.com/bastienwirtz/homer): A very simple static homepage for your server.
 - [teleport](https://github.com/gravitational/teleport): Certificate authority and access plane for SSH, Kubernetes, web applications, and databases.
 - [k6](https://github.com/k6io/k6): A modern load testing tool.
+- [dua-cli](https://github.com/Byron/dua-cli): View disk space usage and delete unwanted data, fast.
+- [fig](https://github.com/withfig/autocomplete): Fig adds autocomplete to your terminal.
