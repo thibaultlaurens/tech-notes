@@ -2,6 +2,7 @@
 
 ## Main Resources
 
+- [Stanford CS Curriculum](https://docs.google.com/spreadsheets/d/1zfw8nPvJeewxcFUBpKUKmAVE8PjnJI7H0CKimdQXxr0/htmlview)
 - [School Of SRE](https://linkedin.github.io/school-of-sre/)
 - [Teach Yourself Computer Science](https://teachyourselfcs.com/)
 - [Every Programmer Should Know](https://github.com/mtdvio/every-programmer-should-know)
