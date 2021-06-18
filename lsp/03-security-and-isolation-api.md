@@ -35,4 +35,3 @@ description: Michael Kerrisk - man7.org
 ## ~~53. Docker unpluged~~
 
 ## ~~54. SELinux~~
-

@@ -4,9 +4,9 @@
 
 ### Core Pillars of Information Security (CIA)
 
-- **Confidentiality**: only allow access to data for which the user is permitted
-- **Integrity**: ensure data is not tampered or altered by unauthorized users
-- **Availability**: ensure systems and data are available to authorized users when they need it
+- **Confidentiality**: only allow access to data for which the user is permitted.
+- **Integrity**: ensure data is not tampered or altered by unauthorized users.
+- **Availability**: ensure systems and data are available to authorized users when they need it.
 
 ### Security Principles
 
