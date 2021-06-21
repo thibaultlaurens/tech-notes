@@ -1,5 +1,5 @@
 ---
-description: SANS - SEC522
+description: SANS SEC522 - sans.org
 ---
 
 # Defending Web Applications
