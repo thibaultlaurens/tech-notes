@@ -2,7 +2,7 @@
 description: Based on the "Grokking Algorithms" book.
 ---
 
-# Algorithms & Data Structures
+# Algorithms & Data Structures I
 
 TLDR:
 

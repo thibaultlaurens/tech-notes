@@ -2,26 +2,33 @@
 
 - [Home](README.md)
 
-## Fundamentals
+## Notes
 
-- [Git](fundamentals/01-git.md)
-- [Algorithms & Data Structures](fundamentals/02-algorithms-and-data-structures.md)
-- [Compiler Design](fundamentals/03-compiler-design.md)
-- [Software Engineering](fundamentals/04-software-engineering.md)
-- [Software Programming](fundamentals/05-software-programming.md)
-- [Database Management System](fundamentals/06-database-management-system.md)
-- [Computer Networking](fundamentals/07-computer-networking.md)
-- [Infrastructure & Operations](fundamentals/08-infrastructures-and-operations.md)
-- [Systems Design](fundamentals/09-systems-design.md)
+- [Git](notes/01-git.md)
+- [Algorithms & Data Structures I](notes/02-algorithms-and-data-structures.md)
+- [Algorithms & Data Structures II](notes/03-algorithms-and-data-structures.md)
+- [Compiler Design](notes/04-compiler-design.md)
+- [Software Engineering](notes/05-software-engineering.md)
+- [Software Programming](notes/06-software-programming.md)
+- [Database Management System](notes/07-database-management-system.md)
+- [Computer Networking I](notes/08-computer-networking.md)
+- [Computer Networking II](notes/09-computer-networking.md)
+- [Information Security](notes/10-information-security.md)
+- [Cryptography](notes/11-cryptography.md)
+- [Infrastructure & Operations](notes/12-infrastructures-and-operations.md)
+- [Systems Design](notes/13-systems-design.md)
+- [Distributed Systems](notes/14-distributed-systems.md)
 
-## Advanced
+## Training
 
-- [Algorithms & Data Structures](advanced/01-algorithms-and-data-structures.md)
-- [Computer Networking](advanced/02-computer-networking.md)
-- [Information Security](advanced/03-information-security.md)
-- [Cryptography](advanced/04-cryptography.md)
-- [Distributed Systems](advanced/05-distributed-systems.md)
-- [Site Reliability Engineering](advanced/06-site-reliability-engineering.md)
+- [Linux System Programming](training/01-linux-system-programming.md)
+- [Defending Web Applications](training/02-defending-web-applications.md)
+
+## Books
+
+- [Site Reliability Engineering](books/01-site-reliability-engineering.md)
+- [Designing Data-Intensive Applications](books/02-designing-data-intensive-applications.md)
+- [Structure and Interpretation of Computer Programs](books/03-structure-and-interpretation-of-computer-programs.md)
 
 ## Conferences
 
@@ -29,15 +36,3 @@
 - [HACK.LU 2019](conferences/02-hack.lu-2019.md)
 - [DFRWS EU 2020](conferences/03-dfrws-eu-2020.md)
 - [QCON PLUS 2020](conferences/04-qcon-plus-2020.md)
-
-## Linux System Programming
-
-- [Files, Processes and Signals](lsp/01-files-processes-signals-and-timers.md)
-- [Threads and IPC](lsp/02-threads-and-ipc.md)
-- [Security and Isolation API](lsp/03-security-and-isolation-api.md)
-- [Shared Libraries](lsp/04-shared-libraries.md)
-
-## Todo
-
-- [Designing Data-Intensive Applications](todo/01-designing-data-intensive-applications.md)
-- [Structure and Interpretation of Computer Programs](todo/02-structure-and-interpretation-of-computer-programs.md)
