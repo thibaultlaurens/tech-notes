@@ -279,3 +279,141 @@ description: SANS - SEC522
 
 - Risks: size, filename, extension, file type, executable content, virus or malware etc.
 - Handling strategy: limit size in HTML, check size, mime type, filename and rename on the server, save outside of web directories (maybe in isolated environment), watch for path traversal, review file content, run a virus scan etc.
+
+## 4. Web Services and Frontend Security
+
+### Web Services Introduction
+
+- Web Service: programmatic interface that can be accessed over the network using open protocols and standards.
+- **SOAP** (Simple Object Access Protocol): communication protocol for exchanging XML based messages (an envelope around XML messages). Used to call remote procedures.
+- **WSDL** (Web Services Description Language): XML-formatted language to describe web services: functions, location, how to invoke etc.
+- **WSDL Enumeration**: WSDL tells the attackers where and how to attack the web service.
+- WSDL enumeration prevention: **avoid WSDL publishing** or limit to an IP range.
+
+### Web Services Attacks and Defense
+
+- XML Schema validation with **DTD** (Document Type Declaration) and **XSD** (XML Schema Definition)
+- **XLM Schema Poisoning**: compromised schema can lead to DoS attacks and unexpected data into the XML processing component.
+- **Entities** (DTD): user-defined names and replacement text can be created.
+- **External Entity Attack**: entities can refer to external content, files on the internet or any network the XML parser has access to.
+- DTD related attacks mitigation: **disable the use of DTD**.
+
+### Web Services Security Features and Options
+
+- **XML Parameter Tampering**: feed malicious data into each XML parameter (SQL injection, XSS etc.)
+- **Oversized Payload**: many parsers load the entire document into memory space.
+- SOAP error reporting can reveal a lot of information.
+- **SAML** (Security Assertion Markup Language): XML-based standard for exchanging security information between entities (authentication and authorization). Works by trust assertions.
+- DOM based XML parsing: parse the file into a tree structure
+- SAX (Simple API for XML) based XML parsing: parse a document as a stream (low memory requirement), tag by tag and element by element. **Vulnerable to overwriting by injection**.
+- **Web Services Firewall**: perform schame validation and XML parameter validation, understand common web services attacks.
+- **WS-Security**: effort to standardize authentication, authorization, encryption and digital signature.
+- **XML Signature**: can sign for elements within the XML documents, can have different elements signed by different parties.
+- **XML Encryption**: Designed from the ground up to protect XML documents: encrypt full XML files or single elements or only contents on an element.
+- Vulnerability: SAML with XML parsing (via comments) `<NameID>user<!- comment -->@example.com</NameID>`
+
+### AJAX Intro
+
+- AJAX: Asynchronous JavaScript and XML.
+- **XHR** (XMLHttpRequest): an API that JavaScript can use to transfer data between server and client.
+- **Fetch API**: improved XHR, based on promises instead of callbacks. Credentials (cookies) and Cross-Origin requests are disabled by default.
+- **Same Origin Policy**: prevents scripts from one website getting or setting properties (XHR, DOM, cookies) of a different site (doesnt prevent to send a request but to read the response).
+- AJAX security: same as before, but with bigger attack surface (on the server and the client). Attacker knowledge increases substantially.
+- **AJAX XSS Worms**: a persistent XSS exploit code can now upload more XSS in the background.
+- **AJAX CSRF**: in strict HTML/HTTP environments, only the GET method can be triggered, AJAX allows POST method to be triggered to a remote site (e.g via XSS).
+- **AJAX + XSS + CSRF make anti-CSRF tokens useless** (XHR requests, token parsing and token submits). MySpace SAMY worm example.
+
+### Cross-Domain AJAX
+
+- Proxy: a proxy can be used to get around Same Origin Policy (attacker can exploit the trust between the 2 bridging parties).
+- **JSONP** (JSON with Padding): SOP does not allow cross-domain use of resources, executing scripts on different domain is allowed -> put parentheses around javascript, let the client execute the code. Very poor in security.
+- XHR Version 2: now able to make cross-domain HTTP requests (SOP was too limiting), new W3C access control syntax.
+- **W3C Access Control** aka **CORS** (Cross-Origin Resource Sharing): standard that describes how a resource should be used for cross-domain access. Usage of **HTTP headers to communicate access control decisions**.
+- **Pre-Flight requests**: required for requests other than `GET`/`POST`/`HEAD` or with custom headers. Use an `OPTIONS` requests with special headers to consult the third-party site for permission to send request.
+- New request headers: `Origin`, `Access-Control-Request-Method` (PUT, DELETE etc.) and `Access-Control-Request-Headers` (headers used by the intended request)
+- New response headers: `Access-Control-Allow-Origin`, `Access-Control-Max-Age`, `Access-Control-Allow-Credentials`, `Access-Control-Allow-Methods`, `Access-Control-Allow-Headers`
+
+### REST Security
+
+- REST: Representational State Transfer, use standard HTTP request methods to map general actions to resource.
+- **REST Auth**: Cookie + Session for browser based client and **query based authentication** (put extra signature or token in the request to validate identity of the requestor).
+- **REST and CSRF**: **custom header (e.g. `X-CSRF`) to trigger cross-origin pre-flight request** or establish state and leverage anti CSRF token (break the stateless nature of REST).
+- REST API Access Restriction: **restrict methods for particular resources, validate content type, rate limit**.
+
+### Browser Defense Mechanism
+
+#### Content Security Policy (CSP)
+
+- Firefox answer to multiple security problems (XSS, Clickjacking, CSRF).
+- Allows the site owner to specify security options so that the browser can **reduce the capability on the client browser**, reducing the attack surface.
+- Use response header `X-Content-Security-Policy` (`X-Content-Security-Policy-Report-Only` to reports the violation without performing any enforcement).
+- **CSP default restrictions**: no inline javascript will execute, code will not be created from strings, no `data: URI` (inline content) etc.
+- **CSP directives**: `default-src` (default source list for all policies), `script-src` (valid sources for javascript), `img-src`, `font-src` etc. `report-uri` (localtion to log information such as violations).
+
+#### CSP Pitfalls
+
+- `default-src` should be `self` or `none`, not `*`.
+- `default-src` doesn't cover all the resources (`base-uri`, `form-action`, etc.), for these, an explicit configuration is needed.
+- `object-src` might leak, set it to `none`.
+- CSP can be bypassed if the policy is not crafted properly.
+
+#### Other browser defense mechanisms
+
+- **MIME Sniffing**: IE detects MIME type automatically and ignore MIME header. Problem: IE could potentially detect MIME type differently and execute some of the content. `X-Content-Type-Options: nosniff` to disable MIME sniffing in IE.
+- **XSS**: browser protection against XSS helps to increase security but is no replacement for input filtering + output encoding.
+
+## 5. Cutting Edge Web Security
+
+### Serialization Security
+
+- Serialization: programming technique to convert an object into a stream of bytes (or a string) so it can be transmitted or stored. JSON and XML are common serialization formats.
+- **Serialization attacks involves sending a chain of serialized objects to the entry point to trigger actions of harmful nature to the system**.
+- Defense: **protect and isolate the endpoints, sign data stream, validate the type of data etc**.
+
+### DNS Rebinding
+
+- Break the hostname based security model (Same Origin Policy).
+- **Use DNS TTL to force user to go through another round of DNS resolution**, also works with multiple A records.
+- Can be used to breach a private network by causing the victim's web browser to access computers at private IP addresses and return the results to the attacker.
+
+#### How It Works
+
+- Attacker registers a domain and delegates it to a DNS server that is under it's control.
+- The server is configured to respond with a very short time to live (TTL) record, preventing the DNS response from being cached.
+- When the victim browses to the malicious domain, the attacker's DNS server first responds with the IP address of a server hosting a malicious client-side code.
+- The malicious client-side code makes additional accesses to the original domain name (allowed by the Same Origin Policy). When the victims browser runs the script, it makes a new DNS request for the domain, and the attacker replies with a new IP address.
+- **The attacker DNS could reply with an internal IP address or the IP address of a target somewhere else on the Internet**.
+
+#### Mitigation
+
+- **DNS server filtering**: filter out private IP addresses and loopback IP addresses.
+- **Firewall filtering** (e.g [DNSWall](https://www.dnswall.net/)) in the gateway or in the local computer can filter local addresses.
+- Web servers can reject HTTP requests with an unrecognized Host header or **use TLS to check for FQDN**.
+- Web browsers can resist DNS rebinding with **DNS pinning**: IP address is locked to the value received in the first DNS response (issue: block legitimate use of Dynamic DNS).
+
+### Clickjacking (UI redressing)
+
+- **Trick a user into clicking on something different from what the user perceives**.
+- Example: On a clickjacked page, the attackers load another page over the original page in a transparent layer to trick the user into taking actions.
+- Multiple categories: Classic (uses hidden layers on web pages), **Cursorjacking** (change the cursor from the location the user perceives), **CookieJacking** (user drag an object that seems harmless, but select the entire content of the cookie), **FileJacking** (select a different file from the user computer) etc.
+
+#### Mitigation
+
+- Browser add-on: [NoScript](https://noscript.net/) (prevents users from clicking on invisible or "redressed" page elements), [NoClickJack](https://www.dnswall.net/) etc.
+- `X-Frame-Options` HTTP header to prevent (only) against framing (is superseded by Content Security Policy, if exist)
+- `Content Security Policy` (frame-ancestors) to disallow embedding of content
+- `Framekiller` include javascript snippet that prevent a page from being within a frame (can be disabled if the page that loads the iframe disallow javascript from running in the frame).
+
+### HTML 5
+
+- Video: browser now has codecs built in -> more attack surface, **codec compromised = browser compromised**
+- Web Storage: similar to cookies but stores more information, is accesible via javascript and is not sent back to the server unless the js code does so.
+- 2 types of Web Storage: **SessionStorage** (scope: same window or tab, guard against accidental refresh) and **LocalStorage** (persistent accross browser sessions unless the js code deletes the content, Same Origin Access via JavaScript).
+- **IndexedDB**: key-value pair storage for structured data with limited queries and searches (allow offline web apps).
+- Offline Applications: cached pages serve as offline applications, **cache manifest** files define the content to be cached.
+- FileAPI: browser can acccess the local filesystem through JavaScript, can create and access a temporary area of the fs on the client side. Uploads are sent over XHR.
+- WebSockets: full duplex, bi-directional communication (ws: and wss:). Uses HTTP header (`Upgrade: websocket` and `Connection: Upgrade`) to establish the socket connection.
+- IFrame Sandbox: **Cannot access the DOM of parent, execute scripts or have input forms by default**. `sandbox` attribute.
+- Cross Document Messaging: allows IFrames to message each other accross different origins with XSS prevention in mind. Receiver needs to check the origin of the message (domain) and to validate the input message.
+- New elements: tel, url, email and search with **built in validation attributes**.
+- Geolocation: JavaScript and browser addons can access the users location information: after explicit user approval, only over TLS connection. **Can be easily spoofed**: through proxy tools, browser add-on, browser debugging tools etc.
