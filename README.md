@@ -47,3 +47,4 @@
 - [k6](https://github.com/k6io/k6): A modern load testing tool.
 - [dua-cli](https://github.com/Byron/dua-cli): View disk space usage and delete unwanted data, fast.
 - [fig](https://github.com/withfig/autocomplete): Fig adds autocomplete to your terminal.
+- [artillery](https://github.com/artilleryio/artillery): Cloud-native performance & reliability testing for developers and SREs.
