@@ -171,7 +171,7 @@ eval("Foo().hello()")
 
 ## Core Object Oriented Programming Concepts
 
-In OOP, all real-world entities are represented by **Classes**. **Objects** are instances of classes so each object encapsulates a **state** and **behavior**. State implies the fields, attributes of the object and behavior is what you do with the state of the object and they are the methods.
+In OOP, all real-world entities are represented by **Classes**. **Objects** are instances of classes so each object encapsulates a **state** and **behavior**. State implies the fields, attributes of the object and behavior is what you do with the state of the object, they are the methods.
 
 ### Encapsulation
 
@@ -179,7 +179,7 @@ Hide unnecessary details in classes and **deliver a simple and clear interface**
 
 ### Inheritance
 
-A mechanism where you can derive a class from another class for **a hierarchy of classes that share a set of attributes and methods**. The class hierarchies develop code readability and add support for the reuse of functionality.
+A mechanism where you can derive a class from another class for **a hierarchy of classes that share a set of attributes and methods**. The class hierarchies help with code readability and the reuse of functionality.
 
 ### Abstraction
 
@@ -193,12 +193,12 @@ Refers to the ability of a variable, function or object to take on multiple form
 
 ### Functions are Pure
 
-- **A function called multiple times with the same arguments will always return the same value**. You cannot rely on state that the function doesn’t control, such as global variables or any sort of randomized activity. As soon as you throw in a rand() function call, or access a variable not defined in the function, then the function loses its purity.
+- **A function called multiple times with the same arguments will always return the same value**. You cannot rely on state that the function doesn’t control, such as global variables or any sort of randomized activity. As soon as you throw in a `rand()` function call, or access a variable not defined in the function the function loses its purity.
 - **No side effects occur throughout the function’s execution**. Modifying a variable defined outside the function, printing out to the console, raising an exception, and reading data from a file are all examples of side effects which prevent a function from being pure.
 
 ### First-Class and Higher-Order Functions
 
-- **First-class functions**: the concept isn’t exclusive to functional programming but it is a requirement of being functional. For a function to be first-class, you have to be able to **set it to a variable**. This allows you to handle the function as if it were a normal data type, and still be able to execute the function at some other point in runtime.
+- **First-class functions**: the concept isn’t exclusive to functional programming but is a requirement of being functional. For a function to be first-class, you have to be able to **set it to a variable**. This allows you to handle the function as if it were a normal data type, and still be able to execute the function at some other point in runtime.
 - **Higher-order functions**: functions that either **accept another function as an argument**, or that **return a function themselves**.
 
 ### Variables are Immutable
@@ -213,8 +213,8 @@ If you can replace the value of a function call with its return value everywhere
 
 The two core concepts of lambda calculus that really shaped the structure of how functional programming works:
 
-- In lambda calculus, **all functions can be written anonymously without a name**, because the only portion of a function header that affects its execution is the list of arguments. This is where lambda (or **anonymous**) functions get their name in modern-day programming (because of lambda calculus).
-- When invoked, all functions will go through a process called **currying**. When a function with multiple arguments is called, it will execute the function once but it will only set one variable in the parameter list. At the end, a new function is returned with 1 less argument – the one that was just applied – and this new function is immediately invoked. This happens recursively until the function has been fully applied, and then a final result is returned (`f(a, b, c)` is called as `f(a)(b)(c)`). Because functions are pure in functional programming, this works. Otherwise, if state changes were a concern, currying could produce unsafe results.
+- In lambda calculus, **all functions can be written anonymously without a name**, because the only portion of a function header that affects its execution is the list of arguments. This is where lambda (or **anonymous**) functions get their name in modern-day programming.
+- When invoked, all functions will go through a process called **currying**. When a function with multiple arguments is called, it will execute the function once but it will only set one variable in the parameter list. At the end, a new function is returned with 1 less argument – the one that was just applied – and this new function is immediately invoked. This happens recursively until the function has been fully applied, and then a final result is returned (`f(a, b, c)` is called as `f(a)(b)(c)`).
 
 ## Garbage Collection
 
