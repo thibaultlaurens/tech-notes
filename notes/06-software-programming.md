@@ -411,14 +411,6 @@ Additional labels for pre-release and build metadata are available as extensions
 - [The modern JavaScript tutorial](https://javascript.info/)
 - [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)
 
-### Bash
-
-#### Resources
-
-- [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
-- [Safe ways to do things in bash](https://github.com/anordal/shellharden/blob/master/how_to_do_things_safely_in_bash.md)
-- [Minimal safe Bash script template](https://betterdev.blog/minimal-safe-bash-script-template/)
-
 ## Templates
 
 ### Self Documenting Makefile

@@ -60,6 +60,14 @@
 | Execute only            | --x | 001    | 1       |
 | None                    | --- | 000    | 0       |
 
+### Bash
+
+#### Resources
+
+- [Google Shell Style Guide](https://google.github.io/styleguide/shellguide.html)
+- [Safe ways to do things in bash](https://github.com/anordal/shellharden/blob/master/how_to_do_things_safely_in_bash.md)
+- [Minimal safe Bash script template](https://betterdev.blog/minimal-safe-bash-script-template/)
+
 ## Site Reliability Engineering
 
 See the [Site Reliability Engineering](https://docs.tlaurens.xyz/books/02-site-reliability-engineering) book review.
