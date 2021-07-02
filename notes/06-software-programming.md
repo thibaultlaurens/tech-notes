@@ -576,3 +576,12 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 ## Resources
 
 - [Programming Concepts](https://thecodeboss.dev/2014/10/programming-concepts-the-stack-and-the-heap/)
+- [Creational patterns](https://en.wikipedia.org/wiki/Creational_pattern)
+- [Structural patterns](https://en.wikipedia.org/wiki/Structural_pattern)
+- [Behavioral patterns](https://en.wikipedia.org/wiki/Behavioral_pattern)
+- [SOLID](https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design):
+- [The Twelve-Factor App](https://12factor.net/)
+- [Semantic Versioning](https://semver.org/)
+- [Go Proverbs](https://go-proverbs.github.io/)
+- [The Zen of Python](https://www.python.org/dev/peps/pep-0020/)
+- [Architecture Design Record](https://github.com/joelparkerhenderson/architecture_decision_record)
