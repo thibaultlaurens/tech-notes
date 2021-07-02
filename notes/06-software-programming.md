@@ -579,7 +579,7 @@ Chosen option: "[option 1]", because [justification. e.g., only option, which me
 - [Creational patterns](https://en.wikipedia.org/wiki/Creational_pattern)
 - [Structural patterns](https://en.wikipedia.org/wiki/Structural_pattern)
 - [Behavioral patterns](https://en.wikipedia.org/wiki/Behavioral_pattern)
-- [SOLID](https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design):
+- [SOLID](https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
 - [The Twelve-Factor App](https://12factor.net/)
 - [Semantic Versioning](https://semver.org/)
 - [Go Proverbs](https://go-proverbs.github.io/)
