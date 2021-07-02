@@ -14,7 +14,6 @@
 
 ## DOING
 
-- Notes: [Software Programming](notes/06-software-programming.md)
 - Notes: [Information Security](notes/10-information-security.md)
 - Notes: [Infrastructure & Operations](notes/12-infrastructures-and-operations.md)
 - Notes: [Systems Design](notes/13-systems-design.md)
@@ -28,6 +27,7 @@
 - Notes: [Git](notes/01-git.md)
 - Notes: [Algorithms & Data Structures I](notes/02-algorithms-and-data-structures.md)
 - Notes: [Software Engineering](notes/05-software-engineering.md)
+- Notes: [Software Programming](notes/06-software-programming.md)
 - Notes: [Computer Networking I](notes/08-computer-networking.md)
 
 - Training: [Defending Web Applications](training/02-defending-web-applications.md)
