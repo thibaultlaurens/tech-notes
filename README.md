@@ -10,6 +10,7 @@
 - [Awesome Interviews](https://github.com/MaximAbramchuck/awesome-interview-questions)
 - [The System Design Primer](https://github.com/donnemartin/system-design-primer)
 - [The Architecture of Open Source Applications](https://aosabook.org/en/index.html)
+- [Open Source Society University](https://github.com/ossu/computer-science)
 
 ## Reading list
 
