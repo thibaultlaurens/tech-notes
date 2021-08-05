@@ -151,6 +151,8 @@ Operationnal challenges from moving from monolithic architecture to (micro) serv
 
 ### Kubernetes
 
+- [NSA Kubernetes Hardening Guidance](https://media.defense.gov/2021/Aug/03/2002820425/-1/-1/0/CTR_KUBERNETES%20HARDENING%20GUIDANCE.PDF)
+
 ## Release Engineering
 
 - CI/CD - gitlab
