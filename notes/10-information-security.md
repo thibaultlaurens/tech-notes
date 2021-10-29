@@ -2,7 +2,7 @@
 
 ## Fundamentals of Security
 
-### Core Pillars of Information Security (CIA)
+### Core Pillars of Information Security
 
 - **Confidentiality**: only allow access to data for which the user is permitted.
 - **Integrity**: ensure data is not tampered or altered by unauthorized users.
@@ -22,7 +22,7 @@
 - Fix security issues correctly
 - Reliability & Security
 
-### Authentication vs Authorization:
+### Authentication vs Authorization
 
 - Authentication
 - Autorization
@@ -275,12 +275,50 @@ Today the services are provided by **PTI** \(Public Technical Identifiers\), a p
 - IPS and IDS \(Snort vs Bro vs zeek vs [more](https://github.com/sbilly/awesome-security#ids--ips--host-ids--host-ips)\)
 - Fast Packet Processing
 
-## Recommandations de sécurité ANSSI
+## Cybersecurity Glossary
 
-- [Systèmes d’information essentiels](https://www.ssi.gouv.fr/administration/guide/recommandations-pour-la-protection-des-systemes-dinformation-essentiels/)
-- [Système GNU/Linux](https://www.ssi.gouv.fr/guide/recommandations-de-securite-relatives-a-un-systeme-gnulinux/)
-- [Conteneurs Docker](https://www.ssi.gouv.fr/administration/guide/recommandations-de-securite-relatives-au-deploiement-de-conteneurs-docker/)
-- [TLS](https://www.ssi.gouv.fr/administration/guide/recommandations-de-securite-relatives-a-tls/)
+- **APT**: Advanced Persistent Threat. Nation-state adversary (or sponsored by a nation). They are remarkable in their persistence, skills, and resources.
+- **ASR**: Attack Surface Reduction.
+- **ATT&CK** (MITRE): Adversarial Tactics, Techniques, and Common Knowledge. Document and track techniques attackers use throughout the different stages of a cyberattack to infiltrate networks and exfiltrate data.
+- **AV**: Antivirus.
+- **CASB**: Cloud Access Security Broker. Security policy enforcement gateway placed between users and cloud service providers to combine and interject enterprise security policies as cloud-based resources are accessed.
+- **CIA**: Confidentiality, Integrity, and Availability.
+- **CSIRT/CERT**: Computer Security Incident Response Team / Computer Emergency Response Team.
+- **CSPM**: Cloud Security Posture Management. Assess secure and compliant configurations of the cloud platform’s control plane.
+- **CVE**: Common Vulnerabilities and Exposures.
+- **CVSS**: Common Vulnerability Scoring System.
+- **CWE**: Common Weakness Enumeration.
+- **CWPP**: Cloud Workload Protection Platform. Security protection solution for cloud workloads, including physical servers, virtual machines (VMs), containers, and serverless workloads.
+- **DAST**: Dynamic Application Security Testing.
+- **DoW**: Detect on Write.
+- **EDR**: Endpoint Detection and Response. More advanced than EPP. Detect and investigate security incidents, ability to remediate endpoints to pre-infection state.
+- **EPP**: Endpoint Protection Platform, covers traditional anti-malware scanning.
+- **FIM**: File Integrity Monitoring.
+- **IAM**: Identity and Access Management.
+- **IDS/IPS**: Intrusion Detection Systems / Intrusion Protection Systems.
+- **IOA**: Indicator of Attack. Focus on detecting the intent of what an attacker is trying to accomplish, regardless of the malware or exploit used in an attack. Used by next-gen AV for malware-free intrusions and zero-day exploits.
+- **IOC**: Indicator of Compromise. Evidence on a computer that indicates that the security of the network has been breached. Traditional AV signatures.
+- **IOM**: Indicator of Misconfiguration.
+- **MDR**: Managed Detection and Response. Outsourced 24/7 cybersecurity services, Continuously monitors, prioritizes, and responds to cybersecurity threats with humans behind the wheel.
+- **NDR**: Network Detection and Response. Continuously monitors an organization's network to detect cyber threats and anomalous behavior using non-signature-based tools or techniques.
+- **NIST**: National Institute of Standards and Technology (USA).
+- **NVD**: National Vulnerability Database (USA). Maintained by NIST.
+- **OSINT**: Open-Source Intelligence. Data collected from publicly available sources to be used in an intelligence context.
+- **PE**: Portable Executable, a windows file format for executables.
+- **RASP**: Run-time Application Self Protection. Uses runtime instrumentation to detect and block computer attacks by taking advantage of information from inside the running software.
+- **RCE**: Remote Code Execution.
+- **SAST**: Static Application Security Testing.
+- **SIEM**: Security Information and Event Management. Collect, normalize, correlate, aggregate, and detect anomalies across a variety of data sources.
+- **SOAR**: Security Orchestration, Automation, and Response. Describe three software capabilities: threat and vulnerability management, security incident response and security operations automation.
+- **SOC**: Security Operation Center. Unit that handles the detection, analysis, and response to cybersecurity incidents in an organization.
+- **SQLI**: SQL Injection.
+- **TIP**: Threat Intelligence Platform/Provider.
+- **TPP**: Tactics, Techniques and Procedures (MITRE ATT&CK). Refers to the methods, tools, and patterns that malicious parties use to carry out attacks.
+- **WAF**: Web Application Firewall. Inspect HTTP requests to safeguard against attacks against web applications.
+- **XDR**: Extended Detection and Response. Security threat detection and incident response tool that natively integrates multiple security products into a cohesive security operations system.
+- **XSRF**: Cross-site Request Forgery.
+- **XSS**: Cross-site Scripting.
+- **XXE**: XML External Entities.
 
 ## Resources
 
@@ -298,3 +336,4 @@ Today the services are provided by **PTI** \(Public Technical Identifiers\), a p
 - [Wikipedia X.509](https://en.wikipedia.org/wiki/X.509)
 - [Scholl of SRE - Security](https://linkedin.github.io/school-of-sre/security/intro/)
 - [Geeksforgeeks - Network Security and Cryptography](https://www.geeksforgeeks.org/computer-network-tutorials/#nsc)
+- [Glossary of Cyber Security Terms, Abbreviations and Acronyms](https://www.infosecmatter.com/infosec-glossary/)
