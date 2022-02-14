@@ -199,3 +199,4 @@ in the cluster (e.g., when sitting behind a round robin balancer). Whereas longe
 - [The System Design Primer](https://github.com/donnemartin/system-design-primer)
 - [The Architecture of Open Source Applications](https://aosabook.org/en/index.html)
 - [System Design Interview](https://www.goodreads.com/book/show/54109255-system-design-interview-an-insider-s-guide)
+- [Designing Netflix](http://highscalability.com/blog/2021/12/13/designing-netflix.html?utm_source=Pointer&utm_campaign=543568cb50-ISSUE_290&utm_medium=email&utm_term=0_6ba2b83261-543568cb50-599218481)

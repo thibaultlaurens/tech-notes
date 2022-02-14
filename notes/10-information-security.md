@@ -305,7 +305,7 @@ Today the services are provided by **PTI** \(Public Technical Identifiers\), a p
 - **NVD**: National Vulnerability Database (USA). Maintained by NIST.
 - **OSINT**: Open-Source Intelligence. Data collected from publicly available sources to be used in an intelligence context.
 - **PE**: Portable Executable, a windows file format for executables.
-- **RASP**: Run-time Application Self Protection. Uses runtime instrumentation to detect and block computer attacks by taking advantage of information from inside the running software.
+- **RASP**: Run-time Application Self Protection. Use runtime instrumentation to detect and block computer attacks by taking advantage of information from inside the running software.
 - **RCE**: Remote Code Execution.
 - **SAST**: Static Application Security Testing.
 - **SIEM**: Security Information and Event Management. Collect, normalize, correlate, aggregate, and detect anomalies across a variety of data sources.
