@@ -19,26 +19,22 @@
 
 ### Latency Numbers
 
-| Operation                                 |         Time ns |    Time μs | Time ms | Comments                    |
-| ----------------------------------------- | --------------: | ---------: | ------: | --------------------------- |
-| L1 cache reference                        |          0.5 ns |            |         |                             |
-| Branch mispredict                         |            5 ns |            |         |                             |
-| L2 cache reference                        |            7 ns |            |         | 14x L1 cache                |
-| Mutex lock/unlock                         |           25 ns |            |         |                             |
-| Main memory reference                     |          100 ns |            |         | 20x L2 cache, 200x L1 cache |
-| System call overhead                      |          400 ns |            |         |                             |
-| Compress 1KB bytes with Zippy             |        3,000 ns |       3 μs |         |                             |
-| Context switch between processes          |        3,000 ns |       3 μs |         |                             |
-| Send 1K bytes over 1 Gbps network         |       10,000 ns |      10 μs |         |                             |
-| fork\(\) \(statically-linked binary\)     |       70,000 ns |      70 μs |         |                             |
-| Read 4K randomly from SSD                 |      150,000 ns |     150 μs |         | ~1GB/sec SSD                |
-| fork\(\) \(dynamically-linked binary\)    |      160,000 ns |     160 μs |         |                             |
-| Read 1MB sequentially from memory         |      250,000 ns |     250 μs |         |                             |
-| Roundtrip within same datacenter          |      500,000 ns |     500 μs |         |                             |
-| Read 1 MB sequentially from SSD           |    1,000,000 ns |   1,000 us |    1 ms | ~1GB/sec SSD, 4X memory     |
-| Disk seek                                 |   10,000,000 ns |  10,000 μs |   10 ms | 20x datacenter roundtrip    |
-| Read 1MB sequentially from disk           |   20,000,000 ns |  20,000 μs |   20 ms | 80x memory, 20X SSD         |
-| Send packet CA -&gt; Netherlands -&gt; CA | 150,000,0000 ns | 150,000 μs |  150 ms |                             |
+| Operation                            |         Time ns |    Time μs | Time ms | Comments                    |
+| ------------------------------------ | --------------: | ---------: | ------: | --------------------------- |
+| L1 cache reference                   |          0.5 ns |            |         |                             |
+| Branch mispredict                    |            3 ns |            |         |                             |
+| L2 cache reference                   |            4 ns |            |         | 8x L1 cache                 |
+| Mutex lock/unlock                    |           17 ns |            |         |                             |
+| Send 2K bytes over commodity network |           22 ns |            |         |                             |
+| Main memory reference                |          100 ns |            |         | 25x L2 cache, 200x L1 cache |
+| Compress 1KB bytes with Zippy        |        2,000 ns |       2 μs |         |                             |
+| Read 1MB sequentially from memory    |        2,000 ns |       2 μs |         |                             |
+| Random read from SSD                 |       16,000 ns |      16 μs |         |                             |
+| Read 1 MB sequentially from SSD      |       31,000 ns |      31 us |         |                             |
+| Roundtrip within same datacenter     |      500,000 ns |     500 μs |         |                             |
+| Read 1MB sequentially from disk      |      625,000 ns |     625 μs |         | 300x memory, 20x SSD        |
+| Disk seek                            |    2,000,000 ns |   2,000 μs |    2 ms | 4x datacenter roundtrip     |
+| Packet roundtrip CA to Netherlands   | 150,000,0000 ns | 150,000 μs |  150 ms |                             |
 
 ### Availability Numbers
 
