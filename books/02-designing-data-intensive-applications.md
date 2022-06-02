@@ -4,8 +4,6 @@ description: The big ideas behind reliable, scalable and maintainable systems
 
 # Designing Data-Intensive Applications
 
-# Part I. Foundations of Data Systems
-
 ## 1. Reliable, Scalable, and Maintainable Applications
 
 ### Thinking About Data Systems
