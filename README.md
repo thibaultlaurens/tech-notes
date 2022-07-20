@@ -12,7 +12,9 @@
 - [The Architecture of Open Source Applications](https://aosabook.org/en/index.html)
 - [Open Source Society University](https://github.com/ossu/computer-science)
 - [Professional Programming](https://github.com/charlax/professional-programming)
-- [The System Design Primer](https://github.com/donnemartin/system-design-primer)
+- [MIT 6.824: Distributed Systems](https://www.youtube.com/watch?v=cQP8WApzIQQ&list=PLrw6a1wE39_tb2fErI4-WkMbsvGQk9_UB)
+- [Designs, Lessons and Advice from Building Large Distributed Systems](https://www.cs.cornell.edu/projects/ladis2009/talks/dean-keynote-ladis2009.pdf)
+- [Papers We Love](https://github.com/papers-we-love/papers-we-love)
 
 ## Reading list
 
