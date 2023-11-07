@@ -74,6 +74,22 @@ See the [Site Reliability Engineering](https://docs.tlaurens.xyz/books/01-site-r
 
 ![Hierarchy of Service Reliability](../.gitbook/assets/reliability-hierarchy.jpg)
 
+### Lessons Learned from 20 Years of SRE
+
+- The riskiness of a mitigation should scale with the severity of the outage
+- Recovery mechanisms should be fully tested before an emergency
+- Canary all changes
+- Have a "Big Red Button"
+- Unit tests alone are not enough - integration testing is also needed
+- Communication Channels! And backup channels!! And backups for those backup channels!!!
+- Intentionally degrade performance modes
+- Test for Disaster resilience
+- Automate your mitigations
+- Reduce the time between rollouts, to decrease the likelihood of the rollout going wrong
+- A single global hardware version is a single point of failure
+
+More details at [Lessons Learned from Twenty Years of Site Reliability Engineering](https://sre.google/resources/practices-and-processes/twenty-years-of-sre-lessons-learned/).
+
 ## Instrastructure as Code
 
 ### Ansible Best Practices
