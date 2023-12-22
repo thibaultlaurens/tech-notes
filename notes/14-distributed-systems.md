@@ -60,6 +60,33 @@ Summary of this [article](https://pages.cs.wisc.edu/~zuyu/files/fallacies.pdf).
 
 - [https://linkedin.github.io/school-of-sre/databases_nosql/intro/](https://linkedin.github.io/school-of-sre/databases_nosql/intro/)
 
+### Cassandra
+
+#### Rules of Data Modeling
+
+DO NOT:
+
+- **Minimize the Number of Writes**: Cassandra is optimized for high write throughput. Extra writes to improve the efficiency of your read queries, it's almost always a good tradeoff.
+- **Minimize Data Duplication**: Disk space is cheap and Cassandra is architected around that fact. To get the most efficient reads, you often need to duplicate data. Cassandra doesn't have JOINs either.
+
+DO:
+
+- **Spread data evenly around the cluster**: You want every node in the cluster to have roughly the same amount of data. Rows are spread around the cluster based on a hash of the partition key, which is the first element of the primary key. 
+- **Minimize the number of partitions read**: Partitions are groups of rows that share the same partition key. When you issue a read query, you want to read rows from as few partitions as possible. Each partition may reside on a different node.
+
+**Model Around Your Queries**
+
+The way to minimize partition reads is to model your data to fit your queries. Don't model around relations. Don't model around objects. Model around your queries.
+
+1. **Determine What Queries to Support**: you may need to think about grouping by, ordering by, filtering by enforcing uniqueness.. changes to just one of these query requirements will frequently warrant a data model change.
+2. **Try to create a table where you can satisfy your query by reading (roughly) one partition**: In practice, this generally means you will use roughly one table per query pattern
+
+Some of Cassandra's fancier features, like **collections, user-defined types, and static columns**, can also be used to reduce the number of partitions that you need to read to satisfy a query. Don't forget to consider these options when designing your schema. 
+
+#### Resources
+
+- [Basic Rules of Cassandra Data Modeling](https://www.datastax.com/blog/basic-rules-cassandra-data-modeling)
+
 ## Big Data
 
 - [Modern Big Data Architectures - Lambda & Kappa](https://luminousmen.com/post/modern-big-data-architectures-lambda-kappa)
